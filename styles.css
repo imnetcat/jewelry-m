@@ -1,0 +1,28 @@
+body {
+  margin: 0;
+}
+.categories {
+  position: relative;
+}
+#rings {
+  width: 300px;
+  height: 350px;
+  margin: 28px auto;
+  -webkit-transition: all 0.5s;
+}
+#rings:hover {
+  -webkit-transform: scale(1.05);
+}
+img {
+  position: relative;
+  width: 300px;
+  height: 350px;
+  margin: 28px auto;
+  box-shadow: 0 0 5px #666;
+  -webkit-clip-path: polygon(0 100%, 0 0, 100% 0, 100% 100%);
+  -webkit-transition: all 0.5s;
+
+}
+img:hover {
+  -webkit-clip-path: polygon(50% 0%, 63% 38%, 100% 38%, 69% 59%, 82% 100%, 50% 75%, 18% 100%, 31% 59%, 0% 38%, 37% 38%);
+}
