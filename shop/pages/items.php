@@ -1,5 +1,5 @@
-<div class="btn left"><big><</big></div>
 <div id="categories">
+  <div class="btn left"><big><</big></div>
   <div class="row">
     <div class="category"><a><img></a></div>
     <div class="category"><a><img></a></div>
@@ -10,8 +10,8 @@
     <div class="category"><a><img></a></div>
     <div class="category"><a><img></a></div>
   </div>
+  <div class="btn right"><big>></big></div>
 </div>
-<div class="btn right"><big>></big></div>
 <div id="filters">
   <div id="to_types">
     <div id="types">
