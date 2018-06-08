@@ -66,3 +66,9 @@ ol {
   background-color: orange;
   margin-bottom: 30px;
 }
+.absolute {
+  position: absolute;
+}
+.relative {
+  position: relative;
+}
