@@ -34,14 +34,14 @@ ol {
 }
 .btn.left{
    position: absolute;
-  height: inherit;
-  width: 70px;
+  height: 66vh;
+  width: 4vw;
 }
 .btn.right{
   position: absolute;
   margin-left: 69vw;
-  height: inherit;
-  width: 70px;
+  height: 66vh;
+  width: 4vw;
 }
 #categories {
   width: 100%;
@@ -49,8 +49,8 @@ ol {
 }
 .row {
   position: absolute;
-  width: inherit;
-  height: inherit;
+  width: 64vw;
+  height: 66vh;
   margin-left: 70px;
   display: -webkit-box;
   display: -ms-flexbox;
