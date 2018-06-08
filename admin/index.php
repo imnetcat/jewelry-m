@@ -22,6 +22,7 @@
 	  url: "actions.php",
 	  data: {
 	    action: 'new',
+	    image: $('#new_image').value,
 	    filter_1: $('#new_filter_1').value,
 	    filter_2: $('#new_filter_2').value,
 	    filter_3: $('#new_filter_3').value,
@@ -41,6 +42,7 @@
 <body>
 <button id="new">Add new</button><br>
 <button>
+<input id="new_image"><br>
 <input id="new_filter_1"><br>
 <input id="new_filter_2"><br>
 <input id="new_filter_3"><br>
