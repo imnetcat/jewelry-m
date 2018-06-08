@@ -1,18 +1,7 @@
 <!DOCTYPE html>
 <html><head>
-  <link rel="stylesheet" href="page.css" type="text/css">
-	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
-  <script async>
-			$( () => {
-
-				$("#to_categories").click( () => {
-					$('html, body').animate({
-						scrollTop: $("#categories").offset().top
-					}, 1000);
-				});
-
-			});
-  </script>
+  <link rel="stylesheet" href="styles.css" type="text/css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
   <script async>
 			$( () => {
 
