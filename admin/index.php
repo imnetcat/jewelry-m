@@ -1,3 +1,4 @@
+<? require_once "../db_def_config.php"; ?>
 <!DOCTYPE html>
 <html><head>
   <link rel="stylesheet" href="styles.css" type="text/css">
