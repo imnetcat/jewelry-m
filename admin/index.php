@@ -32,7 +32,7 @@
 	    description: $('#new_description').value
 	  },
           success: function(data){
-	    $('#info').html(data);
+	    $('#info').html($('#info').html()+data);
           }
         });
       });
