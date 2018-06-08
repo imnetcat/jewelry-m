@@ -49,8 +49,8 @@ ol {
 }
 .row {
   position: absolute;
-  width: 65vw;
-  height: 86vh;
+  width: auto;
+  height: inherit;
   margin-left: 70px;
   display: -webkit-box;
   display: -ms-flexbox;
