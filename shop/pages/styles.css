@@ -34,13 +34,13 @@ ol {
 }
 .btn.left{
    position: absolute;
-  height: 66vh;
+  height: inherit;
   width: 70px;
 }
 .btn.right{
   position: absolute;
   margin-left: 69vw;
-  height: 66vh;
+  height: inherit;
   width: 70px;
 }
 #categories {
