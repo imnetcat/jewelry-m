@@ -21,7 +21,7 @@
           type: "POST",
 	  url: "actions.php",
 	  data: {
-	    action: 'new',
+	    action: 'add_new',
 	    image: $('#new_image').value,
 	    filter_1: $('#new_filter_1').value,
 	    filter_2: $('#new_filter_2').value,
