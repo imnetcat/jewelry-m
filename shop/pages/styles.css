@@ -33,14 +33,14 @@ ol {
   background-color: white;
 }
 .btn.left{
-  position: absolute;
-  height: 66vh;
+  position: relative;
+  height: 100%;
   width: 70px;
 }
 .btn.right{
-  position: absolute;
+  position: relative;
   margin-left: 69vw;
-  height: 66vh;
+  height: 100%;
   width: 70px;
 }
 #categories {
@@ -54,7 +54,7 @@ ol {
   display: -ms-flexbox;
   display: flex;
   width: 100%;
-  height: 80%;
+  height: 100%;
   -ms-flex-wrap: wrap;
   flex-wrap: wrap;
   -webkit-box-pack: center;
