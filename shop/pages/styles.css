@@ -44,12 +44,12 @@ ol {
   width: 70px;
 }
 #categories {
-  position: absolute;
   width: 65vw;
   height: 86vh;
   margin-left: 70px;
 }
 .row {
+  position: absolute;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
