@@ -1,4 +1,3 @@
-<? include "db.php"; ?>
 <!DOCTYPE html>
 <html><head>
   <link rel="stylesheet" href="styles.css" type="text/css">
@@ -18,8 +17,9 @@
   </script>
 </head>
 <body>
-  <div id="container"><br><br><br>
+<div id="container"><br><div id="info"></div><br><br><br>
     <? 
+    require_once "../db.php";
     $query ="SELECT id, filter_1, filter_2, filter_3, filter_4, filter_5, description  FROM items";
     if($result = mysqli_query($database, $query)){
       while ($row = mysqli_fetch_row($result)) {
