@@ -32,7 +32,7 @@
     <div class="right-menu"></div>
   </div>
   <div id="container">
-    <? include "page_1.php"; ?>
+    <? include "items.php"; ?>
   </div>
   <div id="footer">
   </div>
