@@ -29,7 +29,7 @@
 	    filter_4: $('#new_filter_4').value,
 	    filter_5: $('#new_filter_5').value,
 	    filter_5: $('#new_filter_5').value,
-	    description: $('#new_description').value,
+	    description: $('#new_description').value
 	  },
           success: function(data){
 	    $('#info').html(data);
@@ -63,6 +63,8 @@
         echo "<span class='filter_5'>" . "Item filter №5: " . $row[5] . "</span><br>";
         echo "<span class='description'>" . "Item description: " . $row[6] . "</span><br>";
         echo "</div><br><br><br>";
+      }
+    }
     ?>
   </div>
 </body>
