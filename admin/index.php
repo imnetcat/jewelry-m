@@ -56,12 +56,12 @@
       while ($row = mysqli_fetch_row($result)) {
         echo "<div class='item'><br>";
         echo "<span class='id'>" . "Item id: " . $row[0] . "</span><br>";
-        echo "<span class='filter_1'>""Item filter №1: " . $row[1] . "</span><br>";
-        echo "<span class='filter_2'>""Item filter №2: " . $row[2] . "</span><br>";
-        echo "<span class='filter_3'>""Item filter №3: " . $row[3] . "</span><br>";
-        echo "<span class='filter_4'>""Item filter №4: " . $row[4] . "</span><br>";
-        echo "<span class='filter_5'>""Item filter №5: " . $row[5] . "</span><br>";
-        echo "<span class='description'>""Item description: " . $row[6] . "</span><br>";
+        echo "<span class='filter_1'>" . "Item filter №1: " . $row[1] . "</span><br>";
+        echo "<span class='filter_2'>" . "Item filter №2: " . $row[2] . "</span><br>";
+        echo "<span class='filter_3'>" . "Item filter №3: " . $row[3] . "</span><br>";
+        echo "<span class='filter_4'>" . "Item filter №4: " . $row[4] . "</span><br>";
+        echo "<span class='filter_5'>" . "Item filter №5: " . $row[5] . "</span><br>";
+        echo "<span class='description'>" . "Item description: " . $row[6] . "</span><br>";
         echo "</div><br><br><br>";
     ?>
   </div>
