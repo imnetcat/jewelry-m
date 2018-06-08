@@ -1,8 +1,6 @@
 <?
 
-include "../db.php";
-
-function add_new($image, $filter_1, $filter_2, $filter_3, $filter_4, $filter_5, $description){
+function add_new($database, $image, $filter_1, $filter_2, $filter_3, $filter_4, $filter_5, $description){
   $query = "SELECT MAX(id) FROM items";
   if($result = mysqli_query($database, $query)){
     while ($row = mysqli_fetch_row($result)) {
