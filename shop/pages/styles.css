@@ -38,7 +38,7 @@ ol {
   width: 7%;
 }
 .btn.right{
-  position: relative;
+  position: absolute;
   margin-left: 69vw;
   height: 100%;
   width: 70px;
@@ -48,6 +48,7 @@ ol {
   height: 80%;
 }
 .row {
+  position: absolute;
   margin-left: 70px;
   display: -webkit-box;
   display: -ms-flexbox;
