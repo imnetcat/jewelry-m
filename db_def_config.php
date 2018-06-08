@@ -1,8 +1,6 @@
 <?
 include "db.php";
 
-mysqli_query($database, "SET NAMES 'utf8' COLLATE 'utf8_general_ci'");
-mysqli_query($database, "SET CHARACTER SET 'utf8'");
 $query ="CREATE TABLE  IF NOT EXISTS items (
     id INT(20) NOT NULL,
     image VARCHAR(60) NOT NULL,
