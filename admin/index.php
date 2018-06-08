@@ -23,14 +23,14 @@
 	  url: "actions.php",
 	  data: {
 	    action: 'add_new',
-	    image: $('#new_image').value,
-	    filter_1: $('#new_filter_1').value,
-	    filter_2: $('#new_filter_2').value,
-	    filter_3: $('#new_filter_3').value,
-	    filter_4: $('#new_filter_4').value,
-	    filter_5: $('#new_filter_5').value,
-	    filter_5: $('#new_filter_5').value,
-	    description: $('#new_description').value
+	    image: $('#new_image').val(),
+	    filter_1: $('#new_filter_1').val(),
+	    filter_2: $('#new_filter_2').val(),
+	    filter_3: $('#new_filter_3').val(),
+	    filter_4: $('#new_filter_4').val(),
+	    filter_5: $('#new_filter_5').val(),
+	    filter_5: $('#new_filter_5').val(),
+	    description: $('#new_description').val()
 	  },
           success: function(data){
 	    $('#info').html($('#info').html()+data);
