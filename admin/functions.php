@@ -16,7 +16,7 @@ function add_new($image, $filter_1, $filter_2, $filter_3, $filter_4, $filter_5, 
     mysqli_stmt_close($stmt);
     return "Изображение успешно добавлено!";
   }else{
-    return "Error: " . $query . "<br>" . mysqli_error($database);
+    return "Error in: " . $query . "<br>" . mysqli_error($database);
   }
 }
 
