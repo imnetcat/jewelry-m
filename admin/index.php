@@ -39,13 +39,15 @@
   </script>
 </head>
 <body>
-<button id="new">Add new<button><br>
+<button id="new">Add new</button><br>
+<button>
 <input id="new_filter_1"><br>
 <input id="new_filter_2"><br>
 <input id="new_filter_3"><br>
 <input id="new_filter_4"><br>
 <input id="new_filter_5"><br>
 <input id="new_description"><br>
+</button>
 <div id="container"><br><div id="info"></div><br><br><br>
     <? 
     require_once "../db.php";
