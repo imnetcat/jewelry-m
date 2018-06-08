@@ -49,10 +49,6 @@ ol {
   height: 86vh;
   margin-left: 70px;
 }
-#info {
-  width: 100%;
-  height: 20%;
-}
 .row {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -81,4 +77,8 @@ ol {
   height: 250px;
   background-color: orange;
   margin-bottom: 30px;
+}
+#filtres {
+  width: 100%;
+  height: 20%;
 }
