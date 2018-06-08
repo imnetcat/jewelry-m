@@ -35,7 +35,7 @@ ol {
 .btn.left{
   position: absolute;
   height: 100%;
-  width: 70px;
+  width: 7%;
 }
 .btn.right{
   position: relative;
@@ -52,7 +52,7 @@ ol {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  width: 100%;
+  width: 86%;
   height: 100%;
   -ms-flex-wrap: wrap;
   flex-wrap: wrap;
