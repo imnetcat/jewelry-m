@@ -33,12 +33,12 @@ ol {
   background-color: white;
 }
 .btn.left{
-  position: relative;
+  position: absolute;
   height: 100%;
   width: 70px;
 }
 .btn.right{
-  position: relative;
+  position: absolute;
   margin-left: 69vw;
   height: 100%;
   width: 70px;
@@ -49,7 +49,6 @@ ol {
   margin-left: 70px;
 }
 .row {
-  position: absolute;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
