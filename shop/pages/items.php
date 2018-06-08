@@ -22,7 +22,7 @@
         <div value="earrings">earrings <label></div>
         <div value="pendantS">pendants <label></div>
         <div value="other">other <label></div>
-      <div>
+      </div>
       <button>Close</button>
     </div>
   </div>
