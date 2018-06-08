@@ -5,17 +5,6 @@
   <script async="">
 			$( () => {
 
-				$("#to_categories").click( () => {
-					$('html, body').animate({
-						scrollTop: $("#categories").offset().top
-					}, 1000);
-				});
-
-			});
-  </script>
-  <script async="">
-			$( () => {
-
 				var client_w = screen.width;
         console.log(client_w);
         if(client_w < 1024){
@@ -33,7 +22,7 @@
   <div id="menu">
     <div class="left-menu">
       <nav>
-        <ol><a href="shop.html">Магазин</a></ol>
+        <ol><a href="shop.php">Магазин</a></ol>
         <ol><a>Про меня</a></ol>
         <ol></ol>
       </nav>
