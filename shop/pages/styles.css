@@ -34,17 +34,17 @@ ol {
 }
 .btn.left{
   position: absolute;
-  height: 100%;
-  width: 7%;
+  height: 100vh;
+  width: 7vw;
 }
 .btn.right{
   position: absolute;
   margin-left: 69vw;
-  height: 100%;
-  width: 70px;
+  height: 100vh;
+  width: 7vw;
 }
 #categories {
-  width: 97%;
+  width: 100%;
   height: 80%;
 }
 .row {
