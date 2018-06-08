@@ -60,7 +60,8 @@ ol {
   -webkit-box-pack: center;
   -ms-flex-pack: center;
   justify-content: center;
-  padding: 30px 0 15px 140px;
+  padding: 30px 0 15px;
+  padding-right: 140px;
 }
 .category {
   margin: auto;
