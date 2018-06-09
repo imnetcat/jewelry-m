@@ -32,18 +32,16 @@ ol {
   margin-left: 11vw;
   background-color: white;
 }
-.btn.left {
-    position: absolute;
-    height: 66vh;
-    width: 4vw;
-}
 .btn.right {
-    position: absolute;
     margin-left: 68vw;
-    height: 66vh;
-    width: 4vw;
 }
+.btn big {
+  position: relative;
+  margin-top: 50%;
 .btn {
+  position: absolute;
+  height: 66vh;
+  width: 4vw;
   text-align: center;
   display: inline-block;
   text-decoration: none;
