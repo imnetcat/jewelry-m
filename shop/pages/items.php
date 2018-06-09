@@ -1,6 +1,7 @@
 <div id="categories">
   <div class="row">
     <div class="btn left"><big>&lt;</big></div>
+    <div id="row">
       <div class="category"><a><img></a></div>
       <div class="category"><a><img></a></div>
       <div class="category"><a><img></a></div>
@@ -9,6 +10,7 @@
       <div class="category"><a><img></a></div>
       <div class="category"><a><img></a></div>
       <div class="category"><a><img></a></div>
+    </div>
     <div class="btn right"><big>&gt;</big></div>
 </div>
 <div id="filters">
