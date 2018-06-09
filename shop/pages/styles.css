@@ -39,7 +39,7 @@ ol {
 }
 .btn.right {
     position: absolute;
-    margin-left: 69vw;
+    margin-left: 68vw;
     height: 66vh;
     width: 4vw;
 }
@@ -49,14 +49,14 @@ ol {
     position: absolute;
 }
 .row {
-    width: 64vw;
+    width: 72vw;
     height: 66vh;
-    margin-left: 4vw;
 }
 #row {
     position: absolute;
     width: 64vw;
     height: 66vh;
+    margin-left: 4vw;
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
