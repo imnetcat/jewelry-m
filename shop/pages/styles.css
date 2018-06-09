@@ -49,20 +49,22 @@ ol {
     position: absolute;
 }
 .row {
-    /* position: absolute; */
-    width: 72vw;
+    width: 64vw;
     height: 66vh;
-    /* margin-left: 70px; */
-    /* display: -webkit-box; */
+}
+#row {
+    position: absolute;
+    width: 64vw;
+    height: 66vh;
+    margin-left: 4vw;
+    display: -webkit-box;
     display: -ms-flexbox;
-    /* display: flex; */
+    display: flex;
     -ms-flex-wrap: wrap;
-    /* flex-wrap: wrap; */
-    /* -webkit-box-pack: center; */
+    flex-wrap: wrap;
+    -webkit-box-pack: center;
     -ms-flex-pack: center;
-    /* justify-content: center; */
-    /* padding: 30px 0 15px; */
-    /* padding-right: 140px; */
+    justify-content: center;
 }
 .category {
     margin: auto;
@@ -78,7 +80,8 @@ ol {
     align-items: center;
     height: 250px;
     background-color: orange;
-    margin-bottom: 30px;
+    margin-bottom: 0px;
+    margin-top: 40px;
 }
 #filters {
     width: 100%;
