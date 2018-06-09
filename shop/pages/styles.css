@@ -51,12 +51,12 @@ ol {
 .row {
     width: 64vw;
     height: 66vh;
+    margin-left: 4vw;
 }
 #row {
     position: absolute;
     width: 64vw;
     height: 66vh;
-    margin-left: 4vw;
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
