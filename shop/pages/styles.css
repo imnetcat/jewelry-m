@@ -45,8 +45,8 @@ ol {
     height: 66vh;
 }
 .btn big {
-  position: relative;
-  margin-top: 50%;
+  position: absolute;
+  margin-top: 31vh;
 }
 .btn {
   position: absolute;
