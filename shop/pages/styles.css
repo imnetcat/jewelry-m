@@ -35,36 +35,6 @@ ol {
 .btn.right {
     margin-left: 68vw;
 }
-.btn big {
-  position: relative;
-  margin-top: 50%;
-.btn {
-  position: absolute;
-  height: 66vh;
-  width: 4vw;
-  text-align: center;
-  display: inline-block;
-  text-decoration: none;
-  text-shadow: 0 -1px 2px rgba(0,0,0,.2);
-  outline: none;
-  border-radius: 3px;
-  background: linear-gradient(#f2f2f2, #e6e6e6, #f2f2f2);
-  box-shadow:
-   0 1px rgba(255,255,255,.2) inset,
-   0 3px 5px rgba(0,1,6,.5),
-   0 0 1px 1px rgba(0,1,6,.2);
-}
-.btn:hover:not(:active) {
-  background: linear-gradient(#e6e6e6, #cccccc, #e6e6e6);
-}
-.btn:active {
-  top: 1px;
-  background: linear-gradient(#cccccc, #666666, #cccccc);
-  box-shadow:
-   0 0 1px rgba(0,0,0,.5) inset,
-   0 2px 3px rgba(0,0,0,.5) inset,
-   0 1px 1px rgba(255,255,255,.1);
-}
 #categories {
     width: 72vw;
     height: 86vh;
