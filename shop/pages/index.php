@@ -17,6 +17,8 @@
   <script>
     $( () => {
       $(window).resize( () => {
+	      console.log($('#row').width().toString().split('px')[0]);
+	      console.log($('#row').width().toString().split('px')[0] < 1050);
         if($('#row').width().toString().split('px')[0] < 1050){
 	  $('row').last().remove();
 	  $('row').last().remove();
