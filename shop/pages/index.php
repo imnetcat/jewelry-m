@@ -17,15 +17,15 @@
   <script>
     $( () => {
       $(window).resize( () => {
-        if($('#row').width() < 1050){
+        if($('#row').width().toString().split('px')[0] < 1050){
 	  $('row').last().remove();
 	  $('row').last().remove();
 	}
-	if($('#row').width() < 785){
+	if($('#row').width().toString().split('px')[0] < 785){
 	  $('row').last().remove();
 	  $('row').last().remove();
 	}
-	if($('#row').width() < 755){
+	if($('#row').width().toString().split('px')[0] < 755){
 	  $('row').last().remove();
 	  $('row').last().remove();
 	}
