@@ -3,18 +3,28 @@
   <link rel="stylesheet" href="styles.css" type="text/css">
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
   <script async>
-			$( () => {
-
-				var client_w = screen.width();
-        console.log(client_w);
-        if(client_w < 1024){
-          $('#container').css({
-            "marginLeft": "1vw",
-            "width": "96vw"
-          })
-        }
-
-			});
+    $( () => {
+      var client_w = screen.width();
+      console.log(client_w);
+      if(client_w < 1024){
+        $('#container').css({
+          "marginLeft": "1vw",
+          "width": "96vw"
+        })
+      }
+    });
+  </script>
+  <script>
+    $( () => {
+      $(window).resize( () => {
+        if($('#row').width().split('px')[0] < 1050){
+	  $('row').last().remove();
+	  $('row').last().remove();
+	}
+	if( ($('#row').width().split('px')[0] < 785){
+	  $('row').last().remove();
+	  $('row').last().remove();
+         
   </script>
 </head>
 <body>
