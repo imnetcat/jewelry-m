@@ -30,6 +30,7 @@
 	  $('row').last().remove();
 	}
       });
+    });
   </script>
 </head>
 <body>
