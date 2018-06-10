@@ -29,6 +29,7 @@
 	  $('row').last().remove();
 	  $('row').last().remove();
 	}
+      });
   </script>
 </head>
 <body>
