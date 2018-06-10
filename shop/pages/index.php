@@ -21,10 +21,14 @@
 	  $('row').last().remove();
 	  $('row').last().remove();
 	}
-	if( ($('#row').width().split('px')[0] < 785){
+	if($('#row').width().split('px')[0] < 785){
 	  $('row').last().remove();
 	  $('row').last().remove();
-         
+	}
+	if($('#row').width().split('px')[0] < 755){
+	  $('row').last().remove();
+	  $('row').last().remove();
+	}
   </script>
 </head>
 <body>
