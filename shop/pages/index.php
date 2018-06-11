@@ -15,7 +15,7 @@
     });
     $( () => {    
       var item = '<div class="category"><a><img></a></div>';
-      var row = $('#row')[0];
+      var row = $('#row');
 	  console.log(row);
       row.html(item + item + item + item + item + item + item + item);
 	  console.log(row);
