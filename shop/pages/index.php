@@ -45,15 +45,15 @@
 	    }
 	  }
 	}
-	      console.log(row.children().size());
+	      console.log(row.lenght);
 	if(row.width() < 760){
 	  if(row.width() < oldwidth){
-            if(row.children().lenght >= 6){
+            if(row.lenght >= 6){
 	      row.children().last().remove();
 	      row.children().last().remove();
 	    }
 	  }else{
-            if(row.children().lenght <= 6){
+            if(row.lenght <= 6){
 	      row.append(item);
 	      row.append(item);
 	    }
@@ -61,12 +61,12 @@
 	}
 	if(row.width() < 510){
 	  if(row.width() < oldwidth){
-            if(row.children().lenght >= 4){
+            if(row.lenght >= 4){
 	      row.children().last().remove();
 	      row.children().last().remove();
 	    }
 	  }else{
-            if(row.children().lenght <= 4){
+            if(row.lenght <= 4){
 	      row.append(item);
 	      row.append(item);
 	    }
