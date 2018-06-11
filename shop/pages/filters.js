@@ -1,13 +1,13 @@
 $( () => {
   $('#to_types').click( () => {
-    $('#types').animate({
-      "visibility": "visible"
-    }, 500);
+    $('#types').css({
+      visibility: "visible",
+    });
   });
   $('.fil-close').click( () => {
     $('#types').animate({
-      "visibility": "hidden"
-    }, 500);
+      visibility: "hidden",
+    });
   });
 });
    
