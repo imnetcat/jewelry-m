@@ -38,12 +38,13 @@
 	}
 	if($('#row').width().toString().split('px')[0] < 655){
 	  if($('#row').children().length() >= 4){
-	  copy.remove();
-	  copy.remove();
-	}else{
+	    copy.remove();
+	    copy.remove();
+	  }else{
 	    $('#row').append(copy);
 	    $('#row').append(copy);
 	  }
+	}
       });
     });
   </script>
