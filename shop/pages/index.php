@@ -45,7 +45,7 @@
 	    }
 	  }
 	}
-	      console.log(row.children().lenght);
+	      console.log(row.children().size());
 	if(row.width() < 760){
 	  if(row.width() < oldwidth){
             if(row.children().lenght >= 6){
