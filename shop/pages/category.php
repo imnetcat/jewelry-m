@@ -1,1 +1,1 @@
-$('  <div class="category"><a><img></a></div>  ');
+$('  <div class="category"><a><img></a></div>  ')
