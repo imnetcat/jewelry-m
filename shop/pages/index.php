@@ -22,8 +22,8 @@
 	    $('#row').last().remove();
 	    $('#row').last().remove();
 	  }else{
-	    $('#row').append($('<? include "category.php"; ?>'));
-	    $('#row').append($('<? include "category.php"; ?>'));
+	    $('#row').append(<? include "category.php"; ?>);
+	    $('#row').append(<? include "category.php"; ?>);
 	  }
 	}
 	if($('#row').width().toString().split('px')[0] < 950){
@@ -31,8 +31,8 @@
 	    $('#row').last().remove();
 	    $('#row').last().remove();
 	  }else{
-	    $('#row').append($('<? include "category.php"; ?>'));
-	    $('#row').append($('<? include "category.php"; ?>'));
+	    $('#row').append(<? include "category.php"; ?>);
+	    $('#row').append(<? include "category.php"; ?>);
 	  }
 	}
 	if($('#row').width().toString().split('px')[0] < 655){
@@ -40,8 +40,8 @@
 	    $('#row').last().remove();
 	    $('#row').last().remove();
 	  }else{
-	    $('#row').append($('<? include "category.php"; ?>'));
-	    $('#row').append($('<? include "category.php"; ?>'));
+	    $('#row').append(<? include "category.php"; ?>);
+	    $('#row').append(<? include "category.php"; ?>);
 	  }
 	}
       });
