@@ -2,15 +2,41 @@
 <html><head>
   <link rel="stylesheet" href="styles.css" type="text/css">
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
-  <script async>
+  <script>
     $( () => {
-      var client_w = screen.width();
+      var client_w = screen.width;
       console.log(client_w);
       if(client_w < 1024){
         $('#container').css({
           "marginLeft": "1vw",
           "width": "96vw"
         })
+      }
+	    
+      var copy = <? include "category.php"; ?>
+      if($('#row').width().toString().split('px')[0] < 1200){
+	$('#row').append(copy);
+	$('#row').append(copy);
+	$('#row').append(copy);
+	$('#row').append(copy);
+	$('#row').append(copy);
+        $('#row').append(copy);
+	$('#row').append(copy);
+	$('#row').append(copy);
+      }
+      if($('#row').width().toString().split('px')[0] < 950){
+	$('#row').append(copy);
+	$('#row').append(copy);
+	$('#row').append(copy);
+	$('#row').append(copy);
+	$('#row').append(copy);
+	$('#row').append(copy);
+      }
+      if($('#row').width().toString().split('px')[0] < 655){
+	$('#row').append(copy);
+	$('#row').append(copy);
+	$('#row').append(copy);
+	$('#row').append(copy);
       }
     });
   </script>
@@ -32,7 +58,7 @@
 	    $('#row').last().remove();
 	    $('#row').last().remove();
 	  }else{
-	    $('#row').append();
+	    $('#row').append(copy);
 	    $('#row').append(copy);
 	  }
 	}
