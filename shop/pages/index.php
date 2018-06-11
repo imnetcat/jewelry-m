@@ -34,7 +34,7 @@
 	  console.log(row.children());
 	  $('.btn.left').after(row);
       $(window).resize( () => {
-        if($('#row').width() < 1200){
+        if($('#row').width() < 1010){
 	  if($('#row').children().length >= 8){
 	    row.children().last().remove();
 	    row.children().last().remove();
@@ -43,7 +43,7 @@
 	    $('#row').append(item);
 	  }
 	}
-	if($('#row').width() < 950){
+	if($('#row').width() < 760){
 	  if($('#row').children().length >= 6){
 	    row.children().last().remove();
 	    row.children().last().remove();
@@ -52,7 +52,7 @@
 	    $('#row').append(item);
 	  }
 	}
-	if($('#row').width() < 655){
+	if($('#row').width() < 510){
 	  if($('#row').children().length >= 4){
 	    row.children().last().remove();
 	    row.children().last().remove();
