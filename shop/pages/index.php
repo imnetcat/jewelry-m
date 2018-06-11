@@ -25,16 +25,16 @@
       $('#row')[0].append(copy[0]);
       $('#row')[0].append(copy[0]);
       $('#row')[0].append(copy[0]);
-	  console.log($('#row'));
-      if($('#row')[0].width() < 1200){
+	  console.log($('#row')[0]);
+      if($('#row').width() < 1200){
 	$('#row')[0].last().remove();
 	$('#row')[0].last().remove();
       }
-      if($('#row')[0].width()< 950){
+      if($('#row').width()< 950){
 	$('#row')[0].last().remove();
 	$('#row')[0].last().remove();
       }
-      if($('#row')[0].width() < 655){
+      if($('#row').width() < 655){
 	$('#row')[0].last().remove();
 	$('#row')[0].last().remove();
       }
