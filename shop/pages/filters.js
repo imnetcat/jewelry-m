@@ -1,12 +1,12 @@
 $( () => {
   $('#to_types').click( () => {
     $('#types').animate({
-      visibility: visible;
+      visibility: visible
     }, 500);
   });
   $('.fil-close').click( () => {
     $('#types'.animate({
-      visibility: hidden;
+      visibility: hidden
     }, 500);
   });
    
