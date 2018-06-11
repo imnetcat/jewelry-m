@@ -36,33 +36,34 @@
   </script>
   <script>
     $( () => {
-      var copy = <? include "category.php"; ?>
+      var item = '<div class="item"><a><img></a></div>';
+      var row = $('#row');
       $(window).resize( () => {
-        if($('#row')[0].width() < 1200){
-	  if($('#row')[0].children().length >= 8){
-	    $('#row')[0].last().remove();
-	    $('#row')[0].last().remove();
+        if($('#row').width() < 1200){
+	  if($('#row').children().length >= 8){
+	    row.children().last().remove();
+	    row.children().last().remove();
 	  }else{
-	    $('#row')[0].append(copy[0]);
-	    $('#row')[0].append(copy[0]);
+	    $('#row').append(item);
+	    $('#row').append(item);
 	  }
 	}
-	if($('#row')[0].width() < 950){
-	  if($('#row')[0].children().length >= 6){
-	    $('#row')[0].last().remove();
-	    $('#row')[0].last().remove();
+	if($('#row').width() < 950){
+	  if($('#row').children().length >= 6){
+	    row.children().last().remove();
+	    row.children().last().remove();
 	  }else{
-	    $('#row')[0].append(copy[0]);
-	    $('#row')[0].append(copy[0]);
+	    $('#row').append(item);
+	    $('#row').append(item);
 	  }
 	}
-	if($('#row')[0].width() < 655){
-	  if($('#row')[0].children().length >= 4){
-	    $('#row')[0].last().remove();
-	    $('#row')[0].last().remove();
+	if($('#row').width() < 655){
+	  if($('#row').children().length >= 4){
+	    row.children().last().remove();
+	    row.children().last().remove();
 	  }else{
-	    $('#row')[0].append(copy[0]);
-	    $('#row')[0].append(copy[0]);
+	    $('#row').append(item);
+	    $('#row').append(item);
 	  }
 	}
       });
