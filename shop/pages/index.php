@@ -19,7 +19,7 @@
       var copy = <? include "category.php"; ?>
       $(window).resize( () => {
         if($('#row').width().toString().split('px')[0] < 1200){
-	  if($('#row').children().length() >= 8){
+	  if($('#row').children().length >= 8){
 	    $('#row').last().remove();
 	    $('#row').last().remove();
 	  }else{
@@ -28,7 +28,7 @@
 	  }
 	}
 	if($('#row').width().toString().split('px')[0] < 950){
-	  if($('#row').children().length() >= 6){
+	  if($('#row').children().length >= 6){
 	    $('#row').last().remove();
 	    $('#row').last().remove();
 	  }else{
@@ -37,7 +37,7 @@
 	  }
 	}
 	if($('#row').width().toString().split('px')[0] < 655){
-	  if($('#row').children().length() >= 4){
+	  if($('#row').children().length >= 4){
 	    $('#row').last().remove();
 	    $('#row').last().remove();
 	  }else{
