@@ -18,6 +18,10 @@
       $('#row').append(copy);
       $('#row').append(copy);
       $('#row').append(copy);
+      $('#row').append(copy);
+      $('#row').append(copy);
+      $('#row').append(copy);
+      $('#row').append(copy);
       if($('#row').width() < 1200){
 	$('#row').last().remove();
 	$('#row').last().remove();
