@@ -14,23 +14,23 @@
       }
     });
     $( () => {    
-      var item = '<div class="category"><a><img></a></div>';
+      var item = '<div class="item"><a><img></a></div>';
       var row = $('#row');
 	  console.log(row);
       row.html(item + item + item + item + item + item + item + item);
-	  console.log(row);
       if($('#row').width() < 1200){
-	row.last().remove();
-	row.last().remove();
+	row.children().last().remove();
+	row.children().last().remove();
       }
       if($('#row').width()< 950){
-	row.last().remove();
-	row.last().remove();
+	row.children().last().remove();
+	row.children().last().remove();
       }
       if($('#row').width() < 655){
-	row.last().remove();
-	row.last().remove();
+	row.children().last().remove();
+	row.children().last().remove();
       }
+	  console.log(row);
 	  $('.btn.left').after(row);
     });
   </script>
