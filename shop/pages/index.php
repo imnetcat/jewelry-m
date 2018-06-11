@@ -16,21 +16,34 @@
   </script>
   <script>
     $( () => {
+      var copy = $('<? include "category.php'; ?>');
       $(window).resize( () => {
-	      console.log($('#row').width().toString().split('px')[0]);
-	      console.log($('#row').width().toString().split('px')[0] < 1050);
-        if($('#row').width().toString().split('px')[0] < 1050){
-	  $('row').last().remove();
-	  $('row').last().remove();
+        if($('#row').width().toString().split('px')[0] < 1200){
+	  if($('#row').children().length() >= 8){
+	    copy.remove();
+	    copy.remove();
+	  }else{
+	    $('#row').append(copy);
+	    $('#row').append(copy);
+	  }
 	}
-	if($('#row').width().toString().split('px')[0] < 785){
-	  $('row').last().remove();
-	  $('row').last().remove();
+	if($('#row').width().toString().split('px')[0] < 950){
+	  if($('#row').children().length() >= 6){
+	    copy.remove();
+	    copy.remove();
+	  }else{
+	    $('#row').append(copy);
+	    $('#row').append(copy);
+	  }
 	}
-	if($('#row').width().toString().split('px')[0] < 755){
-	  $('row').last().remove();
-	  $('row').last().remove();
-	}
+	if($('#row').width().toString().split('px')[0] < 655){
+	  if($('#row').children().length() >= 4){
+	  copy.remove();
+	  copy.remove();
+	}else{
+	    $('#row').append(copy);
+	    $('#row').append(copy);
+	  }
       });
     });
   </script>
