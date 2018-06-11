@@ -23,11 +23,11 @@
 	row.children().last().remove();
 	row.children().last().remove();
       }
-      if($('#row').width()< 900){
+      if($('#row').width()< 760){
 	row.children().last().remove();
 	row.children().last().remove();
       }
-      if($('#row').width() < 750){
+      if($('#row').width() < 510){
 	row.children().last().remove();
 	row.children().last().remove();
       }
