@@ -16,6 +16,7 @@
     $( () => {    
       var copy = <? include "category.php"; ?>
 	  console.log(copy[0]);
+	  console.log($('#row'));
       $('#row').append(copy[0]);
       $('#row').append(copy[0]);
       $('#row').append(copy[0]);
@@ -24,6 +25,7 @@
       $('#row').append(copy[0]);
       $('#row').append(copy[0]);
       $('#row').append(copy[0]);
+	  console.log($('#row'));
       if($('#row').width() < 1200){
 	$('#row').last().remove();
 	$('#row').last().remove();
@@ -41,6 +43,7 @@
   <script>
     $( () => {
       var copy = <? include "category.php"; ?>
+	  console.log($('#row'));
       $(window).resize( () => {
         if($('#row').width() < 1200){
 	  if($('#row').children().length >= 8){
