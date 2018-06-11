@@ -31,7 +31,7 @@
 	row.last().remove();
 	row.last().remove();
       }
-	  console.log(row);
+	  $('.btn.left').after(row);
     });
   </script>
   <script>
