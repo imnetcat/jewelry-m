@@ -16,7 +16,7 @@
   </script>
   <script>
     $( () => {
-      var copy = $('<? include "category.php'; ?>');
+      var copy = $('<? include "category.php"; ?>');
       $(window).resize( () => {
         if($('#row').width().toString().split('px')[0] < 1200){
 	  if($('#row').children().length() >= 8){
