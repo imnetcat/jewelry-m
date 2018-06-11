@@ -91,7 +91,7 @@ ol {
     -ms-flex-pack: center;
     justify-content: center;
 }
-.category {
+.item {
     margin: auto;
     display: -webkit-box;
     display: -ms-flexbox;
