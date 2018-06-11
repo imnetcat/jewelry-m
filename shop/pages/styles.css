@@ -100,9 +100,9 @@ ol {
     margin-top: 40px;
 }
 #filters {
-    width: 68vw;
-    height: 20vh;        
-    margin-top: 66vh;
+    width: 64vw;
+    height: 15vh;        
+    margin-top: 69vh;
     margin-left: 4vw;
     position: absolute;
     z-index: 99;
@@ -110,14 +110,14 @@ ol {
 #types {
   visibility: hidden;
   position: absolute;
-  width: 68vw;
-  height: 20vh; 
+  width: 64vw;
+  height: 15vh; 
   background-color: white;
 }
 #to_filters {
     width: 64vw;
-    height: 18vh;
-    margin-top: 66vh;
+    height: 15vh;
+    margin-top: 69vh;
     margin-left: 4vw;
     position: absolute;
     display: -webkit-box;
@@ -156,4 +156,17 @@ ol {
 }
 #to_types:active { 
   background: white;
+}
+#filtersHead {
+    width: 64vw;
+    height: 3vh;        
+    margin-top: 66vh;
+    margin-left: 4vw;
+    position: absolute;
+    text-align: center;
+}
+#filtersHead h3 {
+  font-weight: 1200;
+  text-align: center;
+  border-bottom: 1px solid;
 }
