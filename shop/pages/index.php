@@ -19,15 +19,15 @@
 	  console.log(row.children()); 
       row.html(item + item + item + item + item + item + item + item);
 	  console.log(row.children());
-      if($('#row').width() < 1200){
+      if($('#row').width() < 1010){
 	row.children().last().remove();
 	row.children().last().remove();
       }
-      if($('#row').width()< 950){
+      if($('#row').width()< 900){
 	row.children().last().remove();
 	row.children().last().remove();
       }
-      if($('#row').width() < 655){
+      if($('#row').width() < 750){
 	row.children().last().remove();
 	row.children().last().remove();
       }
