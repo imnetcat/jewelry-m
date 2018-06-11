@@ -7,10 +7,8 @@
   </div>
 </div>
 <div id="filters">
-  <div id="filter">
-   <? include "filters.html"; ?>
-  </div>
-  <div id="to_filters">
-   <? include "to_filters.html"; ?>
-  </div>
+ <? include "filters.html"; ?>
+</div>
+<div id="to_filters">
+ <? include "to_filters.html"; ?>
 </div>
