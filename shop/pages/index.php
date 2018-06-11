@@ -30,8 +30,9 @@
 	row.children().last().remove();
 	row.children().last().remove();
       }
-	  console.log(row.children());
-	    oldwidth = row.width();
+      oldwidth = row.width();
+      console.log(oldwidth);
+      console.log(row.children());
       $(window).resize( () => {
         if(row.width() < 1010){
 	  if(row.width() < oldwidth){
@@ -60,6 +61,8 @@
 	    row.append(item);
 	  }
 	}
+	oldwidth = row.width();
+	console.log(oldwidth);
 	console.log(row.children());
       });
     });
