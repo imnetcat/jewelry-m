@@ -40,7 +40,7 @@
 	    }
 	  }
 	}
-	if(row.width() < 1010){
+	if(row.width() > 1010){
 	  if(row.width() > oldwidth){
             if(row.children().length < 8){
 	      row.append(item);
@@ -56,7 +56,7 @@
 	    }
 	  }
 	}
-	if(row.width() < 760){
+	if(row.width() > 760){
 	  if(row.width() > oldwidth){
             if(row.children().length <= 6){
 	      row.append(item);
@@ -72,9 +72,9 @@
 	    }
 	  }
 	}
-	if(row.width() < 510){
+	if(row.width() > 510){
 	  if(row.width() > oldwidth){
-            if(row.children().length <= 4){
+            if(row.children().length < 4){
 	      row.append(item);
 	      row.append(item);
 	    }
