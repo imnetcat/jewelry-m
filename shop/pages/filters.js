@@ -9,4 +9,5 @@ $( () => {
       visibility: hidden
     }, 500);
   });
+});
    
