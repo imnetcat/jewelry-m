@@ -1,9 +1,9 @@
 <div id="items">
   <div class="row">
-    <div class="btn left"><big><big><big><</big></big></big></div>
+    <div class="btn left"><img></div>
     <div id="row">
     </div>
-    <div class="btn right"><big><big><big>></big></big></big></div>
+    <div class="btn right"><img></div>
   </div>
 </div>
 <div id="filters">
