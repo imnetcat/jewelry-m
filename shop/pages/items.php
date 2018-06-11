@@ -1,7 +1,7 @@
 <div id="categories">
   <div class="row">
     <div class="btn left"><big>&lt;</big></div>
-    <div id="row">
+    <div id="row" style="background-color: black;">
     </div>
     <div class="btn right"><big>&gt;</big></div>
 </div>
