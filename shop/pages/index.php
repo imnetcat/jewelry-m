@@ -16,9 +16,9 @@
     $( () => {    
       var item = '<div class="item"><a><img></a></div>';
       var row = $('#row');
-	  console.log(row); 
 	  console.log(row.children()); 
       row.html(item + item + item + item + item + item + item + item);
+	  console.log(row.children());
       if($('#row').width() < 1200){
 	row.children().last().remove();
 	row.children().last().remove();
@@ -31,7 +31,7 @@
 	row.children().last().remove();
 	row.children().last().remove();
       }
-	  console.log(row);
+	  console.log(row.children());
 	  $('.btn.left').after(row);
       $(window).resize( () => {
         if($('#row').width() < 1200){
@@ -62,6 +62,8 @@
 	  }
 	}
       });
+	    
+	  console.log(row.children());
     });
   </script>
 </head>
