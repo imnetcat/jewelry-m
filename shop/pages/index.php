@@ -31,17 +31,17 @@
       }
       oldwidth = row.width();
       console.log(oldwidth);
-	    console.log(row.length);
+	    console.log(row.children().length);
       $(window).resize( () => {
-	    console.log(row.length);
+	    console.log(row.children().length);
         if(row.width() < 1010){
 	  if(row.width() < oldwidth){
-            if(row.length == 8){
+            if(row.children().length == 8){
 	      row.children().last().remove();
 	      row.children().last().remove();
 	    }
 	  }else{
-            if(row.length < 8){
+            if(row.children().length < 8){
 	      row.append(item);
 	      row.append(item);
 	    }
@@ -49,12 +49,12 @@
 	}
 	if(row.width() < 760){
 	  if(row.width() < oldwidth){
-            if(row.length >= 6){
+            if(row.children().length >= 6){
 	      row.children().last().remove();
 	      row.children().last().remove();
 	    }
 	  }else{
-            if(row.length <= 6){
+            if(row.children().length <= 6){
 	      row.append(item);
 	      row.append(item);
 	    }
@@ -62,12 +62,12 @@
 	}
 	if(row.width() < 510){
 	  if(row.width() < oldwidth){
-            if(row.length >= 4){
+            if(row.children().length >= 4){
 	      row.children().last().remove();
 	      row.children().last().remove();
 	    }
 	  }else{
-            if(row.length <= 4){
+            if(row.children().length <= 4){
 	      row.append(item);
 	      row.append(item);
 	    }
