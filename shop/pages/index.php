@@ -14,18 +14,10 @@
       }
     });
     $( () => {    
-      var copy = <? include "category.php"; ?> ;
+      var item = '<div class="category"><a><img></a></div>';
       var row = $('#row')[0];
-	  console.log(copy[0]);
 	  console.log(row);
-      row.append(copy[0]);
-      row.append(copy[0]);
-      row.append(copy[0]);
-      row.append(copy[0]);
-      row.append(copy[0]);
-      row.append(copy[0]);
-      row.append(copy[0]);
-      row.append(copy[0]);
+      row.html(item + item + item + item + item + item + item + item);
 	  console.log(row);
       if($('#row').width() < 1200){
 	row.last().remove();
@@ -39,6 +31,7 @@
 	row.last().remove();
 	row.last().remove();
       }
+	  console.log(row);
     });
   </script>
   <script>
