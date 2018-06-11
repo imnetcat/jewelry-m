@@ -36,29 +36,41 @@
       $(window).resize( () => {
         if(row.width() < 1010){
 	  if(row.width() < oldwidth){
-	    row.children().last().remove();
-	    row.children().last().remove();
+            if(row.children().lenght == 8){
+	      row.children().last().remove();
+	      row.children().last().remove();
+	    }
 	  }else{
-	    row.append(item);
-	    row.append(item);
+            if(row.children().lenght < 8){
+	      row.append(item);
+	      row.append(item);
+	    }
 	  }
 	}
 	if(row.width() < 760){
 	  if(row.width() < oldwidth){
-	    row.children().last().remove();
-	    row.children().last().remove();
+            if(row.children().lenght >= 6){
+	      row.children().last().remove();
+	      row.children().last().remove();
+	    }
 	  }else{
-	    row.append(item);
-	    row.append(item);
+            if(row.children().lenght < 6){
+	      row.append(item);
+	      row.append(item);
+	    }
 	  }
 	}
 	if(row.width() < 510){
 	  if(row.width() < oldwidth){
-	    row.children().last().remove();
-	    row.children().last().remove();
+            if(row.children().lenght >= 4){
+	      row.children().last().remove();
+	      row.children().last().remove();
+	    }
 	  }else{
-	    row.append(item);
-	    row.append(item);
+            if(row.children().lenght < 4){
+	      row.append(item);
+	      row.append(item);
+	    }
 	  }
 	}
 	oldwidth = row.width();
