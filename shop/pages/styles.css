@@ -6,7 +6,7 @@ body {
   height: 5vh;
   margin-left: 11vw;
   background-color: white;
-  box-shadow: 0 0 5px, black;
+  box-shadow: 0 0 5px black;
 }
 #container {
   width: 72vw;
@@ -14,7 +14,7 @@ body {
   margin-left: 14vw;
   margin-top: 2vh;
   background-color: white;
-  box-shadow: 0 0 5px, black;
+  box-shadow: 0 0 5px black;
 }
 .left-menu {
   position: absolute;
@@ -110,5 +110,5 @@ ol {
 #filters {
     width: 100%;
     height: 20vh;
-    box-shadow: 0 0 5px, black;
+    box-shadow: 0 0 5px black;
 }
