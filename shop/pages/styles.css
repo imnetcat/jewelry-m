@@ -104,6 +104,7 @@ ol {
     height: 20vh;    
     margin-top: 66vh;
     position: absolute;
+    z-index: 99;
 }
 #types {
   visibility: hidden;
@@ -132,16 +133,13 @@ ol {
   background-color: white;
   font-weight: 700;
   width: 60px;
+  height: 20px;
   margin-left: 4%;
   margin-top: 2%;
   margin-bottom: 2%;
   text-align: center;
-  text-decoration: none;
-  user-select: none;
   padding: .5em 2em;
-  outline: none;
   border: 2px solid black;
-  border-radius: 0 4px 0 4px;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
