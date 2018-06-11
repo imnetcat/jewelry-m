@@ -47,6 +47,10 @@
 	    }
 	  }
 	}
+	      console.log(row.width() < 760);
+	      console.log(row.width() + ' < ' + oldwidth);
+	      console.log(row.width() < oldwidth);
+	      console.log(row.children().lenght >= 6);
 	if(row.width() < 760){
 	  if(row.width() < oldwidth){
             if(row.children().lenght >= 6){
