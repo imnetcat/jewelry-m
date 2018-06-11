@@ -16,14 +16,15 @@
   </script>
   <script>
     $( () => {
+      var copy = <? include "category.php"; ?>
       $(window).resize( () => {
         if($('#row').width().toString().split('px')[0] < 1200){
 	  if($('#row').children().length() >= 8){
 	    $('#row').last().remove();
 	    $('#row').last().remove();
 	  }else{
-	    $('#row').append(<? include "category.php"; ?>);
-	    $('#row').append(<? include "category.php"; ?>);
+	    $('#row').append(copy);
+	    $('#row').append(copy);
 	  }
 	}
 	if($('#row').width().toString().split('px')[0] < 950){
@@ -31,8 +32,8 @@
 	    $('#row').last().remove();
 	    $('#row').last().remove();
 	  }else{
-	    $('#row').append(<? include "category.php"; ?>);
-	    $('#row').append(<? include "category.php"; ?>);
+	    $('#row').append();
+	    $('#row').append(copy);
 	  }
 	}
 	if($('#row').width().toString().split('px')[0] < 655){
@@ -40,8 +41,8 @@
 	    $('#row').last().remove();
 	    $('#row').last().remove();
 	  }else{
-	    $('#row').append(<? include "category.php"; ?>);
-	    $('#row').append(<? include "category.php"; ?>);
+	    $('#row').append(copy);
+	    $('#row').append(copy);
 	  }
 	}
       });
