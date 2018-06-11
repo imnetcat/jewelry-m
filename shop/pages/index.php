@@ -33,12 +33,6 @@
       }
 	  console.log(row);
 	  $('.btn.left').after(row);
-    });
-  </script>
-  <script>
-    $( () => {
-      var item = '<div class="item"><a><img></a></div>';
-      var row = $('#row');
       $(window).resize( () => {
         if($('#row').width() < 1200){
 	  if($('#row').children().length >= 8){
