@@ -17,7 +17,7 @@
       var item = '<div class="item"><a><img></a></div>';
       var row = $('#row');
 	  console.log(row); 
-	  console.log(row.html()); 
+	  console.log(row.children()); 
       row.html(item + item + item + item + item + item + item + item);
       if($('#row').width() < 1200){
 	row.children().last().remove();
