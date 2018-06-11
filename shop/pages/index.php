@@ -17,7 +17,6 @@
       var item = '<div class="item"><a><img></a></div>';
       var row = $('#row');
       row.html(item + item + item + item + item + item + item + item);
-	  console.log(row.children());
       if(row.width() < 1010){
 	row.children().last().remove();
 	row.children().last().remove();
@@ -32,7 +31,6 @@
       }
       oldwidth = row.width();
       console.log(oldwidth);
-      console.log(row.children());
       $(window).resize( () => {
         if(row.width() < 1010){
 	  if(row.width() < oldwidth){
@@ -79,7 +77,6 @@
 	}
 	oldwidth = row.width();
 	console.log(oldwidth);
-	console.log(row.children());
       });
     });
   </script>
