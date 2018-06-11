@@ -5,7 +5,7 @@ $( () => {
     }, 500);
   });
   $('.fil-close').click( () => {
-    $('#types'.animate({
+    $('#types').animate({
       visibility: hidden
     }, 500);
   });
