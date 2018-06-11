@@ -34,26 +34,25 @@
       $(window).resize( () => {
         if(row.width() < 1010){
 	  if(row.width() < oldwidth){
-            if(row.children().lenght == 8){
+            if(row.length == 8){
 	      row.children().last().remove();
 	      row.children().last().remove();
 	    }
 	  }else{
-            if(row.children().lenght < 8){
+            if(row.length < 8){
 	      row.append(item);
 	      row.append(item);
 	    }
 	  }
 	}
-	      console.log(row.lenght);
 	if(row.width() < 760){
 	  if(row.width() < oldwidth){
-            if(row.lenght >= 6){
+            if(row.length >= 6){
 	      row.children().last().remove();
 	      row.children().last().remove();
 	    }
 	  }else{
-            if(row.lenght <= 6){
+            if(row.length <= 6){
 	      row.append(item);
 	      row.append(item);
 	    }
@@ -61,12 +60,12 @@
 	}
 	if(row.width() < 510){
 	  if(row.width() < oldwidth){
-            if(row.lenght >= 4){
+            if(row.length >= 4){
 	      row.children().last().remove();
 	      row.children().last().remove();
 	    }
 	  }else{
-            if(row.lenght <= 4){
+            if(row.length <= 4){
 	      row.append(item);
 	      row.append(item);
 	    }
