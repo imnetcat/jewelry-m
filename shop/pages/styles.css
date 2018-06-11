@@ -114,6 +114,12 @@ ol {
     margin-top: 66vh;
     position: absolute;
 }
+#to_filter {
+    width: 72vw;
+    height: 20vh;    
+    margin-top: 66vh;
+    position: absolute;
+}
 #types {
   visibility: hidden;
   width: 100%;
