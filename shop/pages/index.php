@@ -12,7 +12,8 @@
           "width": "96vw"
         })
       }
-	    
+    });
+    $( () => {    
       var copy = <? include "category.php"; ?>
       $('#row').append(copy);
       $('#row').append(copy);
