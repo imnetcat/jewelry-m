@@ -1,4 +1,4 @@
-<div id="categories">
+<div id="items">
   <div class="row">
     <div class="btn left"><big>&lt;</big></div>
     <div id="row">
