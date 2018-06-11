@@ -111,8 +111,7 @@ ol {
   visibility: hidden;
   position: absolute;
   width: 68vw;
-  height: 20vh;    
-  margin-left: 4vw;
+  height: 20vh; 
   background-color: white;
 }
 #to_filters {
@@ -128,7 +127,8 @@ ol {
     flex-wrap: wrap;
     -webkit-box-pack: center;
     -ms-flex-pack: center;
-    justify-content: center;
+    justify-content: center;   
+    z-index: 100;
 }
 #to_types {
   display: inline-block;
