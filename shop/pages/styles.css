@@ -114,3 +114,9 @@ ol {
     margin-top: 66vh;
     position: absolute;
 }
+#types {
+  visibility: hidden;
+  width: 100%;
+  heidht: 100%;
+  background-color: white;
+}
