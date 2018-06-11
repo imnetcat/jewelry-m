@@ -6,4 +6,11 @@
     <div class="btn right"><big>&gt;</big></div>
   </div>
 </div>
-<? include "filters.html"; ?>
+<div id="filters">
+  <div id="filter">
+   <? include "filters.html"; ?>
+  </div>
+  <div id="to_filters">
+   <? include "to_filters.html"; ?>
+  </div>
+</div>
