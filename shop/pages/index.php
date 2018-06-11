@@ -16,33 +16,32 @@
   </script>
   <script>
     $( () => {
-      var copy = $('<? include "category.php"; ?>');
       $(window).resize( () => {
         if($('#row').width().toString().split('px')[0] < 1200){
 	  if($('#row').children().length() >= 8){
-	    copy.remove();
-	    copy.remove();
+	    $('#row').last().remove();
+	    $('#row').last().remove();
 	  }else{
-	    $('#row').append(copy);
-	    $('#row').append(copy);
+	    $('#row').append($('<? include "category.php"; ?>'));
+	    $('#row').append($('<? include "category.php"; ?>'));
 	  }
 	}
 	if($('#row').width().toString().split('px')[0] < 950){
 	  if($('#row').children().length() >= 6){
-	    copy.remove();
-	    copy.remove();
+	    $('#row').last().remove();
+	    $('#row').last().remove();
 	  }else{
-	    $('#row').append(copy);
-	    $('#row').append(copy);
+	    $('#row').append($('<? include "category.php"; ?>'));
+	    $('#row').append($('<? include "category.php"; ?>'));
 	  }
 	}
 	if($('#row').width().toString().split('px')[0] < 655){
 	  if($('#row').children().length() >= 4){
-	    copy.remove();
-	    copy.remove();
+	    $('#row').last().remove();
+	    $('#row').last().remove();
 	  }else{
-	    $('#row').append(copy);
-	    $('#row').append(copy);
+	    $('#row').append($('<? include "category.php"; ?>'));
+	    $('#row').append($('<? include "category.php"; ?>'));
 	  }
 	}
       });
