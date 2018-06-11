@@ -16,31 +16,29 @@
     $( () => {    
       var item = '<div class="item"><a><img></a></div>';
       var row = $('#row');
-	  console.log(row.children()); 
       row.html(item + item + item + item + item + item + item + item);
 	  console.log(row.children());
-      if($('#row').width() < 1010){
+      if(row.width() < 1010){
 	row.children().last().remove();
 	row.children().last().remove();
       }
-      if($('#row').width()< 760){
+      if(row.width()< 760){
 	row.children().last().remove();
 	row.children().last().remove();
       }
-      if($('#row').width() < 510){
+      if(row.width() < 510){
 	row.children().last().remove();
 	row.children().last().remove();
       }
 	  console.log(row.children());
-	  $('.btn.left').after(row);
       $(window).resize( () => {
-        if($('#row').width() < 1010){
-	  if($('#row').children().length >= 8){
+        if(row.width() < 1010){
+	  if(row.children().length >= 8){
 	    row.children().last().remove();
 	    row.children().last().remove();
 	  }else{
-	    $('#row').append(item);
-	    $('#row').append(item);
+	    row.append(item);
+	    row.append(item);
 	  }
 	}
 	if($('#row').width() < 760){
@@ -48,8 +46,8 @@
 	    row.children().last().remove();
 	    row.children().last().remove();
 	  }else{
-	    $('#row').append(item);
-	    $('#row').append(item);
+	    row.append(item);
+	    row.append(item);
 	  }
 	}
 	if($('#row').width() < 510){
@@ -57,13 +55,12 @@
 	    row.children().last().remove();
 	    row.children().last().remove();
 	  }else{
-	    $('#row').append(item);
-	    $('#row').append(item);
+	    row.append(item);
+	    row.append(item);
 	  }
 	}
+	console.log(row.children());
       });
-	    
-	  console.log(row.children());
     });
   </script>
 </head>
