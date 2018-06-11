@@ -130,8 +130,9 @@ ol {
   display: inline-block;
   background-color: white;
   font-weight: 700;
-  width: 100px;
+  width: 70px;
   heidth: 50px;
+  text-align: center;
   text-decoration: none;
   user-select: none;
   padding: .5em 2em;
