@@ -14,29 +14,30 @@
       }
     });
     $( () => {    
-      var copy = <? include "category.php"; ?>
+      var copy = <? include "category.php"; ?> ;
+      var row = $('#row')[0];
 	  console.log(copy[0]);
-	  console.log($('#row')[0]);
-      $('#row')[0].append(copy[0]);
-      $('#row')[0].append(copy[0]);
-      $('#row')[0].append(copy[0]);
-      $('#row')[0].append(copy[0]);
-      $('#row')[0].append(copy[0]);
-      $('#row')[0].append(copy[0]);
-      $('#row')[0].append(copy[0]);
-      $('#row')[0].append(copy[0]);
-	  console.log($('#row')[0]);
+	  console.log(row);
+      row.append(copy[0]);
+      row.append(copy[0]);
+      row.append(copy[0]);
+      row.append(copy[0]);
+      row.append(copy[0]);
+      row.append(copy[0]);
+      row.append(copy[0]);
+      row.append(copy[0]);
+	  console.log(row);
       if($('#row').width() < 1200){
-	$('#row')[0].last().remove();
-	$('#row')[0].last().remove();
+	row.last().remove();
+	row.last().remove();
       }
       if($('#row').width()< 950){
-	$('#row')[0].last().remove();
-	$('#row')[0].last().remove();
+	row.last().remove();
+	row.last().remove();
       }
       if($('#row').width() < 655){
-	$('#row')[0].last().remove();
-	$('#row')[0].last().remove();
+	row.last().remove();
+	row.last().remove();
       }
     });
   </script>
