@@ -58,7 +58,7 @@
 	}
 	if(row.width() > 760){
 	  if(row.width() > oldwidth){
-            if(row.children().length <= 6){
+            if(row.children().length < 6){
 	      row.append(item);
 	      row.append(item);
 	    }
