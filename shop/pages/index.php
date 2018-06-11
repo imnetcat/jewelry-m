@@ -18,15 +18,15 @@
       $('#row').append(copy);
       $('#row').append(copy);
       $('#row').append(copy);
-      if($('#row').width().toString().split('px')[0] < 1200){
+      if($('#row').width().split('px')[0] < 1200){
 	$('#row').last().remove();
 	$('#row').last().remove();
       }
-      if($('#row').width().toString().split('px')[0] < 950){
+      if($('#row').width().split('px')[0] < 950){
 	$('#row').last().remove();
 	$('#row').last().remove();
       }
-      if($('#row').width().toString().split('px')[0] < 655){
+      if($('#row').width().split('px')[0] < 655){
 	$('#row').last().remove();
 	$('#row').last().remove();
       }
