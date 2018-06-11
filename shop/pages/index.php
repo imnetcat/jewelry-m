@@ -33,6 +33,7 @@
       console.log(oldwidth);
 	    console.log(row.length);
       $(window).resize( () => {
+	    console.log(row.length);
         if(row.width() < 1010){
 	  if(row.width() < oldwidth){
             if(row.length == 8){
