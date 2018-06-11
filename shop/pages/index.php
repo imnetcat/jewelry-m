@@ -15,6 +15,7 @@
     });
     $( () => {    
       var copy = <? include "category.php"; ?>
+	  console.log(copy);
       $('#row').append(copy);
       $('#row').append(copy);
       $('#row').append(copy);
@@ -23,6 +24,7 @@
       $('#row').append(copy);
       $('#row').append(copy);
       $('#row').append(copy);
+	  console.log($('#row').width() < 1200);
       if($('#row').width() < 1200){
 	$('#row').last().remove();
 	$('#row').last().remove();
