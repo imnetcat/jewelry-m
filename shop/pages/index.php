@@ -56,7 +56,7 @@
 	      row.children().last().remove();
 	    }
 	  }else{
-            if(row.children().lenght < 6){
+            if(row.children().lenght <= 6){
 	      row.append(item);
 	      row.append(item);
 	    }
@@ -69,7 +69,7 @@
 	      row.children().last().remove();
 	    }
 	  }else{
-            if(row.children().lenght < 4){
+            if(row.children().lenght <= 4){
 	      row.append(item);
 	      row.append(item);
 	    }
