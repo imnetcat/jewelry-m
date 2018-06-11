@@ -45,10 +45,7 @@
 	    }
 	  }
 	}
-	      console.log(row.width() < 760);
-	      console.log(row.width() + ' < ' + oldwidth);
-	      console.log(row.width() < oldwidth);
-	      console.log(row.children().lenght >= 6);
+	      console.log(row.children().lenght);
 	if(row.width() < 760){
 	  if(row.width() < oldwidth){
             if(row.children().lenght >= 6){
