@@ -6,6 +6,7 @@
     <div class="btn right"><img></div>
   </div>
 </div>
+<div id="filtersHead">Фильтры</div>
 <div id="filters">
  <? include "filters.html"; ?>
 </div>
