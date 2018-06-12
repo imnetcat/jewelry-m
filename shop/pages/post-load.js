@@ -79,3 +79,6 @@ $( () => {
 	  console.log(oldwidth);
   });
 });
+$( () => {
+  get_items();
+});
