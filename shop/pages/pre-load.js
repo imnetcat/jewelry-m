@@ -101,19 +101,31 @@ function get_items(){
     },
     success: function(data){
       console.log(data);
-      console.log(php_array_to_js_array(data));
-      console.log(new Array(php_array_to_js_array(data)));
+      php_array_to_js_array(data);
     }
   });
 }
 function php_array_to_js_array(array){
   var splited = array.split('"');
   js_array =  '[ '
-  for( n = 1; n < splited.length; n += 2){
-    js_array += splited[n] + ',';
+  for( n = 1; n < splited.length-2; n += 2){
+    js_array += "'" + splited[n] + '', ';
     console.log(js_array);
   }
-  js_array += splited[n+2];
+  js_array += "'" + splited[n+2] + "'";
   js_array += ' ]';
+  console.log(js_array);
   return js_array;
+}
+class item {
+  constructor(array) {
+    this.id = array[0];
+    this.image = array[1];
+    this.type = array[2];
+    this.filter_2 = array[3];
+    this.filter_3 = array[4];
+    this.filter_4 = array[5];
+    this.filter_5 = array[6];
+    this.description = array[7];
+  }
 }
