@@ -85,7 +85,10 @@ $( () => {
 
 
 function get_items(){
+  console.log($('input:checked').children());
+  console.log(Array.from($('input:checked').children()));
   var raw = Array.from($('input:checked').children());
+  console.log(raw[0].attr('id'));
   filters = [];
   for(n = 0; raw.lenght; i++){
     filters[n] = raw[n].attr('id');
