@@ -85,12 +85,12 @@ $( () => {
 
 
 function get_items(){
-  var raw = $('input:checked');
-  var filters = new Array();
+  var raw = $('#types input:checked');
+  var filters = new Object();
   for(n = 0; n < raw.length; n++){
-    filters[n] = raw[n].id;
+    filters.types += raw[n].id + ",";
   }
-  console.log(filters);
+  console.log(filters.types);
   $.ajax({
     type: "POST",
     url: "actions.php",
