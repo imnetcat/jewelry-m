@@ -14,7 +14,7 @@ function found_items($database, $filters){
       return "Error in:  $query";
     }
   }
-        return $id; 
+        return var_dump($id); 
 }
 function get_items($database, $id){
   for( $x = 0; $x < count($id); $x++ ){
