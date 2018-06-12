@@ -88,10 +88,10 @@ function get_items(){
   var raw = $('input:checked');
   console.log(raw);
   console.log(raw[0]);
-  console.log(raw[0].attr('id'));
+  console.log(raw[0].id);
   filters = [];
   for(n = 0; n < raw.lenght; n++){
-    filters[n] = raw[n].attr('id');
+    filters[n] = raw[n].id);
   }
   console.log(filters);
   $.ajax({
