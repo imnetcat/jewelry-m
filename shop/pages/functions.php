@@ -25,9 +25,9 @@ function get_items($database, $id){
       return "Error in:  $query";
     }
   }
-  return js_array($out);
+  return var_dump($out);
 }
-function js_array($array)
+function to_js_array($array)
 {
     return $temp = array_map('js_str', $array);
     return '[' . implode(',', $temp) . ']';
