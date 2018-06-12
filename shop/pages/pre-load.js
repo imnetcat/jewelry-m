@@ -85,6 +85,8 @@ $( () => {
 
 
 function get_items(){
+  console.log($('input:checked'));
+  console.log($('input:checked').children());  
   var raw = $('input:checked').children().prevObject;
   console.log(raw);
   console.log(raw[0]);
