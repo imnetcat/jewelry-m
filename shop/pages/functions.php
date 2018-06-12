@@ -9,12 +9,12 @@ function found_items($database, $filters){
         for( $n = 0; $n < count($row); $n++ ){
           $id[$n] = $row[$n];
         }
-      }    
+      }  
+    return $id[0];  
     }else{
       return "Error in:  $query";
     }
   }
-  return $id[0];
 }
 function get_items($database, $id){
   for( $x = 0; $x < count($id); $x++ ){
