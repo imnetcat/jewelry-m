@@ -108,6 +108,15 @@ function get_items(){
 }
 function php_array_to_js_array(array){
   var splited = array.split('"');
+	console.log(splited[1]);
+	console.log(splited[3]);
+	console.log(splited[5]);
+	console.log(splited[7]);
+	console.log(splited[9]);
+	console.log(splited[11]);
+	console.log(splited[13]);
+	console.log(splited[15]);
+	console.log(splited[17]);
   console.log(splited.length);
   js_array =  '[ '
  // for( n = 1; n < splited.length; n+2){
