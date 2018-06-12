@@ -114,13 +114,13 @@ function php_array_to_js_array(array){
   var splited = array.split('"');
   js_array =  '[ '
   var length = splited.length;
+	console.log(length);
   length -= 2 
+	console.log(length);
   for( n = 1; n < length; n += 2){
     js_array += "'" + splited[n] + "', ";
-	console.log(js_array);
   }
   js_array += "'" + splited[n+2] + "'";
-	console.log(js_array);
   js_array += ' ]';
 	console.log(js_array);
   return new Array(js_array);
