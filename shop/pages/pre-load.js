@@ -86,10 +86,10 @@ $( () => {
 
 function get_items(){
   var raw = $('input:checked').children().prevObject;
-  console.log(raw[0]); //.split('#')[1]);
+  console.log(raw[0].attr('id'));
   filters = [];
   for(n = 0; raw.lenght; i++){
-    filters[n] = raw[n].split('#')[1];
+    filters[n] = raw[n].attr('id');
   }
   console.log(filters);
   $.ajax({
