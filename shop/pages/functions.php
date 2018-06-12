@@ -6,10 +6,8 @@ function found_items($database, $filters){
     $query ="SELECT id FROM items WHERE type = '$types[$x]'";
     if($result = mysqli_query($database, $query)){
       while ($row = mysqli_fetch_row($result)) {
-        return var_dump($row);
+        return $row;
       }   
-    }else{
-      return "Error in:  $query";
     }
   }
 }
@@ -27,6 +25,6 @@ function get_items($database, $id){
       return "Error in:  $query";
     }
   }
-  return $out;
+  return var_dump($out);
 }
 ?>
