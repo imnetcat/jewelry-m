@@ -101,29 +101,19 @@ function get_items(){
     },
     success: function(data){
       console.log(data);
-      php_array_to_js_array(data);
-     // console.log(new Array(php_array_to_js_array(data)));
+      console.log(php_array_to_js_array(data));
+      console.log(new Array(php_array_to_js_array(data)));
     }
   });
 }
 function php_array_to_js_array(array){
   var splited = array.split('"');
-	console.log(splited[1]);
-	console.log(splited[3]);
-	console.log(splited[5]);
-	console.log(splited[7]);
-	console.log(splited[9]);
-	console.log(splited[11]);
-	console.log(splited[13]);
-	console.log(splited[15]);
-	console.log(splited[17]);
-  console.log(splited.length);
- // js_array =  '[ '
- // for( n = 1; n < splited.length; n+2){
-  //  js_array += splited[n] + ',';
-//	  console.log(js_array);
- // }
-//  js_array += splited[n+2];
-//  js_array += ' ]';
- // return js_array;
+  js_array =  '[ '
+  for( n = 1; n < splited.length; n += 2){
+    js_array += splited[n] + ',';
+    console.log(js_array);
+  }
+  js_array += splited[n+2];
+  js_array += ' ]';
+  return js_array;
 }
