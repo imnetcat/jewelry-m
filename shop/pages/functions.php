@@ -2,7 +2,7 @@
 function get_items($database, $filters){
   $types = explode(",", $filters["types"]);
   for( $x = 0; $x < count($types); $x++ ){
-    $query ="SELECT id FROM items WHERE type = $types[$x]";
+    $query ="SELECT id FROM items WHERE type = '$types[$x]'";
     if($result = mysqli_query($database, $query)){
       $id = array();
       while ($row = mysqli_fetch_row($result)) {
@@ -11,7 +11,7 @@ function get_items($database, $filters){
         }
       }
     }else{
-      return "Error in $query";
+      return "Error in:  $query";
     }
   }
 }
