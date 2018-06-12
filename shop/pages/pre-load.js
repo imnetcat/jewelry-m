@@ -100,7 +100,7 @@ function get_items(){
       filters: filters,
     },
     success: function(data){
-      $('#auth_error').html(data);
+      console.log(data);
     }
   });
 }
