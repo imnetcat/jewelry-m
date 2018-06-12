@@ -15,6 +15,7 @@ function get_items($database, $filters){
     }
   }
   for( $x = 0; $x < count($id); $x++ ){
+    return $id[$x];
     $query ="SELECT id, image, type, filter_2, filter_3, filter_4, filter_5, description FROM items WHERE id = '$id[$x]'";
     if($result = mysqli_query($database, $query)){
       $out = array();
