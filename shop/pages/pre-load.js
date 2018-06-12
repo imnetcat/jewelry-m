@@ -87,7 +87,7 @@ $( () => {
 function get_items(){
   var raw = $('input:checked');
   var filters = new Array();
-  for(n = 0; n < raw.lenght; n++){
+  for(n = 0; n < raw.length; n++){
     filters[n] = raw[n].id;
   }
   console.log(filters);
