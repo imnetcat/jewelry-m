@@ -92,14 +92,14 @@ function get_items(){
   }
   console.log(filters);
   $.ajax({
-	  type: "POST",
-	  url: "actions.php",
-	  data: {
-		  action: 'get_items',
-	  	filters: filters,
-  	},
-  	success: function(data){
-  		$('#auth_error').html(data);
-  	}
+    type: "POST",
+    url: "actions.php",
+    data: {
+      action: 'get_items',
+      filters: filters,
+    },
+    success: function(data){
+      $('#auth_error').html(data);
+    }
   });
 }
