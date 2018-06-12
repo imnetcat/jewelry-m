@@ -1,6 +1,6 @@
 <?
 function get_items($database, $filters){
-  return 1; //$filters->types;
+  return $filters.types;
   $types = explode(",", $filters->types);
   for( $x = 0; $x < count($types); $x++ ){
     $query ="SELECT id FROM items WHERE type = $types[$x]";
