@@ -101,7 +101,18 @@ function get_items(){
     },
     success: function(data){
       console.log(data);
-      console.log(data[0]);
+      console.log(php_array_to_js_array(data));
+      console.log(new Array(php_array_to_js_array(data)));
     }
   });
+}
+function php_array_to_js_array(array){
+  var splited = array.split("/"");
+  js_array =  '[ '
+  for( n = 0; n < splited.length-1; n++){
+    js_array += splited[n] + ',';
+  }
+  js_array += splited[n+1];
+  js_array += ' ]';
+  return js_array;
 }
