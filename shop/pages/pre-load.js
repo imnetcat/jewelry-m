@@ -111,6 +111,7 @@ function php_array_to_js_array(array){
   js_array =  '[ '
   for( n = 1; n < splited.length-2; n+2){
     js_array += splited[n] + ',';
+	  console.log(js_array);
   }
   js_array += splited[n+2];
   js_array += ' ]';
