@@ -100,8 +100,14 @@ function get_items(){
       filters: filters,
     },
     success: function(data){
-      console.log(data);
-      php_array_to_js_array(data);
+      var raw_data = data.split('array');
+      var items = new Array();
+      for( n = 0; n < raw_data.length; n++){
+        var item = new item(php_array_to_js_array(raw_data[n]))
+	items[n] = item;
+        console.log(items);
+      }
+      console.log(items);
     }
   });
 }
@@ -110,12 +116,10 @@ function php_array_to_js_array(array){
   js_array =  '[ '
   for( n = 1; n < splited.length-2; n += 2){
     js_array += "'" + splited[n] + "', ";
-    console.log(js_array);
   }
   js_array += "'" + splited[n+2] + "'";
   js_array += ' ]';
-  console.log(js_array);
-  return js_array;
+  return new Array(js_array);
 }
 class item {
   constructor(array) {
