@@ -9,7 +9,8 @@ function get_items($database, $filters){
         for( $n = 0; $n < count($row); $n++ ){
           $id[$n] = $row[$n];
         }
-      }
+      }    
+    return var_dump($id);
     }else{
       return "Error in:  $query";
     }
