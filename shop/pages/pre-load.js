@@ -101,8 +101,8 @@ function get_items(){
     },
     success: function(data){
       console.log(data);
-      console.log(php_array_to_js_array(data));
-      console.log(new Array(php_array_to_js_array(data)));
+      php_array_to_js_array(data);
+     // console.log(new Array(php_array_to_js_array(data)));
     }
   });
 }
