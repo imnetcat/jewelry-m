@@ -108,13 +108,11 @@ function get_items(){
 }
 function php_array_to_js_array(array){
   var splited = array.split('"');
-	console.log(splited[0]);
-	console.log(splited[1]);
   js_array =  '[ '
-  for( n = 0; n < splited.length-1; n++){
+  for( n = 1; n < splited.length-2; n+2){
     js_array += splited[n] + ',';
   }
-  js_array += splited[n+1];
+  js_array += splited[n+2];
   js_array += ' ]';
   return js_array;
 }
