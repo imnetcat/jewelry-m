@@ -85,7 +85,9 @@ $( () => {
 
 
 function get_items(){
-  var raw = $('input:checked').children(); //.prevObject;
+  var raw = $('input:checked').children().prevObject;
+  console.log(raw);
+  console.log(raw[0]);
   console.log(raw[0].attr('id'));
   filters = [];
   for(n = 0; n < raw.lenght; n++){
