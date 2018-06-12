@@ -10,7 +10,7 @@ function get_items($database, $filters){
           $id[$n] = $row[$n];
         }
       }    
-    return var_dump($id[0]);
+    return $id[0];
     }else{
       return "Error in:  $query";
     }
