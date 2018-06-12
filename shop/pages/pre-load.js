@@ -84,18 +84,6 @@ $( () => {
 });
 
 
-class item {
-  constructor(array) {
-    this.id = array[0];
-    this.image = array[1];
-    this.type = array[2];
-    this.filter_2 = array[3];
-    this.filter_3 = array[4];
-    this.filter_4 = array[5];
-    this.filter_5 = array[6];
-    this.description = array[7];
-  }
-}
 function get_items(){
   var raw = $('#types input:checked');
   var filters = new Object();
@@ -115,7 +103,7 @@ function get_items(){
       var raw_data = data.split('array');
       var items = new Array();
       for( n = 0; n < raw_data.length; n++){
-        var item = new item(php_array_to_js_array(raw_data[n]))
+        var item = new Item(php_array_to_js_array(raw_data[n]))
 	items[n] = item;
         console.log(items);
       }
@@ -132,4 +120,16 @@ function php_array_to_js_array(array){
   js_array += "'" + splited[n+2] + "'";
   js_array += ' ]';
   return new Array(js_array);
+}
+class Item {
+  constructor(array) {
+    this.id = array[0];
+    this.image = array[1];
+    this.type = array[2];
+    this.filter_2 = array[3];
+    this.filter_3 = array[4];
+    this.filter_4 = array[5];
+    this.filter_5 = array[6];
+    this.description = array[7];
+  }
 }
