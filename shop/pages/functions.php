@@ -8,10 +8,9 @@ function found_items($database, $filters){
       while ($row = mysqli_fetch_row($result)) {
         for( $n = 0; $n < count($row); $n++ ){
           $id[$n] = $row[$n];
-      return var_dump($row[$n]); 
         }
+        return $row[$n]; 
       }   
-      return var_dump($row[$n]); 
     }else{
       return "Error in:  $query";
     }
