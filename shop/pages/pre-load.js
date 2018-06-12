@@ -107,7 +107,7 @@ function get_items(){
   });
 }
 function php_array_to_js_array(array){
-  var splited = array.split("/"");
+  var splited = array.split('"');
   js_array =  '[ '
   for( n = 0; n < splited.length-1; n++){
     js_array += splited[n] + ',';
