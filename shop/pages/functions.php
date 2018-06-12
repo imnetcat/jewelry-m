@@ -1,6 +1,7 @@
 <?
 function get_items($database, $filters){
   $types = explode(",", $filters.types);
+  return $types[0];
   for( $x = 0; $x < count($types); $x++ ){
     $query ="SELECT id FROM items WHERE type = $types[$x]";
     if($result = mysqli_query($database, $query)){
