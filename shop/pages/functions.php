@@ -6,15 +6,12 @@ function found_items($database, $filters){
     $query ="SELECT id FROM items WHERE type = '$types[$x]'";
     if($result = mysqli_query($database, $query)){
       while ($row = mysqli_fetch_row($result)) {
-        for( $n = 0; $n < count($row); $n++ ){
-          $id[$n] = $row[$n];
-        }
+        return var_dump($row);
       }   
     }else{
       return "Error in:  $query";
     }
   }
-        return var_dump($id); 
 }
 function get_items($database, $id){
   for( $x = 0; $x < count($id); $x++ ){
