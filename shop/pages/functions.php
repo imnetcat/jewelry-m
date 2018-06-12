@@ -6,7 +6,7 @@ function get_items($database, $filters){
     $id = array();
     while ($row = mysqli_fetch_row($result)) {
       for( $n = 0; n < count($row); $n++ ){
-        $id[$n] = $row[$n];
+        return $id[$n] = $row[$n];
       }
     }
   }
