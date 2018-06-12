@@ -110,10 +110,10 @@ function php_array_to_js_array(array){
   var splited = array.split('"');
   console.log(splited.length);
   js_array =  '[ '
-  for( n = 1; n < splited.length; n+2){
-    js_array += splited[n] + ',';
-	  console.log(js_array);
-  }
+ // for( n = 1; n < splited.length; n+2){
+  //  js_array += splited[n] + ',';
+//	  console.log(js_array);
+ // }
   js_array += splited[n+2];
   js_array += ' ]';
   return js_array;
