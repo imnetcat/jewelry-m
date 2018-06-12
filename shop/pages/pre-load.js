@@ -105,9 +105,9 @@ function get_items(){
         console.log(raw_data);
         console.log(raw_data[0]);
         var item = new Item(php_array_to_js_array(raw_data[n]))
-	items[n] = item;
+	allItems[n] = item;
       }
-      console.log(items);
+      console.log(allItems);
     }
   });
 }
@@ -119,7 +119,7 @@ function php_array_to_js_array(array){
   for( n = 1; n < length; n += 2){
     js_array += "'" + splited[n] + "', ";
   }
-  js_array += "'" + splited[n+2] + "'";
+  js_array += "'" + splited[length+2] + "'";
   js_array += ' ]';
 	console.log(js_array);
   return new Array(js_array);
