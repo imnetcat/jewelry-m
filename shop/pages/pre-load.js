@@ -101,7 +101,6 @@ function get_items(){
     },
     success: function(data){
       var raw_data = data.split('array');
-      var items = new Array();
       for( n = 0; n < raw_data.length; n++){
         var item = new Item(php_array_to_js_array(raw_data[n]))
 	items[n] = item;
@@ -119,6 +118,7 @@ function php_array_to_js_array(array){
   }
   js_array += "'" + splited[n+2] + "'";
   js_array += ' ]';
+	console.log(js_array);
   return new Array(js_array);
 }
 class Item {
