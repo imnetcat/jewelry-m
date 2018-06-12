@@ -87,8 +87,8 @@ $( () => {
 function get_items(){
   var raw = $('#types input:checked');
   var filters = new Object();
-  filters.types = "";
-  for(n = 0; n < raw.length; n++){
+  filters.types = "raw[0].id";
+  for(n = 1; n < raw.length; n++){
     filters.types += raw[n].id + ",";
   }
   console.log(filters.types);
