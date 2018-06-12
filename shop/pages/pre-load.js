@@ -102,23 +102,20 @@ function get_items(){
     success: function(data){
       var raw_data = data.split('array');
       for( n = 0; n < raw_data.length; n++){
+        console.log(raw_data);
+        console.log(raw_data[0]);
         var item = new Item(php_array_to_js_array(raw_data[n]))
 	items[n] = item;
-        console.log(items);
       }
       console.log(items);
     }
   });
 }
 function php_array_to_js_array(array){
-	console.log(array);
   var splited = array.split('"');
-	console.log(splited);
   js_array =  '[ '
   var length = splited.length;
-	console.log(length);
   length -= 2 
-	console.log(length);
   for( n = 1; n < length; n += 2){
     js_array += "'" + splited[n] + "', ";
   }
