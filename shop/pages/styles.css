@@ -165,8 +165,9 @@ ol {
     position: absolute;
     text-align: center;
 }
-#filtersHead h3 {
+h3 {
   font-weight: 1200;
   text-align: center;
+  border-top: 1px solid;
   border-bottom: 1px solid;
 }
