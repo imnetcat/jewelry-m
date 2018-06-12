@@ -85,12 +85,11 @@ $( () => {
 
 
 function get_items(){
-  console.log($('input:checked').children().prevObject);
   var raw = $('input:checked').children().prevObject;
-  console.log(raw[0].attr('id'));
+  console.log(raw[0].split('#')[1]);
   filters = [];
   for(n = 0; raw.lenght; i++){
-    filters[n] = raw[n].attr('id');
+    filters[n] = raw[n].split('#')[1];
   }
   console.log(filters);
   $.ajax({
