@@ -111,7 +111,9 @@ function get_items(){
   });
 }
 function php_array_to_js_array(array){
+	console.log(array);
   var splited = array.split('"');
+	console.log(splited);
   js_array =  '[ '
   var length = splited.length;
 	console.log(length);
