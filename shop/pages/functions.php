@@ -27,8 +27,4 @@ function get_items($database, $id){
   }
   return var_dump($out);
 }
-function to_js_array($array){
-    return $temp = array_map('js_str', $array);
-    return '[' . implode(',', $temp) . ']';
-}
 ?>
