@@ -23,6 +23,8 @@ function get_items($database, $filters){
           return $out[$n] = $row[$n];
         }
       }
+    }else{
+      return "Error in:  $query";
     }
   }
 }
