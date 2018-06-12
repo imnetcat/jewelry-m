@@ -10,6 +10,8 @@ function get_items($database, $filters){
           return 1; //$id[$n] = $row[$n];
         }
       }
+    }else{
+      return "Error in $query";
     }
   }
 }
