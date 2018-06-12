@@ -7,11 +7,22 @@ function get_items($database, $filters){
       $id = array();
       while ($row = mysqli_fetch_row($result)) {
         for( $n = 0; $n < count($row); $n++ ){
-          return $id[$n] = $row[$n];
+          $id[$n] = $row[$n];
         }
       }
     }else{
       return "Error in:  $query";
+    }
+  }
+  for( $x = 0; $x < count($id); $x++ ){
+    $query ="SELECT id, image, type, filter_2, filter_3, filter_4, filter_5, description FROM items WHERE id = '$id[$x]'";
+    if($result = mysqli_query($database, $query)){
+      $out = array();
+      while ($row = mysqli_fetch_row($result)) {
+        for( $n = 0; $n < count($row); $n++ ){
+          return $out[$n] = $row[$n];
+        }
+      }
     }
   }
 }
