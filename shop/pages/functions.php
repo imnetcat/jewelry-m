@@ -20,12 +20,13 @@ function get_items($database, $filters){
       $out = array();
       while ($row = mysqli_fetch_row($result)) {
         for( $n = 0; $n < count($row); $n++ ){
-          return $out[$n] = $row[$n];
+          $out[$n] = $row[$n];
         }
       }
     }else{
       return "Error in:  $query";
     }
   }
+  return $out;
 }
 ?>
