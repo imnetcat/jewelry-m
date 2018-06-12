@@ -10,13 +10,12 @@ function get_items($database, $filters){
           $id[$n] = $row[$n];
         }
       }    
-    return $id[0];
     }else{
       return "Error in:  $query";
     }
   }
   for( $x = 0; $x < count($id); $x++ ){
-    return var_dump($id);
+    return $id[0];
     $query ="SELECT id, image, type, filter_2, filter_3, filter_4, filter_5, description FROM items WHERE id = '$id[$x]'";
     if($result = mysqli_query($database, $query)){
       $out = array();
