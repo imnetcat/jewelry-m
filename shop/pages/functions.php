@@ -11,3 +11,4 @@ function get_items($database, $filters){
     }
   }
 }
+?>
