@@ -25,6 +25,6 @@ function get_items($database, $id){
       return "Error in:  $query";
     }
   }
-  return $out;
+  return js_array($out);
 }
 ?>
