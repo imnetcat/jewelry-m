@@ -102,3 +102,4 @@ function get_items(){
   		$('#auth_error').html(data);
   	}
   });
+}
