@@ -4,7 +4,7 @@ $( () => {
       visibility: "visible",
       zIndex: 100
     });
-    $('#filters').css({
+    $('#to_filters').css({
       visibility: "hidden",
       zIndex: 99
     });
@@ -14,7 +14,7 @@ $( () => {
       visibility: "hidden",
       zIndex: 99
     });
-    $('#filters').css({
+    $('#to_filters').css({
       visibility: "visible",
       zIndex: 100
     });
