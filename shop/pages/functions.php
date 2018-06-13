@@ -23,7 +23,7 @@ function found_items($database, $filters){
       }
     }  
   }
-  return var_dump($id);
+  return $id;
 }
 
 function id_parse($array_of_id){
