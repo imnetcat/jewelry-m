@@ -3,8 +3,8 @@ function found_items($database, $filters){
   $id = array();
   $types = explode(",", $filters["types"]);
   $query ="SELECT id, type FROM items";  
-  if($result = mysqli_query($database, $query)){
-    for( $x = 0; $x < count($types); $x++ ){
+  for( $x = 0; $x < count($types); $x++ ){
+    if($result = mysqli_query($database, $query)){
       while ($row = mysqli_fetch_row($result)) {
         if($row[1] == $types[$x]){
           $id['types'][$x][count($id['types'][$x])] = $row[0];
