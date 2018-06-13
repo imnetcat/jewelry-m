@@ -108,9 +108,10 @@ function filter_out(){
     success: function(data){
       var raw_data = data.split('array');
 	    console.log(data);
+	    console.log(raw_data);
       var allItems = new Array();
       for( n = 1; n < raw_data.length; n++){
-        allItems[n-15] = new Item(php_array_to_js_array(raw_data[n]));
+        allItems[n] = new Item(php_array_to_js_array(raw_data[n]));
         console.log(allItems);
       }
       console.log(allItems);
