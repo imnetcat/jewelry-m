@@ -104,7 +104,7 @@ function get_items(){
       var allItems = new Array();
       for( n = 1; n < raw_data.length-1; n++){
 	      console.log(n);
-	      console.log(raw_data.length-1);
+	      console.log(allItems[n]);
         var item = new Item(php_array_to_js_array(raw_data[n]));
 	allItems[n] = item;
       }
