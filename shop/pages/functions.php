@@ -5,15 +5,14 @@ function found_items($database, $filters){
   $x = 0;
   $query ="SELECT id, type FROM items";
   if($result = mysqli_query($database, $query)){
+    $x = 0;
     while ($row = mysqli_fetch_row($result)) {
-      for( $x = 0; $x < count($id); $x++ ){
-        $id['type'][$x] = $row;
-     // if($row['type'] == $types[$x]){
-     //   $id['types'][$x] = $row['id'];
-     // }else{
-     //   $id['types'][$x] = "";
-     // }
+      if($row[1] == $types[$x]){
+        $id['types'][$x] = $row[0];
+      }else{
+        $id['types'][$x] = "";
       }
+    $x += 1;
     }   
   }
   return var_dump($id);
