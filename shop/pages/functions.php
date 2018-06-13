@@ -39,7 +39,7 @@ function id_parse($array_of_id){
 }
 
 function get_items($database, $id){
-  $items = array();
+  $items = " ";
   $query ="SELECT id, image, type, stone, filter_3, filter_4, filter_5, description FROM items";
   if($result = mysqli_query($database, $query)){
     for( $x = 0; $x < count($id); $x++ ){
