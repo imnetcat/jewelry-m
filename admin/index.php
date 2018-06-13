@@ -52,7 +52,7 @@
 <div id="container"><br><div id="info"></div><br><br><br>
     <? 
     require_once "../db.php";
-    $query ="SELECT id, image, type, filter_2, filter_3, filter_4, filter_5, description  FROM items";
+    $query ="SELECT id, image, type, stone, filter_3, filter_4, filter_5, description  FROM items";
     if($result = mysqli_query($database, $query)){
       while ($row = mysqli_fetch_row($result)) {
         echo "<div class='item'><br>";
