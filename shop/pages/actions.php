@@ -6,7 +6,7 @@ require_once "db.php";
 switch ($_POST['action']){
       case 'get_items':
       $filters = $_POST['filters'];
-      echo found_items($database, $filters); //get_items($database, found_items($database, $filters));
+      echo id_parse(found_items($database, $filters)); //get_items($database, found_items($database, $filters));
       break;
 };
 ?>
