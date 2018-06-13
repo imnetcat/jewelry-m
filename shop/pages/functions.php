@@ -35,7 +35,7 @@ function id_parse($array_of_id){
       }
     }
   }
-  return var_dump($parsed);
+  return $parsed;
 }
 
 function get_items($database, $id){
