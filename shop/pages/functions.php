@@ -44,8 +44,9 @@ function get_items($database, $id){
   if($result = mysqli_query($database, $query)){
     for( $x = 0; $x < count($id); $x++ ){
       while ($row = mysqli_fetch_row($result)) {
-        if($row[1] == $stones[$x]){
+        if($row[0] == $id[$x]){
          $items .= var_dump($row);
+        }
       }
     }
   }
