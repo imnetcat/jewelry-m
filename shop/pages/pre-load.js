@@ -101,6 +101,7 @@ function get_items(){
     },
     success: function(data){
       var raw_data = data.split('array');
+	    console.log(data);
 	    console.log(raw_data);
       var allItems = new Array();
       for( n = 1; n < raw_data.length; n++){
