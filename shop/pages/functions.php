@@ -6,11 +6,12 @@ function found_items($database, $filters){
   $query ="SELECT id, type FROM items";
   if($result = mysqli_query($database, $query)){
     while ($row = mysqli_fetch_assoc($result)) {
-      if($row['type'] == $types[$x]){
-        $id['types'][$x] = $row['id'];
-      }else{
-        $id['types'][$x] = "";
-      }
+      return var_dump($row);
+     // if($row['type'] == $types[$x]){
+     //   $id['types'][$x] = $row['id'];
+     // }else{
+     //   $id['types'][$x] = "";
+     // }
     }   
   }
   return var_dump($id);
