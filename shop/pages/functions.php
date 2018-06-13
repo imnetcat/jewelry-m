@@ -42,8 +42,8 @@ function get_items($database, $id){
   $items = " ";
   $query ="SELECT id, image, type, stone, filter_3, filter_4, filter_5, description FROM items";
   if($result = mysqli_query($database, $query)){
-    for( $x = 0; $x < count($id); $x++ ){
-      while ($row = mysqli_fetch_row($result)) {
+    while ($row = mysqli_fetch_row($result)) {
+      for( $x = 0; $x < count($id); $x++ ){
         if($row[0] == $id[$x]){
          $items .= var_dump($row);
         }
