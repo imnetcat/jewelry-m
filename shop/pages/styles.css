@@ -107,7 +107,7 @@ ol {
     position: absolute;
     z-index: 99;
 }
-#types {
+.filters {
   visibility: hidden;
   position: absolute;
   width: 64vw;
@@ -130,7 +130,7 @@ ol {
     justify-content: center;   
     z-index: 100;
 }
-#to_types {
+.to_fiters {
   display: inline-block;
   background-color: white;
   font-weight: 700;
@@ -151,10 +151,10 @@ ol {
   -webkit-box-align: center;
   -ms-flex-align: center;
 } 
-#to_types:hover { 
+.to_fiters:hover { 
   background: rgba(255,255,255,.2); 
 }
-#to_types:active { 
+.to_fiters:active { 
   background: white;
 }
 #filtersHead {
