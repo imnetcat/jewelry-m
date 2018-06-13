@@ -165,11 +165,15 @@ ol {
     position: absolute;
     text-align: center;
 }
-h3 {
+#filtersHead h3 {
   font-weight: 1000;
   text-align: center;
   border-top: 1px solid;
-  border-bottom: 1px solid;
+  border-bottom: 1px solid;   
+  -webkit-margin-before: 0;
+  -webkit-margin-after: 0;
+  -webkit-margin-start: 0;
+  -webkit-margin-end: 0;
 }
 #types label {
   position: relative;
