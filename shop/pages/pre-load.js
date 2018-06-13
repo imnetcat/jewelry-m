@@ -94,7 +94,7 @@ function filter_out(){
   var raw = $('#stones input:checked');
   filters.stones = raw[0].id + ',';
   for(n = 1; n < raw.length; n++){
-    filters.types += raw[n].id + ",";
+    filters.stones += raw[n].id + ",";
   }
   console.log(filters.types);
   console.log(filters.stones);
