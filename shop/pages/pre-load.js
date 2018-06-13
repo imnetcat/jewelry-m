@@ -127,6 +127,7 @@ function php_array_to_js_array(array){
     js_array += splited[n] + ",";
   }
   js_array += splited[length];
+	console.log(js_array.split(','));
   return js_array.split(',');
 }
 class Item {
