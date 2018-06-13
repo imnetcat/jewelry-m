@@ -4,15 +4,13 @@ function found_items($database, $filters){
   $types = explode(",", $filters["types"]);
   $query ="SELECT id, type FROM items";
   if($result = mysqli_query($database, $query)){
-    $x = 0;
     while ($row = mysqli_fetch_row($result)) {
+      $temp = [];
       if($row[1] == $types[0]){
-        $id['types'][$x] = $row[0];
-      }else{
-        $id['types'][$x] = "";
+        $temp[count($temp)] = $row[0];
       }
-    $x += 1;
     }   
+    $id['types'][0] = $temp;
   }
   return var_dump($id);
 }
