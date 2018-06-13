@@ -7,7 +7,7 @@ function found_items($database, $filters){
     if($result = mysqli_query($database, $query)){
       while ($row = mysqli_fetch_row($result)) {
         //$id['types'] = $row;
-          $id['types'][$x] = $row;
+          $id['types'] = $row;
         return var_dump($id);
       }   
     }
