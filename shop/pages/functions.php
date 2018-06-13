@@ -44,7 +44,7 @@ function get_items($database, $id){
     if($result = mysqli_query($database, $query)){
       //$out = array();
       while ($row = mysqli_fetch_row($result)) {
-        return $row;
+        return var_dump($row);
         //for( $n = 0; $n < count($row); $n++ ){
         //  $out[$n] = $row[$n];
         //}
