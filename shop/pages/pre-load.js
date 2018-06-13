@@ -110,8 +110,7 @@ function filter_out(){
 	    console.log(data);
       var allItems = new Array();
       for( n = 1; n < raw_data.length; n++){
-        var item = new Item(php_array_to_js_array(raw_data[n]));
-	allItems[n] = item;
+        allItems[n-15] = new Item(php_array_to_js_array(raw_data[n]));
         console.log(allItems);
       }
       console.log(allItems);
@@ -127,7 +126,6 @@ function php_array_to_js_array(array){
     js_array += splited[n] + ",";
   }
   js_array += splited[length];
-	console.log(js_array.split(','));
   return js_array.split(',');
 }
 class Item {
