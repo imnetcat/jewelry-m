@@ -103,7 +103,9 @@ function get_items(){
       var raw_data = data.split('array');
       var allItems = new Array();
       for( n = 1; n < raw_data.length; n++){
-        var item = new Item(php_array_to_js_array(raw_data[n]))
+	var temp = php_array_to_js_array(raw_data[n]);
+	console.log(temp);
+        var item = new Item(temp);
 	allItems[n] = item;
       }
       console.log(allItems);
@@ -115,16 +117,11 @@ function php_array_to_js_array(array){
   js_array =  '[ '
   var length = splited.length;
   length -= 2 
-  console.log(length);
-  console.log(length+2);
-  console.log(splited[length]);
-  console.log(splited[length+2]);
   for( n = 1; n < length; n += 2){
     js_array += "'" + splited[n] + "', ";
   }
   js_array += "'" + splited[length] + "'";
   js_array += ' ]';
-	console.log(js_array);
   return new Array(js_array);
 }
 class Item {
