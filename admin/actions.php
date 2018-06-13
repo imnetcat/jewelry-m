@@ -8,12 +8,12 @@ switch ($_POST['action']){
       case 'add_new':
       $image = $_POST['image'];
       $type = $_POST['type'];
-      $filter_2 = $_POST['filter_2'];
+      $stone = $_POST['stone'];
       $filter_3 = $_POST['filter_3'];
       $filter_4 = $_POST['filter_4'];
       $filter_5 = $_POST['filter_5'];
       $description = $_POST['description'];
-      echo add_new($database, $image, $type, $filter_2, $filter_3, $filter_4, $filter_5, $description);
+      echo add_new($database, $image, $type, $stone, $filter_3, $filter_4, $filter_5, $description);
       break;
 };
 ?>
