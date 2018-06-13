@@ -12,7 +12,17 @@ function found_items($database, $filters){
       }
     }  
   }
-  
+  $stones = explode(",", $filters["stones"]);
+  $query ="SELECT id, stone FROM items";  
+  for( $x = 0; $x < count($stone); $x++ ){
+    if($result = mysqli_query($database, $query)){
+      while ($row = mysqli_fetch_row($result)) {
+        if($row[1] == $stones[$x]){
+          $id['stones'][count($id['stones'])] = $row[0];
+        }
+      }
+    }  
+  }
   return var_dump($id);
 }
 function get_items($database, $id){
