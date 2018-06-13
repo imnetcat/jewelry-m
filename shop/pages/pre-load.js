@@ -114,14 +114,14 @@ function get_items(){
 }
 function php_array_to_js_array(array){
   var splited = array.split('"');
-  js_array =  '[ '
+  //js_array =  '[ '
   var length = splited.length;
   length -= 2 
   for( n = 1; n < length; n += 2){
     js_array += "'" + splited[n] + "', ";
   }
   js_array += "'" + splited[length] + "'";
-  js_array += ' ]';
+  //js_array += ' ]';
   return new Array(js_array);
 }
 class Item {
