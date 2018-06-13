@@ -22,7 +22,7 @@
 	  data: {
 	    action: 'add_new',
 	    image: $('#new_image').val(),
-	    filter_1: $('#new_filter_1').val(),
+	    type: $('#new_type').val(),
 	    filter_2: $('#new_filter_2').val(),
 	    filter_3: $('#new_filter_3').val(),
 	    filter_4: $('#new_filter_4').val(),
@@ -42,7 +42,7 @@
 <button id="new">Add new</button><br>
 <button>
 <input id="new_image"><br>
-<input id="new_filter_1"><br>
+<input id="new_type"><br>
 <input id="new_filter_2"><br>
 <input id="new_filter_3"><br>
 <input id="new_filter_4"><br>
@@ -58,7 +58,7 @@
         echo "<div class='item'><br>";
         echo "<span class='id'>" . "Item id: " . $row[0] . "</span><br>";
         echo "<span class='image'>" . "Item image in: " . $row[1] . "</span><br>";
-        echo "<span class='filter_1'>" . "Item filter №1: " . $row[2] . "</span><br>";
+        echo "<span class='type'>" . "Item type: " . $row[2] . "</span><br>";
         echo "<span class='filter_2'>" . "Item filter №2: " . $row[3] . "</span><br>";
         echo "<span class='filter_3'>" . "Item filter №3: " . $row[4] . "</span><br>";
         echo "<span class='filter_4'>" . "Item filter №4: " . $row[5] . "</span><br>";
