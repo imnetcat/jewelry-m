@@ -8,6 +8,8 @@ function found_items($database, $filters){
       while ($row = mysqli_fetch_row($result)) {
         if($row[1] = $types[$x]){
           $id['types'][$x] = $row[0];
+        }else{
+          $id['types'][$x] = "";
         }
       }   
     }
