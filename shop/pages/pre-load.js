@@ -102,7 +102,7 @@ function get_items(){
     success: function(data){
       var raw_data = data.split('array');
       var allItems = new Array();
-      for( n = 1; n < raw_data.length-1; n++){
+      for( n = 1; n < raw_data.length; n++){
 	      console.log(n);
 	      console.log(allItems[n]);
         var item = new Item(php_array_to_js_array(raw_data[n]));
