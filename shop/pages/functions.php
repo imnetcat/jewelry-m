@@ -12,6 +12,7 @@ function found_items($database, $filters){
       }
     }  
   }
+  return var_dump($array_of_id);
   $stones = explode(",", $filters["stones"]);
   $query ="SELECT id, stone FROM items";  
   for( $x = 0; $x < count($stone); $x++ ){
