@@ -101,6 +101,7 @@ function get_items(){
     },
     success: function(data){
       var raw_data = data.split('array');
+      var allItems = new Array();
       for( n = 1; n < raw_data.length; n++){
         console.log(raw_data);
         console.log(raw_data[0]);
@@ -116,10 +117,14 @@ function php_array_to_js_array(array){
   js_array =  '[ '
   var length = splited.length;
   length -= 2 
+  console.log(length);
+  console.log(length+2);
+  console.log(splited[length]);
+  console.log(splited[length+2]);
   for( n = 1; n < length; n += 2){
     js_array += "'" + splited[n] + "', ";
   }
-  js_array += "'" + splited[length+2] + "'";
+  js_array += "'" + splited[length] + "'";
   js_array += ' ]';
 	console.log(js_array);
   return new Array(js_array);
