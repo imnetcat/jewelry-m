@@ -2,16 +2,17 @@
 function found_items($database, $filters){
   $id = array();
   $types = explode(",", $filters["types"]);
-  $query ="SELECT id, type FROM items";
-  $x = 0;
+  $query ="SELECT id, type FROM items";  
   if($result = mysqli_query($database, $query)){
-    while ($row = mysqli_fetch_row($result)) {
-      if($row[1] == $types[0]){
-        $id['types'][0][count($id['types'])] = $row[0];
+    for( $x = 0; $x < count($types); $x++ ){
+      while ($row = mysqli_fetch_row($result)) {
+        if($row[1] == $types[$x]){
+          $id['types'][$x][count($id['types'][$x])] = $row[0];
+        }
       }
-      $x += 1;
-    }   
+    }  
   }
+  
   return var_dump($id);
 }
 function get_items($database, $id){
