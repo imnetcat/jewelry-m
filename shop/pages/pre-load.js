@@ -80,18 +80,24 @@ $( () => {
   });
 });
 $( () => {
-  get_items();
+  filter_out();
 });
 
 
-function get_items(){
+function filter_out(){
   var raw = $('#types input:checked');
   var filters = new Object();
   filters.types = raw[0].id + ',';
   for(n = 1; n < raw.length; n++){
     filters.types += raw[n].id + ",";
   }
+  var raw = $('#stones input:checked');
+  filters.stones = raw[0].id + ',';
+  for(n = 1; n < raw.length; n++){
+    filters.types += raw[n].id + ",";
+  }
   console.log(filters.types);
+  console.log(filters.stones);
   $.ajax({
     type: "POST",
     url: "actions.php",
@@ -106,7 +112,7 @@ function get_items(){
       var allItems = new Array();
       for( n = 1; n < raw_data.length; n++){
         var item = new Item(php_array_to_js_array(raw_data[n]));
-	allItems[n-15] = item;
+	allItems[n] = item;
       }
       console.log(allItems);
     }
