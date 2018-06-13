@@ -21,8 +21,6 @@ function get_items($database, $id){
           $out[$n] = $row[$n];
         }
       }
-    }else{
-      return "Error in:  $query";
     }
   }
   return var_dump($out);
