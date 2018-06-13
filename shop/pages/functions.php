@@ -3,12 +3,12 @@ function found_items($database, $filters){
   $id = array();
   $types = explode(",", $filters["types"]);
   for( $x = 0; $x < count($types); $x++ ){
-    $query ="SELECT id FROM items WHERE type = '$types[$x]'";
+    $query ="SELECT id, type FROM items";
     if($result = mysqli_query($database, $query)){
       while ($row = mysqli_fetch_row($result)) {
-        //$id['types'] = $row;
-          $id['types'] = $row;
-        return var_dump($id);
+        if($row[1] = $types[$x]){
+          $id['types'][$x] += $row[0];
+        }
       }   
     }
   }
