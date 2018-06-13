@@ -23,7 +23,7 @@
 	    action: 'add_new',
 	    image: $('#new_image').val(),
 	    type: $('#new_type').val(),
-	    filter_2: $('#new_filter_2').val(),
+	    stone: $('#new_stone').val(),
 	    filter_3: $('#new_filter_3').val(),
 	    filter_4: $('#new_filter_4').val(),
 	    filter_5: $('#new_filter_5').val(),
@@ -43,7 +43,7 @@
 <button>
 <input id="new_image"><br>
 <input id="new_type"><br>
-<input id="new_filter_2"><br>
+<input id="new_stone"><br>
 <input id="new_filter_3"><br>
 <input id="new_filter_4"><br>
 <input id="new_filter_5"><br>
@@ -59,7 +59,7 @@
         echo "<span class='id'>" . "Item id: " . $row[0] . "</span><br>";
         echo "<span class='image'>" . "Item image in: " . $row[1] . "</span><br>";
         echo "<span class='type'>" . "Item type: " . $row[2] . "</span><br>";
-        echo "<span class='filter_2'>" . "Item filter №2: " . $row[3] . "</span><br>";
+        echo "<span class='stone'>" . "Item filter №2: " . $row[3] . "</span><br>";
         echo "<span class='filter_3'>" . "Item filter №3: " . $row[4] . "</span><br>";
         echo "<span class='filter_4'>" . "Item filter №4: " . $row[5] . "</span><br>";
         echo "<span class='filter_5'>" . "Item filter №5: " . $row[6] . "</span><br>";
