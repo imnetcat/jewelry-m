@@ -6,7 +6,7 @@ function found_items($database, $filters){
     $query ="SELECT id FROM items WHERE type = '$types[$x]'";
     if($result = mysqli_query($database, $query)){
       while ($row = mysqli_fetch_row($result)) {
-        return $row;
+        return var_dump($row);
       }   
     }
   }
