@@ -103,10 +103,9 @@ function get_items(){
       var raw_data = data.split('array');
       var allItems = new Array();
       for( n = 1; n < raw_data.length; n++){
-	      console.log(n);
         var item = new Item(php_array_to_js_array(raw_data[n]));
 	      console.log(allItems);
-	allItems[n] = item;
+	allItems[n-1] = item;
 	      console.log(allItems);
       }
       console.log(allItems);
