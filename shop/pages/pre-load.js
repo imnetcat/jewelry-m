@@ -114,13 +114,13 @@ function get_items(){
 }
 function php_array_to_js_array(array){
   var splited = array.split('"');
-  var js_array = "'" + splited[1] + "',";
+  var js_array = splited[1] + ",";
   var length = splited.length;
   length -= 2 
   for( n = 3; n < length; n += 2){
-    js_array += "'" + splited[n] + "',";
+    js_array += splited[n] + ",";
   }
-  js_array += "'" + splited[length] + "'";
+  js_array += splited[length];
   return js_array.split(',');
 }
 class Item {
