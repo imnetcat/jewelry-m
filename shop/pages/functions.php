@@ -6,9 +6,7 @@ function found_items($database, $filters){
     $query ="SELECT id FROM items WHERE type = '$types[$x]'";
     if($result = mysqli_query($database, $query)){
       while ($row = mysqli_fetch_row($result)) {
-        for( $n = 0; $n < count($id); $n++ ){
-          $id[$x] = $row;
-        }
+        $id[$x] = $row;
       }   
     }
   }
