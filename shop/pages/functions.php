@@ -7,24 +7,23 @@ function found_items($database, $filters){
     if($result = mysqli_query($database, $query)){
       while ($row = mysqli_fetch_row($result)) {
         if($row[1] == $types[$x]){
-          $array_of_id['types'][count($id['types'])] = $row[0];
+          $array_of_id['types'][count($array_of_id['types'])] = $row[0];
         }
       }
     }  
   }
-  return var_dump($array_of_id);
   $stones = explode(",", $filters["stones"]);
   $query ="SELECT id, stone FROM items";  
   for( $x = 0; $x < count($stone); $x++ ){
     if($result = mysqli_query($database, $query)){
       while ($row = mysqli_fetch_row($result)) {
         if($row[1] == $stones[$x]){
-          $array_of_id['stones'][count($id['stones'])] = $row[0];
+          $array_of_id['stones'][count($array_of_id['stones'])] = $row[0];
         }
       }
     }  
   }
-  return var_dump($array_of_id);
+  return $array_of_id;
 }
 
 function id_parse($array_of_id){
