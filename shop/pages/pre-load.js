@@ -109,8 +109,8 @@ function filter_out(){
       var raw_data = data.split('array');
       var allItems = new Array();
       console.log(raw_data);
-      for(n = 0; n < 3; n++){
-        allItems[n] = new Item(php_array_to_js_array(raw_data[n+1])) || null;
+      for( let n = 0; n < 3; n++){
+        allItems[n] = new Item(php_array_to_js_array(raw_data[n+1]));
       }
       console.log(allItems);
     }
@@ -121,7 +121,7 @@ function php_array_to_js_array(array){
   var js_array = splited[1] + ",";
   var length = splited.length;
   length -= 2 
-  for( n = 3; n < length; n += 2){
+  for( let n = 3; n < length; n += 2){
     js_array += splited[n] + ",";
   }
   js_array += splited[length];
