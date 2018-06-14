@@ -106,8 +106,9 @@ function filter_out(){
         allItems[n-1] = new Item(php_array_to_js_array(raw_data[n]));
       }
       console.log(allItems);
-      console.log($('.item'));
-      console.log($('.item').length);
+      for( n = 0; n < $('.item').length; n++){
+        console.log($('.item')[n].attr("src", allItems[n].image));
+      }
     }
   });
 }
