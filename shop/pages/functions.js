@@ -107,7 +107,9 @@ function filter_out(){
       }
       console.log(allItems);
       for( n = 0; n < $('.item').length; n++){
-        console.log($('.item img')[n].attr("src", allItems[n].image));
+        console.log($('.item img'));
+        console.log($('.item img')[n]);
+        //$('.item img')[n].attr("src", allItems[n].image);
       }
     }
   });
