@@ -109,14 +109,11 @@ function filter_out(){
       var raw_data = data.split('array');
       var allItems = new Array();
         console.log(raw_data.length);
-        n = 1;
-      while(n < raw_data.length){
-	console.log(n);
-        console.log(raw_data[n]);
-        allItems[n-1] = new Item(php_array_to_js_array(raw_data[n]));
-        console.log(allItems);
-	n += 1;
-      }
+	    allItems[0] = new Item(php_array_to_js_array(raw_data[1]));
+	    allItems[1] = new Item(php_array_to_js_array(raw_data[2]));
+      //for(n = 1; n < raw_data.length; n++){
+      //  allItems[n-1] = new Item(php_array_to_js_array(raw_data[n]));
+      //}
       console.log(allItems);
     }
   });
