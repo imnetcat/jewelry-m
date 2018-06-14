@@ -108,11 +108,11 @@ function filter_out(){
       console.log(allItems);
       for( n = 0; n < $('.item').length; n++){
         console.log($('.item'));
-        console.log($('.item')[n]);
-        console.log($('.item')[n].children());
-        console.log($('.item')[n].children()[0]);
-        console.log($('.item')[n].children('img'));
-        console.log($('.item')[n].children('img')[0]);
+        console.log($('.item'));
+        console.log($('.item').children());
+        console.log($('.item').children()[0]);
+        console.log($('.item').children('img'));
+        console.log($('.item').children('img')[0]);
         //$('.item img')[n].attr("src", allItems[n].image);
       }
     }
