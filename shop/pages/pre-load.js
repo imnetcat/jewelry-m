@@ -110,7 +110,7 @@ function filter_out(){
       var allItems = new Array();
       console.log(raw_data);
       for(n = 0; n < 3; n++){
-        allItems[n] = new Item(php_array_to_js_array(raw_data[n+1]));
+        allItems[n] = new Item(php_array_to_js_array(raw_data[n+1])) || null;
       }
       console.log(allItems);
     }
