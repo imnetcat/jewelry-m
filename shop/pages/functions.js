@@ -116,11 +116,13 @@ function filter_out(){
       console.log(allItems);
       for( n = 0; n < $('.item').length; n++){
 	if(allItems[n]){
-	  //document.getElementsByClassName('item')[n].src = allItems[n].image;
 	  $('.item:eq('+n+')').attr("src", allItems[n].image);
 	}else{
-          $('.item:eq(' + n + ')').remove();
-          //$('.item:eq(' + (n+1) + ')').remove();
+          $('.item').filter( (src) {
+	    src === 'undefined';  
+	  }).remove();
+          //$('.item:eq('+n+')').remove();
+          //$('.item:eq('+(n+1)+')').remove();
 	}
       }
     }
