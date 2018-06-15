@@ -121,9 +121,10 @@ function filter_out(){
 	  $('.item:eq('+n+')').attr("src", allItems[n].image);
 	}else{
 	  for( x = n; x < 8; x++){
-          if($('.item').eq(x)){
-            $('.item').eq(x).hide();
-          }
+            if($('.item').eq(x)){
+              $('.item').eq(x).hide();
+            }
+	  }
 	}
       }
     }
