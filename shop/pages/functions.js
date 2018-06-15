@@ -118,7 +118,7 @@ function filter_out(){
 	if(allItems[n]){
 	  $('.item:eq('+n+')').attr("src", allItems[n].image);
 	}else{
-          $('.item').filter( (element) {
+          $('.item').filter( function(element){
 	    return element.attr("src") === "undefined"; 		   
 	  }).remove();
 	}
