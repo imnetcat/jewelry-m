@@ -29,7 +29,7 @@ function adaptation_3(){
   var oldwidth = row.width();
   $(window).resize( () => {
   var item = '<img class="item" src="">';
-    if(row.width() < 1010){
+    if(row.width() < 1005){
       if(row.width() < oldwidth){
         if(row.children().length == 8){
 	  row.children().last().remove();
