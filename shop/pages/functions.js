@@ -1,4 +1,4 @@
-function adaptation(){
+function adaptation_1(){
   var client_w = screen.width;
   if(client_w < 1024){
     $('#container').css({
@@ -6,6 +6,8 @@ function adaptation(){
       "width": "96vw"
     })
   }
+}
+function adaptation_2(){
   var item = '<img class="item" src="">';
   var row = $('#row');
   row.html(item + item + item + item + item + item + item + item);
@@ -21,57 +23,65 @@ function adaptation(){
 	  row.children().last().remove();
 	  row.children().last().remove();
   }
-  oldwidth = row.width();
+}
+function adaptation_3(){
   $(window).resize( () => {
+    oldwidth = row.width();
     if(row.width() < 1010){
-	    if(row.width() < oldwidth){
+      if(row.width() < oldwidth){
         if(row.children().length == 8){
-	        row.children().last().remove();
-	        row.children().last().remove();
-	      }
-	    }
-  	}
-	  if(row.width() > 1010){
-	    if(row.width() > oldwidth){
+	  row.children().last().remove();
+	  row.children().last().remove();
+          filter_out();
+	}
+      }
+    }
+    if(row.width() > 1010){
+      if(row.width() > oldwidth){
         if(row.children().length < 8){
-	        row.append(item);
-	        row.append(item);
-	      }
-	    }
-	  }
-	  if(row.width() < 760){
-	    if(row.width() < oldwidth){
+	  row.append(item);
+	  row.append(item);
+	  filter_out();
+	}
+      }
+    }
+    if(row.width() < 760){
+      if(row.width() < oldwidth){
         if(row.children().length >= 6){
-	        row.children().last().remove();
-	        row.children().last().remove();
-	      }
-	    }
-	  }
-	  if(row.width() > 760){
-	    if(row.width() > oldwidth){
+	  row.children().last().remove();
+	  row.children().last().remove();
+	  filter_out();
+	}
+      }
+    }
+    if(row.width() > 760){
+      if(row.width() > oldwidth){
         if(row.children().length < 6){
-	        row.append(item);
-	        row.append(item);
-	      }
-	    }
-	  }
-	  if(row.width() < 510){
-	    if(row.width() < oldwidth){
+	  row.append(item);
+	  row.append(item);
+	  filter_out();
+	}
+      }
+    }
+    if(row.width() < 510){
+      if(row.width() < oldwidth){
         if(row.children().length >= 4){
-	        row.children().last().remove();
-	        row.children().last().remove();
-	      }
-	    }
-	  }
-  	if(row.width() > 510){
-	    if(row.width() > oldwidth){
+	  row.children().last().remove();
+	  row.children().last().remove();
+	  filter_out();
+	}
+      }
+    }
+    if(row.width() > 510){
+      if(row.width() > oldwidth){
         if(row.children().length < 4){
-	        row.append(item);
-	        row.append(item);
-	      }
-	    }
-	  }
-	  oldwidth = row.width();
+	  row.append(item);
+	  row.append(item);
+	  filter_out();
+	}
+      }
+    }
+    oldwidth = row.width();
   });
 }
 
@@ -87,8 +97,6 @@ function filter_out(){
   for(n = 1; n < raw.length; n++){
     filters.stones += raw[n].id + ",";
   }
-  console.log(filters.types);
-  console.log(filters.stones);
   $.ajax({
     type: "POST",
     url: "actions.php",
