@@ -36,7 +36,7 @@ function adaptation_3(){
         if(row.children().filter(":visible").length == 8){
 	  //row.children().eq(7).hide();
 	  //row.children().eq(6).hide();
-          filter_out();
+          filter_out(6);
 	}
       }
     }
@@ -45,7 +45,7 @@ function adaptation_3(){
         if(row.children().filter(":visible").length < 8){
 	  //row.children().eq(7).show();
 	  //row.children().eq(6).show();
-	  filter_out();
+	  filter_out(8);
 	}
       }
     }
@@ -54,7 +54,7 @@ function adaptation_3(){
         if(row.children().filter(":visible").length >= 6){
 	  //row.children().eq(5).hide();
 	  //row.children().eq(4).hide();
-	  filter_out();
+	  filter_out(4);
 	}
       }
     }
@@ -63,7 +63,7 @@ function adaptation_3(){
         if(row.children().filter(":visible").length < 6){
 	  //row.children().eq(5).show();
 	  //row.children().eq(4).show();
-	  filter_out();
+	  filter_out(6);
 	}
       }
     }
@@ -72,7 +72,7 @@ function adaptation_3(){
         if(row.children().filter(":visible").length >= 4){
 	  //row.children().eq(3).hide();
 	  //row.children().eq(2).hide();
-	  filter_out();
+	  filter_out(1);
 	}
       }
     }
@@ -81,7 +81,7 @@ function adaptation_3(){
         if(row.children().filter(":visible").length < 4){
 	  //row.children().eq(3).show();
 	  //row.children().eq(2).show();
-	  filter_out();
+	  filter_out(4);
 	}
       }
     }
@@ -89,7 +89,7 @@ function adaptation_3(){
   });
 }
 
-function filter_out(){
+function filter_out(index){
   var raw = $('#types input:checked');
   var filters = new Object();
   filters.types = raw[0].id + ',';
@@ -116,7 +116,7 @@ function filter_out(){
         allItems[n-1] = new Item(php_array_to_js_array(raw_data[n]));
       }
       console.log(allItems);
-      for( n = 0; n < $('.item').filter(":visible").length; n++){
+      for( n = 0; n < index; n++){
 	if(allItems[n]){
           $('.item').eq(n).show();
 	  $('.item:eq('+n+')').attr("src", allItems[n].image);
