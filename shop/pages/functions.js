@@ -7,7 +7,7 @@ function adaptation(){
       "width": "96vw"
     })
   }
-  var item = '<div class="item"><a><img src=""></a></div>';
+  var item = '<img class="item" src="">';
   var row = $('#row');
   row.html(item + item + item + item + item + item + item + item);
   if(row.width() < 1010){
