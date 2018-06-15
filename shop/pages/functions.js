@@ -112,8 +112,11 @@ function filter_out(){
 }
 
 function php_array_to_js_array(array){
+	console.log(array);
   var splited = array.split('"');
+	cosnole.log(splited);
   var js_array = splited[1] + ",";
+	console.log(js_array);
   var length = splited.length;
   length -= 2 
   for( x = 3; x < length; x += 2){
