@@ -11,15 +11,15 @@ function adaptation_2(){
   var item = '<img class="item" src="#">';
   var row = $('#row');
   row.html(item + item + item + item + item + item + item + item);
-  if(row.width() < 1010){
+  if(screen.width < 1010){
     row.children().last().remove();
     row.children().last().remove();
   }
-  if(row.width()< 760){
+  if(screen.width < 760){
     row.children().last().remove();
     row.children().last().remove();
   }
-  if(row.width() < 600){
+  if(screen.width < 600){
     row.children().last().remove();
     row.children().last().remove();
     row.children().last().remove();
