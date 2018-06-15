@@ -19,14 +19,14 @@ function adaptation_2(){
 function filter_out(){
   var raw = $('#types input:checked');
   var filters = new Object();
-  filters.types = raw[0].id + ',';
+  filters.types = raw[0].id + '-_-';
   for(n = 1; n < raw.length; n++){
     filters.types += raw[n].id + ",";
   }
   var raw = $('#stones input:checked');
-  filters.stones = raw[0].id + ',';
+  filters.stones = raw[0].id + '-_-';
   for(n = 1; n < raw.length; n++){
-    filters.stones += raw[n].id + ",";
+    filters.stones += raw[n].id + "-_-";
   }
   $.ajax({
     type: "POST",
