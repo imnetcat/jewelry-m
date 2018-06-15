@@ -29,7 +29,6 @@ function adaptation_3(){
   var row = $('#row');
   var oldwidth = row.width();
   $(window).resize( () => {
-  var item = '<img class="item" src="#">';
     if(row.width() < 1005){
       if(row.width() < oldwidth){
         if(row.children().filter(":visible").length == 8){
