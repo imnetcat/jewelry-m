@@ -118,7 +118,8 @@ function filter_out(){
 	  //document.getElementsByClassName('item')[n].src = allItems[n].image;
 	  $('.item:eq('+n+')').attr("src", allItems[n].image);
 	}else{
-          $('.item:eq('+n+')').remove()
+          $('.item:eq('+n+')').remove();
+	}
       }
     }
   });
