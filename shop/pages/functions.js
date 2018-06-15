@@ -119,11 +119,11 @@ function filter_out(){
 	  $('.item:eq('+n+')').attr("src", allItems[n].image);
 	}else{
           if($('.item').eq(n)){
-            $('.item').eq(n).remove();
+            $('.item').eq(n).hide();
 	    if($('.item').eq(n+1)){
-	      $('.item').eq(n+1).remove();
+	      $('.item').eq(n+1).hide();
 	      if($('.item').eq(n+2)){
-	        $('.item').eq(n+2).remove();
+	        $('.item').eq(n+2).hide();
 	      }
 	    }
           }
