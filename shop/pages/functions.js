@@ -43,7 +43,7 @@ function adaptation_3(){
       if(row.width() > oldwidth){
         if(row.children().filter(":visible").length < 8){
 	  //row.children().eq(7).show();
-	  /row.children().eq(6).show();
+	  //row.children().eq(6).show();
 	  filter_out();
 	}
       }
