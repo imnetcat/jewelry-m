@@ -16,7 +16,6 @@ function found_items($database, $filters){
   $query ="SELECT id, stone FROM items";  
   for( $x = 0; $x < count($stones); $x++ ){
     if($result = mysqli_query($database, $query)){
-      $e = count($id['stones']);
       while ($row = mysqli_fetch_row($result)) {
         $stones_filters = explode(", ", $row[1]);
         for($n = 0; $n < count($stones_filters); $n++ ){
