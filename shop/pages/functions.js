@@ -118,10 +118,15 @@ function filter_out(){
 	if(allItems[n]){
 	  $('.item:eq('+n+')').attr("src", allItems[n].image);
 	}else{
-          $('.item').filter( function(element){
-		  console.log(element.src);
-	    return element.src == "#"; 		   
-	  }).remove();
+          if($('.item').eq(n)){
+            $('.item').eq(n).remove();
+	    if($('.item').eq(n+1){
+	      $('.item').eq(n+1).remove();
+	      if($('.item').eq(n+2){
+	        $('.item').eq(n+2).remove();
+	      }
+	    }
+          }
 	}
       }
     }
