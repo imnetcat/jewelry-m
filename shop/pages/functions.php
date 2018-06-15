@@ -20,7 +20,9 @@ function found_items($database, $filters){
       for($n = 0; $n < count($item_filters); $n++ ){
         for( $x = 0; $x < count($stones); $x++ ){
           if($item_filters[$n] == $stones[$x]){
-            $id['stones'][count($id['stones'])] = $row[0];
+            if($id['stones'][count($id['stones'])-1] != $row[0]){
+              $id['stones'][count($id['stones'])] = $row[0];
+            }
           }
         }
       }
