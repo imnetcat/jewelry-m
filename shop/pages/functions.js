@@ -28,7 +28,7 @@ function adaptation_3(){
   var row = $('#row');
   var oldwidth = row.width();
   $(window).resize( () => {
-  var item = '<img class="item" src="">';
+  var item = '<img class="item" src="#">';
     if(row.width() < 1005){
       if(row.width() < oldwidth){
         if(row.children().length == 8){
@@ -119,6 +119,7 @@ function filter_out(){
 	  $('.item:eq('+n+')').attr("src", allItems[n].image);
 	}else{
           $('.item').filter( function(element){
+		  console.log(element.src);
 	    return element.src == "#"; 		   
 	  }).remove();
 	}
