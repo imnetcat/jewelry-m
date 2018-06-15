@@ -125,6 +125,7 @@ function php_array_to_js_array(array){
 	console.log(js_array);
   js_array += splited[length];
 	console.log(js_array);
+	console.log(js_array.split(','));
   return js_array.split(',');
 }
 
