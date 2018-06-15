@@ -14,13 +14,13 @@ function found_items($database, $filters){
   }
   $stones = explode(",", $filters["stones"]);
   $query ="SELECT id, stone FROM items";  
-  for( $x = 0; $x < count($stones); $x++ ){
-    if($result = mysqli_query($database, $query)){
-      $e = count($id['stones']);
-      while ($row = mysqli_fetch_row($result)) {
-        $stones_filters = explode(", ", $row[1]);
-        for($n = 0; $n < count($stones_filters); $n++ ){
-          if($stones_filters[$n] == $stones[$x]){
+  if($result = mysqli_query($database, $query)){
+    while ($row = mysqli_fetch_row($result)) {
+      for( $x = 0; $x < count($stones); $x++ ){
+        $e = count($id['stones']);
+        $item_filters = explode(", ", $row[1]);
+        for($n = 0; $n < count($item_filters); $n++ ){
+          if($item_filters[$n] == $stones[$x]){
             $id['stones'][$e] = $row[0];
           }
           $e++;
