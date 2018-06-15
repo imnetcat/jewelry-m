@@ -120,7 +120,7 @@ function filter_out(){
 	}else{
           $('.item').filter( (element) {
 	    return element.attr("src") === "undefined"; 		   
-	  ).remove();
+	  }).remove();
 	}
       }
     }
