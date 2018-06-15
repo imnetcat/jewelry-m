@@ -118,6 +118,9 @@ function filter_out(){
 	if(allItems[n]){
 	  $('.item:eq('+n+')').attr("src", allItems[n].image);
 	}else{
+		console.log(document.getElementsByClassName('item')[n].src)
+		console.log(document.getElementsByClassName('item')[n+1].src)
+		console.log(document.getElementsByClassName('item')[n+2].src)
           $('.item').filter( function(element){
 	    return element.src == "unknown"; 		   
 	  }).remove();
