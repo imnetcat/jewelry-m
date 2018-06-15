@@ -120,7 +120,7 @@ function filter_out(){
 	  $('.item:eq('+n+')').attr("src", allItems[n].image);
 	}else{
           $('.item:eq(' + n + ')').remove();
-          $('.item:eq(' + (n+1) + ')').remove();
+          //$('.item:eq(' + (n+1) + ')').remove();
 	}
       }
     }
