@@ -12,16 +12,17 @@ function adaptation_2(){
   var row = $('#row');
   row.html(item + item + item + item + item + item + item + item);
   if(row.width() < 1010){
-	  row.children().last().remove();
-	  row.children().last().remove();
+    row.children().last().remove();
+    row.children().last().remove();
   }
   if(row.width()< 760){
-	  row.children().last().remove();
-	  row.children().last().remove();
+    row.children().last().remove();
+    row.children().last().remove();
   }
-  if(row.width() < 510){
-	  row.children().last().remove();
-	  row.children().last().remove();
+  if(row.width() < 600){
+    row.children().last().remove();
+    row.children().last().remove();
+    row.children().last().remove();
   }
 }
 function adaptation_3(){
@@ -32,8 +33,8 @@ function adaptation_3(){
     if(row.width() < 1005){
       if(row.width() < oldwidth){
         if(row.children().filter(":visible").length == 8){
-	  row.children().eq(7).hide();
-	  row.children().eq(6).hide();
+	  //row.children().eq(7).hide();
+	  //row.children().eq(6).hide();
           filter_out();
 	}
       }
@@ -41,8 +42,8 @@ function adaptation_3(){
     if(row.width() > 1010){
       if(row.width() > oldwidth){
         if(row.children().filter(":visible").length < 8){
-	  row.children().eq(7).show();
-	  row.children().eq(6).show();
+	  //row.children().eq(7).show();
+	  /row.children().eq(6).show();
 	  filter_out();
 	}
       }
@@ -50,8 +51,8 @@ function adaptation_3(){
     if(row.width() < 760){
       if(row.width() < oldwidth){
         if(row.children().filter(":visible").length >= 6){
-	  row.children().eq(5).hide();
-	  row.children().eq(4).hide();
+	  //row.children().eq(5).hide();
+	  //row.children().eq(4).hide();
 	  filter_out();
 	}
       }
@@ -59,8 +60,8 @@ function adaptation_3(){
     if(row.width() > 760){
       if(row.width() > oldwidth){
         if(row.children().filter(":visible").length < 6){
-	  row.children().eq(5).show();
-	  row.children().eq(4).show();
+	  //row.children().eq(5).show();
+	  //row.children().eq(4).show();
 	  filter_out();
 	}
       }
@@ -68,8 +69,8 @@ function adaptation_3(){
     if(row.width() < 510){
       if(row.width() < oldwidth){
         if(row.children().filter(":visible").length >= 4){
-	  row.children().eq(3).hide();
-	  row.children().eq(2).hide();
+	  //row.children().eq(3).hide();
+	  //row.children().eq(2).hide();
 	  filter_out();
 	}
       }
@@ -77,8 +78,8 @@ function adaptation_3(){
     if(row.width() > 510){
       if(row.width() > oldwidth){
         if(row.children().filter(":visible").length < 4){
-	  row.children().eq(3).show();
-	  row.children().eq(2).show();
+	  //row.children().eq(3).show();
+	  //row.children().eq(2).show();
 	  filter_out();
 	}
       }
@@ -116,16 +117,12 @@ function filter_out(){
       console.log(allItems);
       for( n = 0; n < $('.item').length; n++){
 	if(allItems[n]){
+          $('.item').eq(n).show();
 	  $('.item:eq('+n+')').attr("src", allItems[n].image);
 	}else{
-          if($('.item').eq(n)){
-            $('.item').eq(n).hide();
-	    if($('.item').eq(n+1)){
-	      $('.item').eq(n+1).hide();
-	      if($('.item').eq(n+2)){
-	        $('.item').eq(n+2).hide();
-	      }
-	    }
+	  for( x = n; x < 8; x++){
+          if($('.item').eq(x)){
+            $('.item').eq(x).hide();
           }
 	}
       }
