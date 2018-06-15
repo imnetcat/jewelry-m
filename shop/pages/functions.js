@@ -109,7 +109,7 @@ function filter_out(){
       console.log($('.item'));
         console.log($('.item img')) 
       for( n = 0; n < $('.item').length; n++){
-	document.getElementsByClassName('item')[n].src = allItems[n];
+	document.getElementsByClassName('item')[n].src = allItems[n].image;
 	      console.log(document.getElementsByClassName('item')[n]);
       }
     }
