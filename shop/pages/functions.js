@@ -112,21 +112,15 @@ function filter_out(){
 }
 
 function php_array_to_js_array(array){
-	console.log(array);
   var splited = array.split('"');
-	console.log(splited);
-  var js_array = splited[1] + ",";
-	console.log(js_array);
+  var js_array = splited[1] + "/";
   var length = splited.length;
   length -= 2 
   for( x = 3; x < length; x += 2){
-    js_array += splited[x] + ",";
+    js_array += splited[x] + "/";
   }
-	console.log(js_array);
   js_array += splited[length];
-	console.log(js_array);
-	console.log(js_array.split(','));
-  return js_array.split(',');
+  return js_array.split('/');
 }
 
 class Item {
