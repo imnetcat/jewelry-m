@@ -30,7 +30,7 @@ function adaptation_3(){
   var item = '<img class="item" src="">';
   var row = $('#row');
 	  console.log(row);
-	  console.log(row.width());
+	  //console.log(row.width());
 	  console.log(row.width);
     if(row.width() < 1010){
       if(row.width() < oldwidth){
