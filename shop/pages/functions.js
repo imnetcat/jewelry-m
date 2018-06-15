@@ -1,6 +1,5 @@
 function adaptation(){
   var client_w = screen.width;
-  console.log(client_w);
   if(client_w < 1024){
     $('#container').css({
       "marginLeft": "1vw",
@@ -23,7 +22,6 @@ function adaptation(){
 	  row.children().last().remove();
   }
   oldwidth = row.width();
-  console.log(oldwidth);
   $(window).resize( () => {
     if(row.width() < 1010){
 	    if(row.width() < oldwidth){
@@ -74,7 +72,6 @@ function adaptation(){
 	    }
 	  }
 	  oldwidth = row.width();
-	  console.log(oldwidth);
   });
 }
 
@@ -107,11 +104,8 @@ function filter_out(){
         allItems[n-1] = new Item(php_array_to_js_array(raw_data[n]));
       }
       console.log(allItems);
-      console.log($('.item'));
-        console.log($('.item img')) 
       for( n = 0; n < $('.item').length; n++){
 	document.getElementsByClassName('item')[n].src = allItems[n].image;
-	      console.log(document.getElementsByClassName('item')[n]);
       }
     }
   });
