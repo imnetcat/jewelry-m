@@ -114,7 +114,7 @@ function filter_out(){
 function php_array_to_js_array(array){
 	console.log(array);
   var splited = array.split('"');
-	cosnole.log(splited);
+	console.log(splited);
   var js_array = splited[1] + ",";
 	console.log(js_array);
   var length = splited.length;
