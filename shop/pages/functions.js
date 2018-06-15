@@ -8,7 +8,7 @@ function adaptation_1(){
   }
 }
 function adaptation_2(){
-  var item = '<img class="item" src="">';
+  var item = '<img class="item" src="#">';
   var row = $('#row');
   row.html(item + item + item + item + item + item + item + item);
   if(row.width() < 1010){
@@ -120,7 +120,7 @@ function filter_out(){
 	}else{
 		console.log(document.location.href);
           $('.item').filter( function(element){
-	    return element.src == document.location.href; 		   
+	    return element.src == "#"; 		   
 	  }).remove();
 	}
       }
