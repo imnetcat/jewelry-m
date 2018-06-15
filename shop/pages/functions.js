@@ -2,15 +2,15 @@ function adaptation_2(){
   var item = '<img class="item" src="#">';
   var row = $('#row');
   row.html(item + item + item + item + item + item + item + item);
-  if(screen.width < 1010){
+  if(row.width() < 1010){
     row.children().last().remove();
     row.children().last().remove();
   }
-  if(screen.width < 760){
+  if(row.width() < 760){
     row.children().last().remove();
     row.children().last().remove();
   }
-  if(screen.width < 600){
+  if(row.width() < 600){
     row.children().last().remove();
     row.children().last().remove();
     row.children().last().remove();
