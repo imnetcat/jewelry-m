@@ -110,12 +110,11 @@ function filter_out(){
     success: function(data){
       var raw_data = data.split('array');
       var allItems = new Array();
-	    console.log(raw_data);
       for( n = 1; n < raw_data.length; n++){
         allItems[n-1] = new Item(php_array_to_js_array(raw_data[n]));
       }
       console.log(allItems);
-      for( n = 0; n < index; n++){
+      for( n = 0; n <  $('.item').length; n++){
 	if(allItems[n]){
 	  $('.item:eq('+n+')').attr("src", allItems[n].image);
 	}
