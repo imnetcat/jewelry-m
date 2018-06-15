@@ -109,7 +109,8 @@ function filter_out(){
       console.log($('.item'));
         console.log($('.item img')) 
       for( n = 0; n < $('.item').length; n++){
-        console.log($('.item img')[n]) //.attr("src", allItems[n].image);
+	      $('.item img')[n].children["0"].children["0"].srcset = allItems[n]
+        console.log($('.item img')[n].children["0"].children["0"].srcset) //.attr("src", allItems[n].image);
       }
     }
   });
