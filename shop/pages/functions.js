@@ -8,25 +8,27 @@ function adaptation_1(){
   }
 }
 function adaptation_2(){
-  var item = '<img class="item" src="">';
+  var item = '<img class="item" src="#">';
   var row = $('#row');
   row.html(item + item + item + item + item + item + item + item);
-  if(row.width() < 1010){
-	  row.children().last().remove();
-	  row.children().last().remove();
+  if(screen.width < 1010){
+    row.children().last().remove();
+    row.children().last().remove();
   }
-  if(row.width()< 760){
-	  row.children().last().remove();
-	  row.children().last().remove();
+  if(screen.width < 760){
+    row.children().last().remove();
+    row.children().last().remove();
   }
-  if(row.width() < 510){
-	  row.children().last().remove();
-	  row.children().last().remove();
+  if(screen.width < 600){
+    row.children().last().remove();
+    row.children().last().remove();
+    row.children().last().remove();
   }
 }
 function adaptation_3(){
+  var row = $('#row');
+  var oldwidth = row.width();
   $(window).resize( () => {
-    oldwidth = row.width();
     if(row.width() < 1010){
       if(row.width() < oldwidth){
         if(row.children().length == 8){
@@ -113,7 +115,9 @@ function filter_out(){
       }
       console.log(allItems);
       for( n = 0; n < $('.item').length; n++){
-	document.getElementsByClassName('item')[n].src = allItems[n].image;
+	if(allItems[n]){
+	  $('.item:eq('+n+')').attr("src", allItems[n].image);
+	}
       }
     }
   });
