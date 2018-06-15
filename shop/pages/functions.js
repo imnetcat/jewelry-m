@@ -26,6 +26,7 @@ function adaptation_2(){
 }
 function adaptation_3(){
   $(window).resize( () => {
+  var row = $('#row');
     oldwidth = row.width();
     if(row.width() < 1010){
       if(row.width() < oldwidth){
