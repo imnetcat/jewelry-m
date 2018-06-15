@@ -114,7 +114,11 @@ function filter_out(){
       }
       console.log(allItems);
       for( n = 0; n < $('.item').length; n++){
-	document.getElementsByClassName('item')[n].src = allItems[n].image;
+	if(allItems[n]){
+	  //document.getElementsByClassName('item')[n].src = allItems[n].image;
+	  $('.item:eq('+n+')').attr("src", allItems[n].image);
+	}else{
+          $('.item:eq('+n+')').remove()
       }
     }
   });
