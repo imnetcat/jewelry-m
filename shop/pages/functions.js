@@ -1,12 +1,3 @@
-function adaptation_1(){
-  var client_w = screen.width;
-  if(client_w < 1024){
-    $('#container').css({
-      "marginLeft": "1vw",
-      "width": "96vw"
-    })
-  }
-}
 function adaptation_2(){
   var item = '<img class="item" src="#">';
   var row = $('#row');
@@ -25,69 +16,6 @@ function adaptation_2(){
     row.children().last().remove();
   }
 }
-function adaptation_3(){
-  var item = '<img class="item" src="#">';
-  var row = $('#row');
-  var oldwidth = row.width();
-  $(window).resize( () => {
-    if(row.width() < 1010){
-      if(row.width() < oldwidth){
-        if(row.children().length == 8){
-	  row.children().last().remove();
-	  row.children().last().remove();
-          filter_out();
-	}
-      }
-    }
-    if(row.width() > 1010){
-      if(row.width() > oldwidth){
-        if(row.children().length < 8){
-	  row.append(item);
-	  row.append(item);
-	  filter_out();
-	}
-      }
-    }
-    if(row.width() < 760){
-      if(row.width() < oldwidth){
-        if(row.children().length >= 6){
-	  row.children().last().remove();
-	  row.children().last().remove();
-	  filter_out();
-	}
-      }
-    }
-    if(row.width() > 760){
-      if(row.width() > oldwidth){
-        if(row.children().length < 6){
-	  row.append(item);
-	  row.append(item);
-	  filter_out();
-	}
-      }
-    }
-    if(row.width() < 510){
-      if(row.width() < oldwidth){
-        if(row.children().length >= 4){
-	  row.children().last().remove();
-	  row.children().last().remove();
-	  filter_out();
-	}
-      }
-    }
-    if(row.width() > 510){
-      if(row.width() > oldwidth){
-        if(row.children().length < 4){
-	  row.append(item);
-	  row.append(item);
-	  filter_out();
-	}
-      }
-    }
-    oldwidth = row.width();
-  });
-}
-
 function filter_out(){
   var raw = $('#types input:checked');
   var filters = new Object();
