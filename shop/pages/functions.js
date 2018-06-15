@@ -31,54 +31,54 @@ function adaptation_3(){
   var item = '<img class="item" src="#">';
     if(row.width() < 1005){
       if(row.width() < oldwidth){
-        if(row.children().length == 8){
-	  row.children().last().remove();
-	  row.children().last().remove();
+        if(row.children().filter(":visible").length == 8){
+	  row.children().eq(7).hide();
+	  row.children().eq(6).hide();
           filter_out();
 	}
       }
     }
     if(row.width() > 1010){
       if(row.width() > oldwidth){
-        if(row.children().length < 8){
-	  row.append(item);
-	  row.append(item);
+        if(row.children().filter(":visible").length < 8){
+	  row.children().eq(7).show();
+	  row.children().eq(6).show();
 	  filter_out();
 	}
       }
     }
     if(row.width() < 760){
       if(row.width() < oldwidth){
-        if(row.children().length >= 6){
-	  row.children().last().remove();
-	  row.children().last().remove();
+        if(row.children().filter(":visible").length >= 6){
+	  row.children().eq(5).hide();
+	  row.children().eq(4).hide();
 	  filter_out();
 	}
       }
     }
     if(row.width() > 760){
       if(row.width() > oldwidth){
-        if(row.children().length < 6){
-	  row.append(item);
-	  row.append(item);
+        if(row.children().filter(":visible").length < 6){
+	  row.children().eq(5).show();
+	  row.children().eq(4).show();
 	  filter_out();
 	}
       }
     }
     if(row.width() < 510){
       if(row.width() < oldwidth){
-        if(row.children().length >= 4){
-	  row.children().last().remove();
-	  row.children().last().remove();
+        if(row.children().filter(":visible").length >= 4){
+	  row.children().eq(3).hide();
+	  row.children().eq(2).hide();
 	  filter_out();
 	}
       }
     }
     if(row.width() > 510){
       if(row.width() > oldwidth){
-        if(row.children().length < 4){
-	  row.append(item);
-	  row.append(item);
+        if(row.children().filter(":visible").length < 4){
+	  row.children().eq(3).show();
+	  row.children().eq(2).show();
 	  filter_out();
 	}
       }
