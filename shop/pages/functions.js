@@ -118,11 +118,8 @@ function filter_out(){
 	if(allItems[n]){
 	  $('.item:eq('+n+')').attr("src", allItems[n].image);
 	}else{
-          $('.item').filter( (src) {
-	    src === 'undefined';  
-	  }).remove();
-          //$('.item:eq('+n+')').remove();
-          //$('.item:eq('+(n+1)+')').remove();
+          $('.item:eq('+n+')').remove();
+          $('.item:eq('+(n+1)+')').remove();
 	}
       }
     }
