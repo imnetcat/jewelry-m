@@ -113,14 +113,14 @@ function filter_out(){
 
 function php_array_to_js_array(array){
   var splited = array.split('"');
-  var js_array = splited[1] + "/";
+  var js_array = splited[1] + "\";
   var length = splited.length;
   length -= 2 
   for( x = 3; x < length; x += 2){
-    js_array += splited[x] + "/";
+    js_array += splited[x] + "\";
   }
   js_array += splited[length];
-  return js_array.split('/');
+  return js_array.split('\');
 }
 
 class Item {
