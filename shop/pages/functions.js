@@ -112,20 +112,13 @@ function filter_out(index){
       var raw_data = data.split('array');
       var allItems = new Array();
 	    console.log(raw_data);
-      for( n = 1; n < raw_data.length; n++){
+      for( n = 1; n < index; n++){
         allItems[n-1] = new Item(php_array_to_js_array(raw_data[n]));
       }
       console.log(allItems);
-      for( n = 0; n < index; n++){
+      for( n = 0; n < $('.item').; n++){
 	if(allItems[n]){
-          $('.item').eq(n).show();
 	  $('.item:eq('+n+')').attr("src", allItems[n].image);
-	}else{
-	  for( x = n; x < 8; x++){
-            if($('.item').eq(x)){
-              $('.item').eq(x).hide();
-            }
-	  }
 	}
       }
     }
