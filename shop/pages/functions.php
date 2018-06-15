@@ -1,7 +1,7 @@
 <?
 function found_items($database, $filters){
   $id = array();
-  $types = explode(",", $filters["types"]);
+  $types = explode("-_-", $filters["types"]);
   $query ="SELECT id, type FROM items";  
   for( $x = 0; $x < count($types); $x++ ){
     if($result = mysqli_query($database, $query)){
@@ -12,7 +12,7 @@ function found_items($database, $filters){
       }
     }  
   }
-  $stones = explode(",", $filters["stones"]);
+  $stones = explode("-_-", $filters["stones"]);
   $query ="SELECT id, stone FROM items";  
   if($result = mysqli_query($database, $query)){
     while ($row = mysqli_fetch_row($result)) {
