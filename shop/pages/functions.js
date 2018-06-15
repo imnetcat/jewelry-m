@@ -119,7 +119,7 @@ function filter_out(){
 	  $('.item:eq('+n+')').attr("src", allItems[n].image);
 	}else{
           $('.item').filter( function(element){
-	    return element.src === "undefined"; 		   
+	    return element.src == "unknown"; 		   
 	  }).remove();
 	}
       }
