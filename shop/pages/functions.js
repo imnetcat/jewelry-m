@@ -31,6 +31,8 @@ function adaptation_3(){
   $(window).resize( () => {
     if(row.width() < 1005){
       if(row.width() < oldwidth){
+	      console.log(row.children().filter(":visible"));
+	      console.log(row.children().filter(":visible").length);
         if(row.children().filter(":visible").length == 8){
 	  //row.children().eq(7).hide();
 	  //row.children().eq(6).hide();
