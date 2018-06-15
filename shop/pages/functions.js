@@ -120,6 +120,7 @@ function filter_out(){
 	}else{
           $('.item:eq('+n+')').remove();
           $('.item:eq('+(n+1)+')').remove();
+          $('.item:eq('+(n+2)+')').remove();
 	}
       }
     }
