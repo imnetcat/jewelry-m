@@ -120,9 +120,9 @@ function filter_out(){
 	}else{
           if($('.item').eq(n)){
             $('.item').eq(n).remove();
-	    if($('.item').eq(n+1){
+	    if($('.item').eq(n+1)){
 	      $('.item').eq(n+1).remove();
-	      if($('.item').eq(n+2){
+	      if($('.item').eq(n+2)){
 	        $('.item').eq(n+2).remove();
 	      }
 	    }
