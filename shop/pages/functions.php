@@ -19,10 +19,9 @@ function found_items($database, $filters){
       while ($row = mysqli_fetch_row($result)) {
         $stones_filters = explode(", ", $row[1]);
         for($n = 0; $n < count($stones_filters); $n++ ){
+          $e = count($id['stones']);
           if($stones_filters[$n] == $stones[$x]){
-            if($id['stones'][count($id['stones'])] != $row[0]){ 
-              $id['stones'][count($id['stones'])] = $row[0];
-            }
+            $id['stones'][e] = $row[0];
           }
         }
       }
