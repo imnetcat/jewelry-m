@@ -23,6 +23,7 @@ function found_items($database, $filters){
           if($stones_filters[$n] == $stones[$x]){
             $id['stones'][$e] = $row[0];
           }
+          $e++;
         }
       }
     }  
