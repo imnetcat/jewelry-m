@@ -118,7 +118,6 @@ function filter_out(){
 	if(allItems[n]){
 	  $('.item:eq('+n+')').attr("src", allItems[n].image);
 	}else{
-		console.log(document.location.href);
           $('.item').filter( function(element){
 	    return element.src == "#"; 		   
 	  }).remove();
