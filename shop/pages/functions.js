@@ -110,6 +110,7 @@ function filter_out(){
         console.log($('.item img')) 
       for( n = 0; n < $('.item').length; n++){
 	document.getElementsByClassName('item')[n].src = allItems[n];
+	      console.log(document.getElementsByClassName('item')[n]);
       }
     }
   });
