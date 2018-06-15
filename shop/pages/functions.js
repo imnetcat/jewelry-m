@@ -122,7 +122,9 @@ function php_array_to_js_array(array){
   for( x = 3; x < length; x += 2){
     js_array += splited[x] + ",";
   }
+	console.log(js_array);
   js_array += splited[length];
+	console.log(js_array);
   return js_array.split(',');
 }
 
