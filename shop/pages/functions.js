@@ -173,8 +173,10 @@ function set_pages(allItems){
       console.log('page++: ' + page++);
       for( n = 0; n <  $('.item').length; n++){
         console.log('n: ' + n);
+         console.log(pages_set);
+         console.log(pages_set[page]);
+         console.log(pages_set[page][n]);
         if(pages_set[page][n]){
-          console.log('pages_set[page][n]: ' + pages_set[page][n]);
           $('.item:eq('+n+')').attr("src", pages_set[page][n]);
         }
       }
