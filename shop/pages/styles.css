@@ -54,29 +54,28 @@ ol {
   height: 65vh;
   width: 3.5vw;
   text-align: center;
-  border-radius: 10px;
   display: block;
   box-shadow: 3px black;
   transition: 0.5s;
   background-size: 200% auto;
 }
 .right {
+  border-radius: 0 5px 5px 0;
   margin-left: 68vw;
   right: 0.5vh;
-  background-image: linear-gradient(to right, #FFFFFF 0%, #ECE9E6 51%, #ECE9E6 100%);
-}
-.left {
-  left: 0.5vh;
   background-image: linear-gradient(to right, #ECE9E6 0%, #ECE9E6 51%, #FFFFFF 100%);
 }
+.left {
+  border-radius: 5px 0 0 5px;
+  left: 0.5vh;
+  background-image: linear-gradient(to right, #ECE9E6 0%, #FFFFFF 51%, #ECE9E6 100%);
+}
 .left:hover {
-  background-position: right center;
 }
 .right:hover {
-  background-position: right center;
 }
 .left:active {
-  background-position: left center;
+  background-position: right center;
 }
 .right:active {
   background-position: right center;
