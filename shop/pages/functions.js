@@ -138,13 +138,18 @@ function set_pages(allItems){
   var e = 0;
   for( page = 0; page <  allItems.length / $('.item').length; page++){
     pages_set[page] = new Array();
-    
-    for( n = e; n <  $('.item').length; n++){
-      if(allItems[n]){
-        pages_set[page][n] = allItems[n].image;
-	e = n;
-      }
+    if(page == 0){
+      e = n;
+    }else{
+      e = couter+1;
     }
+    for( n = 0; n <  $('.item').length; n++){
+      if(allItems[n]){
+        pages_set[page][n] = allItems[e].image;
+      }
+      couter = n;
+    }
+    couter++
   }
   var page = 0; //номер текущей страницы
 	console.log(pages_set);
