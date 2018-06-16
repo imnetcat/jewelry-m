@@ -135,6 +135,7 @@ function php_array_to_js_array(array){
 
 function set_pages(allItems){
   var pages_set = new Array();
+  var e = 0;
   var page = 0; //номер текущей страницы
   for( page; page <  allItems.length / $('.item').length; page++){
     pages_set[page] = new Array();
