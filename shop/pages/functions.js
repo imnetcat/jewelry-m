@@ -149,7 +149,7 @@ function set_pages(allItems){
     }
   }		
   //предыдущая стриницы
-  $('.btn.left).click( () => {
+  $('.btn.left').click( () => {
     if(pages_set[page-1]){
       page--
       for( n = 0; n <  $('.item').length; n++){
@@ -160,7 +160,7 @@ function set_pages(allItems){
     }
   });  
   // следующая страница
-  $('.btn.left).click( () => {
+  $('.btn.left').click( () => {
     if(pages_set[page+1]){
       page++
       for( n = 0; n <  $('.item').length; n++){
