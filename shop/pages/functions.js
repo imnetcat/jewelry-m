@@ -139,10 +139,10 @@ function set_pages(allItems){
   for( page = 0; page <  allItems.length / $('.item').length; page++){
     pages_set[page] = new Array();
     if(page != 0){
-      e = couter+1;
+      e = couter;
     }
     for( n = 0; n <  $('.item').length; n++){
-      if(allItems[n]){
+      if(allItems[e]){
         pages_set[page][n] = allItems[e].image;
       }
       couter = n;
