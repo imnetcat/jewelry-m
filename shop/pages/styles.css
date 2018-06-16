@@ -57,21 +57,21 @@ ol {
   border-radius: 4px;
   box-shadow: 3px black;
 }
-.btn.right {
+.right {
   margin-left: 68vw;
   right: 0.5vh;
   background-image: linear-gradient(to right, #FFFFFF 0%, #ECE9E6 51%, #ECE9E6 100%);
 }
-.btn.left {
+.left {
   left: 0.5vh;
   background-image: linear-gradient(to left, #ECE9E6 0%, #ECE9E6 51%, #FFFFFF 100%);
 }
 .btn:hover {
 }
-(.btn.left):active {
+.left:active {
   background-position: left center;
 }
-(.btn.right):active {
+.right:active {
   background-position: right center;
 }
 #row {
