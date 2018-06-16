@@ -66,7 +66,11 @@ ol {
   left: 0.5vh;
   background-image: linear-gradient(to left, #FFFFFF 0%, #ECE9E6 51%, #ECE9E6 100%);
 }
-.btn:hover {
+.left:hover {
+  background-position: left center;
+}
+.right:hover {
+  background-position: right center;
 }
 .left:active {
   background-position: left center;
