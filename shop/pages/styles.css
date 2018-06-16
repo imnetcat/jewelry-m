@@ -60,18 +60,18 @@ ol {
 .btn.right {
   margin-left: 68vw;
   right: 0.5vh;
-  background-image: linear-gradient(to right, #ECE9E6 0%, #FFFFFF 51%, #ECE9E6 100%);
+  background-image: linear-gradient(to right, #FFFFFF 0%, #ECE9E6 51%, #ECE9E6 100%);
 }
 .btn.left {
   left: 0.5vh;
-  background-image: linear-gradient(to left, #ECE9E6 0%, #FFFFFF 51%, #ECE9E6 100%);
+  background-image: linear-gradient(to left, #ECE9E6 0%, #ECE9E6 51%, #FFFFFF 100%);
 }
 .btn:hover {
 }
-.btn.left:active {
+(.btn.left):active {
   background-position: left center;
 }
-.btn.right:active {
+(.btn.right):active {
   background-position: right center;
 }
 #row {
