@@ -1,5 +1,4 @@
 $( () => {
-  
   $('#to_types').click( () => {
     $('#types').css({
       visibility: "visible",
@@ -20,7 +19,8 @@ $( () => {
       });
     });
   });
-  
+});
+$( () => {
   $('#to_stones').click( () => {
     $('#stones').css({
       visibility: "visible",
@@ -41,6 +41,5 @@ $( () => {
       });
     });
   });
-  
 });
    
