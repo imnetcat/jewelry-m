@@ -168,13 +168,9 @@ function set_pages(allItems){
   // следующая страница
   $('.btn.right').click( () => {
 	  console.log('click');
-	  console.log('click');
-	  console.log(pages_set);
-	  console.log(page);
-	  console.log(pages_set[page-1]);
     if(pages_set[page+1]){
-	  console.log('if yeeaa!');
       page++
+      console.log('if yeeaa!');
       for( n = 0; n <  $('.item').length; n++){
         if(pages_set[page][n]){
           $('.item:eq('+n+')').attr("src", pages_set[page][n]);
