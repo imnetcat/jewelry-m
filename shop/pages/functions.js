@@ -135,10 +135,11 @@ function php_array_to_js_array(array){
 
 function set_pages(allItems){
   var pages_set = new Array();
-  var e;
+  var e = 0;
   for( page = 0; page <  allItems.length / $('.item').length; page++){
-    pages_set[page || e] = new Array();
-    for( n = 0; n <  $('.item').length; n++){
+    pages_set[page] = new Array();
+    
+    for( n = e; n <  $('.item').length; n++){
       if(allItems[n]){
         pages_set[page][n] = allItems[n].image;
 	e = n;
