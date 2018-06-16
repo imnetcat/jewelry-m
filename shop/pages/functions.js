@@ -138,9 +138,7 @@ function set_pages(allItems){
   var e = 0;
   for( page = 0; page <  allItems.length / $('.item').length; page++){
     pages_set[page] = new Array();
-    if(page == 0){
-      e = n;
-    }else{
+    if(page != 0){
       e = couter+1;
     }
     for( n = 0; n <  $('.item').length; n++){
