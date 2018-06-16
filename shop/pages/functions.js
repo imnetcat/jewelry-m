@@ -135,7 +135,7 @@ function php_array_to_js_array(array){
 
 function set_pages(allItems){
   var pages_set = new Array();
-  for( page = 0; page <  allItems.length; page++){
+  for( page = 0; page <  allItems.length / $('.item').length; page++){
     pages_set[page] = new Array();
     for( n = 0; n <  $('.item').length; n++){
       if(allItems[n]){
@@ -163,7 +163,7 @@ function set_pages(allItems){
     }
   });  
   // следующая страница
-  $('.btn.left').click( () => {
+  $('.btn.right').click( () => {
     if(pages_set[page+1]){
       page++
       for( n = 0; n <  $('.item').length; n++){
