@@ -56,7 +56,7 @@ ol {
   text-align: center;
   display: block;
   box-shadow: 3px black;
-  transition: 0.1s;
+  transition: 0.5s;
   background-size: 200% auto;
 }
 .right {
@@ -71,14 +71,14 @@ ol {
   background-image: linear-gradient(to right, #ECE9E6 0%, #FFFFFF 51%, #ECE9E6 100%);
 }
 .left:hover {
+  background-position: right center;
 }
 .right:hover {
+  background-position: right center;
 }
 .left:active {
-  background-position: right center;
 }
 .right:active {
-  background-position: right center;
 }
 #row {
     position: absolute;
