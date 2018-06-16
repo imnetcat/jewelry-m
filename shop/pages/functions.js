@@ -1,5 +1,5 @@
 function adaptation_2(){
-  var item = '<img class="item" src="#">';
+  var item = '<img class="item" src="items/default.png">';
   var row = $('#row');
   row.html(item + item + item + item + item + item + item + item);
   if(row.width() < 1010){
