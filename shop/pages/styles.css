@@ -67,10 +67,10 @@ ol {
 }
 .left {
   left: 0.5vh;
-  background-image: linear-gradient(to left, #FFFFFF 0%, #ECE9E6 51%, #ECE9E6 100%);
+  background-image: linear-gradient(to right, #ECE9E6 0%, #ECE9E6 51%, #FFFFFF 100%);
 }
 .left:hover {
-  background-position: left center;
+  background-position: right center;
 }
 .right:hover {
   background-position: right center;
