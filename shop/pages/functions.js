@@ -154,6 +154,9 @@ function set_pages(allItems){
       $('.item:eq('+n+')').attr("src", pages_set[page][n]);
     }
   }
+  if(!pages_set[page-1]){
+    $('.btn.left:active').css({});
+  }
   //предыдущая страницы
   $('.btn.left').click( () => {
     if(pages_set[page-1]){
