@@ -116,11 +116,7 @@ function filter_out(){
         allItems[n-1] = new Item(php_array_to_js_array(raw_data[n]));
       }
       console.log(allItems);
-      for( n = 0; n <  $('.item').length; n++){
-	if(allItems[n]){
-	  $('.item:eq('+n+')').attr("src", allItems[n].image);
-	}
-      }
+      set_pages(allItems);
     }
   });
 }
@@ -135,6 +131,45 @@ function php_array_to_js_array(array){
   }
   js_array += splited[length];
   return js_array.split('-_-');
+}
+
+function set_pages(allItems){
+  var pages_set = new Array();
+  for( page = 0; page <  allItems.length; page++){
+    for( n = 0; n <  $('.item').length; n++){
+      pages_set[page][n] = allItems[n].image;
+    }
+  }
+  var page = 0; //номер текущей страницы
+	console.log(pages_set);
+  // первая страница
+  for( n = 0; n <  $('.item').length; n++){
+    if(pages_set[page][n]){
+      $('.item:eq('+n+')').attr("src", pages_set[page][n]);
+    }
+  }		
+  //предыдущая стриницы
+  $('.btn.left).click( () => {
+    if(pages_set[page-1]){
+      page--
+      for( n = 0; n <  $('.item').length; n++){
+        if(pages_set[page][n]){
+          $('.item:eq('+n+')').attr("src", pages_set[page][n]);
+        }
+      }
+    }
+  });  
+  // следующая страница
+  $('.btn.left).click( () => {
+    if(pages_set[page+1]){
+      page++
+      for( n = 0; n <  $('.item').length; n++){
+        if(pages_set[page][n]){
+          $('.item:eq('+n+')').attr("src", pages_set[page][n]);
+        }
+      }
+    }
+  }); 
 }
 
 class Item {
