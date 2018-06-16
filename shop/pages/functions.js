@@ -1,4 +1,4 @@
-function item(){
+function build(){
   return '<img class="item" src="items/default.png">';
 }
 function adaptation_1(){
@@ -11,7 +11,7 @@ function adaptation_1(){
   }
 }
 function adaptation_2(){
-  var item = item();
+  var item = build();
   var row = $('#row');
   row.html(item + item + item + item + item + item + item + item);
   if(row.width() < 1010){
@@ -30,7 +30,7 @@ function adaptation_2(){
 }
 function adaptation_3(){
   var row = $('#row');
-  var item = item();
+  var item = build();
   var oldwidth = row.width();
   $(window).resize( () => {
     if(row.width() < 1010){
