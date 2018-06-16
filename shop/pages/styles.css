@@ -56,14 +56,14 @@ ol {
   text-align: center;
   display: block;
   box-shadow: 3px black;
-  transition: 0.5s;
+  transition: 0.25s;
   background-size: 200% auto;
 }
 .right {
   border-radius: 0 5px 5px 0;
   margin-left: 68vw;
   right: 0.5vh;
-  background-image: linear-gradient(to right, #ECE9E6 0%, #ECE9E6 51%, #FFFFFF 100%);
+  background-image: linear-gradient(to right, #ECE9E6 0%, #FFFFFF 51%, #ECE9E6 100%);
 }
 .left {
   border-radius: 5px 0 0 5px;
