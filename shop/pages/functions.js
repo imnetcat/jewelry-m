@@ -134,6 +134,8 @@ function php_array_to_js_array(array){
 }
 
 function set_pages(allItems){
+	console.log(allItems);
+	console.log(allItems[n].image);
   var pages_set = new Array();
   for( page = 0; page <  allItems.length; page++){
     for( n = 0; n <  $('.item').length; n++){
