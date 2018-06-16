@@ -135,12 +135,14 @@ function php_array_to_js_array(array){
 
 function set_pages(allItems){
   var pages_set = new Array();
+  var e = 0;
   for( page = 0; page <  allItems.length / $('.item').length; page++){
     pages_set[page] = new Array();
     for( n = 0; n <  $('.item').length; n++){
-      if(allItems[n]){
-        pages_set[page][n] = allItems[n].image;
+      if(allItems[e]){
+        pages_set[page][n] = allItems[e].image;
       }
+      e++
     }
   }
   var page = 0; //номер текущей страницы
