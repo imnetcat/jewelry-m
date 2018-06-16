@@ -173,6 +173,7 @@ function set_pages(allItems){
       console.log('page++: ' + page++);
       for( n = 0; n <  $('.item').length; n++){
         console.log('n: ' + n);
+         console.log('page: ' + page);
          console.log(pages_set);
          console.log(pages_set[page]);
          console.log(pages_set[page][n]);
