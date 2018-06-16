@@ -1,3 +1,6 @@
+function item(){
+  return '<img class="item" src="items/default.png">';
+}
 function adaptation_1(){
   var client_w = screen.width;
   if(client_w < 1024){
@@ -8,7 +11,7 @@ function adaptation_1(){
   }
 }
 function adaptation_2(){
-  var item = '<img class="item" src="items/default.png">';
+  var item = item();
   var row = $('#row');
   row.html(item + item + item + item + item + item + item + item);
   if(row.width() < 1010){
@@ -27,6 +30,7 @@ function adaptation_2(){
 }
 function adaptation_3(){
   var row = $('#row');
+  var item = item();
   var oldwidth = row.width();
   $(window).resize( () => {
     if(row.width() < 1010){
