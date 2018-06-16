@@ -161,7 +161,9 @@ function set_pages(allItems){
       for( n = 0; n <  $('.item').length; n++){
         if(pages_set[page][n]){
           $('.item:eq('+n+')').attr("src", pages_set[page][n]);
-        }
+        }else{
+          $('.item:eq('+n+')').attr("src", "items/default.png");
+	}
       }
     }
   });  
@@ -174,6 +176,7 @@ function set_pages(allItems){
           $('.item:eq('+n+')').attr("src", pages_set[page][n]);
         }else{
           $('.item:eq('+n+')').attr("src", "items/default.png");
+	}
       }
     }
   }); 
