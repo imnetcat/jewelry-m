@@ -138,6 +138,7 @@ function set_pages(allItems){
   for( page = 0; page <  allItems.length; page++){
     pages_set[page] = new Array();
     for( n = 0; n <  $('.item').length; n++){
+	    console.log(n);
       pages_set[page][n] = allItems[n].image;
     }
   }
