@@ -43,13 +43,6 @@ ol {
   width: 72vw;
   height: 66vh;
 }
-.btn.right {
-  margin-left: 68vw;
-  right: 0.5vh;
-}
-.btn.left {
-  left: 0.5vh;
-}
 .btn img {
   position: absolute;
   margin-top: 31vh;
@@ -61,15 +54,19 @@ ol {
   height: 65vh;
   width: 3.5vw;
   text-align: center;
-  display: inline-block;
-  text-decoration: none;
-  background-image: linear-gradient(to top, #ECE9E6 0%, #FFFFFF 51%, #ECE9E6 100%);
-  text-shadow: 0 -1px 2px rgba(0,0,0,.2);
   border-radius: 4px;
   box-shadow: 3px black;
 }
+.btn.right {
+  margin-left: 68vw;
+  right: 0.5vh;
+  background-image: linear-gradient(to right, #ECE9E6 0%, #FFFFFF 51%, #ECE9E6 100%);
+}
+.btn.left {
+  left: 0.5vh;
+  background-image: linear-gradient(to left, #ECE9E6 0%, #FFFFFF 51%, #ECE9E6 100%);
+}
 .btn:hover {
-  background-position: top center;
 }
 .btn.left:active {
   background-position: left center;
