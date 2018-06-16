@@ -170,9 +170,11 @@ function set_pages(allItems){
 	  console.log('click');
     if(pages_set[page+1]){
       page++
-      console.log('if yeeaa!');
+      console.log('page++: ' + page++);
       for( n = 0; n <  $('.item').length; n++){
+        console.log('n: ' + n);
         if(pages_set[page][n]){
+          console.log('pages_set[page][n]: ' + pages_set[page][n]);
           $('.item:eq('+n+')').attr("src", pages_set[page][n]);
         }
       }
