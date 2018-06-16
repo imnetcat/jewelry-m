@@ -134,12 +134,9 @@ function php_array_to_js_array(array){
 }
 
 function set_pages(allItems){
-	console.log(allItems);
-      var pages_set = new Array();
-	pages_set[0] = new Array();
-      pages_set[0][0] = allItems[0].image;
-	console.log(pages_set);
+  var pages_set = new Array();
   for( page = 0; page <  allItems.length; page++){
+    pages_set[page] = new Array();
     for( n = 0; n <  $('.item').length; n++){
       pages_set[page][n] = allItems[n].image;
     }
