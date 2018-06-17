@@ -170,10 +170,10 @@ ol {
   background: white;
 }
 #filtersHead {
-    width: 64vw;
+    width: 71.5vw;
     height: 3vh;        
     margin-top: 66vh;
-    margin-left: 4vw;
+    margin-left: 0.5vw;
     position: absolute;
     text-align: center;
 }
