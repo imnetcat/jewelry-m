@@ -55,7 +55,6 @@ ol {
   width: 3.5vw;
   text-align: center;
   display: block;
-  box-shadow: 3px black;
   transition: 0.5s;
   background-size: 200% auto;
 }
