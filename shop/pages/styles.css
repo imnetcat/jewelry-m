@@ -2,9 +2,9 @@ body {
   margin: 0;
 }
 #menu {
-  width: 78vw;
+  width: 72vw;
   height: 5vh;
-  margin-left: 11vw;
+  margin-left: 14vw;
   background-color: white;
   box-shadow: 0 0 5px black;
 }
@@ -28,9 +28,9 @@ ol {
 }
 #footer {
   margin-top: 2vh;
-  width: 78vw;
+  width: 72vw;
   height: 5vh;
-  margin-left: 11vw;
+  margin-left: 14vw;
   background-color: white;
   box-shadow: 0 0 5px black;
 }
