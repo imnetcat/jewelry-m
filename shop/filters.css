@@ -118,7 +118,7 @@ label {
   -moz-transition: visibility 0s, z-index 0s, all 1s;
   -webkit-transition: visibility 0s, z-index 0s, all 1s;
   -o-transition: visibility 0s, z-index 0s, all 1s;
-  transition: all 1s ease-in;
+  transition: visibility 0s, z-index 0s, all 1s;
   cursor: pointer; }
   /* line 137, filters.scss */
   label:before {
