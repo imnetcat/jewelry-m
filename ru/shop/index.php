@@ -20,7 +20,7 @@
           <li><a href="/ru/about/">Мои выставки</a></li>
         </ul>
       </li>
-      <li><a href="" style="background-image: none; cursor: default;">Магазин</a></li>
+      <li><a href="#" style="background-image: none; cursor: default;">Магазин</a></li>
       <li><a href="/ru/contacts/">Контакты</a></li>
       <li><a href="/ru/archive/">Архив</a></li>
     </ul>
