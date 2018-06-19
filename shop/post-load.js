@@ -1,6 +1,6 @@
 $( () => {
   $('.fil-close-btn').click( () => {
-    $('#filters').css({
+    $('.filters').css({
       visibility: "hidden",
       zIndex: 99
     });
