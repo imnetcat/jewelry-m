@@ -115,9 +115,9 @@ label {
   text-shadow: 0 1px 1px rgba(0, 0, 0, 0.1);
   font-weight: bold;
   -webkit-box-reflect: below 0px -webkit-gradient(linear, left top, left bottom, color-stop(0.5, transparent), to(rgba(255, 255, 255, 0.3)));
-  -moz-transition: all 1s ease-in;
-  -webkit-transition: all 1s ease-in;
-  -o-transition: all 1s ease-in;
+  -moz-transition: visibility 0s, z-index 0s, all 1s;
+  -webkit-transition: visibility 0s, z-index 0s, all 1s;
+  -o-transition: visibility 0s, z-index 0s, all 1s;
   transition: all 1s ease-in;
   cursor: pointer; }
   /* line 137, filters.scss */
@@ -126,11 +126,11 @@ label {
     font-size: 0.9em;
     margin-left: 19px;
     text-transform: uppercase;
-    -webkit-transition: all 200ms ease;
-    -moz-transition: all 200ms ease;
-    -o-transition: all 200ms ease;
-    -ms-transition: all 200ms ease;
-    transition: all 200ms ease; }
+    -webkit-transition: visibility 0s, z-index 0s, all 200ms ease;
+    -moz-transition: visibility 0s, z-index 0s, all 200ms ease;
+    -o-transition: visibility 0s, z-index 0s, all 200ms ease;
+    -ms-transition: visibility 0s, z-index 0s, all 200ms ease;
+    transition: visibility 0s, z-index 0s, all 200ms ease; }
   /* line 148, filters.scss */
   label i {
     position: absolute;
@@ -147,11 +147,11 @@ label {
     background: -ms-linear-gradient(top, white 0%, #fcfcfc 11%, #e4e4e4 50%, #dddddd 53%, #cdcdcd 97%, #bfbfbf 100%);
     background: linear-gradient(top, white 0%, #fcfcfc 11%, #e4e4e4 50%, #dddddd 53%, #cdcdcd 97%, #bfbfbf 100%);
     box-shadow: inset 0 -3px 3px 0 rgba(0, 0, 0, 0.1), inset 0 -1px 1px 0 rgba(255, 255, 255, 0.4), 0 2px 0 0 rgba(0, 0, 0, 0.2);
-    -webkit-transition: all 200ms ease;
-    -moz-transition: all 200ms ease;
-    -o-transition: all 200ms ease;
-    -ms-transition: all 200ms ease;
-    transition: all 200ms ease; }
+    -webkit-transition: visibility 0s, z-index 0s, all 200ms ease;
+    -moz-transition: visibility 0s, z-index 0s, all 200ms ease;
+    -o-transition: visibility 0s, z-index 0s, all  200ms ease;
+    -ms-transition: visibility 0s, z-index 0s, all  200ms ease;
+    transition:  visibility 0s, z-index 0s, all  200ms ease; }
     /* line 168, filters.scss */
     label i:before {
       content: "";
