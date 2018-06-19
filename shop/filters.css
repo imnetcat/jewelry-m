@@ -115,10 +115,6 @@ label {
   text-shadow: 0 1px 1px rgba(0, 0, 0, 0.1);
   font-weight: bold;
   -webkit-box-reflect: below 0px -webkit-gradient(linear, left top, left bottom, color-stop(0.5, transparent), to(rgba(255, 255, 255, 0.3)));
-  -moz-transition: visibility 0s, z-index 0s, all 1s;
-  -webkit-transition: visibility 0s, z-index 0s, all 1s;
-  -o-transition: visibility 0s, z-index 0s, all 1s;
-  transition: visibility 0s, z-index 0s, all 1s;
   cursor: pointer; }
   /* line 137, filters.scss */
   label:before {
