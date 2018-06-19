@@ -42,7 +42,7 @@
      <? include "to_filters.html"; ?>
     </div>
     <div id="use_filters">
-      <div class="use_filters">Use filters</div>
+      <div class="use_filters">поиск</div>
     </div>
   </div>
   <footer>
