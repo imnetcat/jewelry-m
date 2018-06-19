@@ -43,4 +43,19 @@ $( () => {
       zIndex: 99
     });
   });
+  
+  $('#to_technology').click( () => {
+    $('#technology').css({
+      visibility: "visible",
+      zIndex: 100
+    });
+    $('#to_filters').css({
+      visibility: "hidden",
+      zIndex: 99
+    });
+    $('#use_filters').css({
+      visibility: "hidden",
+      zIndex: 99
+    });
+  });
 });
