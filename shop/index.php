@@ -13,15 +13,16 @@
 <body>
   <nav role='navigation' id="menu">
     <ul>
-      <li><a href="#">Home</a></li>
-      <li><a href="#">About</a>
+      <li><a href="../">Дом</a></li>
+      <li><a href="/about/">Про</a>
         <ul>
-          <li><a href="">Our team</a></li>
-          <li><a href="">History</a></li>
+          <li><a href="/about/me/">Меня</a></li>
+          <li><a href="">Мои выставки</a></li>
         </ul>
       </li>
-      <li><a href="#" style="background-image: none; cursor: default;">Shop</a></li>
-      <li><a href="#">Contact Us</a></li>
+      <li><a href="/shop/" style="background-image: none; cursor: default;">Магазин</a></li>
+      <li><a href="/contacts/">Контакты</a></li>
+      <li><a href="/archive/">Архив</a></li>
     </ul>
   </nav>
   <div id="container">
