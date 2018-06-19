@@ -460,28 +460,6 @@ input.opal:checked ~ label.opal i.opal {
   right: -6px; }
 
 /* -------------------------------------------------------------------------------------------------------------------------------------------------------*/
-input.epoxy:checked ~ label.epoxy:before {
-  content: "on";
-  font-size: 0.9em;
-  text-transform: uppercase;
-  margin-right: 0;
-  margin-left: 8px;
-  margin-bottom: 3px; }
-
-/* line 431, filters.scss */
-input.epoxy:checked ~ label.epoxy {
-  background: #E2E2E2;
-  background: -webkit-radial-gradient(to top, #AEAEAE 0%, #FFFFFF 51%);
-  background: -moz-radial-gradient(to top, #AEAEAE 0%, #FFFFFF 51%);
-  background: -o-radial-gradient(to top, #AEAEAE 0%, #FFFFFF 51%);
-  background: -ms-radial-gradient(to top, #AEAEAE 0%, #FFFFFF 51%);
-  background: radial-gradient(to top, #AEAEAE 0%, #FFFFFF 51%); }
-
-/* line 439, filters.scss */
-input.epoxy:checked ~ label.epoxy i.epoxy {
-  right: -6px; }
-
-/* -------------------------------------------------------------------------------------------------------------------------------------------------------*/input.opal:checked ~ label.opal:before {
 input.foundry:checked ~ label.foundry:before {  
   content: "on";
   font-size: 0.9em;
@@ -504,3 +482,25 @@ input.foundry:checked ~ label.foundry i.foundry {
   right: -6px; }
 
 /* -------------------------------------------------------------------------------------------------------------------------------------------------------*/
+input.epoxy:checked ~ label.epoxy:before {
+  content: "on";
+  font-size: 0.9em;
+  text-transform: uppercase;
+  margin-right: 0;
+  margin-left: 8px;
+  margin-bottom: 3px; }
+
+/* line 431, filters.scss */
+input.epoxy:checked ~ label.epoxy {
+  background: #E2E2E2;
+  background: -webkit-radial-gradient(to top, #AEAEAE 0%, #FFFFFF 51%);
+  background: -moz-radial-gradient(to top, #AEAEAE 0%, #FFFFFF 51%);
+  background: -o-radial-gradient(to top, #AEAEAE 0%, #FFFFFF 51%);
+  background: -ms-radial-gradient(to top, #AEAEAE 0%, #FFFFFF 51%);
+  background: radial-gradient(to top, #AEAEAE 0%, #FFFFFF 51%); }
+
+/* line 439, filters.scss */
+input.epoxy:checked ~ label.epoxy i.epoxy {
+  right: -6px; }
+
+/* -------------------------------------------------------------------------------------------------------------------------------------------------------*/input.opal:checked ~ label.opal:before {
