@@ -103,6 +103,7 @@ ol {
   margin-top: 40px;
 }
 .item {
+  z-index: 9
   opacity: 1;
   width: 250px;
   height: 250px;
@@ -110,6 +111,7 @@ ol {
   transition: opacity 0.5s;
 }
 .description {
+  z-index: 10
   width: 250px;
   height: 250px;
   position: absolute;
