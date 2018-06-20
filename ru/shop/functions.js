@@ -219,7 +219,14 @@ function set_pages(allItems){
     }
   }); 
 }
-
+function desc_hover(j){
+  $('.description:eq('+j+')'').animate({
+    "opacity": 1,
+  }, 500);
+  $('.item:eq('+j+')'').animate({
+    "opacity": 0.5,
+  }, 500);
+}
 class Item {
   constructor(array) {
     this.id = array[0];
