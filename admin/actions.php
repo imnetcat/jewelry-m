@@ -9,11 +9,11 @@ switch ($_POST['action']){
       $image = $_POST['image'];
       $type = $_POST['type'];
       $stone = $_POST['stone'];
-      $filter_3 = $_POST['filter_3'];
+      $technology = $_POST['technology'];
       $filter_4 = $_POST['filter_4'];
       $filter_5 = $_POST['filter_5'];
       $description = $_POST['description'];
-      echo add_new($database, $image, $type, $stone, $filter_3, $filter_4, $filter_5, $description);
+      echo add_new($database, $image, $type, $stone, $technology, $filter_4, $filter_5, $description);
       break;
 };
 ?>
