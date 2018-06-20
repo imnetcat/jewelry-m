@@ -56,10 +56,10 @@ function id_parse($array_of_id){
       }
     }
   }
-  for( $n = 0; $n < count($array_of_id['technology']); $n++ ){
-    for( $x = 0; $x < count($parsed); $x++ ){
-      if($parsed[$n] == $array_of_id['technology'][$x]){
-        $parsed[count($parsed)] = $parsed[$n];
+  for( $n = 0; $n < count($parsed); $n++ ){
+    for( $x = 0; $x < count($array_of_id['technology']); $x++ ){
+      if($array_of_id['technology'][$n] == $parsed[$x]){
+        $parsed[count($parsed)] = $array_of_id['technology'][$n];
       }
     }
   }
