@@ -181,6 +181,8 @@ function set_pages(allItems){
   // первая страница
   for( n = 0; n <  $('.item').length; n++){
     if(pages_set[page][n]){
+      console.log(pages_set[page][n]);
+      console.log(pages_set[page][n][0]);
       $('.item:eq('+n+')').attr("src", pages_set[page][n][0]);
       $('.description:eq('+n+')').html(pages_set[page][n][1]);
     }
