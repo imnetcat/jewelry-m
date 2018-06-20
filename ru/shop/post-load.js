@@ -58,10 +58,5 @@ $( () => {
       zIndex: 99
     });
   });
-  
-  var divs = $('.description');
-  for (var i = 0; i < divs.length; i++) {
-    divs[i].hover( desc_hover(i) );
-  }
 });
 
