@@ -59,14 +59,13 @@ $( () => {
     });
   });
   
-  var divs = $('.description');
+  var divs = document.getElementsByClassName('description');
   for (var i = 0; i < divs.length; i++) {
-    divs[i].hover( desc_hover(i) );
+    divs[i].onmouseenter = function(j){
+      return function() {
+        alert(j);
+      }
+    }(i);
   }
 });
 
-function desc_hover(j){
-  return function() {
-    alert(j);
-  }
-}
