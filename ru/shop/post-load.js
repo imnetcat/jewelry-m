@@ -61,7 +61,7 @@ $( () => {
   
   var divs = $('.description');
   for (var i = 0; i < divs.length; i++) {
-    divs[i].hover = function(j){
+    divs[i].hover( function(j){
       return function() {
         alert(j);
       }
