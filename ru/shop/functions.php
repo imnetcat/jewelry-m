@@ -48,6 +48,7 @@ function found_items($database, $filters){
 }
 
 function id_parse($array_of_id){
+  return var_dump($array_of_id);
   $parsed = array();
   for( $n = 0; $n < count($array_of_id['types']); $n++ ){
     for( $x = 0; $x < count($array_of_id['stones']); $x++ ){
