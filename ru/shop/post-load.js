@@ -58,4 +58,8 @@ $( () => {
       zIndex: 99
     });
   });
+  
+  $('.description').hover( () => {
+    console.log(this);
+  });
 });
