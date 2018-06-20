@@ -118,6 +118,7 @@ ol {
 }
 .description {
   opacity: 0;
+  trinsition: opacity 0.5s;
   margin: auto;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -132,6 +133,9 @@ ol {
   height: 250px;
   margin-bottom: 0px;
   margin-top: 40px;
+}
+.description:hover {
+  opacity: 0.5;
 }
 .item a {
   width: 100%;
