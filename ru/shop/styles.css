@@ -86,7 +86,7 @@ ol {
   -ms-flex-pack: center;
   justify-content: center;
 }
-.item {
+#row > div {
   margin: auto;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -102,44 +102,25 @@ ol {
   margin-bottom: 0px;
   margin-top: 40px;
 }
-#description {
+.item {
+  opacity: 1;
+  width: 250px;
+  height: 250px;
   position: absolute;
-  width: 64vw;
-  height: 66vh;
-  margin-left: 4vw;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -ms-flex-wrap: wrap;
-  flex-wrap: wrap;
-  -webkit-box-pack: center;
-  -ms-flex-pack: center;
-  justify-content: center;
+  transition: opacity 0.5s;
 }
 .description {
+  width: 250px;
+  height: 250px;
+  position: absolute;
   opacity: 0;
   transition: opacity 0.5s;
-  margin: auto;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  width: 250px;
-  -webkit-box-pack: center;
-  -ms-flex-pack: center;
-  justify-content: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  height: 250px;
-  margin-bottom: 0px;
-  margin-top: 40px;
 }
 .description:hover {
-  opacity: 0.5;
+  opacity: 1;
 }
-.item a {
-  width: 100%;
-  height:100%;
+.description:hover + .item {
+  opacity: 0.5;
 }
 footer {
   margin-top: 2vh;
