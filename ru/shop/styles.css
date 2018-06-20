@@ -118,7 +118,7 @@ ol {
 }
 .description {
   opacity: 0;
-  trinsition: opacity 0.5s;
+  transition: opacity 0.5s;
   margin: auto;
   display: -webkit-box;
   display: -ms-flexbox;
