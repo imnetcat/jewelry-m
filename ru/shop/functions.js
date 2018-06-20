@@ -220,10 +220,10 @@ function set_pages(allItems){
   }); 
 }
 function desc_hover(j){
-  $('.description:eq('+j+')'').animate({
+  $('.description:eq('+j+')').animate({
     "opacity": 1,
   }, 500);
-  $('.item:eq('+j+')'').animate({
+  $('.item:eq('+j+')').animate({
     "opacity": 0.5,
   }, 500);
 }
