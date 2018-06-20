@@ -103,7 +103,6 @@ ol {
   margin-top: 40px;
 }
 .item {
-  z-index: 9
   opacity: 1;
   width: 250px;
   height: 250px;
@@ -111,18 +110,17 @@ ol {
   transition: opacity 0.5s;
 }
 .description {
-  z-index: 10
   width: 250px;
   height: 250px;
   position: absolute;
   opacity: 0;
   transition: opacity 0.5s;
 }
-.description:hover {
-  opacity: 1;
-}
-.description:hover + .item {
+.item:hover {
   opacity: 0.5;
+}
+.item:hover + .description {
+  opacity: 1;
 }
 footer {
   margin-top: 2vh;
