@@ -65,6 +65,6 @@ $( () => {
       return function() {
         alert(j);
       }
-    }(i);
+    }(i));
   }
 });
