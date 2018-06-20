@@ -102,6 +102,11 @@ function filter_out(){
   for(n = 1; n < raw.length; n++){
     filters.stones += raw[n].id + "-_-";
   }
+  var raw = $('#technology input:checked');
+  filters.technology = raw[0].id + '-_-';
+  for(n = 1; n < raw.length; n++){
+    filters.technology += raw[n].id + "-_-";
+  }
   $.ajax({
     type: "POST",
     url: "actions.php",
