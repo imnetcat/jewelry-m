@@ -31,8 +31,6 @@
         <div class="btn left"><img></div>
         <div id="row">
         </div>
-        <div id="description">
-        </div>
         <div class="btn right"><img></div>
       </div>
     </div>
