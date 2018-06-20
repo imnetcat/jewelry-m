@@ -1,8 +1,5 @@
 function build_item(){
-  return '<img class="item" src="items/default.png">';
-}
-function build_item_description(){
-  return '<div class="description"></div>';
+  return '<div><img class="item" src="items/default.png"><div class="description"></div></div>';
 }
 function adaptation_1(){
   var client_w = screen.width;
@@ -15,37 +12,25 @@ function adaptation_1(){
 }
 function adaptation_2(){
   var item = build_item();
-  var desc = build_item_description();
   var row = $('#row');
-  var description = $('#description');
   row.html(item + item + item + item + item + item + item + item);
-  description.html(desc + desc + desc + desc + desc + desc + desc + desc);
   if(row.width() < 1010){
     row.children().last().remove();
     row.children().last().remove();
-    description.children().last().remove();
-    description.children().last().remove();
   }
   if(row.width() < 760){
     row.children().last().remove();
     row.children().last().remove();
-    description.children().last().remove();
-    description.children().last().remove();
   }
   if(row.width() < 600){
     row.children().last().remove();
     row.children().last().remove();
     row.children().last().remove();
-    description.children().last().remove();
-    description.children().last().remove();
-    description.children().last().remove();
   }
 }
 function adaptation_3(){
   var row = $('#row');
-  var description = $('#description');
   var item = build_item();
-  var desc = build_item_description();
   var oldwidth = row.width();
   $(window).resize( () => {
     if(row.width() < 1010){
@@ -53,8 +38,6 @@ function adaptation_3(){
         if(row.children().length == 8){
 	  row.children().last().remove();
 	  row.children().last().remove();
-          description.children().last().remove();
-          description.children().last().remove();
           filter_out();
 	}
       }
@@ -64,8 +47,6 @@ function adaptation_3(){
         if(row.children().length < 8){
 	  row.append(item);
 	  row.append(item);
-	  description.append(desc);
-	  description.append(desc);
 	  filter_out();
 	}
       }
@@ -75,8 +56,6 @@ function adaptation_3(){
         if(row.children().length >= 6){
 	  row.children().last().remove();
 	  row.children().last().remove();
-          description.children().last().remove();
-          description.children().last().remove();
 	  filter_out();
 	}
       }
@@ -86,8 +65,6 @@ function adaptation_3(){
         if(row.children().length < 6){
 	  row.append(item);
 	  row.append(item);
-	  description.append(desc);
-	  description.append(desc);
 	  filter_out();
 	}
       }
@@ -97,8 +74,6 @@ function adaptation_3(){
         if(row.children().length >= 4){
 	  row.children().last().remove();
 	  row.children().last().remove();
-          description.children().last().remove();
-          description.children().last().remove();
 	  filter_out();
 	}
       }
@@ -108,8 +83,6 @@ function adaptation_3(){
         if(row.children().length < 4){
 	  row.append(item);
 	  row.append(item);
-	  description.append(desc);
-	  description.append(desc);
 	  filter_out();
 	}
       }
