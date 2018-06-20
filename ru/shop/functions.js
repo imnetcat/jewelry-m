@@ -168,6 +168,7 @@ function set_pages(allItems){
   for( page; page <  allItems.length / $('.item').length; page++){
     pages_set[page] = new Array();
     for( n = 0; n <  $('.item').length; n++){
+      pages_set[page][n] = new Array();
       if(allItems[e]){
         pages_set[page][n][0] = allItems[e].image;  
 	pages_set[page][n][1] = allItems[e].description
