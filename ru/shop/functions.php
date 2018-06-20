@@ -63,7 +63,7 @@ function id_parse($array_of_id){
       }
     }
   }
-  return $parsed;
+  return var_dump($parsed);
 }
 
 function get_items($database, $id){
