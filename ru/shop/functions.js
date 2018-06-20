@@ -107,7 +107,6 @@ function filter_out(){
   for(n = 1; n < raw.length; n++){
     filters.technology += raw[n].id + "-_-";
   }
-	console.log(filters);
   $.ajax({
     type: "POST",
     url: "actions.php",
