@@ -58,8 +58,8 @@ function id_parse($array_of_id){
   }
   for( $n = 0; $n < count($parsed); $n++ ){
     for( $x = 0; $x < count($array_of_id['technology']); $x++ ){
-      if($array_of_id['technology'][$n] == $parsed[$x]){
-        $parsed[count($parsed)] = $array_of_id['technology'][$n];
+      if($array_of_id['technology'][$n] != $parsed[$x]){
+        $parsed.splice($n, 1);
       }
     }
   }
