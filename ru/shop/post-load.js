@@ -61,7 +61,7 @@ $( () => {
   
   var divs = document.getElementsByClassName('description');
   for (var i = 0; i < divs.length; i++) {
-    divs[i].onmouseenter = function(j){
+    divs[i].onhover = function(j){
       desc_hover(j);
     }(i);
   }
