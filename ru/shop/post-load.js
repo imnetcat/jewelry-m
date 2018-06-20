@@ -62,9 +62,7 @@ $( () => {
   var divs = document.getElementsByClassName('description');
   for (var i = 0; i < divs.length; i++) {
     divs[i].onmouseenter = function(j){
-      return function() {
-        alert(j);
-      }
+      desc_hover(j);
     }(i);
   }
 });
