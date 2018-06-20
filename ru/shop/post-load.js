@@ -58,5 +58,8 @@ $( () => {
       zIndex: 99
     });
   });
+  $('#use_filters').click( () => {
+    filter_out();
+  });
 });
 
