@@ -59,11 +59,9 @@ $( () => {
     });
   });
   
-  var divs = document.getElementsByClassName('description');
+  var divs = $('.description');
   for (var i = 0; i < divs.length; i++) {
-    divs[i].onhover = function(j){
-      desc_hover(j);
-    }(i);
+    divs[i].hover( desc_hover(i) );
   }
 });
 
