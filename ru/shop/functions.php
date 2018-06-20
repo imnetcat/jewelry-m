@@ -28,7 +28,7 @@ function found_items($database, $filters){
       }
     }  
   }
-  $technology = explode("-_-", $filters["technology "]);
+  $technology = explode("-_-", $filters["technology"]);
   $query ="SELECT id, technology FROM items";  
   if($result = mysqli_query($database, $query)){
     while ($row = mysqli_fetch_row($result)) {
