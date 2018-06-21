@@ -16,28 +16,34 @@
   <script async>
     $( () => {
       $('#new').click( () => {
-	if($('#new_image').val() || $('#new_type').val() || $('#new_stone').val() || $('#new_technology').val() || $('#new_description').val() != "" || " "){
-	  $.ajax({
-            type: "POST",
-	    url: "actions.php",
-	    data: {
-	      action: 'add_new',
-	      image: $('#new_image').val(),
-	      type: $('#new_type').val(),
-	      stone: $('#new_stone').val(),
-	      technology: $('#new_technology').val(),
-	      filter_4: $('#new_filter_4').val(),
-	      filter_5: $('#new_filter_5').val(),
-	      filter_5: $('#new_filter_5').val(),
-	      description: $('#new_description').val()
-	    },
-            success: function(data){
-	      $('#info').html($('#info').html() + "<br>" + data);
-            }
-          });
-	}else{
-          $('#info').html($('#info').html() + "<br>" + "Поля должны быть запонеными");
-	}
+        $.ajax({
+          type: "POST",
+	  url: "actions.php",
+	  data: {
+	    action: 'add_new',
+	    image: $('#new_image').val(),
+	    type: $('#new_type').val(),
+	    stone: $('#new_stone').val(),
+	    technology: $('#new_technology').val(),
+	    filter_4: $('#new_filter_4').val(),
+	    filter_5: $('#new_filter_5').val(),
+	    filter_5: $('#new_filter_5').val(),
+	    description: $('#new_description').val()
+	  },
+          success: function(data){
+	    $('#info').html($('#info').html() + "<br>" + data);
+          }
+        });
+      });
+      $('#del').click( () => {
+        $.ajax({
+          type: "POST",
+	  url: "actions.php",
+	  data: {
+	    action: 'delete',
+	    id: $('delete_this').val()
+	  }
+	});
       });
     });
   </script>
@@ -53,6 +59,10 @@
 <input id="new_filter_5"><br>
 <input id="new_description"><br>
 </button>
+<br>
+<button id="del">Delete</button>
+<input id="delete_this"><br>
+
 <div id="container"><br><div id="info"></div><br><br><br>
     <? 
     require_once "db.php";
