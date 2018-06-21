@@ -504,3 +504,48 @@ input.epoxy:checked ~ label.epoxy i.epoxy {
   right: -6px; }
 
 /* -------------------------------------------------------------------------------------------------------------------------------------------------------*/input.opal:checked ~ label.opal:before {
+input.cost-up-to-down:checked ~ label.cost-up-to-down:before {
+  content: "on";
+  font-size: 0.9em;
+  text-transform: uppercase;
+  margin-right: 0;
+  margin-left: 8px;
+  margin-bottom: 3px; }
+
+/* line 431, filters.scss */
+input.cost-up-to-down:checked ~ label.cost-up-to-down {
+  background: #E2E2E2;
+  background: -webkit-radial-gradient(to top, #AEAEAE 0%, #FFFFFF 51%);
+  background: -moz-radial-gradient(to top, #AEAEAE 0%, #FFFFFF 51%);
+  background: -o-radial-gradient(to top, #AEAEAE 0%, #FFFFFF 51%);
+  background: -ms-radial-gradient(to top, #AEAEAE 0%, #FFFFFF 51%);
+  background: radial-gradient(to top, #AEAEAE 0%, #FFFFFF 51%); }
+
+/* line 439, filters.scss */
+input.cost-up-to-down:checked ~ label.cost-up-to-down i.cost-up-to-down {
+  right: -6px; }
+
+/* -------------------------------------------------------------------------------------------------------------------------------------------------------*/input.opal:checked ~ label.opal:before {
+
+  input.cost-down-to-up:checked ~ label.cost-down-to-up:before {
+  content: "on";
+  font-size: 0.9em;
+  text-transform: uppercase;
+  margin-right: 0;
+  margin-left: 8px;
+  margin-bottom: 3px; }
+
+/* line 431, filters.scss */
+input.cost-down-to-up:checked ~ label.cost-down-to-up {
+  background: #E2E2E2;
+  background: -webkit-radial-gradient(to top, #AEAEAE 0%, #FFFFFF 51%);
+  background: -moz-radial-gradient(to top, #AEAEAE 0%, #FFFFFF 51%);
+  background: -o-radial-gradient(to top, #AEAEAE 0%, #FFFFFF 51%);
+  background: -ms-radial-gradient(to top, #AEAEAE 0%, #FFFFFF 51%);
+  background: radial-gradient(to top, #AEAEAE 0%, #FFFFFF 51%); }
+
+/* line 439, filters.scss */
+input.cost-down-to-up:checked ~ label.cost-down-to-up i.cost-down-to-up {
+  right: -6px; }
+
+/* -------------------------------------------------------------------------------------------------------------------------------------------------------*/input.opal:checked ~ label.opal:before {
