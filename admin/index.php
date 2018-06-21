@@ -25,7 +25,7 @@
 	    type: $('#new_type').val(),
 	    stone: $('#new_stone').val(),
 	    technology: $('#new_technology').val(),
-	    filter_4: $('#new_cost').val(),
+	    cost: $('#new_cost').val(),
 	    filter_5: $('#new_filter_5').val(),
 	    description: $('#new_description').val()
 	  },
