@@ -42,6 +42,9 @@
 	    action: 'delete',
 	    id: $('delete_this').val()
 	  }
+	  success: function(data){
+	    $('#info').html($('#info').html() + "<br>" + data);
+          }
 	});
       });
     });
