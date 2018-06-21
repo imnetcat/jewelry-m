@@ -213,6 +213,8 @@ function set_pages(allItems){
 }
  
 function filter_error(){
+ $('.item').attr("src", "items/default.png");
+ $('.description').html("");
  $('#row').append($('<h1 class="filter_error" style="margin-top: 30vh; position: absolute; ">Поиск не дал результатов</h1>')); 
 }
 class Item {
