@@ -7,7 +7,7 @@ function found_items($database, $filters, $sortings){
     $sort = "cost DESC";
   }
   $types = explode("-_-", $filters["types"]);
-  $query ="SELECT id, type FROM items ORDER BY " . $sort;  
+  $query ="SELECT id, type, cost FROM items ORDER BY " . $sort;  
   for( $x = 0; $x < count($types); $x++ ){
     if($result = mysqli_query($database, $query)){
       while ($row = mysqli_fetch_row($result)) {
