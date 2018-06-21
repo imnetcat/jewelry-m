@@ -11,13 +11,13 @@ function found_items($database, $filters, $sortings){
   for( $x = 0; $x < count($types); $x++ ){
     if($result = mysqli_query($database, $query)){
       while ($row = mysqli_fetch_row($result)) {
-          return var_dump($row);
         if($row[1] == $types[$x]){
           $id['types'][count($id['types'])] = $row[0];
         }
       }
     }  
   }
+  return var_dump($row);
   $stones = explode("-_-", $filters["stones"]);
   $query ="SELECT id, stone FROM items ORDER BY " . $sort;  
   if($result = mysqli_query($database, $query)){
