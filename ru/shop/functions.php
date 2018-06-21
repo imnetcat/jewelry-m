@@ -2,9 +2,9 @@
 function found_items($database, $filters, $sortings){
   $id = array();
   if($sortings['cost'] == "cost-down-to-up"){
-    $sort = "cost";
+    $sort = "id";
   }else{
-    $sort = "cost DESC";
+    $sort = "id DESC";
   }
   $types = explode("-_-", $filters["types"]);
   $query ="SELECT id, type, cost FROM items ORDER BY " . $sort;  
