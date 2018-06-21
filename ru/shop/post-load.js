@@ -78,7 +78,7 @@ $( () => {
     filter_out();
   });
   
-  $('label[for="cost-down-to-up"]').change( () => {
+  $('#cost-down-to-up').change( () => {
     if($('#cost-down-to-up').prop("checked") == true){
       $('#cost-down-to-up').removeAttr("checked");
     }else{
@@ -86,7 +86,7 @@ $( () => {
     }
   });
   
-  $('label[for="cost-up-to-down"]').change( () => {
+  $('#cost-up-to-down').change( () => {
     if($('#cost-up-to-down').prop( "checked" ) == true){
       $('#cost-down-to-up').removeAttr("checked");
     }else{
