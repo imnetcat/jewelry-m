@@ -79,18 +79,18 @@ $( () => {
   });
   
   $('#cost-down-to-up').change( () => {
-    if($('#cost-down-to-up').prop("checked") == true){
-      $('#cost-down-to-up').removeAttr("checked");
+    if ($('#cost-down-to-up').checked){
+      $('#cost-down-to-up').checked = false;
     }else{
-      $('#cost-up-to-down').prop("checked", true);
+      $('#cost-up-to-down').checked = true;
     }
   });
   
   $('#cost-up-to-down').change( () => {
-    if($('#cost-up-to-down').prop( "checked" ) == true){
-      $('#cost-down-to-up').removeAttr("checked");
+    if($('#cost-up-to-down').checked){
+      $('#cost-down-to-up').checked = false;
     }else{
-      $('#cost-down-to-up').prop("checked", true);
+      $('#cost-down-to-up').checked = true;
     }
   });
   
