@@ -97,7 +97,6 @@ function filter_out(){
   for(n = 1; n < raw.length; n++){
     filters.types += raw[n].id + "-_-";
   }
-	console.log(filters);
   var raw = $('#stones input:checked');
   filters.stones = raw[0].id + '-_-';
   for(n = 1; n < raw.length; n++){
