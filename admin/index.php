@@ -40,7 +40,7 @@
 	  url: "actions.php",
 	  data: {
 	    action: 'delete',
-	    id: $('delete_this').val()
+	    id: $('#delete_this').val()
 	  },
 	  success: function(data){
 	    $('#info').html($('#info').html() + "<br>" + data);
