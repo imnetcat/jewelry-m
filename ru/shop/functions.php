@@ -58,19 +58,13 @@ function id_parse($array_of_id){
   }
   for( $n = 0; $n < count($parsed); $n++ ){
     for( $x = 0; $x < count($array_of_id['technology']); $x++ ){
-      if($array_of_id['technology'][$x] == $parsed[$n]){
-        break 1;
-      }else{
-        if(!$array_of_id['technology'][$x+1]){
-          if($n == 0){
-            array_splice($parsed, $n, $n+1);
-          }else{
-            array_splice($parsed, $n, $n);
-          }
-        }
+      if($parsed[$n] == $array_of_id['technology'][$x]){
+        $parsed__[count($parsed__)] = $parsed[$n];
       }
     }
   }
+  $parsed = $parsed__;
+  $parsed__ = array();
   return $parsed;
 }
 
