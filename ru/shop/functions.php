@@ -56,11 +56,6 @@ function id_parse($array_of_id){
       }
     }
   }
-  $a = array();
-  $a[0] = "0";
-  $a[1] = "1";
-  $a[2] = "2";
-          array_splice($a, 1, 2);
   return var_dump($a);
   for( $n = 0; $n < count($parsed); $n++ ){
     for( $x = 0; $x < count($array_of_id['technology']); $x++ ){
@@ -68,8 +63,11 @@ function id_parse($array_of_id){
         break 1;
       }else{
         if($x == count($array_of_id['technology'])-1){
-          array_splice($parsed, $n, $n);
-          return var_dump($parsed)." -|- ".$n;
+          if($n == 0){
+            array_splice($parsed, $n, $n+1);
+          }else{
+            array_splice($parsed, $n, $n);
+          }
         }
       }
     }
