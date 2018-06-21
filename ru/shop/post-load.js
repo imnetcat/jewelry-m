@@ -79,7 +79,7 @@ $( () => {
   });
   
   $('#cost-down-to-up').change( () => {
-    if($(this).is(':checked')){
+    if($(this).prop('checked')){
       $('#cost-up-to-up').checked = false;
     }else{
       $('#cost-up-to-down').checked = true;
@@ -87,7 +87,7 @@ $( () => {
   });
   
   $('#cost-up-to-down').change( () => {
-    if($(this).is(':checked')){
+    if($(this).prop('checked')){
         $('.cost-down-to-up').prop('checked', true);
     }else{
         $('.cost-down-to-up').prop('checked', false);
