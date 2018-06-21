@@ -115,13 +115,11 @@ function filter_out(){
       filters: filters,
     },
     success: function(data){
-	    console.log(data);
       var raw_data = data.split('array');
       var allItems = new Array();
       for( n = 1; n < raw_data.length; n++){
         allItems[n-1] = new Item(php_array_to_js_array(raw_data[n]));
       }
-      console.log(allItems);
       set_pages(allItems);
     }
   });
@@ -151,6 +149,9 @@ function set_pages(allItems){
       if(allItems[e]){
         pages_set[page][n][0] = allItems[e].image;  
 	pages_set[page][n][1] = allItems[e].description
+      }else{
+	pages_set[page][n][0] = "items/default.png";
+	pages_set[page][n][1] = "";
       }
       e++
     }
