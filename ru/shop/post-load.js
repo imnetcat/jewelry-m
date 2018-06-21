@@ -64,7 +64,7 @@ $( () => {
       visibility: "visible",
       zIndex: 100
     });
-    $('#to_cost').css({
+    $('#to_filters').css({
       visibility: "hidden",
       zIndex: 99
     });
