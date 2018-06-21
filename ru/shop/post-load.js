@@ -78,19 +78,19 @@ $( () => {
     filter_out();
   });
   
-  $('.cost-up-to-down').on('change', function(){
+  $('#cost-up-to-down').on('change', function(){
     if ($(this).is(':checked')){
-        $('.cost-down-to-up').prop('checked', false);
+        $('#cost-down-to-up').prop('checked', false);
     }else{
-        $('.cost-down-to-up').prop('checked', true);
+        $('#cost-down-to-up').prop('checked', true);
     }
   });
 
-  $('.cost-down-to-up').on('change', function(){
+  $('#cost-down-to-up').on('change', function(){
     if ($(this).is(':checked')){
-       $('.cost-up-to-down').prop('checked', false);
+       $('#cost-up-to-down').prop('checked', false);
     }else{
-       $('.cost-up-to-down').prop('checked', true);
+       $('#cost-up-to-down').prop('checked', true);
     }
   });
   
