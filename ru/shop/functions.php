@@ -8,6 +8,7 @@ function found_items($database, $filters, $sortings){
   }
   $types = explode("-_-", $filters["types"]);
   $query ="SELECT id, type FROM items ORDER BY " . $sort;  
+  return $query;
   for( $x = 0; $x < count($types); $x++ ){
     if($result = mysqli_query($database, $query)){
       while ($row = mysqli_fetch_row($result)) {
