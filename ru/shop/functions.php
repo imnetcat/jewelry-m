@@ -56,7 +56,6 @@ function id_parse($array_of_id){
       }
     }
   }
-  return var_dump($array_of_id['technology']);
   for( $n = 0; $n < count($parsed); $n++ ){
     for( $x = 0; $x < count($array_of_id['technology']); $x++ ){
       if($array_of_id['technology'][$x] == $parsed[$n]){
