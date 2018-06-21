@@ -74,32 +74,18 @@ function get_items($database, $id, $sortings){
   }else{
     $sort = "cost DESC";
   }
-  $out = array();
-  $sorted = array();
+  $raw = array();
   $query ="SELECT id, image, type, stone, technology, cost, filter_5, description FROM items ORDER BY " . $sort;
   if($result = mysqli_query($database, $query)){
     while ($row = mysqli_fetch_row($result)) {
-      $count = count($id);
-      for( $x = 0; $x < $count; $x++ ){
-        if($row[0] == $id[$x]){
-          $sorted[count($sorted)] = $row;
-          break;
-        }else{
-          $s = $count-1;
-          if($x == $s){
-            $out[count($out)] = $row;
-          }
-        }
-      }
+      $raw[count($raw)] = $row;
     }
   }
-  //return var_dump($out);
-  return var_dump($sorted);
   $items = " ";
-  for( $n = 0; $n < count($sorted); $n++ ){
-    for( $x = 0; $x < count($out); $x++ ){
-      if($sorted[$n] == $out[$x]){
-        $items .= var_dump($sorted[$n]);
+  for( $n = 0; $n < count($raw); $n++ ){
+    for( $x = 0; $x < count($id); $x++ ){
+      if($raw[$n][0] == $out[$x]){
+        $items .= var_dump($raw[$n]);
       }
     }
   }
