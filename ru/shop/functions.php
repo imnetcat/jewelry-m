@@ -81,7 +81,7 @@ function get_items($database, $id, $sortings){
       $raw[count($raw)] = $row;
     }
   }
-  return $raw;
+  return var_dump($raw);
   $items = " ";
   for( $n = 0; $n < count($id); $n++ ){
     for( $x = 0; $x < count($raw); $x++ ){
