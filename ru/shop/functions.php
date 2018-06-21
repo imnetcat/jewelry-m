@@ -1,13 +1,8 @@
 <?
-function found_items($database, $filters, $sortings){
+function found_items($database, $filters){
   $id = array();
-  if($sortings['cost'] == "cost-down-to-up"){
-    $sort = "id";
-  }else{
-    $sort = "id DESC";
-  }
   $types = explode("-_-", $filters["types"]);
-  $query ="SELECT id, type, cost FROM items"; //ORDER BY " . $sort;  
+  $query ="SELECT id, type FROM items";
   for( $x = 0; $x < count($types); $x++ ){
     if($result = mysqli_query($database, $query)){
       while ($row = mysqli_fetch_row($result)) {
@@ -17,9 +12,8 @@ function found_items($database, $filters, $sortings){
       }
     }  
   }
-  return var_dump($id);
   $stones = explode("-_-", $filters["stones"]);
-  $query ="SELECT id, stone FROM items ORDER BY " . $sort;  
+  $query ="SELECT id, stone FROM items";
   if($result = mysqli_query($database, $query)){
     while ($row = mysqli_fetch_row($result)) {
       $item_filters = explode(", ", $row[1]);
@@ -35,7 +29,7 @@ function found_items($database, $filters, $sortings){
     }  
   }
   $technology = explode("-_-", $filters["technology"]);
-  $query ="SELECT id, technology FROM items ORDER BY " . $sort;  
+  $query ="SELECT id, technology FROM items";  
   if($result = mysqli_query($database, $query)){
     while ($row = mysqli_fetch_row($result)) {
       $item_filters = explode(", ", $row[1]);
@@ -74,9 +68,14 @@ function id_parse($array_of_id){
   return $parsed;
 }
 
-function get_items($database, $id){
+function get_items($database, $id, $sortings){
+  if($sortings['cost'] == "cost-down-to-up"){
+    $sort = "cost";
+  }else{
+    $sort = "cost DESC";
+  }
   $items = " ";
-  $query ="SELECT id, image, type, stone, technology, cost, filter_5, description FROM items";
+  $query ="SELECT id, image, type, stone, technology, cost, filter_5, description FROM items ORDER BY " . $sort;
   if($result = mysqli_query($database, $query)){
     while ($row = mysqli_fetch_row($result)) {
       for( $x = 0; $x < count($id); $x++ ){
