@@ -77,5 +77,22 @@ $( () => {
   $('#use_filters').click( () => {
     filter_out();
   });
+  
+  $('label[for="cost-down-to-up"]').click( () => {
+    if($('#cost-down-to-up').attr("checked") == "checked"){
+      $('#cost-up-to-down').attr("checked", "")
+    }else{
+      $('#cost-up-to-down').attr("checked", "checked");
+    }
+  });
+  
+  $('label[for="cost-up-to-down"]').click( () => {
+    if($('#cost-up-to-down').attr("checked") == "checked"){
+      $('#cost-down-to-up').attr("checked", "")
+    }else{
+      $('#cost-down-to-up').attr("checked", "checked");
+    }
+  });
+  
 });
 
