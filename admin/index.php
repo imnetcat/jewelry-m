@@ -27,7 +27,6 @@
 	    technology: $('#new_technology').val(),
 	    filter_4: $('#new_filter_4').val(),
 	    filter_5: $('#new_filter_5').val(),
-	    filter_5: $('#new_filter_5').val(),
 	    description: $('#new_description').val()
 	  },
           success: function(data){
