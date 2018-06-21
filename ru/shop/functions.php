@@ -84,7 +84,7 @@ function get_items($database, $id, $sortings){
   $items = " ";
   for( $n = 0; $n < count($raw); $n++ ){
     for( $x = 0; $x < count($id); $x++ ){
-      if($raw[$n][0] == $out[$x]){
+      if($raw[$n][0] == $id[$x]){
         $items .= var_dump($raw[$n]);
       }
     }
