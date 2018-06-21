@@ -93,8 +93,8 @@ function get_items($database, $id, $sortings){
       }
     }
   }
-  return var_dump($out)
-  return var_dump($sorted)
+  return var_dump($out);
+  return var_dump($sorted);
   $items = " ";
   for( $n = 0; $n < count($sorted); $n++ ){
     for( $x = 0; $x < count($out); $x++ ){
