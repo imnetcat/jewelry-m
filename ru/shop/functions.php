@@ -7,7 +7,6 @@ function found_items($database, $filters){
     if($result = mysqli_query($database, $query)){
       while ($row = mysqli_fetch_row($result)) {
         if($row[1] == $types[$x]){
-          return $row[1] . " == " . $types[$x];
           $id['types'][count($id['types'])] = $row[0];
         }
       }
