@@ -91,9 +91,9 @@ function adaptation_3(){
   });
 }
 function filter_out(){
+  var filters = new Object();
   var raw = $('#types input:checked');
   if(raw[0] != undefined){
-    var filters = new Object();
     filters.types = raw[0].id + '-_-';
     for(n = 1; n < raw.length; n++){
       filters.types += raw[n].id + "-_-";
@@ -113,12 +113,21 @@ function filter_out(){
       filters.technology += raw[n].id + "-_-";
     }
   }
+  var sortings = new Object();
+  var raw = $('#cost input:checked');
+  if(raw[0] != undefined){
+    sortings.cost = raw[0].id + '-_-';
+    for(n = 1; n < raw.length; n++){
+      sortings.cost += raw[n].id + "-_-";
+    }
+  }
   $.ajax({
     type: "POST",
     url: "actions.php",
     data: {
       action: 'get_items',
       filters: filters,
+      sortings: sortings
     },
     success: function(data){
       var raw_data = data.split('array');
