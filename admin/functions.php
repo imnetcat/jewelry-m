@@ -19,8 +19,8 @@ function add_new($database, $image, $type, $stone, $technology, $filter_4, $filt
 }
 
 function delete($database, $id){
-  $query = "DELETE FROM items WHERE id=".$id;
-  if($result = mysqli_query($database, $query)){
+  $query = "DELETE FROM items WHERE id='" . $id . "'";
+  if($result = mysqli_query($database, $query)){ 
     return "Запись номер ". $id . " удалена успешно";
   } else {
     return "Error in: " . $query . "<br>" . mysqli_error($database);
