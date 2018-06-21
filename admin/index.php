@@ -25,7 +25,7 @@
 	    type: $('#new_type').val(),
 	    stone: $('#new_stone').val(),
 	    technology: $('#new_technology').val(),
-	    filter_4: $('#new_filter_4').val(),
+	    filter_4: $('#new_cost').val(),
 	    filter_5: $('#new_filter_5').val(),
 	    description: $('#new_description').val()
 	  },
@@ -57,7 +57,7 @@
 <input id="new_type"><br>
 <input id="new_stone"><br>
 <input id="new_technology"><br>
-<input id="new_filter_4"><br>
+<input id="new_cost"><br>
 <input id="new_filter_5"><br>
 <input id="new_description"><br>
 </button>
@@ -77,7 +77,7 @@
         echo "<span class='type'>" . "Item type: " . $row[2] . "</span><br>";
         echo "<span class='stone'>" . "Item stone: " . $row[3] . "</span><br>";
         echo "<span class='technology'>" . "Item technology: " . $row[4] . "</span><br>";
-        echo "<span class='filter_4'>" . "Item filter №4: " . $row[5] . "</span><br>";
+        echo "<span class='cost'>" . "Item cost: " . $row[5] . "</span><br>";
         echo "<span class='filter_5'>" . "Item filter №5: " . $row[6] . "</span><br>";
         echo "<span class='description'>" . "Item description: " . $row[7] . "</span><br>";
         echo "</div><br><br><br>";
