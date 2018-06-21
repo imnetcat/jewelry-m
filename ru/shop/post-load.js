@@ -78,19 +78,19 @@ $( () => {
     filter_out();
   });
   
-  $('label[for="cost-down-to-up"]').click( () => {
-    if($('#cost-down-to-up').attr("checked") == "checked"){
-      $('#cost-up-to-down').attr("checked", "")
+  $('label[for="cost-down-to-up"]').change( () => {
+    if($('#cost-down-to-up').prop("checked") == true){
+      $('#cost-down-to-up').removeAttr("checked");
     }else{
-      $('#cost-up-to-down').attr("checked", "checked");
+      $('#cost-up-to-down').prop("checked", true);
     }
   });
   
-  $('label[for="cost-up-to-down"]').click( () => {
-    if($('#cost-up-to-down').attr("checked") == "checked"){
-      $('#cost-down-to-up').attr("checked", "")
+  $('label[for="cost-up-to-down"]').change( () => {
+    if($('#cost-up-to-down').prop( "checked" ) == true){
+      $('#cost-down-to-up').removeAttr("checked");
     }else{
-      $('#cost-down-to-up').attr("checked", "checked");
+      $('#cost-down-to-up').prop("checked", true);
     }
   });
   
