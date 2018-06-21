@@ -60,7 +60,7 @@ function id_parse($array_of_id){
   $a[0] = "0";
   $a[1] = "1";
   $a[2] = "2";
-          array_splice($a, 0, 0);
+          array_splice($a, 0, 1);
   return var_dump($a);
   for( $n = 0; $n < count($parsed); $n++ ){
     for( $x = 0; $x < count($array_of_id['technology']); $x++ ){
