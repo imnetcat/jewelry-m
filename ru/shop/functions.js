@@ -92,7 +92,7 @@ function adaptation_3(){
 }
 function filter_out(){
   var raw = $('#types input:checked');
-  if(raw[0] === undefined){
+  if(raw[0] != undefined){
     var filters = new Object();
     filters.types = raw[0].id + '-_-';
     for(n = 1; n < raw.length; n++){
@@ -100,14 +100,14 @@ function filter_out(){
     }
   }
   var raw = $('#stones input:checked');
-  if(raw[0] === undefined){
+  if(raw[0] != undefined){
     filters.stones = raw[0].id + '-_-';
     for(n = 1; n < raw.length; n++){
       filters.stones += raw[n].id + "-_-";
     }
   }
   var raw = $('#technology input:checked');
-  if(raw[0] === undefined){
+  if(raw[0] != undefined){
     filters.technology = raw[0].id + '-_-';
     for(n = 1; n < raw.length; n++){
       filters.technology += raw[n].id + "-_-";
@@ -126,7 +126,13 @@ function filter_out(){
       for( n = 1; n < raw_data.length; n++){
         allItems[n-1] = new Item(php_array_to_js_array(raw_data[n]));
       }
-      set_pages(allItems);
+      if(allItems[0] != undefined){
+	$('.filter_error').remove();
+        set_pages(allItems);
+      }else{
+	$('.filter_error').remove();
+	filter_error();
+      }
     }
   });
 }
@@ -206,6 +212,9 @@ function set_pages(allItems){
   }); 
 }
  
+function filter_error(){
+ $('#row').append($('<h1 class="filter_error" style="margin-top: 30vh; position: absolute; ">Поиск не дал результатов</h1>')); 
+}
 class Item {
   constructor(array) {
     this.id = array[0];
