@@ -25,4 +25,5 @@ function delete($database, $id){
   } else {
     return "Error in: " . $query . "<br>" . mysqli_error($database);
   }
+}
 ?>
