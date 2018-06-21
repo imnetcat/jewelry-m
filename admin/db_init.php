@@ -7,7 +7,7 @@ $query ="CREATE TABLE  IF NOT EXISTS items (
     type VARCHAR(60) NOT NULL,
     stone VARCHAR(60) NOT NULL,
     technology VARCHAR(60) NOT NULL,
-    filter_4 VARCHAR(60) NOT NULL,
+    cost VARCHAR(60) NOT NULL,
     filter_5 VARCHAR(60) NOT NULL,
     description VARCHAR(600) NULL
 )";
