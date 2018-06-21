@@ -1,8 +1,13 @@
 <?
-function found_items($database, $filters){
+function found_items($database, $filters, $sortings){
   $id = array();
+  if($sortings['cost'] == "cost-down-to-up"){
+    $sort = "cost";
+  }else{
+    $sort = "cost DESC";
+  }
   $types = explode("-_-", $filters["types"]);
-  $query ="SELECT id, type FROM items";  
+  $query ="SELECT id, type FROM items ORDER BY " . $sort;  
   for( $x = 0; $x < count($types); $x++ ){
     if($result = mysqli_query($database, $query)){
       while ($row = mysqli_fetch_row($result)) {
@@ -13,7 +18,7 @@ function found_items($database, $filters){
     }  
   }
   $stones = explode("-_-", $filters["stones"]);
-  $query ="SELECT id, stone FROM items";  
+  $query ="SELECT id, stone FROM items ORDER BY " . $sort;  
   if($result = mysqli_query($database, $query)){
     while ($row = mysqli_fetch_row($result)) {
       $item_filters = explode(", ", $row[1]);
@@ -29,7 +34,7 @@ function found_items($database, $filters){
     }  
   }
   $technology = explode("-_-", $filters["technology"]);
-  $query ="SELECT id, technology FROM items";  
+  $query ="SELECT id, technology FROM items ORDER BY " . $sort;  
   if($result = mysqli_query($database, $query)){
     while ($row = mysqli_fetch_row($result)) {
       $item_filters = explode(", ", $row[1]);
