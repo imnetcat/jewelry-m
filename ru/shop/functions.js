@@ -115,12 +115,7 @@ function filter_out(){
   }
   var sortings = new Object();
   var raw = $('#cost input:checked');
-  if(raw[0] != undefined){
-    sortings.cost = raw[0].id + '-_-';
-    for(n = 1; n < raw.length; n++){
-      sortings.cost += raw[n].id + "-_-";
-    }
-  }
+  sortings.cost = raw.id;
   $.ajax({
     type: "POST",
     url: "actions.php",
