@@ -92,18 +92,22 @@ function adaptation_3(){
 }
 function filter_out(){
   var raw = $('#types input:checked');
-  var filters = new Object();
-  filters.types = raw[0].id + '-_-';
-  for(n = 1; n < raw.length; n++){
-    filters.types += raw[n].id + "-_-";
+  if(raw[0] === undefined){
+    var filters = new Object();
+    filters.types = raw[0].id + '-_-';
+    for(n = 1; n < raw.length; n++){
+      filters.types += raw[n].id + "-_-";
+    }
   }
   var raw = $('#stones input:checked');
-  filters.stones = raw[0].id + '-_-';
-  for(n = 1; n < raw.length; n++){
-    filters.stones += raw[n].id + "-_-";
+  if(raw[0] === undefined){
+    filters.stones = raw[0].id + '-_-';
+    for(n = 1; n < raw.length; n++){
+      filters.stones += raw[n].id + "-_-";
+    }
   }
   var raw = $('#technology input:checked');
-  if(raw[0].id){
+  if(raw[0] === undefined){
     filters.technology = raw[0].id + '-_-';
     for(n = 1; n < raw.length; n++){
       filters.technology += raw[n].id + "-_-";
