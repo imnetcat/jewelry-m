@@ -63,7 +63,7 @@ function id_parse($array_of_id){
       }else{
         if($x == count($array_of_id['technology'])-1){
           array_splice($parsed, $n, $n);
-          return $parsed;
+          return var_dump($parsed);
         }
       }
     }
