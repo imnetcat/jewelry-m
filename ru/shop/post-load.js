@@ -58,6 +58,22 @@ $( () => {
       zIndex: 99
     });
   });
+  
+  $('#to_cost').click( () => {
+    $('#cost').css({
+      visibility: "visible",
+      zIndex: 100
+    });
+    $('#to_cost').css({
+      visibility: "hidden",
+      zIndex: 99
+    });
+    $('#use_filters').css({
+      visibility: "hidden",
+      zIndex: 99
+    });
+  });
+  
   $('#use_filters').click( () => {
     filter_out();
   });
