@@ -58,11 +58,11 @@ function id_parse($array_of_id){
   }
   for( $n = 0; $n < count($parsed); $n++ ){
     for( $x = 0; $x < count($array_of_id['technology']); $x++ ){
-      if($array_of_id['technology'][$n] != $parsed[$x]){
-        for( $s = 0; $s < count($array_of_id['technology']); $s++ ){
-          if($array_of_id['technology'][$s] == $parsed[$x]){
-            $parsed = array_splice($parsed, $s, $s);
-          }
+      if($array_of_id['technology'][$x] == $parsed[$n]){
+        break 1;
+      }else{
+        if($n == count($array_of_id['technology'])){
+          $parsed = array_splice($parsed, $n, $n);
         }
       }
     }
