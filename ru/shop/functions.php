@@ -70,7 +70,7 @@ function id_parse($array_of_id){
 
 function get_items($database, $id){
   $items = " ";
-  $query ="SELECT id, image, type, stone, technology, filter_4, filter_5, description FROM items";
+  $query ="SELECT id, image, type, stone, technology, cost, filter_5, description FROM items";
   if($result = mysqli_query($database, $query)){
     while ($row = mysqli_fetch_row($result)) {
       for( $x = 0; $x < count($id); $x++ ){
