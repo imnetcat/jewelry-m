@@ -17,7 +17,7 @@ function found_items($database, $filters, $sortings){
       }
     }  
   }
-  return var_dump($row);
+  return var_dump($id);
   $stones = explode("-_-", $filters["stones"]);
   $query ="SELECT id, stone FROM items ORDER BY " . $sort;  
   if($result = mysqli_query($database, $query)){
