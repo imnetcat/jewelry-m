@@ -115,6 +115,7 @@ function filter_out(){
   }
   var sortings = new Object();
   var raw = $('#cost input:checked');
+	console.log(raw);
   sortings.cost = raw.id;
 	console.log(sortings.cost);
   $.ajax({
