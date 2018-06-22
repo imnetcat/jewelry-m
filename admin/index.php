@@ -16,6 +16,7 @@
   <script async>
     $( () => {
       $('#new').click( () => {
+	      console.log($('#new_cost').val().split(''));
         $.ajax({
           type: "POST",
 	  url: "actions.php",
