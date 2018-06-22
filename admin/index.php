@@ -21,11 +21,17 @@
 	cost = cost.join('.');
 	if(length == 2){
           cost = "0." + cost;
+          cost = "0." + cost;
+          cost = "0." + cost;
+          cost = "0." + cost;
 	}
 	if(length == 3){
           cost = "0." + cost;
+          cost = "0." + cost;
+          cost = "0." + cost;
 	}
 	if(length == 4){
+          cost = "0." + cost;
           cost = "0." + cost;
 	}
 	if(length == 5){
