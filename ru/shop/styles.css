@@ -69,45 +69,48 @@ ol {
 }
 .right:active {
 }
+.btn span {
+  margin-top: 29vh;
+}
 .btn.right span {  
-  height: 7vw;
-  width: 5px;
-    display: block;
-    background: red;
-    transform: rotate(-45deg);
-    margin-left: 3.5vw;
-    position: absolute;
-}
-.btn.right span::before {
-  content: '';
-  height: 7vw;
-  width: 5px;
-    display: block;
-    background: blue;
-   transform: rotate(90deg);
-    position: absolute;
-    margin-top: 3.5vw;
-    margin-left: 3.5vw;
-}
-.btn.left span {
-  height: 7vw;
+  height: 4vw;
   width: 5px;
     display: block;
     background: red;
     transform: rotate(45deg);
-    margin-left: 3.5vw;
+    margin-left: 1.75vw;
+    position: absolute;
+}
+.btn.right span::before {
+  content: '';
+  height: 4vw;
+  width: 5px;
+    display: block;
+    background: blue;
+   transform: rotate(90deg);
+    margin-left: 2vw;
+    position: absolute;
+    margin-top: 2vw;
+}
+.btn.left span {
+  height: 4vw;
+  width: 5px;
+    display: block;
+    background: red;
+    transform: rotate(45deg);
+    margin-left: 1.75vw;
     position: absolute;
 }
 .btn.left span::before {
   content: '';
-  height: 7vw;
+  height: 4vw;
   width: 5px;
     display: block;
     background: blue;
    transform: rotate(-90deg);
     position: absolute;
-    margin-top: 3.5vw;
-    margin-left: 3.5vw;
+    margin-top: 2vw;
+    margin-left: 2vw;
 }
 #row {
   position: absolute;
