@@ -74,7 +74,7 @@ function get_items($database, $id, $sortings){
   }else{
     $sort = "cost DESC";
   }
-  return $sort
+  return $sort;
   $raw = array();
   $query ="SELECT id, image, type, stone, technology, cost, filter_5, description FROM items ORDER BY " . $sort;
   if($result = mysqli_query($database, $query)){
