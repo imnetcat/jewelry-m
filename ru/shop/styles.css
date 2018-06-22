@@ -79,8 +79,6 @@ ol {
   transform: scale(0.99999);
   border-right: 30px solid #D6D8DB;
   position: absolute;
-  margin-top: -20px;
-  margin-left: -15px;
 }
 .btn.left span::before {
   content: '';
@@ -89,8 +87,6 @@ ol {
   border-right: 30px solid #fff;
   position: absolute;
   top: 50%;
-  margin-top: -50px;
-  margin-left: -33px;
 }
 .btn.right span {
       border-top: 50px solid transparent;
@@ -98,8 +94,6 @@ ol {
   transform: scale(0.99999);
   border-left: 30px solid #D6D8DB;
   position: absolute;
-  margin-top: -20px;
-  margin-left: -15px;
 }
 .btn.right span::before {
   content: '';
@@ -108,8 +102,6 @@ ol {
   border-left: 30px solid #fff;
   position: absolute;
   top: 50%;
-  margin-top: -50px;
-  margin-left: -33px;
 }
 #row {
   position: absolute;
