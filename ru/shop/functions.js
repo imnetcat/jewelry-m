@@ -184,12 +184,29 @@ function set_pages(allItems){
     }
   }
   if(!pages_set[page-1]){
-    $('.btn.left:active').css({});
+    $('.btn.left').css({
+      backgroundImage: "none"
+    });
+  }
+  if(!pages_set[page+1]){
+    $('.btn.right').css({
+      backgroundImage: "none"
+    });
   }
   //предыдущая страницы
   $('.btn.left').click( () => {
     if(pages_set[page-1]){
       page--
+      if(!pages_set[page-1]){
+        $('.btn.left').css({
+          backgroundImage: "none"
+        });
+      }
+      if(!pages_set[page+1]){
+        $('.btn.right').css({
+          backgroundImage: "none"
+        });
+      }
       for( n = 0; n <  $('.item').length; n++){
         if(pages_set[page][n]){
           $('.item:eq('+n+')').attr("src", pages_set[page][n][0]);
@@ -205,6 +222,16 @@ function set_pages(allItems){
   $('.btn.right').click( () => {
     if(pages_set[page+1]){
       page++
+      if(!pages_set[page-1]){
+        $('.btn.left').css({
+          backgroundImage: "none"
+        });
+      }
+      if(!pages_set[page+1]){
+        $('.btn.right').css({
+          backgroundImage: "none"
+        });
+      }
       for( n = 0; n <  $('.item').length; n++){
         if(pages_set[page][n]){
           $('.item:eq('+n+')').attr("src", pages_set[page][n][0]);
