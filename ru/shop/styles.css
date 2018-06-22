@@ -56,6 +56,7 @@ ol {
   margin-left: 68vw;
   right: 0.5vh;
   background-image: linear-gradient(to right, #ECE9E6 0%, #FFFFFF 51%, #ECE9E6 100%);
+  background-position: right center;
 }
 .left {
   border-radius: 5px 0 0 5px;
@@ -66,7 +67,7 @@ ol {
   background-position: right center;
 }
 .right:hover {
-  background-position: right center;
+  background-position: left center;
 }
 .left:active {
 }
