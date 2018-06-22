@@ -17,6 +17,7 @@
     $( () => {
       $('#new').click( () => {
 	      console.log($('#new_cost').val().split(''));
+	      console.log($('#new_cost').val().split('').join('.'));
         $.ajax({
           type: "POST",
 	  url: "actions.php",
