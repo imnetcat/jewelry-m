@@ -78,14 +78,12 @@ ol {
   border-bottom: 50px solid transparent;
   transform: scale(0.99999);
   border-right: 30px solid #D6D8DB;
-  position: absolute;
 }
 .btn.left span::before {
   content: '';
   border-top: 50px solid transparent;
   border-bottom: 50px solid transparent;
   border-right: 30px solid #fff;
-  position: absolute;
   top: 50%;
 }
 .btn.right span {
@@ -93,14 +91,12 @@ ol {
   border-bottom: 50px solid transparent;
   transform: scale(0.99999);
   border-left: 30px solid #D6D8DB;
-  position: absolute;
 }
 .btn.right span::before {
   content: '';
   border-top: 50px solid transparent;
   border-bottom: 50px solid transparent;
   border-left: 30px solid #fff;
-  position: absolute;
   top: 50%;
 }
 #row {
