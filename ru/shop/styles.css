@@ -73,31 +73,45 @@ ol {
 }
 .right:active {
 }
-.btn.left span {
-      border-top: 50px solid transparent;
-  border-bottom: 50px solid transparent;
-  transform: scale(0.99999);
-  border-right: 30px solid #D6D8DB;
-}
-.btn.left span::before {
-  content: '';
-  border-top: 50px solid transparent;
-  border-bottom: 50px solid transparent;
-  border-right: 30px solid #fff;
-  top: 50%;
-}
 .btn.right span {
-      border-top: 50px solid transparent;
-  border-bottom: 50px solid transparent;
-  transform: scale(0.99999);
-  border-left: 30px solid #D6D8DB;
+      width: 3px;
+    height: 50px;
+    display: block;
+    background: red;
+    transform: rotate(-45deg);
+    margin-left: 10px;
+    position: absolute;
 }
 .btn.right span::before {
   content: '';
-  border-top: 50px solid transparent;
-  border-bottom: 50px solid transparent;
-  border-left: 30px solid #fff;
-  top: 50%;
+  width: 3px;
+    height: 50px;
+    display: block;
+    background: blue;
+   transform: rotate(90deg);
+    position: absolute;
+    margin-top: 25px;
+    margin-left: -25px;
+}
+.btn.left span {
+      width: 3px;
+    height: 50px;
+    display: block;
+    background: red;
+    transform: rotate(45deg);
+    margin-left: 10px;
+    position: absolute;
+}
+.btn.left span::before {
+  content: '';
+  width: 3px;
+    height: 50px;
+    display: block;
+    background: blue;
+   transform: rotate(-90deg);
+    position: absolute;
+    margin-top: 25px;
+    margin-left: 25px;
 }
 #row {
   position: absolute;
