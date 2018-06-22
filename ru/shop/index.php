@@ -29,10 +29,10 @@
   <div id="container">
     <div id="items">
       <div class="row">
-        <div class="btn left"><img></div>
+        <div class="btn left"><span></span></div>
         <div id="row">
         </div>
-        <div class="btn right"><img></div>
+        <div class="btn right"><span></span></div>
       </div>
     </div>
     <div id="filtersHead"><p>  </p></div>
