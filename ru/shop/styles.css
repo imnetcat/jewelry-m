@@ -38,6 +38,7 @@ ol {
 }
 .btn {
   position: absolute;
+  cursor: pointer;
   top: 0.5vh;
   bottom: 0.5vh;
   height: 65vh;
@@ -71,7 +72,6 @@ ol {
 }
 .btn span {
   margin-top: 29vh;
-  cursor: pointer;
 }
 .btn:hover span {
   transform: scale(1.2);
