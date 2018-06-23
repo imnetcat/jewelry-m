@@ -193,35 +193,23 @@ function set_pages(allItems){
     });
   }
   if(!pages_set[page+1]){
-    $('.btn.right').css({
-      backgroundImage: "none"
-    });
+    $('.btn.right').hide();
   }else{
-    $('.btn.right').css({
-      backgroundImage: "linear-gradient(to right, #ECE9E6 0%, #FFFFFF 51%, #ECE9E6 100%)"
-    });
+    $('.btn.right').show();
   }
   //предыдущая страницы
   $('.btn.left').click( () => {
     if(pages_set[page-1]){
       page--
       if(!pages_set[page-1]){
-        $('.btn.left').css({
-          backgroundImage: "none"
-        });
+        $('.btn.left').hide();
       }else{
-        $('.btn.left').css({
-	  backgroundImage: "linear-gradient(to right, #ECE9E6 0%, #FFFFFF 51%, #ECE9E6 100%)"
-	});
+        $('.btn.left').show();
       }
       if(!pages_set[page+1]){
-        $('.btn.right').css({
-          backgroundImage: "none"
-        });
+        $('.btn.right').hide();
       }else{
-        $('.btn.right').css({
-	  backgroundImage: "linear-gradient(to right, #ECE9E6 0%, #FFFFFF 51%, #ECE9E6 100%)"
-	});
+        $('.btn.right').show();
       }
       for( n = 0; n <  $('.item').length; n++){
         if(pages_set[page][n]){
@@ -239,22 +227,14 @@ function set_pages(allItems){
     if(pages_set[page+1]){
       page++
       if(!pages_set[page-1]){
-        $('.btn.left').css({
-          backgroundImage: "none"
-        });
+        $('.btn.left').hide();
       }else{
-        $('.btn.left').css({
-	  backgroundImage: "linear-gradient(to right, #ECE9E6 0%, #FFFFFF 51%, #ECE9E6 100%)"
-	});
+        $('.btn.left').show();
       }
       if(!pages_set[page+1]){
-        $('.btn.right').css({
-          backgroundImage: "none"
-        });
+        $('.btn.right').hide();
       }else{
-        $('.btn.right').css({
-	  backgroundImage: "linear-gradient(to right, #ECE9E6 0%, #FFFFFF 51%, #ECE9E6 100%)"
-	});
+        $('.btn.right').show();
       }
       for( n = 0; n <  $('.item').length; n++){
         if(pages_set[page][n]){
