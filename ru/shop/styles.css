@@ -71,46 +71,45 @@ ol {
 }
 .btn span {
   margin-top: 29vh;
-}
-.btn.right span {  
-  height: 4vw;
+}.btn.right span {  
+  height: 3vw;
   width: 5px;
     display: block;
-    background: red;
-    transform: rotate(45deg);
+    background: #ECE9E6;
+    transform: rotate(-45deg);
     margin-left: 1.75vw;
     position: absolute;
 }
 .btn.right span::before {
   content: '';
-  height: 4vw;
+  height: 3vw;
   width: 5px;
     display: block;
-    background: blue;
+    background: #ECE9E6;
    transform: rotate(90deg);
-    margin-left: 2vw;
+    margin-left: -1.5vw;
     position: absolute;
-    margin-top: 2vw;
+    margin-top: 1.5vw;
 }
 .btn.left span {
-  height: 4vw;
+  height: 3vw;
   width: 5px;
     display: block;
-    background: red;
+    background: #ECE9E6;
     transform: rotate(45deg);
     margin-left: 1.75vw;
     position: absolute;
 }
 .btn.left span::before {
   content: '';
-  height: 4vw;
+  height: 3vw;
   width: 5px;
     display: block;
-    background: blue;
+    background: #ECE9E6;
    transform: rotate(-90deg);
     position: absolute;
-    margin-top: 2vw;
-    margin-left: 2vw;
+    margin-top: 1.5vw;
+    margin-left: 1.5vw;
 }
 #row {
   position: absolute;
