@@ -71,7 +71,12 @@ ol {
 }
 .btn span {
   margin-top: 29vh;
-}.btn.right span {  
+  cursor: pointer;
+}
+.btn:hover span {
+  transform: scale(1.2);
+}
+.btn.right span {  
   height: 3vw;
   width: 5px;
     display: block;
