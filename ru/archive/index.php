@@ -4,7 +4,8 @@
   <link rel="stylesheet" href="menu.css" type="text/css">
   <link rel="stylesheet" href="use_filters.css" type="text/css">
   <link rel="stylesheet" href="to_filters.css" type="text/css">
-  <link rel="stylesheet" href="filters.css" type="text/css">
+  <link rel="stylesheet" href="filters-1.css" type="text/css">
+  <link rel="stylesheet" href="filters-2.css" type="text/css">
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
   <script src="functions.js"></script>
   <script src="pre-load.js"></script>
@@ -20,18 +21,18 @@
           <li><a href="/ru/about/">Мои выставки</a></li>
         </ul>
       </li>
-      <li><a href="/ru/shop/">Магазин</a></li>
+      <li><a href="#" style="background-image: none; cursor: default;">Магазин</a></li>
       <li><a href="/ru/contacts/">Контакты</a></li>
-      <li><a href="#" style="background-image: none; cursor: default;">Архив</a></li>
+      <li><a href="/ru/archive/">Архив</a></li>
     </ul>
   </nav>
   <div id="container">
     <div id="items">
       <div class="row">
-        <div class="btn left"><img></div>
+        <div class="btn left"><span></span></div>
         <div id="row">
         </div>
-        <div class="btn right"><img></div>
+        <div class="btn right"><span></span></div>
       </div>
     </div>
     <div id="filtersHead"><p>  </p></div>
