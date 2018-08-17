@@ -1,5 +1,10 @@
 <!DOCTYPE html>
 <html><head>
+  <style>
+    input {
+      width: 250px;
+    }
+  </style>
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
   <script async="">
     $( () => {
@@ -86,7 +91,7 @@
     <input id="new_description" placeholder="Описание изделия"><br>
     <button id="new">Ок</button><br>
   </div>
-  <div style="position:relative">
+  <div style="position:absolute; left:350px;">
     <input id="new_image" placeholder="Путь к изображению"><br>
     <input id="new_type" placeholder="Тип изделия"><br>
     <input id="new_stone" placeholder="Камни в изделии (через запятую, без пробелов)"><br>
@@ -96,7 +101,7 @@
     <input id="new_description" placeholder="Описание изделия"><br>
     <button id="new">Ок</button><br>
   </div>
-  <div style="position:relative">
+  <div style="position:relative; left:650px;">
     <input id="new_image" placeholder="Путь к изображению"><br>
     <input id="new_type" placeholder="Тип изделия"><br>
     <input id="new_stone" placeholder="Камни в изделии (через запятую, без пробелов)"><br>
