@@ -4,7 +4,7 @@
     input {
       width: 25vw;
     }
-    div {
+    .center {
       text-align:center;
       align:center;
     }
@@ -85,8 +85,8 @@
     //<button id="del">Delete</button>
     //<input id="delete_this"><br>
 <div>
-  <div style="position:absolute; left:15vw;">
-    Магазин
+  <div style="position:absolute; left:15vw;" class="center">
+    <span>Магазин</span>
     <input id="new_image" placeholder="Путь к изображению"><br>
     <input id="new_type" placeholder="Тип изделия"><br>
     <input id="new_stone" placeholder="Камни в изделии (через запятую, без пробелов)"><br>
@@ -96,8 +96,8 @@
     <input id="new_description" placeholder="Описание изделия"><br>
     <button id="new">Ок</button><br>
   </div>
-  <div style="position:relative; left:35vw;">
-    Архив
+  <div style="position:relative; left:35vw;" class="center">
+    <span>Архив</span>
     <input id="new_image" placeholder="Путь к изображению"><br>
     <input id="new_type" placeholder="Тип изделия"><br>
     <input id="new_stone" placeholder="Камни в изделии (через запятую, без пробелов)"><br>
