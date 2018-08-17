@@ -2,7 +2,7 @@
 <html><head>
   <style>
     input {
-      width: 250px;
+      width: 25vw;
     }
   </style>
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
@@ -81,7 +81,7 @@
     //<button id="del">Delete</button>
     //<input id="delete_this"><br>
 <div>
-  <div style="position:absolute">
+  <div style="position:absolute; left:5vw;">
     <input id="new_image" placeholder="Путь к изображению"><br>
     <input id="new_type" placeholder="Тип изделия"><br>
     <input id="new_stone" placeholder="Камни в изделии (через запятую, без пробелов)"><br>
@@ -91,7 +91,7 @@
     <input id="new_description" placeholder="Описание изделия"><br>
     <button id="new">Ок</button><br>
   </div>
-  <div style="position:absolute; left:350px;">
+  <div style="position:absolute; left:35vw;">
     <input id="new_image" placeholder="Путь к изображению"><br>
     <input id="new_type" placeholder="Тип изделия"><br>
     <input id="new_stone" placeholder="Камни в изделии (через запятую, без пробелов)"><br>
@@ -101,7 +101,7 @@
     <input id="new_description" placeholder="Описание изделия"><br>
     <button id="new">Ок</button><br>
   </div>
-  <div style="position:relative; left:650px;">
+  <div style="position:relative; left:65vw;">
     <input id="new_image" placeholder="Путь к изображению"><br>
     <input id="new_type" placeholder="Тип изделия"><br>
     <input id="new_stone" placeholder="Камни в изделии (через запятую, без пробелов)"><br>
