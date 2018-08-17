@@ -1,5 +1,5 @@
-function build(){
-  return '<img class="item" src="items/default.png">';
+function build_item(){
+  return '<div><img class="item" src="items/default.png"><div class="description"></div></div>';
 }
 function adaptation_1(){
   var client_w = screen.width;
@@ -11,7 +11,7 @@ function adaptation_1(){
   }
 }
 function adaptation_2(){
-  var item = build();
+  var item = build_item();
   var row = $('#row');
   row.html(item + item + item + item + item + item + item + item);
   if(row.width() < 1010){
@@ -30,7 +30,7 @@ function adaptation_2(){
 }
 function adaptation_3(){
   var row = $('#row');
-  var item = build();
+  var item = build_item();
   var oldwidth = row.width();
   $(window).resize( () => {
     if(row.width() < 1010){
@@ -91,32 +91,54 @@ function adaptation_3(){
   });
 }
 function filter_out(){
-  var raw = $('#types input:checked');
   var filters = new Object();
-  filters.types = raw[0].id + '-_-';
-  for(n = 1; n < raw.length; n++){
-    filters.types += raw[n].id + ",";
+  var raw = $('#types input:checked');
+  if(raw[0] != undefined){
+    filters.types = raw[0].id + '-_-';
+    for(n = 1; n < raw.length; n++){
+      filters.types += raw[n].id + "-_-";
+    }
   }
   var raw = $('#stones input:checked');
-  filters.stones = raw[0].id + '-_-';
-  for(n = 1; n < raw.length; n++){
-    filters.stones += raw[n].id + "-_-";
+  if(raw[0] != undefined){
+    filters.stones = raw[0].id + '-_-';
+    for(n = 1; n < raw.length; n++){
+      filters.stones += raw[n].id + "-_-";
+    }
   }
+  var raw = $('#technology input:checked');
+  if(raw[0] != undefined){
+    filters.technology = raw[0].id + '-_-';
+    for(n = 1; n < raw.length; n++){
+      filters.technology += raw[n].id + "-_-";
+    }
+  }
+  var sortings = new Object();
+  var raw = $('#cost input:checked');
+  sortings.cost = raw[0].id;
+	console.log(sortings.cost);
   $.ajax({
     type: "POST",
     url: "actions.php",
     data: {
       action: 'get_items',
       filters: filters,
+      sortings: sortings
     },
     success: function(data){
+	console.log(data);
       var raw_data = data.split('array');
       var allItems = new Array();
       for( n = 1; n < raw_data.length; n++){
         allItems[n-1] = new Item(php_array_to_js_array(raw_data[n]));
       }
-      console.log(allItems);
-      set_pages(allItems);
+      if(allItems[0] != undefined){
+	$('.filter_error').remove();
+        set_pages(allItems);
+      }else{
+	$('.filter_error').remove();
+	filter_error();
+      }
     }
   });
 }
@@ -137,11 +159,17 @@ function set_pages(allItems){
   var pages_set = new Array();
   var e = 0;
   var page = 0; //номер текущей страницы
+  //создаем массив с предметами разбитыми на страницы 
   for( page; page <  allItems.length / $('.item').length; page++){
     pages_set[page] = new Array();
     for( n = 0; n <  $('.item').length; n++){
+      pages_set[page][n] = new Array();
       if(allItems[e]){
-        pages_set[page][n] = allItems[e].image;  //создаем массив с предметами разбитыми на страницы 
+        pages_set[page][n][0] = allItems[e].image;  
+	pages_set[page][n][1] = allItems[e].description
+      }else{
+	pages_set[page][n][0] = "items/default.png";
+	pages_set[page][n][1] = "";
       }
       e++
     }
@@ -151,21 +179,41 @@ function set_pages(allItems){
   // первая страница
   for( n = 0; n <  $('.item').length; n++){
     if(pages_set[page][n]){
-      $('.item:eq('+n+')').attr("src", pages_set[page][n]);
+      $('.item:eq('+n+')').attr("src", pages_set[page][n][0]);
+      $('.description:eq('+n+')').html(pages_set[page][n][1]);
     }
   }
   if(!pages_set[page-1]){
-    $('.btn.left:active').css({});
+    $('.btn.left').hide();
+  }else{
+    $('.btn.left').show();
+  }
+  if(!pages_set[page+1]){
+    $('.btn.right').hide();
+  }else{
+    $('.btn.right').show();
   }
   //предыдущая страницы
   $('.btn.left').click( () => {
     if(pages_set[page-1]){
       page--
+      if(!pages_set[page-1]){
+        $('.btn.left').hide();
+      }else{
+        $('.btn.left').show();
+      }
+      if(!pages_set[page+1]){
+        $('.btn.right').hide();
+      }else{
+        $('.btn.right').show();
+      }
       for( n = 0; n <  $('.item').length; n++){
         if(pages_set[page][n]){
-          $('.item:eq('+n+')').attr("src", pages_set[page][n]);
+          $('.item:eq('+n+')').attr("src", pages_set[page][n][0]);
+          $('.description:eq('+n+')').html(pages_set[page][n][1]);
         }else{
           $('.item:eq('+n+')').attr("src", "items/default.png");
+          $('.description:eq('+n+')').html("");
 	}
       }
     }
@@ -174,17 +222,34 @@ function set_pages(allItems){
   $('.btn.right').click( () => {
     if(pages_set[page+1]){
       page++
+      if(!pages_set[page-1]){
+        $('.btn.left').hide();
+      }else{
+        $('.btn.left').show();
+      }
+      if(!pages_set[page+1]){
+        $('.btn.right').hide();
+      }else{
+        $('.btn.right').show();
+      }
       for( n = 0; n <  $('.item').length; n++){
         if(pages_set[page][n]){
-          $('.item:eq('+n+')').attr("src", pages_set[page][n]);
+          $('.item:eq('+n+')').attr("src", pages_set[page][n][0]);
+          $('.description:eq('+n+')').html(pages_set[page][n][1]);
         }else{
           $('.item:eq('+n+')').attr("src", "items/default.png");
+          $('.description:eq('+n+')').html("");
 	}
       }
     }
   }); 
 }
-
+ 
+function filter_error(){
+ $('.item').attr("src", "items/default.png");
+ $('.description').html("");
+ $('#row').append($('<h1 class="filter_error" style="margin-top: 30vh; position: absolute; ">Поиск не дал результатов</h1>')); 
+}
 class Item {
   constructor(array) {
     this.id = array[0];
