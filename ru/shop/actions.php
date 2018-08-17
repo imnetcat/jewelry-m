@@ -8,7 +8,7 @@ switch ($_POST['action']){
       $filters = $_POST['filters'];
       $sortings = $_POST['sortings'];
       //echo get_items($database, id_parse(found_items($database, $filters, $sortings)), $sortings); 
-      echo found_items($database, $filters, $sortings); 
+      echo var_dump(found_items($database, $filters, $sortings)); 
       break;
 };
 ?>
