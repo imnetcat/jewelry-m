@@ -173,7 +173,6 @@ function set_pages(allItems){
     }
   }
   var page = 0; //номер текущей страницы
-	console.log(pages_set);
   // первая страница
   for( n = 0; n <  $('.item').length; n++){
     if(pages_set[page][n]){
