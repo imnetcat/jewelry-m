@@ -73,16 +73,14 @@
   </script>
 </head>
 <body>
-<button id="new">Add new</button><br>
-<button>
-<input id="new_image"><br>
-<input id="new_type"><br>
-<input id="new_stone"><br>
-<input id="new_technology"><br>
-<input id="new_cost"><br>
-<input id="new_filter_5"><br>
-<input id="new_description"><br>
-</button>
+Путь к изображению <input id="new_image"><br>
+Тип изделия <input id="new_type"><br>
+Камни в изделии (через запятую, без пробелов) <input id="new_stone"><br>
+Технология изделия <input id="new_technology"><br>
+Цена изделия (без точек или запятых) <input id="new_cost"><br>
+ФИЛЬТР №5 <input id="new_filter_5"><br>
+Описание изделия <input id="new_description"><br>
+<button id="new">Ок</button><br>
 <br>
 <button id="del">Delete</button>
 <input id="delete_this"><br>
