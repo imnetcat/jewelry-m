@@ -8,7 +8,7 @@
 <body>
   <nav role='navigation' id="menu">
     <ul>
-      <li><a href="/ru/">Дом</a></li>
+      <li><a href="/ru/">Главная</a></li>
       <li><a href="#" style="cursor: default;">Про</a>
         <ul>
           <li><a href="#" style="background-image: none; cursor: default;">Меня</a></li>
