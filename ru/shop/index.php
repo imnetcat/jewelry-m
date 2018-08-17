@@ -22,7 +22,6 @@
         </ul>
       </li>
       <li><a href="#" style="background-image: none; cursor: default;">Магазин</a></li>
-      <li><a href="/ru/sketching/">Работа по эскизу</a></li>
       <li><a href="/ru/archive/">Архив</a></li>
       <li><a href="/ru/contacts/">Контакты</a></li>
     </ul>
