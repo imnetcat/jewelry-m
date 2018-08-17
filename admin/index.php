@@ -96,7 +96,7 @@
     <input id="new_description" placeholder="Описание изделия"><br>
     <button id="new">Ок</button><br>
   </div>
-  <div style="position:relative; left:60vw;">
+  <div style="position:relative; left:35vw;">
     Архив
     <input id="new_image" placeholder="Путь к изображению"><br>
     <input id="new_type" placeholder="Тип изделия"><br>
