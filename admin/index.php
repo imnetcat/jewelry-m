@@ -73,18 +73,19 @@
   </script>
 </head>
 <body>
-Путь к изображению <input id="new_image"><br>
-Тип изделия <input id="new_type"><br>
-Камни в изделии (через запятую, без пробелов) <input id="new_stone"><br>
-Технология изделия <input id="new_technology"><br>
-Цена изделия (без точек или запятых) <input id="new_cost"><br>
-ФИЛЬТР №5 <input id="new_filter_5"><br>
-Описание изделия <input id="new_description"><br>
-<button id="new">Ок</button><br>
-<br>
-<button id="del">Delete</button>
-<input id="delete_this"><br>
-
+<div>
+  <input id="new_image" placeholder="Путь к изображению"><br>
+  <input id="new_type" placeholder="Тип изделия"><br>
+  <input id="new_stone" placeholder="Камни в изделии (через запятую, без пробелов)"><br>
+  <input id="new_technology" placeholder="Технология изделия"><br>
+  <input id="new_cost" placeholder="Цена изделия (без точек или запятых)"><br>
+  <input id="new_filter_5" placeholder="ФИЛЬТР №5"><br>
+  <input id="new_description" placeholder="Описание изделия"><br>
+  <button id="new">Ок</button><br>
+  <br>
+  <button id="del">Delete</button>
+  <input id="delete_this"><br>
+</div>
 <div id="container"><br><div id="info"></div><br><br><br>
     <? 
     require_once "db.php";
