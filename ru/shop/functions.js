@@ -126,6 +126,7 @@ function filter_out(){
       sortings: sortings
     },
     success: function(data){
+	    console.log(data);
       var raw_data = data.split('array');
       var allItems = new Array();
       for( n = 1; n < raw_data.length; n++){
