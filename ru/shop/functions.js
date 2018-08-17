@@ -116,7 +116,6 @@ function filter_out(){
   var sortings = new Object();
   var raw = $('#cost input:checked');
   sortings.cost = raw[0].id;
-	console.log(filters.technology);
   $.ajax({
     type: "POST",
     url: "actions.php",
@@ -126,7 +125,6 @@ function filter_out(){
       sortings: sortings
     },
     success: function(data){
-	    console.log(data);
       var raw_data = data.split('array');
       var allItems = new Array();
       for( n = 1; n < raw_data.length; n++){
