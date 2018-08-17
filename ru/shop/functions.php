@@ -87,7 +87,7 @@ function get_items($database, $id, $sortings){
       if($raw[$n][0] == $id[$x]){
         $items .= var_dump($raw[$n]);
       }else{
-        $items .= "$raw[$n][0] == $id[$x]////";
+        $items .= "var_dump($raw[$n][0]) == $id[$x]////";
       }
     }
   }
