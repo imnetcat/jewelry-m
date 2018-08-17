@@ -4,6 +4,10 @@
     input {
       width: 25vw;
     }
+    div {
+      text-align:center;
+      align:center;
+    }
   </style>
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
   <script async="">
@@ -81,7 +85,8 @@
     //<button id="del">Delete</button>
     //<input id="delete_this"><br>
 <div>
-  <div style="position:absolute; left:5vw;">
+  <div style="position:absolute; left:15vw;">
+    Магазин
     <input id="new_image" placeholder="Путь к изображению"><br>
     <input id="new_type" placeholder="Тип изделия"><br>
     <input id="new_stone" placeholder="Камни в изделии (через запятую, без пробелов)"><br>
@@ -91,17 +96,8 @@
     <input id="new_description" placeholder="Описание изделия"><br>
     <button id="new">Ок</button><br>
   </div>
-  <div style="position:absolute; left:35vw;">
-    <input id="new_image" placeholder="Путь к изображению"><br>
-    <input id="new_type" placeholder="Тип изделия"><br>
-    <input id="new_stone" placeholder="Камни в изделии (через запятую, без пробелов)"><br>
-    <input id="new_technology" placeholder="Технология изделия"><br>
-    <input id="new_cost" placeholder="Цена изделия (без точек или запятых)"><br>
-    <input id="new_filter_5" placeholder="ФИЛЬТР №5"><br>
-    <input id="new_description" placeholder="Описание изделия"><br>
-    <button id="new">Ок</button><br>
-  </div>
-  <div style="position:relative; left:65vw;">
+  <div style="position:relative; left:60vw;">
+    Архив
     <input id="new_image" placeholder="Путь к изображению"><br>
     <input id="new_type" placeholder="Тип изделия"><br>
     <input id="new_stone" placeholder="Камни в изделии (через запятую, без пробелов)"><br>
