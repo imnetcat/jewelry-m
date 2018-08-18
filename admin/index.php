@@ -141,6 +141,37 @@
             for( n = 1; n < raw_data.length; n++){
               allItems[n-1] = new Item(php_array_to_js_array(raw_data[n]));
             }
+            $('.item').remove();
+            for( n = 0; n < allItems.length; n++){
+              var div = $("<div class='item'></div>");
+	      div.append($("<span>Item id: </span><span class='id'>"+allItems[n].id+"</span><br>"));
+	      div.append($("<span>Item image in: </span><span class='image'>"+allItems[n].image+"</span><br>"));
+              div.append($("<span>Item type: </span><span class='type'>"+allItems[n].type+"</span><br>"));
+              div.append($("<span>Item stone: </span><span class='stone'>"+allItems[n].stone+"</span><br>"));
+              div.append($("<span>Item technology: </span><span class='technology'>"+allItems[n].technology+"</span><br>"));
+              div.append($("<span>Item cost: </span><span class='cost'>"+allItems[n].cost+"</span><br>"));
+              div.append($("<span>Item filter №5: </span><span class='filter_5'>"+allItems[n].filter_5+"</span><br>"));
+              div.append($("<span>Item description: </span><span class='description'>"+allItems[n].description+"</span><br>"));
+	      $('#container').append(div);
+            }
+          }
+        });
+      });
+	    
+      $('#get_archive').click( () => {
+	$.ajax({
+          type: "POST",
+          url: "actions.php",
+          data: {
+            action: 'get_archive'
+          },
+          success: function(data){
+            var raw_data = data.split('array');
+            var allItems = new Array();
+            for( n = 1; n < raw_data.length; n++){
+              allItems[n-1] = new Item(php_array_to_js_array(raw_data[n]));
+            }
+            $('.item').remove();
             for( n = 0; n < allItems.length; n++){
               var div = $("<div class='item'></div>");
 	      div.append($("<span>Item id: </span><span class='id'>"+allItems[n].id+"</span><br>"));
