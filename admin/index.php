@@ -169,7 +169,28 @@
           }
         });
       });	    
-
+      
+      $('.copy').click( () => {
+	      console.log(this.parent());
+	      console.log(this.parent().parent());
+	      console.log(this.parent().parent().find("span[class='id']"));
+	      console.log(this.parent().parent().find("span[class='id']")[0]);
+	      console.log(this.parent().parent().find("span[class='id']")[0].text());
+	var image = this.parent().parent().find("span[class='image']")[0].text();
+	var type = this.parent().parent().find("span[class='type']")[0].text();
+	var stone = this.parent().parent().find("span[class='stone']")[0].text();
+	var technology = this.parent().parent().find("span[class='technology']")[0].text();
+	var cost = this.parent().parent().find("span[class='cost']")[0].text();
+	var filter_5 = this.parent().parent().find("span[class='filter_5']")[0].text();
+	var description = this.parent().parent().find("span[class='description']")[0].text();
+	$('#new_image').text(image);
+	$('#new_stone').text(stone);
+	$('#new_technology').text(technology);
+	$('#new_cost').text(cost);
+	$('#new_filter_5').text(filter_5);
+	$('#new_description').text(description);
+      });
+	    
       $('#get_shop').click( () => {
         $('.item').remove();
 	$.ajax({
@@ -198,7 +219,7 @@
 	      div.append(a);
 	      var b = $("<img class='b' style='width:175px; height:175px; position:absolute; margin-left:600px' src='/ru/shop/"+allItems[n].image+"'>");
 	      div.append(b);
-	      var c = $("<div class='c' style='margin-left:900px'><button class='del'>Удалить</button><br><br><button class='change'>Изменить</button></div>");
+	      var c = $("<div class='c' style='margin-left:900px'><br><button class='del'>Удалить</button><br><br><button class='change'>Изменить</button><br><br><button class='copy'>Скопировать</button></div>");
 	      div.append(c);
 	      $('#container').append(div);
             }
@@ -234,7 +255,7 @@
 	      div.append(a);
 	      var b = $("<img class='b' style='width:175px; height:175px; position:absolute; margin-left:600px' src='/ru/archive/"+allItems[n].image+"'>");
 	      div.append(b);
-	      var c = $("<div class='c' style='margin-left:900px'><br><br><button class='del'>Удалить</button><br><br><button class='change'>Изменить</button></div>");
+	      var c = $("<div class='c' style='margin-left:900px'><br><button class='del'>Удалить</button><br><br><button class='change'>Изменить</button><br><br><button class='copy'>Скопировать</button></div>");
 	      div.append(c);
 	      $('#container').append(div);
             }
