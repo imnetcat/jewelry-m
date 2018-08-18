@@ -156,7 +156,7 @@
 	      div.append(a);
 	      var b = $("<img class='b' style='width:175px; height:175px; position:absolute; margin-left:600px' src='/ru/shop/"+allItems[n].image+"'>");
 	      div.append(b);
-	      var c = $("<div class='c' style='margin-left:150px'><button class='del'>Удалить</button><br><br><button class='change'>Изменить</button></div>");
+	      var c = $("<div class='c' style='margin-left:900px'><button class='del'>Удалить</button><br><br><button class='change'>Изменить</button></div>");
 	      div.append(c);
 	      $('#container').append(div);
             }
