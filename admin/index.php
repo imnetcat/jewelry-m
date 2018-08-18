@@ -237,7 +237,7 @@
 </head>
 <body>
 <div>
-  <div style="left:15vw;">
+  <div style="margin-left:15vw;">
     <br>
     <p><input id="new_image" placeholder="Файл"> Например image-1.jpg</p>
     <p><input id="new_type" placeholder="Тип"> Доступны только эти: rings,bracelets,necklaces,earrings,pendants,other (можно писать много, через запятую, но без пробела после запятых)</p>
