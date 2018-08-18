@@ -117,20 +117,24 @@
       });
 	    
       $('.del').click( () => {
+	      console.log(this.parent());
+	      console.log(this.parent().parent());
+	      console.log(this.parent().parent().find("span[class='id']"));
+	      console.log(this.parent().parent().find("span[class='id']")[0]);
+	      console.log(this.parent().parent().find("span[class='id']")[0].text());
+	var delID = this.parent().parent().find("span[class='id']")[0].text();
+	var derectory = this.parent().parent().find("span[class='image']")[0].text().split("/")[1];
+	      console.log(derectory);
 	$.ajax({
           type: "POST",
           url: "actions.php",
           data: {
-            action: 'get_items',
-            filters: filters,
-            sortings: sortings
+            action: 'delete',
+            id: delID,
+            derectory: derectory
           },
           success: function(data){
-            var raw_data = data.split('array');
-            var allItems = new Array();
-            for( n = 1; n < raw_data.length; n++){
-              allItems[n-1] = new Item(php_array_to_js_array(raw_data[n]));
-            }
+            
           }
         });
       });
@@ -252,7 +256,7 @@
 </div>
 	
 
-<div id="container" style="position:absolute; top:250px;"><br><div id="info"></div><br><br><br>
+<div id="container" style="position:absolute; top:425px;"><div id="info"></div><br><br>
 </div>
 </body>
 </html>
