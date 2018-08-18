@@ -149,14 +149,14 @@
             for( n = 0; n < allItems.length; n++){
               var div = $("<div class='item'></div>");
 	      var a = $("<div class='a' style='position:absolute; width:600px;'></div>");
-	      a.append($("<span>Item id: </span><span class='id'>"+allItems[n].id+"</span><br>"+
-	      "<span>Item image in: </span><span class='image'>"+allItems[n].image+"</span><br>"+
-              "<span>Item type: </span><span class='type'>"+allItems[n].type+"</span><br>"+
-              "<span>Item stone: </span><span class='stone'>"+allItems[n].stone+"</span><br>"+
-              "<span>Item technology: </span><span class='technology'>"+allItems[n].technology+"</span><br>"+
-              "<span>Item cost: </span><span class='cost'>"+allItems[n].cost+"</span><br>"+
-              "<span>Item filter №5: </span><span class='filter_5'>"+allItems[n].filter_5+"</span><br>"+
-              "<span>Item description: </span><span class='description'>"+allItems[n].description+"</span><br>"));
+	      a.append($("<span>ID: </span><span class='id'>"+allItems[n].id+"</span><br>"+
+	      "<span>Файл: </span><span class='image'>"+allItems[n].image.split("/")[1]+"</span><br>"+
+              "<span>Тип: </span><span class='type'>"+allItems[n].type+"</span><br>"+
+              "<span>Камни: </span><span class='stone'>"+allItems[n].stone+"</span><br>"+
+              "<span>Технология: </span><span class='technology'>"+allItems[n].technology+"</span><br>"+
+              "<span>Цена: </span><span class='cost'>"+allItems[n].cost+"</span><br>"+
+              "<span>ФИЛЬТЕР №5: </span><span class='filter_5'>"+allItems[n].filter_5+"</span><br>"+
+              "<span>Описание: </span><span class='description'>"+allItems[n].description+"</span><br>"));
 	      div.append(a);
 	      var b = $("<img class='b' style='width:175px; height:175px; position:absolute; margin-left:600px' src='/ru/shop/"+allItems[n].image+"'>");
 	      div.append(b);
@@ -185,14 +185,14 @@
             for( n = 0; n < allItems.length; n++){
               var div = $("<div class='item'></div>");
 	      var a = $("<div class='a' style='position:absolute; width:600px;'></div>");
-	      a.append($("<span>Item id: </span><span class='id'>"+allItems[n].id+"</span><br>"+
-	      "<span>Item image in: </span><span class='image'>"+allItems[n].image+"</span><br>"+
-              "<span>Item type: </span><span class='type'>"+allItems[n].type+"</span><br>"+
-              "<span>Item stone: </span><span class='stone'>"+allItems[n].stone+"</span><br>"+
-              "<span>Item technology: </span><span class='technology'>"+allItems[n].technology+"</span><br>"+
-              "<span>Item cost: </span><span class='cost'>"+allItems[n].cost+"</span><br>"+
-              "<span>Item filter №5: </span><span class='filter_5'>"+allItems[n].filter_5+"</span><br>"+
-              "<span>Item description: </span><span class='description'>"+allItems[n].description+"</span><br>"));
+	      a.append($("<span>ID: </span><span class='id'>"+allItems[n].id+"</span><br>"+
+	      "<span>Файл: </span><span class='image'>"+allItems[n].image.split("/")[1]+"</span><br>"+
+              "<span>Тип: </span><span class='type'>"+allItems[n].type+"</span><br>"+
+              "<span>Камни: </span><span class='stone'>"+allItems[n].stone+"</span><br>"+
+              "<span>Технология: </span><span class='technology'>"+allItems[n].technology+"</span><br>"+
+              "<span>Цена: </span><span class='cost'>"+allItems[n].cost+"</span><br>"+
+              "<span>ФИЛЬТЕР №5: </span><span class='filter_5'>"+allItems[n].filter_5+"</span><br>"+
+              "<span>Описание: </span><span class='description'>"+allItems[n].description+"</span><br>"));
 	      div.append(a);
 	      var b = $("<img class='b' style='width:175px; height:175px; position:absolute; margin-left:600px' src='/ru/archive/"+allItems[n].image+"'>");
 	      div.append(b);
@@ -236,13 +236,13 @@
 <div>
   <div style="position:absolute; left:15vw;" class="center">
     <br>
-    <input id="new_image" placeholder="Путь к изображению"><br>
-    <input id="new_type" placeholder="Тип изделия"><br>
-    <input id="new_stone" placeholder="Камни в изделии (через запятую, без пробелов)"><br>
-    <input id="new_technology" placeholder="Технология изделия"><br>
-    <input id="new_cost" placeholder="Цена изделия (без точек или запятых)"><br>
+    <input id="new_image" placeholder="Файл"><br>
+    <input id="new_type" placeholder="Тип"><br>
+    <input id="new_stone" placeholder="Камни (через запятую, без пробелов)"><br>
+    <input id="new_technology" placeholder="Технология"><br>
+    <input id="new_cost" placeholder="Цена (без точек или запятых)"><br>
     <input id="new_filter_5" placeholder="ФИЛЬТР №5"><br>
-    <textarea id="new_description" placeholder="Описание изделия" multiline="true"></textarea><br>
+    <textarea id="new_description" placeholder="Описание" multiline="true"></textarea><br>
     <button id="inshop">В магазин</button><sp><sp><sp><sp><button id="inarchive">В архив</button><br>
   </div>
   <div style="position:relative;" class="center">
