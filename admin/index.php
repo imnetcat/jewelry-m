@@ -53,7 +53,7 @@
           type: "POST",
 	  url: "actions.php",
 	  data: {
-	    action: 'add_new',
+	    action: 'add_in_shop',
 	    image: $('#new_image').val(),
 	    type: $('#new_type').val(),
 	    stone: $('#new_stone').val(),
@@ -67,6 +67,7 @@
           }
         });
       });
+	    
       $('#inarchive').click( () => {
 	var cost = $('#new_cost').val().split('');
 	var length = cost.length;
@@ -89,12 +90,11 @@
 	if(length == 5){
           cost = "0." + cost;
 	}
-	      console.log(cost);
         $.ajax({
           type: "POST",
 	  url: "actions.php",
 	  data: {
-	    action: 'add_new',
+	    action: 'add_in_archive',
 	    image: $('#new_image').val(),
 	    type: $('#new_type').val(),
 	    stone: $('#new_stone').val(),
@@ -108,6 +108,7 @@
           }
         });
       });
+	    
       $('.del').click( () => {
 	$.ajax({
           type: "POST",
@@ -122,6 +123,35 @@
             var allItems = new Array();
             for( n = 1; n < raw_data.length; n++){
               allItems[n-1] = new Item(php_array_to_js_array(raw_data[n]));
+            }
+          }
+        });
+      });
+      
+      $('#get_shop').click( () => {
+	$.ajax({
+          type: "POST",
+          url: "actions.php",
+          data: {
+            action: 'get_shop'
+          },
+          success: function(data){
+            var raw_data = data.split('array');
+            var allItems = new Array();
+            for( n = 1; n < raw_data.length; n++){
+              allItems[n-1] = new Item(php_array_to_js_array(raw_data[n]));
+            }
+            for( n = 0; n < allItems.length; n++){
+              var div = $("<div class='item'></div>"));
+	      div.append($("Item id: <span class='id'>"+allItems[n].id+"</span><br>"));
+	      div.append($("Item image in: <span class='image'>"+allItems[n].image+"</span><br>"));
+              div.append($("Item type: <span class='type'>"+allItems[n].type+"</span><br>"));
+              div.append($("Item stone: <span class='stone'>"+allItems[n].stone+"</span><br>"));
+              div.append($("Item technology: <span class='technology'>"+allItems[n].technology+"</span><br>"));
+              div.append($("Item cost: <span class='cost'>"+allItems[n].cost+"</span><br>"));
+              div.append($("Item filter №5: <span class='filter_5'>"+allItems[n].filter_5+"</span><br>"));
+              div.append($("Item description: <span class='description'>"+allItems[n].description+"</span><br>"));
+	      $('#container').append(div);
             }
           }
         });
@@ -151,20 +181,7 @@
           this.description = array[7];
         }
       }
-	    
-      $('.del').click( () => {
-        $.ajax({
-          type: "POST",
-	  url: "actions.php",
-	  data: {
-	    action: 'delete',
-	    id: $('#delete_this').val()
-	  },
-	  success: function(data){
-	    $('#info').html($('#info').html() + "<br>" + data);
-          }
-	});
-      });
+      
     });
   </script>
 </head>
@@ -182,22 +199,12 @@
     <button id="inshop">В магазин</button><sp><sp><sp><sp><button id="inarchive">В архив</button><br>
   </div>
   <div style="position:relative; left:40vw;" class="center">
-     <button id="shop">Загрузить магазин</button><sp><sp><sp><sp><button id="archive">Загрузить архив</button><br>
+     <button id="get_shop">Загрузить магазин</button><sp><sp><sp><sp><button id="get_archive">Загрузить архив</button><br>
   </div>
 </div>
 	
 
 <div id="container"><br><div id="info"></div><br><br><br>
-  <div class='item'><br>;
-  Item id: <span class='id'></span><br>;
-  Item image in: <span class='image'></span><br>;
-  Item type: <span class='type'></span><br>;
-  Item stone: <span class='stone'></span><br>;
-  Item technology: <span class='technology'></span><br>;
-  Item cost: <span class='cost'></span><br>;
-  Item filter №5: <span class='filter_5'></span><br>;
-  Item description: <span class='description'></span><br>;
-  </div><br><br><br>;
 </div>
 </body>
 </html>
