@@ -184,14 +184,20 @@
             }
             for( n = 0; n < allItems.length; n++){
               var div = $("<div class='item'></div>");
-	      div.append($("<span>Item id: </span><span class='id'>"+allItems[n].id+"</span><br>"));
-	      div.append($("<span>Item image in: </span><span class='image'>"+allItems[n].image+"</span><br>"));
-              div.append($("<span>Item type: </span><span class='type'>"+allItems[n].type+"</span><br>"));
-              div.append($("<span>Item stone: </span><span class='stone'>"+allItems[n].stone+"</span><br>"));
-              div.append($("<span>Item technology: </span><span class='technology'>"+allItems[n].technology+"</span><br>"));
-              div.append($("<span>Item cost: </span><span class='cost'>"+allItems[n].cost+"</span><br>"));
-              div.append($("<span>Item filter №5: </span><span class='filter_5'>"+allItems[n].filter_5+"</span><br>"));
-              div.append($("<span>Item description: </span><span class='description'>"+allItems[n].description+"</span><br>"));
+	      var a = $("<div class='a' style='position:absolute; width:600px;'></div>");
+	      a.append($("<span>Item id: </span><span class='id'>"+allItems[n].id+"</span><br>"+
+	      "<span>Item image in: </span><span class='image'>"+allItems[n].image+"</span><br>"+
+              "<span>Item type: </span><span class='type'>"+allItems[n].type+"</span><br>"+
+              "<span>Item stone: </span><span class='stone'>"+allItems[n].stone+"</span><br>"+
+              "<span>Item technology: </span><span class='technology'>"+allItems[n].technology+"</span><br>"+
+              "<span>Item cost: </span><span class='cost'>"+allItems[n].cost+"</span><br>"+
+              "<span>Item filter №5: </span><span class='filter_5'>"+allItems[n].filter_5+"</span><br>"+
+              "<span>Item description: </span><span class='description'>"+allItems[n].description+"</span><br>"));
+	      div.append(a);
+	      var b = $("<img class='b' style='width:175px; height:175px; position:absolute; margin-left:600px' src='/ru/archive/"+allItems[n].image+"'>");
+	      div.append(b);
+	      var c = $("<div class='c' style='margin-left:900px'><br><br><button class='del'>Удалить</button><br><br><button class='change'>Изменить</button></div>");
+	      div.append(c);
 	      $('#container').append(div);
             }
           }
@@ -240,12 +246,12 @@
     <button id="inshop">В магазин</button><sp><sp><sp><sp><button id="inarchive">В архив</button><br>
   </div>
   <div style="position:relative;" class="center">
-     <button id="get_shop">Загрузить магазин</button><sp><sp><sp><sp><button id="get_archive">Загрузить архив</button><br>
+     <button id="get_shop">Загрузить магазин</button><button id="get_archive">Загрузить архив</button><br>
   </div>
 </div>
 	
 
-<div id="container" style="position:absolute; top:200px;"><br><div id="info"></div><br><br><br>
+<div id="container" style="position:absolute; top:250px;"><br><div id="info"></div><br><br><br>
 </div>
 </body>
 </html>
