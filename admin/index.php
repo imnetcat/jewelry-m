@@ -229,7 +229,7 @@
     <textarea id="new_description" placeholder="Описание изделия" multiline="true"></textarea><br>
     <button id="inshop">В магазин</button><sp><sp><sp><sp><button id="inarchive">В архив</button><br>
   </div>
-  <div style="position:relative; left:40vw;" class="center">
+  <div style="position:relative;" class="center">
      <button id="get_shop">Загрузить магазин</button><sp><sp><sp><sp><button id="get_archive">Загрузить архив</button><br>
   </div>
 </div>
