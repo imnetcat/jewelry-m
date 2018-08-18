@@ -93,7 +93,7 @@
     <input id="new_technology" placeholder="Технология изделия"><br>
     <input id="new_cost" placeholder="Цена изделия (без точек или запятых)"><br>
     <input id="new_filter_5" placeholder="ФИЛЬТР №5"><br>
-    <input id="new_description" placeholder="Описание изделия"><br>
+    <textarea id="new_description" placeholder="Описание изделия" multiline="true"></textarea><br>
     <button id="new">Ок</button><br>
   </div>
   <div style="position:relative; left:35vw;" class="center">
@@ -104,7 +104,7 @@
     <input id="new_technology" placeholder="Технология изделия"><br>
     <input id="new_cost" placeholder="Цена изделия (без точек или запятых)"><br>
     <input id="new_filter_5" placeholder="ФИЛЬТР №5"><br>
-    <input id="new_description" placeholder="Описание изделия"><br>
+    <textarea id="new_description" placeholder="Описание изделия" multiline="true"></textarea><br>
     <button id="new">Ок</button><br>
   </div>
 </div>
