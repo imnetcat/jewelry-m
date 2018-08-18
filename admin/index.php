@@ -204,7 +204,7 @@
 </div>
 	
 
-<div id="container"><br><div id="info"></div><br><br><br>
+<div id="container" style="position:absolute; top:200px;"><br><div id="info"></div><br><br><br>
 </div>
 </body>
 </html>
