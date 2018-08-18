@@ -14,6 +14,9 @@
       height:200px;
       margin-left:20vw;
     }
+    p {
+      margin-top: 2px;
+    }
   </style>
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
   <script async="">
