@@ -26,7 +26,7 @@
   </script>
   <script async>
     $( () => {
-      $('#new').click( () => {
+      $('#inshop').click( () => {
 	var cost = $('#new_cost').val().split('');
 	var length = cost.length;
 	cost = cost.join('.');
@@ -67,7 +67,48 @@
           }
         });
       });
-      $('#del').click( () => {
+      $('#inarchive').click( () => {
+	var cost = $('#new_cost').val().split('');
+	var length = cost.length;
+	cost = cost.join('.');
+	if(length == 2){
+          cost = "0." + cost;
+          cost = "0." + cost;
+          cost = "0." + cost;
+          cost = "0." + cost;
+	}
+	if(length == 3){
+          cost = "0." + cost;
+          cost = "0." + cost;
+          cost = "0." + cost;
+	}
+	if(length == 4){
+          cost = "0." + cost;
+          cost = "0." + cost;
+	}
+	if(length == 5){
+          cost = "0." + cost;
+	}
+	      console.log(cost);
+        $.ajax({
+          type: "POST",
+	  url: "actions.php",
+	  data: {
+	    action: 'add_new',
+	    image: $('#new_image').val(),
+	    type: $('#new_type').val(),
+	    stone: $('#new_stone').val(),
+	    technology: $('#new_technology').val(),
+	    cost: cost,
+	    filter_5: $('#new_filter_5').val(),
+	    description: $('#new_description').val()
+	  },
+          success: function(data){
+	    $('#info').html($('#info').html() + "<br>" + data);
+          }
+        });
+      });
+      $('.del').click( () => {
         $.ajax({
           type: "POST",
 	  url: "actions.php",
@@ -86,7 +127,7 @@
 <body>
 <div>
   <div style="position:absolute; left:15vw;" class="center">
-    <span>Магазин</span><br>
+    <br>
     <input id="new_image" placeholder="Путь к изображению"><br>
     <input id="new_type" placeholder="Тип изделия"><br>
     <input id="new_stone" placeholder="Камни в изделии (через запятую, без пробелов)"><br>
@@ -94,40 +135,25 @@
     <input id="new_cost" placeholder="Цена изделия (без точек или запятых)"><br>
     <input id="new_filter_5" placeholder="ФИЛЬТР №5"><br>
     <textarea id="new_description" placeholder="Описание изделия" multiline="true"></textarea><br>
-    <button id="new">Ок</button><br>
+    <button id="inshop">В магазин</button><sp><sp><sp><sp><button id="inarchive">В архив</button><br>
   </div>
-  <div style="position:relative; margin-left:45vw;" class="center">
-    <span>Архив</span><br>
-    <input id="new_image" placeholder="Путь к изображению"><br>
-    <input id="new_type" placeholder="Тип изделия"><br>
-    <input id="new_stone" placeholder="Камни в изделии (через запятую, без пробелов)"><br>
-    <input id="new_technology" placeholder="Технология изделия"><br>
-    <input id="new_cost" placeholder="Цена изделия (без точек или запятых)"><br>
-    <input id="new_filter_5" placeholder="ФИЛЬТР №5"><br>
-    <textarea id="new_description" placeholder="Описание изделия" multiline="true"></textarea><br>
-    <button id="new">Ок</button><br>
+  <div style="position:relative; left:40vw;" class="center">
+     <button id="shop">Загрузить магазин</button><sp><sp><sp><sp><button id="archive">Загрузить архив</button><br>
   </div>
 </div>
 	
+
 <div id="container"><br><div id="info"></div><br><br><br>
-    <? 
-    require_once "db.php";
-    $query ="SELECT id, image, type, stone, technology, cost, filter_5, description  FROM items";
-    if($result = mysqli_query($database, $query)){
-      while ($row = mysqli_fetch_row($result)) {
-        echo "<div class='item'><br>";
-        echo "<span class='id'>" . "Item id: " . $row[0] . "</span><br>";
-        echo "<span class='image'>" . "Item image in: " . $row[1] . "</span><br>";
-        echo "<span class='type'>" . "Item type: " . $row[2] . "</span><br>";
-        echo "<span class='stone'>" . "Item stone: " . $row[3] . "</span><br>";
-        echo "<span class='technology'>" . "Item technology: " . $row[4] . "</span><br>";
-        echo "<span class='cost'>" . "Item cost: " . $row[5] . "</span><br>";
-        echo "<span class='filter_5'>" . "Item filter №5: " . $row[6] . "</span><br>";
-        echo "<span class='description'>" . "Item description: " . $row[7] . "</span><br>";
-        echo "</div><br><br><br>";
-      }
-    }
-    ?>
-  </div>
+  <div class='item'><br>;
+  Item id: <span class='id'></span><br>;
+  Item image in: <span class='image'></span><br>;
+  Item type: <span class='type'></span><br>;
+  Item stone: <span class='stone'></span><br>;
+  Item technology: <span class='technology'></span><br>;
+  Item cost: <span class='cost'></span><br>;
+  Item filter №5: <span class='filter_5'></span><br>;
+  Item description: <span class='description'></span><br>;
+  </div><br><br><br>;
+</div>
 </body>
 </html>
