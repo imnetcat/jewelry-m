@@ -97,7 +97,7 @@
     <textarea id="new_description" placeholder="Описание изделия" multiline="true"></textarea><br>
     <button id="new">Ок</button><br>
   </div>
-  <div style="position:absolute; margin-left:45vw;" class="center">
+  <div style="position:relative; margin-left:45vw;" class="center">
     <span>Архив</span><br>
     <input id="new_image" placeholder="Путь к изображению"><br>
     <input id="new_type" placeholder="Тип изделия"><br>
