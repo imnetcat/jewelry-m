@@ -144,7 +144,7 @@
             }
             for( n = 0; n < allItems.length; n++){
               var div = $("<div class='item'></div>");
-	      var a = $("<div class="a" style='position:absolute;'></div>");
+	      var a = $("<div class='a' style='position:absolute;'></div>");
 	      a.append($("<span>Item id: </span><span class='id'>"+allItems[n].id+"</span><br>"));
 	      a.append($("<span>Item image in: </span><span class='image'>"+allItems[n].image+"</span><br>"));
               a.append($("<span>Item type: </span><span class='type'>"+allItems[n].type+"</span><br>"));
