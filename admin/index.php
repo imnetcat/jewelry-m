@@ -142,7 +142,7 @@
               allItems[n-1] = new Item(php_array_to_js_array(raw_data[n]));
             }
             for( n = 0; n < allItems.length; n++){
-              var div = $("<div class='item'></div>"));
+              var div = $("<div class='item'></div>");
 	      div.append($("Item id: <span class='id'>"+allItems[n].id+"</span><br>"));
 	      div.append($("Item image in: <span class='image'>"+allItems[n].image+"</span><br>"));
               div.append($("Item type: <span class='type'>"+allItems[n].type+"</span><br>"));
