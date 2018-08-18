@@ -102,7 +102,7 @@
 	  url: "actions.php",
 	  data: {
 	    action: 'add_in_archive',
-	    image: $('#new_image').val(),
+	    image: "items/"+$('#new_image').val(),
 	    type: $('#new_type').val(),
 	    stone: $('#new_stone').val(),
 	    technology: $('#new_technology').val(),
@@ -134,11 +134,42 @@
             derectory: derectory
           },
           success: function(data){
-            
+            $('#info').html($('#info').html() + "<br>" + data);
           }
         });
       });
       
+      $('.change').click( () => {
+	      console.log(this.parent());
+	      console.log(this.parent().parent());
+	      console.log(this.parent().parent().find("span[class='id']"));
+	      console.log(this.parent().parent().find("span[class='id']")[0]);
+	      console.log(this.parent().parent().find("span[class='id']")[0].text());
+	var delID = this.parent().parent().find("span[class='id']")[0].text();
+	var derectory = this.parent().parent().find("span[class='image']")[0].text().split("/")[1];
+	      console.log(derectory);
+	$.ajax({
+          type: "POST",
+          url: "actions.php",
+          data: {
+            action: 'change',
+            id: delID,
+            derectory: derectory,
+            action: 'add_in_archive',
+	    image: "items/"+$('#new_image').val(),
+	    type: $('#new_type').val(),
+	    stone: $('#new_stone').val(),
+	    technology: $('#new_technology').val(),
+	    cost: cost,
+	    filter_5: $('#new_filter_5').val(),
+	    description: $('#new_description').val()
+          },
+          success: function(data){
+            $('#info').html($('#info').html() + "<br>" + data);
+          }
+        });
+      });	    
+
       $('#get_shop').click( () => {
         $('.item').remove();
 	$.ajax({
