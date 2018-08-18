@@ -5,7 +5,7 @@ require_once "db.php";
 
 
 switch ($_POST['action']){
-  case 'add_new':
+  case 'add_in_shop':
     $image = $_POST['image'];
     $type = $_POST['type'];
     $stone = $_POST['stone'];
@@ -13,7 +13,23 @@ switch ($_POST['action']){
     $cost = $_POST['cost'];
     $filter_5 = $_POST['filter_5'];
     $description = $_POST['description'];
-    echo add_new($database, $image, $type, $stone, $technology, $cost, $filter_5, $description);
+    echo add_in_shop($database, $image, $type, $stone, $technology, $cost, $filter_5, $description);
+  break;
+  case 'add_in_archive':
+    $image = $_POST['image'];
+    $type = $_POST['type'];
+    $stone = $_POST['stone'];
+    $technology = $_POST['technology'];
+    $cost = $_POST['cost'];
+    $filter_5 = $_POST['filter_5'];
+    $description = $_POST['description'];
+    echo add_in_archive($database, $image, $type, $stone, $technology, $cost, $filter_5, $description);
+  break;
+  case 'get_shop':
+    echo get_shop($database);
+  break;
+  case 'get_archive':
+    echo get_archive($database);
   break;
   case 'delete':
     $id = $_POST['id'];
