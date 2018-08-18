@@ -243,9 +243,9 @@
     <input id="new_cost" placeholder="Цена (без точек или запятых)"><br>
     <input id="new_filter_5" placeholder="ФИЛЬТР №5"><br>
     <textarea id="new_description" placeholder="Описание" multiline="true"></textarea><br>
-    <button id="inshop">В магазин</button><sp><sp><sp><sp><button id="inarchive">В архив</button><br>
+    <button id="inshop">В магазин</button><button id="inarchive">В архив</button><br>
   </div>
-  <div style="position:relative;">
+  <div style="position:relative; margin-left:42vw;">
      <br>
      Например image-1.jpg
      <br>
