@@ -36,10 +36,10 @@ function add_in_archive($database, $image, $type, $stone, $technology, $cost, $f
   }
 }
 
-function delete($database, $id){
-  $query = "DELETE FROM items WHERE id='" . $id . "'";
+function delete($database, $id, $derectory){
+  $query = "DELETE FROM ".$derectory." WHERE id='".$id."'";
   if($result = mysqli_query($database, $query)){ 
-    return "Запись номер ". $id . " удалена успешно";
+    return "Изображение номер ". $id . " удалено успешно";
   } else {
     return "Error in: " . $query . "<br>" . mysqli_error($database);
   }
