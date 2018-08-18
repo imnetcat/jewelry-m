@@ -246,7 +246,22 @@
     <button id="inshop">В магазин</button><sp><sp><sp><sp><button id="inarchive">В архив</button><br>
   </div>
   <div style="position:relative;" class="center">
-     <button id="get_shop">Загрузить магазин</button><button id="get_archive">Загрузить архив</button><br>
+     <br>
+     Например image-1.jpg
+     <br>
+     Доступны только эти: rings,bracelets,necklaces,earrings,pendants,other (можно писать много, через запятую, но без пробела после запятых)
+     <br>
+     Доступны только эти: agat,aquamarine,diamond,garnet,sapphire,opal (можно писать много, через запятую, но без пробела после запятых)
+     <br>
+     Доступны только эти: epoxy,foundry,sketching (можно писать много, через запятую, но без пробела после запятых)
+     <br>
+     Без точек или запятых
+     <br>
+     Пока что не для чего не используется, можно оставить пустым
+     <br>
+     То что будет отображатся при наведении на изображение
+     <br>
+     <button id="get_shop">Загрузить магазин</button><button id="get_archive">Загрузить архив</button>
   </div>
 </div>
 	
