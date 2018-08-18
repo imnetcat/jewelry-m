@@ -247,7 +247,7 @@
     <p><input id="new_filter_5" placeholder="ФИЛЬТР №5"> Пока что не для чего не используется, можно оставить пустым</p>
     <p><textarea id="new_description" placeholder="Описание" multiline="true"></textarea>То что будет отображатся при наведении на изображение</p>
     <p class="center"><button id="inshop">В магазин</button><button id="inarchive">В архив</button></p>
-    <button id="get_shop">Загрузить магазин</button><button id="get_archive">Загрузить архив</button>
+    <p class="center"><button id="get_shop">Загрузить магазин</button><button id="get_archive">Загрузить архив</button></p>
   </div>
 </div>
 	
