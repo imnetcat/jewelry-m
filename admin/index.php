@@ -129,6 +129,7 @@
       });
       
       $('#get_shop').click( () => {
+        $('.item').remove();
 	$.ajax({
           type: "POST",
           url: "actions.php",
@@ -141,7 +142,6 @@
             for( n = 1; n < raw_data.length; n++){
               allItems[n-1] = new Item(php_array_to_js_array(raw_data[n]));
             }
-            $('.item').remove();
             for( n = 0; n < allItems.length; n++){
               var div = $("<div class='item'></div>");
 	      div.append($("<span>Item id: </span><span class='id'>"+allItems[n].id+"</span><br>"));
@@ -159,6 +159,7 @@
       });
 	    
       $('#get_archive').click( () => {
+        $('.item').remove();
 	$.ajax({
           type: "POST",
           url: "actions.php",
@@ -171,7 +172,6 @@
             for( n = 1; n < raw_data.length; n++){
               allItems[n-1] = new Item(php_array_to_js_array(raw_data[n]));
             }
-            $('.item').remove();
             for( n = 0; n < allItems.length; n++){
               var div = $("<div class='item'></div>");
 	      div.append($("<span>Item id: </span><span class='id'>"+allItems[n].id+"</span><br>"));
