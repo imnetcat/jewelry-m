@@ -40,7 +40,18 @@ switch ($_POST['action']){
     $id = $_POST['id'];
     $derectory = $_POST['derectory'];
     delete($database, $id, $derectory);
-    echo change($database, $id, $derectory);
+    $image = $_POST['image'];
+    $type = $_POST['type'];
+    $stone = $_POST['stone'];
+    $technology = $_POST['technology'];
+    $cost = $_POST['cost'];
+    $filter_5 = $_POST['filter_5'];
+    $description = $_POST['description'];
+    if($derectory == "shop"){
+      echo add_in_shop($database, $image, $type, $stone, $technology, $cost, $filter_5, $description);
+    }else{
+      echo add_in_archive($database, $image, $type, $stone, $technology, $cost, $filter_5, $description);
+    }
   break;
 };
 ?>
