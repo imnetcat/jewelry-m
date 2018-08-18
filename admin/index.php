@@ -54,7 +54,7 @@
 	  url: "actions.php",
 	  data: {
 	    action: 'add_in_shop',
-	    image: $('#new_image').val(),
+	    image: "items/"+$('#new_image').val(),
 	    type: $('#new_type').val(),
 	    stone: $('#new_stone').val(),
 	    technology: $('#new_technology').val(),
@@ -145,16 +145,16 @@
             for( n = 0; n < allItems.length; n++){
               var div = $("<div class='item'></div>");
 	      var a = $("<div class='a' style='position:absolute;'></div>");
-	      a.append($("<span>Item id: </span><span class='id'>"+allItems[n].id+"</span><br>"));
-	      a.append($("<span>Item image in: </span><span class='image'>"+allItems[n].image+"</span><br>"));
-              a.append($("<span>Item type: </span><span class='type'>"+allItems[n].type+"</span><br>"));
-              a.append($("<span>Item stone: </span><span class='stone'>"+allItems[n].stone+"</span><br>"));
-              a.append($("<span>Item technology: </span><span class='technology'>"+allItems[n].technology+"</span><br>"));
-              a.append($("<span>Item cost: </span><span class='cost'>"+allItems[n].cost+"</span><br>"));
-              a.append($("<span>Item filter №5: </span><span class='filter_5'>"+allItems[n].filter_5+"</span><br>"));
-              a.append($("<span>Item description: </span><span class='description'>"+allItems[n].description+"</span><br>"));
+	      a.append($("<span>Item id: </span><span class='id'>"+allItems[n].id+"</span><br>"+
+	      "<span>Item image in: </span><span class='image'>"+allItems[n].image+"</span><br>"+
+              "<span>Item type: </span><span class='type'>"+allItems[n].type+"</span><br>"+
+              "<span>Item stone: </span><span class='stone'>"+allItems[n].stone+"</span><br>"+
+              "<span>Item technology: </span><span class='technology'>"+allItems[n].technology+"</span><br>"+
+              "<span>Item cost: </span><span class='cost'>"+allItems[n].cost+"</span><br>"+
+              "<span>Item filter №5: </span><span class='filter_5'>"+allItems[n].filter_5+"</span><br>"+
+              "<span>Item description: </span><span class='description'>"+allItems[n].description+"</span><br>"));
 	      div.append(a);
-	      var b = $("<img class='b' style='width:300px; height:300px; position:absolute; margin-left:600px' src='/ru/shop/items/"+allItems[n].image+"'>");
+	      var b = $("<img class='b' style='width:300px; height:300px; position:absolute; margin-left:600px' src='/ru/shop/"+allItems[n].image+"'>");
 	      div.append(b);
 	      var c = $("<div class='c'><button class='del'>Удалить</button><br><br><button class='change'>Изменить</button></div>");
 	      $('#container').append(div);
