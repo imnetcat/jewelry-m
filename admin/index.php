@@ -11,7 +11,7 @@
       text-align:center;
     }
     .item {
-      heigth:200px;
+      height:200px;
       margin-left:20vw;
     }
   </style>
