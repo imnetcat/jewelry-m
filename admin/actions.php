@@ -33,7 +33,14 @@ switch ($_POST['action']){
   break;
   case 'delete':
     $id = $_POST['id'];
-    echo delete($database, $id);
+    $derectory = $_POST['$derectory'];
+    echo delete($database, $id, $derectory);
+  break;
+  case 'change':
+    $id = $_POST['id'];
+    $derectory = $_POST['$derectory'];
+    delete($database, $id, $derectory);
+    echo change($database, $id, $derectory);
   break;
 };
 ?>
