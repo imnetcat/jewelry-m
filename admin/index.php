@@ -245,7 +245,7 @@
     <textarea id="new_description" placeholder="Описание" multiline="true"></textarea><br>
     <button id="inshop">В магазин</button><sp><sp><sp><sp><button id="inarchive">В архив</button><br>
   </div>
-  <div style="position:relative;" class="center">
+  <div style="position:relative;">
      <br>
      Например image-1.jpg
      <br>
