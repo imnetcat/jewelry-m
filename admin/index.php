@@ -147,62 +147,59 @@
 	      var c = $("<div class='c' style='margin-left:900px'><br><button class='del'>Удалить</button><br><br><button class='change'>Изменить</button><br><br><button class='copy'>Скопировать</button></div>");
 	      div.append(c);
 	      $('#container').append(div);
-		    
-	      $('.del').click( (ev) => {
-	        var ID = $(ev.currentTarget).parent().parent().children('.a').children(".id").text();
-	        $.ajax({
-                  type: "POST",
-                  url: "actions.php",
-                  data: {
-                    action: 'delete',
-                    id: ID,
-                    derectory: "shop"
-                  },
-                  success: function(data){
-                    $('#info').html($('#info').html() + "<br>" + data);
-                  }
-                });
+	    }
+	    $('.del').click( (ev) => {
+	      var ID = $(ev.currentTarget).parent().parent().children('.a').children(".id").text();
+	      $.ajax({
+                type: "POST",
+                url: "actions.php",
+                data: {
+                  action: 'delete',
+                  id: ID,
+                  derectory: "shop"
+                },
+                success: function(data){
+                  $('#info').html($('#info').html() + "<br>" + data);
+                }
               });
-              $('.change').click( (ev) => {
-		      console.log("zzzzzzzzzzzzzzzzzzzzZ");
-	        var ID = $(ev.currentTarget).parent().parent().children('.a').children(".id").text();
-	        $.ajax({
-                  type: "POST",
-                  url: "actions.php",
-                  data: {
-                    action: 'change',
-                    id: ID,
-                    derectory: "shop",
-	            image: "items/"+$('#new_image').val(),
-	            type: $('#new_type').val(),
-	            stone: $('#new_stone').val(),
-	            technology: $('#new_technology').val(),
-	            cost: $('#new_cost').val(),
-	            filter_5: $('#new_filter_5').val(),
-	            description: $('#new_description').val()
-                  },
-                  success: function(data){
-                    $('#info').html($('#info').html() + "<br>" + data);
-                  }
-                });
+            });
+            $('.change').click( (ev) => {
+	      var ID = $(ev.currentTarget).parent().parent().children('.a').children(".id").text();
+	      $.ajax({
+                type: "POST",
+                url: "actions.php",
+                data: {
+                  action: 'change',
+                  id: ID,
+                  derectory: "shop",
+	          image: "items/"+$('#new_image').val(),
+	          type: $('#new_type').val(),
+	          stone: $('#new_stone').val(),
+	          technology: $('#new_technology').val(),
+	          cost: $('#new_cost').val(),
+	          filter_5: $('#new_filter_5').val(),
+	          description: $('#new_description').val()
+                },
+                success: function(data){
+                  $('#info').html($('#info').html() + "<br>" + data);
+                }
               });
-              $('.copy').on('click', (ev) => {
-		      console.log("zzzzzzzzzzzzzzzzzzzzZ");
-	        var image = $(ev.currentTarget).parent().parent().children('.a').children(".image").text();
-	        var type = $(ev.currentTarget).parent().parent().children('.a').children(".types").text();
-	        var stone = $(ev.currentTarget).parent().parent().children('.a').children(".stones").text();
-	        var technology = $(ev.currentTarget).parent().parent().children('.a').children(".technology").text();
-	        var cost = $(ev.currentTarget).parent().parent().children('.a').children(".cost").text();
-	        var filter_5 = $(ev.currentTarget).parent().parent().children('.a').children(".filter_5").text();
-	        var description = $(ev.currentTarget).parent().parent().children('.a').children(".description").text();
-	        $('#new_image').val(image);
-	        $('#new_stone').val(stone);
-	        $('#new_technology').val(technology);
-	        $('#new_cost').val(cost);
-	        $('#new_filter_5').val(filter_5);
-	        $('#new_description').val(description);
-              });
-            }
+            });
+            $('.copy').on('click', (ev) => {
+	      var image = $(ev.currentTarget).parent().parent().children('.a').children(".image").text();
+	      var type = $(ev.currentTarget).parent().parent().children('.a').children(".types").text();
+	      var stone = $(ev.currentTarget).parent().parent().children('.a').children(".stones").text();
+	      var technology = $(ev.currentTarget).parent().parent().children('.a').children(".technology").text();
+	      var cost = $(ev.currentTarget).parent().parent().children('.a').children(".cost").text();
+	      var filter_5 = $(ev.currentTarget).parent().parent().children('.a').children(".filter_5").text();
+	      var description = $(ev.currentTarget).parent().parent().children('.a').children(".description").text();
+	      $('#new_image').val(image);
+	      $('#new_stone').val(stone);
+	      $('#new_technology').val(technology);
+	      $('#new_cost').val(cost);
+	      $('#new_filter_5').val(filter_5);
+	      $('#new_description').val(description);
+            });
           }
         });
       });
