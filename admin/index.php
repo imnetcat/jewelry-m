@@ -196,7 +196,7 @@
                 });
               });
               $('.copy').click( () => {
-	        console.log($(this).parent());
+	        console.log($(this).parents());
 	        console.log($(this).parent().siblings('.a')[0]);
 	        console.log($(this).parent().siblings('.a')[0].find("span[class='id']"));
 	        console.log($(this).parent().siblings('.a')[0].find("span[class='id']").text());
