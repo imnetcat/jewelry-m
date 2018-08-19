@@ -196,14 +196,14 @@
                 });
               });
               $('.copy').click( () => {
-	        console.log($(this).parent());
-	        console.log($(this).parent().parent());
-	        console.log($(this).parent().parent().find("span[class='id']"));
-	        console.log($(this).parent().parent().find("span[class='id']").text());
-	        var image = $(this).parent().parent().find("span[class='image']").text();
-	        var type = $(this).parent().parent().find("span[class='type']").text();
-	        var stone = $(this).parent().parent().find("span[class='stone']").text();
-	        var technology = $(this).parent().parent().find("span[class='technology']").text();
+	        console.log($(this).parent().get( 0 ));
+	        console.log($(this).parent().get( 0 ).parent().get( 0 ));
+	        console.log($(this).parent().get( 0 ).parent().get( 0 ).find("span[class='id']"));
+	        console.log($(this).parent().get( 0 ).parent().get( 0 ).find("span[class='id']").text());
+	        var image = $(this).parent().get( 0 ).parent().get( 0 ).find("span[class='image']").text();
+	        var type = $(this).parent().get( 0 ).parent().get( 0 ).find("span[class='type']").text();
+	        var stone = $(this).parent().get( 0 ).parent().get( 0 ).find("span[class='stone']").text();
+	        var technology = $(this).parent().get( 0 ).parent().get( 0 ).find("span[class='technology']").text();
 	        var cost = $(this).parent().parent().find("span[class='cost']").text();
 	        var filter_5 = $(this).parent().parent().find("span[class='filter_5']").text();
 	        var description = $(this).parent().parent().find("span[class='description']").text();
