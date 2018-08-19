@@ -148,7 +148,7 @@
 	      div.append(c);
 	      $('#container').append(div);
 		    
-	      $('.del').click( () => {
+	      $('.del').click( (ev) => {
 	        var ID = $(ev.currentTarget).parent().parent().children('.a').children(".id").text();
 	        $.ajax({
                   type: "POST",
@@ -163,7 +163,7 @@
                   }
                 });
               });
-              $('.change').click( () => {
+              $('.change').click( (ev) => {
 	        var ID = $(ev.currentTarget).parent().parent().children('.a').children(".id").text();
 	        $.ajax({
                   type: "POST",
