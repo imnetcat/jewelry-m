@@ -45,6 +45,18 @@ function delete($database, $id, $derectory){
   }
 }
 
+function change($database, $id, $derectory, $image, $type, $stone, $technology, $cost, $filter_5, $description){
+  $query = "UPDATE $derectory SET (image, type, stone, technology, cost, filter_5, description) VALUES (?,?,?,?,?,?,?,?) WHERE id=$id";
+  $stmt = mysqli_prepare($database, $query);
+  mysqli_stmt_bind_param($stmt, "sssssss", $image, $type, $stone, $technology, $cost, $filter_5, $description);
+  if(mysqli_stmt_execute($stmt)){
+    mysqli_stmt_close($stmt);
+    return "Изображение успешно изменено";
+  }else{
+    return "Error in: " . $query . "<br>" . mysqli_error($database);
+  }
+}
+
 function get_shop($database){
   $items = " ";
   $query ="SELECT id, image, type, stone, technology, cost, filter_5, description  FROM shop";
