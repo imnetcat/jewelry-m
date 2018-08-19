@@ -196,9 +196,7 @@
                 });
               });
               $('.copy').click( () => {
-	        console.log($(this).closest('.item').find('.a'));
-	        console.log($(this).closest('.item').find('.a').find(".id"));
-	        console.log($(this).closest('.item').find('.a').find(".id").text());
+	        console.log(this.parentElement.parentElement.getElementsByClassName('a')[0].getElementsByClassName('items')[0]);
 	        var image = $(this).closest('.item').find('.a').find(".image").text();
 	        var type = $(this).closest('.item').find('.a').find(".type").text();
 	        var stone = $(this).closest('.item').find('.a').find(".stone").text();
