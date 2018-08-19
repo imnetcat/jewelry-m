@@ -195,14 +195,14 @@
                   }
                 });
               });
-              $('.copy').on('click', () => {
-	        var image = $(this).closest('.item').find('.a').find(".image").text();
-	        var type = $(this).closest('.item').find('.a').find(".type").text();
-	        var stone = $(this).closest('.item').find('.a').find(".stone").text();
-	        var technology = $(this).closest('.item').find('.a').find(".technology").text();
-	        var cost = $(this).closest('.item').find('.a').find(".cost").text();
-	        var filter_5 = $(this).closest('.item').find('.a').find(".filter_5").text();
-	        var description = $(this).closest('.item').find('.a').find(".description").text();
+              $('.copy').on('click', (ev) => {
+	        var image = $(ev.currentTarget).closest('.item').find('.a').find(".image").text();
+	        var type = $(ev.currentTarget).closest('.item').find('.a').find(".type").text();
+	        var stone = $(ev.currentTarget).closest('.item').find('.a').find(".stone").text();
+	        var technology = $(ev.currentTarget).closest('.item').find('.a').find(".technology").text();
+	        var cost = $(ev.currentTarget).closest('.item').find('.a').find(".cost").text();
+	        var filter_5 = $(ev.currentTarget).closest('.item').find('.a').find(".filter_5").text();
+	        var description = $(ev.currentTarget).closest('.item').find('.a').find(".description").text();
 		console.log(image);
 		console.log(type);
 		console.log(stone);
