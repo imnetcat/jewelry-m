@@ -148,6 +148,7 @@
 	      div.append(c);
 	      $('#container').append(div);
 	      $('.del').click( () => {
+		var this = $(this);
 	        console.log(this.parent());
 	        console.log(this.parent().parent());
 	        console.log(this.parent().parent().find("span[class='id']"));
@@ -168,6 +169,7 @@
                 });
               });
               $('.change').click( () => {
+		var this = $(this);
 	        console.log(this.parent());
 	        console.log(this.parent().parent());
 	        console.log(this.parent().parent().find("span[class='id']"));
