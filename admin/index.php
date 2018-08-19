@@ -197,8 +197,8 @@
               });
               $('.copy').on('click', (ev) => {
 	        var image = $(ev.currentTarget).parent().parent().children('.a').children(".image").text();
-	        var type = $(ev.currentTarget).parent().parent().children('.a').children(".types").text();
-	        var stone = $(ev.currentTarget).parent().parent().children('.a').children(".stones").text();
+	        var type = $(ev.currentTarget).parent().parent().children('.a').children(".types")[0].text();
+	        var stone = $(ev.currentTarget).parent().parent().children('.a').children(".stones")[0].text();
 	        var technology = $(ev.currentTarget).parent().parent().children('.a').children(".technology").text();
 	        var cost = $(ev.currentTarget).parent().parent().children('.a').children(".cost").text();
 	        var filter_5 = $(ev.currentTarget).parent().parent().children('.a').children(".filter_5").text();
