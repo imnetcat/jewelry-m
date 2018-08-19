@@ -195,8 +195,7 @@
                   }
                 });
               });
-              $('.copy').click( () => {
-	        console.log($(this).parentElement.parentElement.getElementsByClassName('a')[0].getElementsByClassName('items')[0]);
+              $('.copy').on('click', () => {
 	        var image = $(this).closest('.item').find('.a').find(".image").text();
 	        var type = $(this).closest('.item').find('.a').find(".type").text();
 	        var stone = $(this).closest('.item').find('.a').find(".stone").text();
