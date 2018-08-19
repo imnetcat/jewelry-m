@@ -148,13 +148,12 @@
 	      div.append(c);
 	      $('#container').append(div);
 	      $('.del').click( () => {
-		var this = $(this);
-	        console.log(this.parent());
-	        console.log(this.parent().parent());
-	        console.log(this.parent().parent().find("span[class='id']"));
-	        console.log(this.parent().parent().find("span[class='id']")[0]);
-	        console.log(this.parent().parent().find("span[class='id']")[0].text());
-	        var delID = this.parent().parent().find("span[class='id']")[0].text();
+	        console.log($(this).parent());
+	        console.log($(this).parent().parent());
+	        console.log($(this).parent().parent().find("span[class='id']"));
+	        console.log($(this).parent().parent().find("span[class='id']")[0]);
+	        console.log($(this).parent().parent().find("span[class='id']")[0].text());
+	        var delID = $(this).parent().parent().find("span[class='id']")[0].text();
 	        $.ajax({
                   type: "POST",
                   url: "actions.php",
@@ -169,13 +168,12 @@
                 });
               });
               $('.change').click( () => {
-		var this = $(this);
-	        console.log(this.parent());
-	        console.log(this.parent().parent());
-	        console.log(this.parent().parent().find("span[class='id']"));
-	        console.log(this.parent().parent().find("span[class='id']")[0]);
-	        console.log(this.parent().parent().find("span[class='id']")[0].text());
-	        var ID = this.parent().parent().find("span[class='id']")[0].text();
+	        console.log($(this).parent());
+	        console.log($(this).parent().parent());
+	        console.log($(this).parent().parent().find("span[class='id']"));
+	        console.log($(this).parent().parent().find("span[class='id']")[0]);
+	        console.log($(this).parent().parent().find("span[class='id']")[0].text());
+	        var ID = $(this).parent().parent().find("span[class='id']")[0].text();
 	        $.ajax({
                   type: "POST",
                   url: "actions.php",
@@ -198,18 +196,18 @@
                 });
               });
               $('.copy').click( () => {
-	        console.log(this.parent());
-	        console.log(this.parent().parent());
-	        console.log(this.parent().parent().find("span[class='id']"));
-	        console.log(this.parent().parent().find("span[class='id']")[0]);
-	        console.log(this.parent().parent().find("span[class='id']")[0].text());
-	        var image = this.parent().parent().find("span[class='image']")[0].text();
-	        var type = this.parent().parent().find("span[class='type']")[0].text();
-	        var stone = this.parent().parent().find("span[class='stone']")[0].text();
-	        var technology = this.parent().parent().find("span[class='technology']")[0].text();
-	        var cost = this.parent().parent().find("span[class='cost']")[0].text();
-	        var filter_5 = this.parent().parent().find("span[class='filter_5']")[0].text();
-	        var description = this.parent().parent().find("span[class='description']")[0].text();
+	        console.log($(this).parent());
+	        console.log($(this).parent().parent());
+	        console.log($(this).parent().parent().find("span[class='id']"));
+	        console.log($(this).parent().parent().find("span[class='id']")[0]);
+	        console.log($(this).parent().parent().find("span[class='id']")[0].text());
+	        var image = $(this).parent().parent().find("span[class='image']")[0].text();
+	        var type = $(this).parent().parent().find("span[class='type']")[0].text();
+	        var stone = $(this).parent().parent().find("span[class='stone']")[0].text();
+	        var technology = $(this).parent().parent().find("span[class='technology']")[0].text();
+	        var cost = $(this).parent().parent().find("span[class='cost']")[0].text();
+	        var filter_5 = $(this).parent().parent().find("span[class='filter_5']")[0].text();
+	        var description = $(this).parent().parent().find("span[class='description']")[0].text();
 	        $('#new_image').text(image);
 	        $('#new_stone').text(stone);
 	        $('#new_technology').text(technology);
