@@ -147,19 +147,15 @@
 	      var c = $("<div class='c' style='margin-left:900px'><br><button class='del'>Удалить</button><br><br><button class='change'>Изменить</button><br><br><button class='copy'>Скопировать</button></div>");
 	      div.append(c);
 	      $('#container').append(div);
+		    
 	      $('.del').click( () => {
-	        console.log($(this).parent());
-	        console.log($(this).parent().parent());
-	        console.log($(this).parent().parent().find("span[class='id']"));
-	        console.log($(this).parent().parent().find("span[class='id']")[0]);
-	        console.log($(this).parent().parent().find("span[class='id']")[0].text());
-	        var delID = $(this).parent().parent().find("span[class='id']")[0].text();
+	        var ID = $(ev.currentTarget).parent().parent().children('.a').children(".id").text();
 	        $.ajax({
                   type: "POST",
                   url: "actions.php",
                   data: {
                     action: 'delete',
-                    id: delID,
+                    id: ID,
                     derectory: "shop"
                   },
                   success: function(data){
@@ -168,12 +164,7 @@
                 });
               });
               $('.change').click( () => {
-	        console.log($(this).parent());
-	        console.log($(this).parent().parent());
-	        console.log($(this).parent().parent().find("span[class='id']"));
-	        console.log($(this).parent().parent().find("span[class='id']")[0]);
-	        console.log($(this).parent().parent().find("span[class='id']")[0].text());
-	        var ID = $(this).parent().parent().find("span[class='id']")[0].text();
+	        var ID = $(ev.currentTarget).parent().parent().children('.a').children(".id").text();
 	        $.ajax({
                   type: "POST",
                   url: "actions.php",
@@ -181,7 +172,6 @@
                     action: 'change',
                     id: ID,
                     derectory: "shop",
-                    action: 'add_in_archive',
 	            image: "items/"+$('#new_image').val(),
 	            type: $('#new_type').val(),
 	            stone: $('#new_stone').val(),
