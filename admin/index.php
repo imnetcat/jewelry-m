@@ -197,8 +197,8 @@
               });
               $('.copy').on('click', (ev) => {
 	        var image = $(ev.currentTarget).parent().parent().children('.a').children(".image").text();
-	        var type = $(ev.currentTarget).parent().parent().children('.a').children(".types")[0].text();
-	        var stone = $(ev.currentTarget).parent().parent().children('.a').children(".stones")[0].text();
+	        var type = $(ev.currentTarget).parent().parent().children('.a').children(".types").text();
+	        var stone = $(ev.currentTarget).parent().parent().children('.a').children(".stones").text();
 	        var technology = $(ev.currentTarget).parent().parent().children('.a').children(".technology").text();
 	        var cost = $(ev.currentTarget).parent().parent().children('.a').children(".cost").text();
 	        var filter_5 = $(ev.currentTarget).parent().parent().children('.a').children(".filter_5").text();
@@ -208,12 +208,12 @@
 		console.log(stone);
 		console.log(technology);
 		console.log(cost);
-	        $('#new_image').val(image);
-	        $('#new_stone').val(stone);
-	        $('#new_technology').val(technology);
-	        $('#new_cost').val(cost);
-	        $('#new_filter_5').val(filter_5);
-	        $('#new_description').val(description);
+	        $('#new_image').value(image);
+	        $('#new_stone').value(stone);
+	        $('#new_technology').value(technology);
+	        $('#new_cost').value(cost);
+	        $('#new_filter_5').value(filter_5);
+	        $('#new_description').value(description);
               });
             }
           }
