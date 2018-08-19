@@ -164,6 +164,7 @@
                 });
               });
               $('.change').click( (ev) => {
+		      console.log("zzzzzzzzzzzzzzzzzzzzZ");
 	        var ID = $(ev.currentTarget).parent().parent().children('.a').children(".id").text();
 	        $.ajax({
                   type: "POST",
@@ -186,6 +187,7 @@
                 });
               });
               $('.copy').on('click', (ev) => {
+		      console.log("zzzzzzzzzzzzzzzzzzzzZ");
 	        var image = $(ev.currentTarget).parent().parent().children('.a').children(".image").text();
 	        var type = $(ev.currentTarget).parent().parent().children('.a').children(".types").text();
 	        var stone = $(ev.currentTarget).parent().parent().children('.a').children(".stones").text();
