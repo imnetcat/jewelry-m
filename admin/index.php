@@ -55,7 +55,7 @@
 	if(length == 5){
           cost = "0." + cost;
 	}
-	      console.log($('#new_technology').val());
+	      console.log($('#news_technology').val());
         $.ajax({
           type: "POST",
 	  url: "actions.php",
@@ -275,7 +275,7 @@
     <p><input id="new_image" placeholder="Файл"> Например image-1.jpg</p>
     <p><input id="new_type" placeholder="Тип"> Доступны только эти: rings,bracelets,necklaces,earrings,pendants,other (можно писать много, через запятую, но без пробела после запятых)</p>
     <p><input id="new_stone" placeholder="Камни (через запятую, без пробелов)">  Доступны только эти: agat,aquamarine,diamond,garnet,sapphire,opal (можно писать много, через запятую, но без пробела после запятых)</p>
-    <p><input id="new_technology" placeholder="Технология"> Доступны только эти: epoxy,foundry,sketching (можно писать много, через запятую, но без пробела после запятых)</p>
+    <p><input id="news_technology" placeholder="Технология"> Доступны только эти: epoxy,foundry,sketching (можно писать много, через запятую, но без пробела после запятых)</p>
     <p><input id="new_cost" placeholder="Цена"> Без точек или запятых</p>
     <p><input id="new_filter_5" placeholder="ФИЛЬТР №5"> Пока что не для чего не используется, можно оставить пустым</p>
     <p><textarea id="new_description" placeholder="Описание" multiline="true"></textarea>То что будет отображатся при наведении на изображение</p>
