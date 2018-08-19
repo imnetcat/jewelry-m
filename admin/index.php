@@ -196,24 +196,24 @@
                 });
               });
               $('.copy').on('click', (ev) => {
-	        var image = $(ev.currentTarget).parent().parent().child('.a').find(".image").text();
-	        var type = $(ev.currentTarget).parent().parent().child('.a').child(".types").text();
-	        var stone = $(ev.currentTarget).parent().parent().child('.a').child(".stones").text();
-	        var technology = $(ev.currentTarget).parent().parent().child('.a').child(".technology").text();
-	        var cost = $(ev.currentTarget).parent().parent().child('.a').child(".cost").text();
-	        var filter_5 = $(ev.currentTarget).parent().parent().child('.a').child(".filter_5").text();
-	        var description = $(ev.currentTarget).parent().parent().child('.a').child(".description").text();
+	        var image = $(ev.currentTarget).parent().parent().children('.a').children(".image").text();
+	        var type = $(ev.currentTarget).parent().parent().children('.a').children(".types").text();
+	        var stone = $(ev.currentTarget).parent().parent().children('.a').children(".stones").text();
+	        var technology = $(ev.currentTarget).parent().parent().children('.a').children(".technology").text();
+	        var cost = $(ev.currentTarget).parent().parent().children('.a').children(".cost").text();
+	        var filter_5 = $(ev.currentTarget).parent().parent().children('.a').children(".filter_5").text();
+	        var description = $(ev.currentTarget).parent().parent().children('.a').children(".description").text();
 		console.log(image);
 		console.log(type);
 		console.log(stone);
 		console.log(technology);
 		console.log(cost);
-	        $('#new_image').text(image);
-	        $('#new_stone').text(stone);
-	        $('#new_technology').text(technology);
-	        $('#new_cost').text(cost);
-	        $('#new_filter_5').text(filter_5);
-	        $('#new_description').text(description);
+	        $('#new_image').val(image);
+	        $('#new_stone').val(stone);
+	        $('#new_technology').val(technology);
+	        $('#new_cost').val(cost);
+	        $('#new_filter_5').val(filter_5);
+	        $('#new_description').val(description);
               });
             }
           }
