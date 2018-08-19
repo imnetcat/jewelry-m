@@ -198,6 +198,7 @@
               $('.copy').click( () => {
 	        console.log($(this).closest('.item').find('.a'));
 	        console.log($(this).closest('.item').find('.a').find(".id"));
+	        console.log($(this).closest('.item').find('.a').find(".id").text());
 	        var image = $(this).closest('.item').find('.a').find(".image").text();
 	        var type = $(this).closest('.item').find('.a').find(".type").text();
 	        var stone = $(this).closest('.item').find('.a').find(".stone").text();
@@ -205,6 +206,11 @@
 	        var cost = $(this).closest('.item').find('.a').find(".cost").text();
 	        var filter_5 = $(this).closest('.item').find('.a').find(".filter_5").text();
 	        var description = $(this).closest('.item').find('.a').find(".description").text();
+		console.log(image);
+		console.log(type);
+		console.log(stone);
+		console.log(technology);
+		console.log(cost);
 	        $('#new_image').text(image);
 	        $('#new_stone').text(stone);
 	        $('#new_technology').text(technology);
