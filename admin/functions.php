@@ -1,6 +1,7 @@
 <?
 
 function add_in_shop($database, $image, $type, $stone, $technology, $cost, $filter_5, $description){
+  return $technology;
   $query = "SELECT MAX(id) FROM shop";
   if($result = mysqli_query($database, $query)){
     while ($row = mysqli_fetch_row($result)) {
