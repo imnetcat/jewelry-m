@@ -203,17 +203,12 @@
 	        var cost = $(ev.currentTarget).parent().parent().children('.a').children(".cost").text();
 	        var filter_5 = $(ev.currentTarget).parent().parent().children('.a').children(".filter_5").text();
 	        var description = $(ev.currentTarget).parent().parent().children('.a').children(".description").text();
-		console.log(image);
-		console.log(type);
-		console.log(stone);
-		console.log(technology);
-		console.log(cost);
-	        $('#new_image').value(image);
-	        $('#new_stone').value(stone);
-	        $('#new_technology').value(technology);
-	        $('#new_cost').value(cost);
-	        $('#new_filter_5').value(filter_5);
-	        $('#new_description').value(description);
+	        $('#new_image').val(image);
+	        $('#new_stone').val(stone);
+	        $('#new_technology').val(technology);
+	        $('#new_cost').val(cost);
+	        $('#new_filter_5').val(filter_5);
+	        $('#new_description').val(description);
               });
             }
           }
