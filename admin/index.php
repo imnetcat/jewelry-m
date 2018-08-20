@@ -34,7 +34,7 @@
   <script async>
     $( () => {
       $('#inshop').click( () => {
-	var cost = $('#new_cost').value().split('');
+	var cost = $('#new_cost').val().split('');
 	var length = cost.length;
 	cost = cost.join('.');
 	if(length == 2){
@@ -55,18 +55,18 @@
 	if(length == 5){
           cost = "0." + cost;
 	}
-	      console.log($('#news_technology').value());
+	      console.log($('#new_technology').val());
         $.ajax({
           type: "POST",
 	  url: "actions.php",
 	  data: {
 	    action: 'add_in_shop',
-	    image: "items/"+$('#new_image').value(),
-	    type: $('#new_type').value(),
-	    stone: $('#new_stone').value(),
-	    technology: $('#new_technology').value(),
+	    image: "items/"+$('#new_image').val(),
+	    type: $('#new_type').val(),
+	    stone: $('#new_stone').val(),
+	    technology: $('#new_technology').val(),
 	    cost: cost,
-	    filter_5: $('#new_filter_5').value(),
+	    filter_5: $('#new_filter_5').val(),
 	    description: $('#new_description').val()
 	  },
           success: function(data){
@@ -76,7 +76,7 @@
       });
 	    
       $('#inarchive').click( () => {
-	var cost = $('#new_cost').value().split('');
+	var cost = $('#new_cost').val().split('');
 	var length = cost.length;
 	cost = cost.join('.');
 	if(length == 2){
@@ -102,12 +102,12 @@
 	  url: "actions.php",
 	  data: {
 	    action: 'add_in_archive',
-	    image: "items/"+$('#new_image').value(),
-	    type: $('#new_type').value(),
-	    stone: $('#new_stone').value(),
-	    technology: $('#new_technology').value(),
+	    image: "items/"+$('#new_image').val(),
+	    type: $('#new_type').val(),
+	    stone: $('#new_stone').val(),
+	    technology: $('#new_technology').val(),
 	    cost: cost,
-	    filter_5: $('#new_filter_5').value(),
+	    filter_5: $('#new_filter_5').val(),
 	    description: $('#new_description').val()
 	  },
           success: function(data){
@@ -172,13 +172,13 @@
                   action: 'change',
                   id: ID,
                   derectory: "shop",
-	          image: "items/"+$('#new_image').value,
-	          type: $('#new_type').value,
-	          stone: $('#new_stone').value,
-	          technology: $('#new_technology').value,
-	          cost: $('#new_cost').value,
-	          filter_5: $('#new_filter_5').value,
-	          description: $('#new_description').value
+	          image: "items/"+$('#new_image').val(),
+	          type: $('#new_type').val(),
+	          stone: $('#new_stone').val(),
+	          technology: $('#new_technology').val(),
+	          cost: $('#new_cost').val(),
+	          filter_5: $('#new_filter_5').val(),
+	          description: $('#new_description').val()
                 },
                 success: function(data){
                   $('#info').html($('#info').html() + "<br>" + data);
@@ -193,13 +193,13 @@
 	      var cost = $(ev.currentTarget).parent().parent().find('.cost').text();
 	      var filter_5 = $(ev.currentTarget).parent().parent().find('.filter_5').text();
 	      var description = $(ev.currentTarget).parent().parent().find('.description').text();
-	      $('input#new_image').val(image);
-	      $('input#new_type').val(type);
-	      $('input#new_stone').val(stone);
-	      $('input#new_technology').val(technology);
-	      $('input#new_cost').val(cost);
-	      $('input#new_filter_5').val(filter_5);
-	      $('input#new_description').text(description);
+	      $('#new_image').val(image);
+	      $('#new_type').val(type);
+	      $('#new_stone').val(stone);
+	      $('#new_technology').val(technology);
+	      $('#new_cost').val(cost);
+	      $('#new_filter_5').val(filter_5);
+	      $('#new_description').val(description);
             });
           }
         });
