@@ -34,7 +34,7 @@
   <script async>
     $( () => {
       $('#inshop').click( () => {
-	var cost = $('#new_cost').value.split('');
+	var cost = $('#new_cost').value().split('');
 	var length = cost.length;
 	cost = cost.join('.');
 	if(length == 2){
@@ -55,19 +55,19 @@
 	if(length == 5){
           cost = "0." + cost;
 	}
-	      console.log($('#news_technology').value);
+	      console.log($('#news_technology').value());
         $.ajax({
           type: "POST",
 	  url: "actions.php",
 	  data: {
 	    action: 'add_in_shop',
-	    image: "items/"+$('#new_image').value,
-	    type: $('#new_type').value,
-	    stone: $('#new_stone').value,
-	    technology: $('#new_technology').value,
+	    image: "items/"+$('#new_image').value(),
+	    type: $('#new_type').value(),
+	    stone: $('#new_stone').value(),
+	    technology: $('#new_technology').value(),
 	    cost: cost,
-	    filter_5: $('#new_filter_5').value,
-	    description: $('#new_description').text()
+	    filter_5: $('#new_filter_5').value(),
+	    description: $('#new_description').val()
 	  },
           success: function(data){
 	    $('#info').html($('#info').html() + "<br>" + data);
@@ -76,7 +76,7 @@
       });
 	    
       $('#inarchive').click( () => {
-	var cost = $('#new_cost').value.split('');
+	var cost = $('#new_cost').value().split('');
 	var length = cost.length;
 	cost = cost.join('.');
 	if(length == 2){
@@ -102,13 +102,13 @@
 	  url: "actions.php",
 	  data: {
 	    action: 'add_in_archive',
-	    image: "items/"+$('#new_image').value,
-	    type: $('#new_type').value,
-	    stone: $('#new_stone').value,
-	    technology: $('#new_technology').value,
+	    image: "items/"+$('#new_image').value(),
+	    type: $('#new_type').value(),
+	    stone: $('#new_stone').value(),
+	    technology: $('#new_technology').value(),
 	    cost: cost,
-	    filter_5: $('#new_filter_5').value,
-	    description: $('#new_description').text()
+	    filter_5: $('#new_filter_5').value(),
+	    description: $('#new_description').val()
 	  },
           success: function(data){
 	    $('#info').html($('#info').html() + "<br>" + data);
