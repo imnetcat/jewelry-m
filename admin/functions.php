@@ -37,7 +37,7 @@ function add_in_archive($database, $image, $type, $stone, $technology, $cost, $f
 }
 
 function delete($database, $id, $derectory){
-  $query = "DELETE FROM ".$derectory." WHERE id='".$id."'";
+  $query = "DELETE FROM ".$derectory." WHERE id=".$id;
   if($result = mysqli_query($database, $query)){ 
     return "Изображение номер ". $id . " удалено успешно";
   } else {
