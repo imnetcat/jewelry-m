@@ -186,17 +186,13 @@
               });
             });
             $('.copy').on('click', (ev) => {
-	      var image = $(ev.currentTarget).parent().parent().children('.a').children(".image").text();
-	      var type = $(ev.currentTarget).parent().parent().children('.a').children(".types").text();
-	      var stone = $(ev.currentTarget).parent().parent().children('.a').children(".stones").text();
-	      var technology = $(ev.currentTarget).parent().parent().children('.a').children(".technology").text();
-	      var cost = $(ev.currentTarget).parent().parent().children('.a').children(".cost").text();
-	      var filter_5 = $(ev.currentTarget).parent().parent().children('.a').children(".filter_5").text();
-	      var description = $(ev.currentTarget).parent().parent().children('.a').children(".description").text();
-		    console.log($(ev.currentTarget).parent().parent());
-		    console.log($(ev.currentTarget).parent().parent().children('.a'));
-		    console.log($(ev.currentTarget).parent().parent().children('.a').children(".types"));
-		    console.log($(ev.currentTarget).parent().parent().children('.a').children(".types").text());
+	      var image = $(ev.currentTarget).parent().parent().children('.a').children()[4].text();
+	      var type = $(ev.currentTarget).parent().parent().children('.a').children()[7].text();
+	      var stone = $(ev.currentTarget).parent().parent().children('.a').children()[10].text();
+	      var technology = $(ev.currentTarget).parent().parent().children('.a').children()[13].text();
+	      var cost = $(ev.currentTarget).parent().parent().children('.a').children()[16].text();
+	      var filter_5 = $(ev.currentTarget).parent().parent().children('.a').children()[19].text();
+	      var description = $(ev.currentTarget).parent().parent().children('.a').children()[22].text();
 	      $('input#new_image').val(image);
 	      $('input#new_type').val(type);
 	      $('input#new_stone').val(stone);
