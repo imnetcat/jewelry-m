@@ -34,7 +34,7 @@
   <script async>
     $( () => {
       $('#inshop').click( () => {
-	var cost = $('#new_cost').val().split('');
+	var cost = $('#new_cost').value.split('');
 	var length = cost.length;
 	cost = cost.join('.');
 	if(length == 2){
@@ -55,19 +55,19 @@
 	if(length == 5){
           cost = "0." + cost;
 	}
-	      console.log($('#news_technology').val());
+	      console.log($('#news_technology').value);
         $.ajax({
           type: "POST",
 	  url: "actions.php",
 	  data: {
 	    action: 'add_in_shop',
-	    image: "items/"+$('#new_image').val(),
-	    type: $('#new_type').val(),
-	    stone: $('#new_stone').val(),
-	    technology: $('#new_technology').val(),
+	    image: "items/"+$('#new_image').value,
+	    type: $('#new_type').value,
+	    stone: $('#new_stone').value,
+	    technology: $('#new_technology').value,
 	    cost: cost,
-	    filter_5: $('#new_filter_5').val(),
-	    description: $('#new_description').val()
+	    filter_5: $('#new_filter_5').value,
+	    description: $('#new_description').text()
 	  },
           success: function(data){
 	    $('#info').html($('#info').html() + "<br>" + data);
@@ -76,7 +76,7 @@
       });
 	    
       $('#inarchive').click( () => {
-	var cost = $('#new_cost').val().split('');
+	var cost = $('#new_cost').value.split('');
 	var length = cost.length;
 	cost = cost.join('.');
 	if(length == 2){
@@ -102,13 +102,13 @@
 	  url: "actions.php",
 	  data: {
 	    action: 'add_in_archive',
-	    image: "items/"+$('#new_image').val(),
-	    type: $('#new_type').val(),
-	    stone: $('#new_stone').val(),
-	    technology: $('#new_technology').val(),
+	    image: "items/"+$('#new_image').value,
+	    type: $('#new_type').value,
+	    stone: $('#new_stone').value,
+	    technology: $('#new_technology').value,
 	    cost: cost,
-	    filter_5: $('#new_filter_5').val(),
-	    description: $('#new_description').val()
+	    filter_5: $('#new_filter_5').value,
+	    description: $('#new_description').text()
 	  },
           success: function(data){
 	    $('#info').html($('#info').html() + "<br>" + data);
@@ -172,13 +172,13 @@
                   action: 'change',
                   id: ID,
                   derectory: "shop",
-	          image: "items/"+$('#new_image').val(),
-	          type: $('#new_type').val(),
-	          stone: $('#new_stone').val(),
-	          technology: $('#new_technology').val(),
-	          cost: $('#new_cost').val(),
-	          filter_5: $('#new_filter_5').val(),
-	          description: $('#new_description').val()
+	          image: "items/"+$('#new_image').value,
+	          type: $('#new_type').value,
+	          stone: $('#new_stone').value,
+	          technology: $('#new_technology').value,
+	          cost: $('#new_cost').value,
+	          filter_5: $('#new_filter_5').value,
+	          description: $('#new_description').value
                 },
                 success: function(data){
                   $('#info').html($('#info').html() + "<br>" + data);
