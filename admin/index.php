@@ -16,6 +16,11 @@
     }
     p {
       margin-top: 2px;
+      display: block;
+      -webkit-margin-before: 0;
+      -webkit-margin-after: 0;
+      -webkit-margin-start: 0;
+      -webkit-margin-end: 0;
     }
     #info {
       width:20vw;
