@@ -149,7 +149,7 @@
 	      $('#container').append(div);
 	    }
 	    $('.del').click( (ev) => {
-	      var ID = $(ev.currentTarget).parent().parent().children('.a').children(".id").text();
+	      var ID = $(ev.currentTarget).parent().parent().find('.id').text();
 	      $.ajax({
                 type: "POST",
                 url: "actions.php",
@@ -164,7 +164,7 @@
               });
             });
             $('.change').click( (ev) => {
-	      var ID = $(ev.currentTarget).parent().parent().children('.a').children(".id").text();
+	      var ID = $(ev.currentTarget).parent().parent().find('.id').text();
 	      $.ajax({
                 type: "POST",
                 url: "actions.php",
@@ -186,15 +186,13 @@
               });
             });
             $('.copy').on('click', (ev) => {
-		    console.log($(ev.currentTarget).parent().parent().find('.image').text());
-		    console.log($(ev.currentTarget).parent().parent().children('.a').find('.image').text());
-	      var image = $(ev.currentTarget).parent().parent().children('.a').children().text();
-	      var type = $(ev.currentTarget).parent().parent().children('.a').children().text();
-	      var stone = $(ev.currentTarget).parent().parent().children('.a').children().text();
-	      var technology = $(ev.currentTarget).parent().parent().children('.a').children().text();
-	      var cost = $(ev.currentTarget).parent().parent().children('.a').children().text();
-	      var filter_5 = $(ev.currentTarget).parent().parent().children('.a').children().text();
-	      var description = $(ev.currentTarget).parent().parent().children('.a').children().text();
+	      var image = $(ev.currentTarget).parent().parent().find('.image').text();
+	      var type = $(ev.currentTarget).parent().parent().find('.type').text();
+	      var stone = $(ev.currentTarget).parent().parent().find('.stone').text();
+	      var technology = $(ev.currentTarget).parent().parent().find('.technology').text();
+	      var cost = $(ev.currentTarget).parent().parent().find('.cost').text();
+	      var filter_5 = $(ev.currentTarget).parent().parent().find('.filter_5').text();
+	      var description = $(ev.currentTarget).parent().parent().find('.description').text();
 	      $('input#new_image').val(image);
 	      $('input#new_type').val(type);
 	      $('input#new_stone').val(stone);
