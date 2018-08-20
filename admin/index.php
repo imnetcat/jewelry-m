@@ -1,6 +1,9 @@
 <!DOCTYPE html>
 <html><head>
   <style>
+    body {
+      margin-top: 0;
+    }
     input {
       width: 20vw;
     }
