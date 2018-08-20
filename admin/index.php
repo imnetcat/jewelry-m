@@ -193,13 +193,13 @@
 	      var cost = $(ev.currentTarget).parent().parent().children('.a').children(".cost").text();
 	      var filter_5 = $(ev.currentTarget).parent().parent().children('.a').children(".filter_5").text();
 	      var description = $(ev.currentTarget).parent().parent().children('.a').children(".description").text();
-	      $('input#new_image').val('COPYCOPYCOPY');
-	      $('input#new_type').val('COPYCOPYCOPY');
-	      $('input#new_stone').val('COPYCOPYCOPY');
-	      $('input#new_technology').val('COPYCOPYCOPY');
-	      $('input#new_cost').val('COPYCOPYCOPY');
-	      $('input#new_filter_5').val('COPYCOPYCOPY');
-	      $('input#new_description').val('COPYCOPYCOPY');
+	      //$('input#new_image').val(image);
+	      $('input#new_type').val(type);
+	      $('input#new_stone').val(stone);
+	      $('input#new_technology').val(technology);
+	      //$('input#new_cost').val(cost);
+	      //$('input#new_filter_5').val(filter_5);
+	      //$('input#new_description').val(description);
             });
           }
         });
