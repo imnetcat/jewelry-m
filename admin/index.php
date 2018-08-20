@@ -142,6 +142,8 @@
               allItems[n-1] = new Item(php_array_to_js_array(raw_data[n]));
             }
             for( n = 0; n < allItems.length; n++){
+	      var raw_cost = allItems[n].cost.split(".");
+	      var cost = Number(raw_cost[0] + "" + raw_cost[1] + "" + raw_cost[2] + "" + raw_cost[3] + "" + raw_cost[4] + "" + raw_cost[5]);
               var div = $("<div class='item'></div>");
 	      var a = $("<div class='a' style='position:absolute; width:600px;'></div>");
 	      a.append($("<span>ID: </span><span class='id'>"+allItems[n].id+"</span><br>"+
@@ -149,7 +151,7 @@
               "<span>Тип: </span><span class='type'>"+allItems[n].type+"</span><br>"+
               "<span>Камни: </span><span class='stone'>"+allItems[n].stone+"</span><br>"+
               "<span>Технология: </span><span class='technology'>"+allItems[n].technology+"</span><br>"+
-              "<span>Цена: </span><span class='cost'>"+allItems[n].cost+"</span><br>"+
+              "<span>Цена: </span><span class='cost'>"+cost+"</span><br>"+
               "<span>ФИЛЬТЕР №5: </span><span class='filter_5'>"+allItems[n].filter_5+"</span><br>"+
               "<span>Описание: </span><span class='description'>"+allItems[n].description+"</span><br>"));
 	      div.append(a);
@@ -233,7 +235,6 @@
             for( n = 0; n < allItems.length; n++){
 	      var raw_cost = allItems[n].cost.split(".");
 	      var cost = Number(raw_cost[0] + "" + raw_cost[1] + "" + raw_cost[2] + "" + raw_cost[3] + "" + raw_cost[4] + "" + raw_cost[5]);
-		    console.log(cost);
               var div = $("<div class='item'></div>");
 	      var a = $("<div class='a' style='position:absolute; width:600px;'></div>");
 	      a.append($("<span>ID: </span><span class='id'>"+allItems[n].id+"</span><br>"+
