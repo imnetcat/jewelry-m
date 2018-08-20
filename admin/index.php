@@ -17,6 +17,10 @@
     p {
       margin-top: 2px;
     }
+    #info {
+      width:20vw;
+      position:fixed;
+    }
   </style>
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
   <script async="">
@@ -269,22 +273,20 @@
   </script>
 </head>
 <body>
-<div>
-  <div style="margin-left:15vw;">
-    <br>
-    <p><input id="new_image" placeholder="Файл"> Например image-1.jpg</p>
-    <p><input id="new_type" placeholder="Тип"> Доступны только эти: rings,bracelets,necklaces,earrings,pendants,other (можно писать много, через запятую, но без пробела после запятых)</p>
-    <p><input id="new_stone" placeholder="Камни">  Доступны только эти: agat,aquamarine,diamond,garnet,sapphire,opal (можно писать много, через запятую, но без пробела после запятых)</p>
-    <p><input id="new_technology" placeholder="Технология"> Доступны только эти: epoxy,foundry,sketching (можно писать много, через запятую, но без пробела после запятых)</p>
-    <p><input id="new_cost" placeholder="Цена"> Без точек или запятых</p>
-    <p><input id="new_filter_5" placeholder="ФИЛЬТР №5"> Пока что не для чего не используется, можно оставить пустым</p>
-    <p><textarea id="new_description" placeholder="Описание" multiline="true"></textarea>То что будет отображатся при наведении на изображение</p>
-    <p class="center"><button id="inshop">В магазин</button><button id="inarchive">В архив</button></p>
-    <p class="center"><button id="get_shop">Загрузить магазин</button><button id="get_archive">Загрузить архив</button></p>
-  </div>
+<div style="margin-left:15vw; position:fixed;">
+  <br>
+  <p><input id="new_image" placeholder="Файл"> Например image-1.jpg</p>
+  <p><input id="new_type" placeholder="Тип"> Доступны только эти: rings,bracelets,necklaces,earrings,pendants,other (можно писать много, через запятую, но без пробела после запятых)</p>
+  <p><input id="new_stone" placeholder="Камни">  Доступны только эти: agat,aquamarine,diamond,garnet,sapphire,opal (можно писать много, через запятую, но без пробела после запятых)</p>
+  <p><input id="new_technology" placeholder="Технология"> Доступны только эти: epoxy,foundry,sketching (можно писать много, через запятую, но без пробела после запятых)</p>
+  <p><input id="new_cost" placeholder="Цена"> Без точек или запятых</p>
+  <p><input id="new_filter_5" placeholder="ФИЛЬТР №5"> Пока что не для чего не используется, можно оставить пустым</p>
+  <p><textarea id="new_description" placeholder="Описание" multiline="true"></textarea>То что будет отображатся при наведении на изображение</p>
+  <p class="center"><button id="inshop">В магазин</button><button id="inarchive">В архив</button></p>
+  <p class="center"><button id="get_shop">Загрузить магазин</button><button id="get_archive">Загрузить архив</button></p>
 </div>
 	
-
+	
 <div id="container" style="position:absolute; top:425px;"><div id="info"></div><br><br>
 </div>
 </body>
