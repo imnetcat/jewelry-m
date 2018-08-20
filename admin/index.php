@@ -126,13 +126,10 @@
           },
           success: function(data){
             var raw_data = data.split('array');
-		  console.log(raw_data);
             var allItems = new Array();
             for( n = 1; n < raw_data.length; n++){
               allItems[n-1] = new Item(php_array_to_js_array(raw_data[n]));
             }
-		  console.log(allItems);
-		  console.log(allItems[n].technology);
             for( n = 0; n < allItems.length; n++){
               var div = $("<div class='item'></div>");
 	      var a = $("<div class='a' style='position:absolute; width:600px;'></div>");
@@ -262,8 +259,8 @@
           this.image = array[1];
           this.type = array[2];
           this.stone = array[3];
-          this.filter_3 = array[4];
-          this.filter_4 = array[5];
+          this.technology = array[4];
+          this.cost = array[5];
           this.filter_5 = array[6];
           this.description = array[7];
         }
