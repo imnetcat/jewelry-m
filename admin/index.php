@@ -131,6 +131,8 @@
             for( n = 1; n < raw_data.length; n++){
               allItems[n-1] = new Item(php_array_to_js_array(raw_data[n]));
             }
+		  console.log(allItems);
+		  console.log(allItems[n].technology);
             for( n = 0; n < allItems.length; n++){
               var div = $("<div class='item'></div>");
 	      var a = $("<div class='a' style='position:absolute; width:600px;'></div>");
