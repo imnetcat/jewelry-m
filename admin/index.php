@@ -164,10 +164,6 @@
               });
             });
             $('.change').click( (ev) => {
-		    console.log($('#new_technology').val());
-		    console.log($('input#new_technology').val());
-		    console.log($('#new_technology').text());
-		    console.log($('#new_technology').html());
 	      var ID = $(ev.currentTarget).parent().parent().find('.id').text();
 	      $.ajax({
                 type: "POST",
