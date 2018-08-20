@@ -13,7 +13,6 @@ switch ($_POST['action']){
     $cost = $_POST['cost'];
     $filter_5 = $_POST['filter_5'];
     $description = $_POST['description'];
-    echo $technology;
     echo add_in_shop($database, $image, $type, $stone, $technology, $cost, $filter_5, $description);
   break;
   case 'add_in_archive':
