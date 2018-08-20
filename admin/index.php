@@ -55,7 +55,6 @@
 	if(length == 5){
           cost = "0." + cost;
 	}
-	      console.log($('#new_technology').val());
         $.ajax({
           type: "POST",
 	  url: "actions.php",
