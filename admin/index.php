@@ -193,13 +193,13 @@
 	      var cost = $(ev.currentTarget).parent().parent().children('.a').children(".cost").text();
 	      var filter_5 = $(ev.currentTarget).parent().parent().children('.a').children(".filter_5").text();
 	      var description = $(ev.currentTarget).parent().parent().children('.a').children(".description").text();
-	      $('#new_image').val(image);
-	      $('#new_type').val(type);
-	      $('#new_stone').val(stone);
-	      $('#new_technology').val('COPYCOPYCOPY');
-	      $('#new_cost').val(cost);
-	      $('#new_filter_5').val(filter_5);
-	      $('#new_description').val(description);
+	      $('input#new_image').val('COPYCOPYCOPY');
+	      $('input#new_type').val('COPYCOPYCOPY');
+	      $('input#new_stone').val('COPYCOPYCOPY');
+	      $('input#new_technology').val('COPYCOPYCOPY');
+	      $('input#new_cost').val('COPYCOPYCOPY');
+	      $('input#new_filter_5').val('COPYCOPYCOPY');
+	      $('input#new_description').val('COPYCOPYCOPY');
             });
           }
         });
@@ -275,8 +275,8 @@
     <br>
     <p><input id="new_image" placeholder="Файл"> Например image-1.jpg</p>
     <p><input id="new_type" placeholder="Тип"> Доступны только эти: rings,bracelets,necklaces,earrings,pendants,other (можно писать много, через запятую, но без пробела после запятых)</p>
-    <p><input id="new_stone" placeholder="Камни (через запятую, без пробелов)">  Доступны только эти: agat,aquamarine,diamond,garnet,sapphire,opal (можно писать много, через запятую, но без пробела после запятых)</p>
-    <p><input id="news_technology" placeholder="Технология"> Доступны только эти: epoxy,foundry,sketching (можно писать много, через запятую, но без пробела после запятых)</p>
+    <p><input id="new_stone" placeholder="Камни">  Доступны только эти: agat,aquamarine,diamond,garnet,sapphire,opal (можно писать много, через запятую, но без пробела после запятых)</p>
+    <p><input id="new_technology" placeholder="Технология"> Доступны только эти: epoxy,foundry,sketching (можно писать много, через запятую, но без пробела после запятых)</p>
     <p><input id="new_cost" placeholder="Цена"> Без точек или запятых</p>
     <p><input id="new_filter_5" placeholder="ФИЛЬТР №5"> Пока что не для чего не используется, можно оставить пустым</p>
     <p><textarea id="new_description" placeholder="Описание" multiline="true"></textarea>То что будет отображатся при наведении на изображение</p>
