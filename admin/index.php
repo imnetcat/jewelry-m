@@ -2,10 +2,10 @@
 <html><head>
   <style>
     input {
-      width: 25vw;
+      width: 20vw;
     }
     textarea {
-      width: 25vw;
+      width: 20vw;
     }
     .center {
       text-align:center;
@@ -17,8 +17,8 @@
     p {
       margin-top: 2px;
       display: block;
-      -webkit-margin-before: 0;
-      -webkit-margin-after: 0;
+      -webkit-margin-before: 5px;
+      -webkit-margin-after: 5px;
       -webkit-margin-start: 0;
       -webkit-margin-end: 0;
     }
