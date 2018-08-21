@@ -239,7 +239,16 @@ function set_pages(allItems){
 	}
       }
     }
-  }); 
+  });
+  // Конкретный предмет
+  $('.item').click( (ev) => {
+    var currentImg = $(ev.eventTarget).attr('src');
+    var n = 0;
+    while(allItems[n].image != currentImg){
+      $('#currentImg').attr('src', currentImg');
+      n++; 
+    }
+    $('#currentItem').show();
 }
  
 function filter_error(){
