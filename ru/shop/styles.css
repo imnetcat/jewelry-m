@@ -164,12 +164,31 @@ ol {
   opacity: 0;
   background-color: #ECE9E6;
   transition: opacity 0.5s;
+  overflow-y: hidden;
+  line-height: 20px;
+}
+.description::after {
+  content: '';
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  width: 100%;
+  height: 20px;
+  //background-color: #fff;
+  background-image: linear-gradient(to right, rgba(255,255,255,0), rgba(255,255,255,1));
 }
 .item:hover {
   opacity: 0.2;
 }
 .item:hover + .description {
   opacity: 1;
+}
+.more {
+  background: #fff;
+  margin-top: 150px;
+  margin-left: 125px;
+  position: absolute;
+  line-height: 20px;
 }
 footer {
   margin-top: 2vh;
