@@ -1,5 +1,5 @@
 function build_item(){
-  return '<div><img class="item" src="items/default.png"><div class="description"></div></div>';
+  return '<div><img class="item" src="items/default.png"><div class="description"><div class="more"></div></div></div>';
 }
 function adaptation_1(){
   var client_w = screen.width;
