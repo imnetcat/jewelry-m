@@ -242,14 +242,12 @@ function set_pages(allItems){
   });
   // Конкретный предмет
   $('.item').click( (ev) => {
-    var currentImg = $(ev.eventTarget).attr('src');
+    var currentImg = $(ev.target).attr('src');
     var n = 0;
     var f = true;
-    while(f){
-	  console.log(page);
 	  console.log(pages_set[page]);
-	  console.log(pages_set[page][n]);
-	  console.log(pages_set[page][n][0]);
+	  console.log(currentImg);
+    while(f){
       if(pages_set[page][n][0] == currentImg){
         $('#currentImg').attr('src', currentImg);
 	f = false;
