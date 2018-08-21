@@ -1,5 +1,5 @@
 function build_item(){
-  return '<div><img class="item" src="items/default.png"><span><div class="description"><span class="more">Подробнее</span></span></div></div>';
+  return '<div><img class="item" src="items/default.png"><div class="description"></div></div>';
 }
 function adaptation_1(){
   var client_w = screen.width;
@@ -189,7 +189,7 @@ function set_pages(allItems){
   for( n = 0; n <  $('.item').length; n++){
     if(pages_set[page][n]){
       $('.item:eq('+n+')').attr("src", pages_set[page][n][0]);
-      $('.description:eq('+n+')').html(pages_set[page][n][1]);
+      $('.description:eq('+n+')').html(pages_set[page][n][1] + '<span class="more">Подробнее</span>');
     }
   }
   if(!pages_set[page-1]){
@@ -219,7 +219,7 @@ function set_pages(allItems){
       for( n = 0; n <  $('.item').length; n++){
         if(pages_set[page][n]){
           $('.item:eq('+n+')').attr("src", pages_set[page][n][0]);
-          $('.description:eq('+n+')').html(pages_set[page][n][1]);
+          $('.description:eq('+n+')').html(pages_set[page][n][1] + '<span class="more">Подробнее</span>');
         }else{
           $('.item:eq('+n+')').attr("src", "items/default.png");
           $('.description:eq('+n+')').html("");
@@ -244,7 +244,7 @@ function set_pages(allItems){
       for( n = 0; n <  $('.item').length; n++){
         if(pages_set[page][n]){
           $('.item:eq('+n+')').attr("src", pages_set[page][n][0]);
-          $('.description:eq('+n+')').html(pages_set[page][n][1]);
+          $('.description:eq('+n+')').html(pages_set[page][n][1] + '<span class="more">Подробнее</span>');
         }else{
           $('.item:eq('+n+')').attr("src", "items/default.png");
           $('.description:eq('+n+')').html("");
