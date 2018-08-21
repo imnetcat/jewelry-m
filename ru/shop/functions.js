@@ -253,7 +253,7 @@ function set_pages(allItems){
       }
       n++; 
     }
-    $('#currentItem').attr('visibility', 'visible');
+    $('#currentItem').css('visibility', 'visible');
   });
 }
  
