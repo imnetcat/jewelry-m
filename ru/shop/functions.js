@@ -244,7 +244,7 @@ function set_pages(allItems){
   $('.item').click( (ev) => {
     var currentImg = $(ev.eventTarget).attr('src');
     var n = 0;
-    while(allItems[n].image != currentImg){
+    while(pages_set[page][n][0] != currentImg){
       $('#currentImg').attr('src', currentImg);
       n++; 
     }
