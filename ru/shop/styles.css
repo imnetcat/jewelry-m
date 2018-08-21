@@ -190,6 +190,14 @@ ol {
   position: absolute;
   line-height: 20px;
 }
+#currentItem {
+  visibilty: hidden;
+  position: fixed;
+  width: 60wv;
+  height: 45vh;
+  margin-top: 27.5vh;
+  margin-left: 20vw;
+}
 footer {
   margin-top: 2vh;
   height: 77px;
