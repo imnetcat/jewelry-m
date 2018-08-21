@@ -198,7 +198,7 @@ ol {
   margin-top: 7vh;
   margin-left: 20vw;
   background-color: white;
-  z-index: 11;
+  z-index: 101;
 }
 #currentImg {
   width: 350px;
