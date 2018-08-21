@@ -160,10 +160,11 @@ ol {
   height: 250px;
   position: absolute;
   opacity: 0;
+  background-color: #ECE9E6;
   transition: opacity 0.5s;
 }
 .item:hover {
-  opacity: 0.5;
+  opacity: 0.25;
 }
 .item:hover + .description {
   opacity: 1;
