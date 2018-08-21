@@ -171,6 +171,9 @@ function set_pages(allItems){
 		allItems[e].description.charAt(238)+
 		allItems[e].description.charAt(239)+
 		allItems[e].description.charAt(240))[0];
+      }else{
+        var description = allItems[e].description;
+      }
       if(allItems[e]){
         pages_set[page][n][0] = allItems[e].image;  
 	pages_set[page][n][1] = description;
