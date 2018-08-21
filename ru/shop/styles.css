@@ -162,9 +162,8 @@ ol {
   height: 200px;
   position: absolute;
   opacity: 0;
-  background-color: #ECE9E6;
   transition: opacity 0.5s;
-  overflow-y: hidden;
+  //overflow-y: hidden;
   line-height: 20px;
 }
 .description::after {
@@ -185,8 +184,10 @@ ol {
 }
 .more {
   background: #fff;
-  margin-top: 150px;
-  margin-left: 125px;
+  width: 200px;
+  text-align: right;
+  margin-top: -20px;
+  margin-left: -95px;
   position: absolute;
   line-height: 20px;
 }
