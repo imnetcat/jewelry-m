@@ -162,33 +162,9 @@ function set_pages(allItems){
     pages_set[page] = new Array();
     for( n = 0; n <  $('.item').length; n++){
       pages_set[page][n] = new Array();
-      if(allItems[e].description.charAt(233)){
-        var description = allItems[e].description.split(
-		allItems[e].description.charAt(233)+
-		allItems[e].description.charAt(234)+
-		allItems[e].description.charAt(235)+
-		allItems[e].description.charAt(236)+
-		allItems[e].description.charAt(237)+
-		allItems[e].description.charAt(238)+
-		allItems[e].description.charAt(239)+
-		allItems[e].description.charAt(240)+
-		allItems[e].description.charAt(241)+
-		allItems[e].description.charAt(242)+
-		allItems[e].description.charAt(243)+
-		allItems[e].description.charAt(244)+
-		allItems[e].description.charAt(245)+
-		allItems[e].description.charAt(246)+
-		allItems[e].description.charAt(247)+
-		allItems[e].description.charAt(248)+
-		allItems[e].description.charAt(249)+
-		allItems[e].description.charAt(250)+
-		allItems[e].description.charAt(251))[0];
-      }else{
-        var description = allItems[e].description;
-      }
       if(allItems[e]){
         pages_set[page][n][0] = allItems[e].image;  
-	pages_set[page][n][1] = description;
+	pages_set[page][n][1] = allItems[e].description;
       }else{
 	pages_set[page][n][0] = "items/default.png";
 	pages_set[page][n][1] = "";
