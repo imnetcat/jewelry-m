@@ -244,12 +244,16 @@ function set_pages(allItems){
   $('.item').click( (ev) => {
     var currentImg = $(ev.eventTarget).attr('src');
     var n = 0;
+    var f = true;
 	  console.log(page);
 	  console.log(pages_set[page]);
 	  console.log(pages_set[page][n]);
 	  console.log(pages_set[page][n][0]);
-    while(pages_set[page][n][0] != currentImg){
-      $('#currentImg').attr('src', currentImg);
+    while(f){
+      if(pages_set[page][n][0] == currentImg){
+        $('#currentImg').attr('src', currentImg);
+	f = false;
+      }
       n++; 
     }
     $('#currentItem').show();
