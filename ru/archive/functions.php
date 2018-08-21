@@ -69,6 +69,7 @@ function id_parse($array_of_id){
 }
 
 function get_items($database, $id, $sortings){
+  return var_dump($id);
   if($sortings['cost'] == "cost-down-to-up"){
     $sort = "cost";
   }else{
@@ -89,14 +90,4 @@ function get_items($database, $id, $sortings){
   return $items;
 }
 
-function get_archive($database){
-  $items = " ";
-  $query ="SELECT id, image, type, stone, technology, cost, filter_5, description  FROM archive";
-  if($result = mysqli_query($database, $query)){
-    while ($row = mysqli_fetch_row($result)) {
-      $items .= var_dump($row);
-    }
-  }
-  return $items;
-}
 ?>
