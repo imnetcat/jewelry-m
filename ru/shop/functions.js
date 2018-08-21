@@ -249,6 +249,7 @@ function set_pages(allItems){
       n++; 
     }
     $('#currentItem').show();
+  });
 }
  
 function filter_error(){
