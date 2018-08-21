@@ -162,9 +162,18 @@ function set_pages(allItems){
     pages_set[page] = new Array();
     for( n = 0; n <  $('.item').length; n++){
       pages_set[page][n] = new Array();
+      if(allItems[e].description.charAt(234)){
+        var description = allItems[e].description.split(
+		allItems[e].description.charAt(234)+
+		allItems[e].description.charAt(235)+
+		allItems[e].description.charAt(236)+
+		allItems[e].description.charAt(237)+
+		allItems[e].description.charAt(238)+
+		allItems[e].description.charAt(239)+
+		allItems[e].description.charAt(240))[0];
       if(allItems[e]){
         pages_set[page][n][0] = allItems[e].image;  
-	pages_set[page][n][1] = allItems[e].description
+	pages_set[page][n][1] = description;
       }else{
 	pages_set[page][n][0] = "items/default.png";
 	pages_set[page][n][1] = "";
