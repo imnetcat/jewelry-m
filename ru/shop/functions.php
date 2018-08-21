@@ -2,7 +2,7 @@
 function found_items($database, $filters){
   $id = array();
   $types = explode("-_-", $filters["types"]);
-  $query ="SELECT id, type FROM items";
+  $query ="SELECT id, type FROM shop";
   for( $x = 0; $x < count($types); $x++ ){
     if($result = mysqli_query($database, $query)){
       while ($row = mysqli_fetch_row($result)) {
@@ -13,7 +13,7 @@ function found_items($database, $filters){
     }  
   }
   $stones = explode("-_-", $filters["stones"]);
-  $query ="SELECT id, stone FROM items";
+  $query ="SELECT id, stone FROM shop";
   if($result = mysqli_query($database, $query)){
     while ($row = mysqli_fetch_row($result)) {
       $item_filters = explode(", ", $row[1]);
@@ -29,7 +29,7 @@ function found_items($database, $filters){
     }  
   }
   $technology = explode("-_-", $filters["technology"]);
-  $query ="SELECT id, technology FROM items";  
+  $query ="SELECT id, technology FROM shop";  
   if($result = mysqli_query($database, $query)){
     while ($row = mysqli_fetch_row($result)) {
       $item_filters = explode(", ", $row[1]);
@@ -76,7 +76,7 @@ function get_items($database, $id, $sortings){
   }
   $raw = array();
   $items = " ";
-  $query ="SELECT id, image, type, stone, technology, cost, filter_5, description FROM items ORDER BY " . $sort;
+  $query ="SELECT id, image, type, stone, technology, cost, filter_5, description FROM shop ORDER BY " . $sort;
   if($result = mysqli_query($database, $query)){
     while ($row = mysqli_fetch_row($result)) {
       for( $n = 0; $n < count($id); $n++ ){
