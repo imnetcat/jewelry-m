@@ -26,7 +26,7 @@
       <li><a href="/ru/contacts/">Контакты</a></li>
     </ul>
   </nav>
-  <div id="currentItem"><div id='currentImg'></div></div>
+  <div id="currentItem"><div id='currentImg'></div><div class="fil-close-btn"><div></div><div></div></div></div>
   <div id="container">
     <div id="items">
       <div class="row">
