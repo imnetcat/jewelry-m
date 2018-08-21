@@ -2,7 +2,7 @@
 function found_items($database, $filters){
   $id = array();
   $types = explode("-_-", $filters["types"]);
-  $query ="SELECT id, type FROM items";  
+  $query ="SELECT id, type FROM archive";  
   for( $x = 0; $x < count($types); $x++ ){
     if($result = mysqli_query($database, $query)){
       while ($row = mysqli_fetch_row($result)) {
@@ -13,7 +13,7 @@ function found_items($database, $filters){
     }  
   }
   $stones = explode("-_-", $filters["stones"]);
-  $query ="SELECT id, stone FROM items";  
+  $query ="SELECT id, stone FROM archive";  
   if($result = mysqli_query($database, $query)){
     while ($row = mysqli_fetch_row($result)) {
       $item_filters = explode(", ", $row[1]);
@@ -45,7 +45,7 @@ function id_parse($array_of_id){
 
 function get_items($database, $id){
   $items = " ";
-  $query ="SELECT id, image, type, stone, filter_3, filter_4, filter_5, description FROM items";
+  $query ="SELECT id, image, type, stone, filter_3, filter_4, filter_5, description FROM archive";
   if($result = mysqli_query($database, $query)){
     while ($row = mysqli_fetch_row($result)) {
       for( $x = 0; $x < count($id); $x++ ){
