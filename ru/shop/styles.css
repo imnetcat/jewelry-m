@@ -191,12 +191,18 @@ ol {
   line-height: 20px;
 }
 #currentItem {
-  visibilty: hidden;
+  visibility: hidden;
   position: fixed;
-  width: 60wv;
+  width: 60vw;
   height: 45vh;
   margin-top: 27.5vh;
   margin-left: 20vw;
+  background-color: white;
+  z-index: 1000;
+}
+#currentImg {
+  width: 350px;
+  height: 350px;
 }
 footer {
   margin-top: 2vh;
