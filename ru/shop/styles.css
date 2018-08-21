@@ -166,7 +166,7 @@ ol {
   transition: opacity 0.5s;
 }
 .item:hover {
-  //opacity: 0.5;
+  opacity: 0.2;
 }
 .item:hover + .description {
   opacity: 1;
