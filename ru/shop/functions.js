@@ -253,8 +253,8 @@ class Item {
     this.image = array[1];
     this.type = array[2];
     this.stone = array[3];
-    this.filter_3 = array[4];
-    this.filter_4 = array[5];
+    this.technology = array[4];
+    this.cost = array[5];
     this.filter_5 = array[6];
     this.description = array[7];
   }
