@@ -194,11 +194,11 @@ ol {
   visibility: hidden;
   position: fixed;
   width: 60vw;
-  height: 45vh;
+  height: 75vh;
   margin-top: 27.5vh;
   margin-left: 20vw;
   background-color: white;
-  z-index: 1000;
+  z-index: 11;
 }
 #currentImg {
   width: 350px;
