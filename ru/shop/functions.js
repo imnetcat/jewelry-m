@@ -165,6 +165,7 @@ function set_pages(allItems){
       if(allItems[e]){
         pages_set[page][n][0] = allItems[e].image;  
 	pages_set[page][n][1] = allItems[e].description;
+	pages_set[page][n][2] = allItems[e].filter_5;
       }else{
 	pages_set[page][n][0] = "items/default.png";
 	pages_set[page][n][1] = "";
@@ -249,6 +250,8 @@ function set_pages(allItems){
     while(f){
       if(pages_set[page][n][0] == currentImg){
         $('#currentImg').attr('src', currentImg);
+        $('#currentDes').html(pages_set[page][n][1]);
+        $('#currentISim').attr('src', pages_set[page][n][2]);
 	f = false;
       }
       n++; 
