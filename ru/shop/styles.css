@@ -148,6 +148,7 @@ ol {
 }
 .item {
   z-index: 10;
+  cursor: pointer;
   opacity: 1;
   width: 250px;
   height: 250px;
@@ -156,6 +157,7 @@ ol {
 }
 .description {
   z-index: 9;
+  cursor: pointer;
   width: 200px;
   height: 200px;
   position: absolute;
@@ -164,7 +166,7 @@ ol {
   transition: opacity 0.5s;
 }
 .item:hover {
-  opacity: 0.5;
+  //opacity: 0.5;
 }
 .item:hover + .description {
   opacity: 1;
