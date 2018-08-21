@@ -246,7 +246,6 @@ function set_pages(allItems){
     var n = 0;
     var f = true;
 	  console.log(pages_set[page]);
-	  console.log(currentImg);
     while(f){
       if(pages_set[page][n][0] == currentImg){
         $('#currentImg').attr('src', currentImg);
@@ -254,7 +253,7 @@ function set_pages(allItems){
       }
       n++; 
     }
-    $('#currentItem').show();
+    $('#currentItem').attr('visibility', 'visible');
   });
 }
  
