@@ -178,6 +178,27 @@
             });
             $('.change').click( (ev) => {
 	      var ID = $(ev.currentTarget).parent().parent().find('.id').text();
+	      var cost = $('#new_cost').val().split('');
+	      var length = cost.length;
+	      cost = cost.join('.');
+	      if(length == 2){
+                cost = "0." + cost;
+                cost = "0." + cost;
+                cost = "0." + cost;
+                cost = "0." + cost;
+	      }
+	      if(length == 3){
+                cost = "0." + cost;
+                cost = "0." + cost;
+                cost = "0." + cost;
+	      }
+	      if(length == 4){
+                cost = "0." + cost;
+                cost = "0." + cost;
+	      }
+	      if(length == 5){
+                cost = "0." + cost;
+	      }
 	      $.ajax({
                 type: "POST",
                 url: "actions.php",
@@ -189,7 +210,7 @@
 	          type: $('#new_type').val(),
 	          stone: $('#new_stone').val(),
 	          technology: $('#new_technology').val(),
-	          cost: $('#new_cost').val(),
+	          cost: cost,
 	          filter_5: $('#new_filter_5').val(),
 	          description: $('#new_description').val()
                 },
