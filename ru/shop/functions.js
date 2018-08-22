@@ -244,8 +244,6 @@ function set_pages(allItems){
   // Конкретный предмет
   $('.item').click( (ev) => {
     var currentImg = $(ev.target).attr('src');
-    var similars = pages_set[page][n][2].split(',');
-    similars[similars.lenght] = currentImg;
     var n = 0;
     var f = true;
     var simNum = 0;
@@ -253,6 +251,8 @@ function set_pages(allItems){
       if(pages_set[page][n][0] == currentImg){
         $('#currentImg').attr('src', currentImg);
         $('#currentDes').html(pages_set[page][n][1]);
+        var similars = pages_set[page][n][2].split(',');
+        similars[similars.lenght] = currentImg;
         $('#currentISim img:eq(1)').attr('src', similars[simNum]);
         $('#currentISim img:eq(2)').attr('src', similars[simNum]+1);
         $('#currentISim img:eq(3)').attr('src', similars[simNum]+2);
