@@ -204,6 +204,33 @@ ol {
   width: 350px;
   height: 350px;
 }
+.fil-close-btn {
+  position: relative;
+  cursor: pointer;
+  display: inline-block;
+  width: 25px;
+  height: 25px;
+  left: 50%;
+  overflow: hidden; 
+}
+.fil-close-btn:hover::before, .fil-close-btn:hover::after {
+  background: red; 
+}
+.fil-close-btn::before, .fil-close-btn::after {
+  content: '';
+  position: absolute;
+  height: 2px;
+  width: 100%;
+  top: 50%;
+  margin-top: -1px;
+  background: #AEAEAE; 
+}
+.fil-close-btn::before {
+  transform: rotate(45deg); 
+}
+.fil-close-btn::after {
+  transform: rotate(-45deg); 
+}
 footer {
   margin-top: 2vh;
   height: 77px;
