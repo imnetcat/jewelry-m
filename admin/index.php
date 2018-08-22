@@ -143,7 +143,6 @@
             }
             for( n = 0; n < allItems.length; n++){
 	      var raw_cost = allItems[n].cost.split(".");
-		    console.log(raw_cost);
 	      var cost = Number(raw_cost[0] + "" + raw_cost[1] + "" + raw_cost[2] + "" + raw_cost[3] + "" + raw_cost[4] + "" + raw_cost[5]);
               var div = $("<div class='item'></div>");
 	      var a = $("<div class='a' style='position:absolute; width:600px;'></div>");
