@@ -244,18 +244,34 @@ function set_pages(allItems){
   // Конкретный предмет
   $('.item').click( (ev) => {
     var currentImg = $(ev.target).attr('src');
+    var similars = pages_set[page][n][2].split(',');
+    similars[similars.lenght] = currentImg;
     var n = 0;
     var f = true;
-	  console.log(pages_set[page]);
+    var simNum = 0;
     while(f){
       if(pages_set[page][n][0] == currentImg){
         $('#currentImg').attr('src', currentImg);
         $('#currentDes').html(pages_set[page][n][1]);
-        $('#currentISim').attr('src', pages_set[page][n][2]);
+        $('#currentISim img:eq(1)').attr('src', similars[simNum]);
+        $('#currentISim img:eq(2)').attr('src', similars[simNum]+1);
+        $('#currentISim img:eq(3)').attr('src', similars[simNum]+2);
 	f = false;
       }
       n++; 
     }
+    $('#currentISim img:eq(1)').click( () => {
+      simNum--;
+      $('#currentISim img:eq(1)').attr('src', similars[simNum]);
+      $('#currentISim img:eq(2)').attr('src', similars[simNum]+1);
+      $('#currentISim img:eq(3)').attr('src', similars[simNum]+2);
+    });
+    $('#currentISim img:eq(3)').click( () => {
+      simNum++;
+      $('#currentISim img:eq(1)').attr('src', similars[simNum]);
+      $('#currentISim img:eq(2)').attr('src', similars[simNum]+1);
+      $('#currentISim img:eq(3)').attr('src', similars[simNum]+2);
+    });
     $('#currentItem').css('visibility', 'visible');
   });
 }
