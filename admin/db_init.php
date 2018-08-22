@@ -2,7 +2,7 @@
 include "db.php";
 
 $query ="CREATE TABLE  IF NOT EXISTS shop (
-  id INT(20) NOT NULL,
+  id INT(50) NOT NULL,
   image VARCHAR(60) NOT NULL,
   type VARCHAR(60) NOT NULL,
   stone VARCHAR(60) NOT NULL,
@@ -16,7 +16,7 @@ if(mysqli_query($database, $query)){
   echo  mysqli_error($database);
 }
 $query ="CREATE TABLE  IF NOT EXISTS archive (
-  id INT(20) NOT NULL,
+  id INT(50) NOT NULL,
   image VARCHAR(60) NOT NULL,
   type VARCHAR(60) NOT NULL,
   stone VARCHAR(60) NOT NULL,
