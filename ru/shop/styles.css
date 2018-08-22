@@ -203,6 +203,16 @@ ol {
 #currentImg {
   width: 350px;
   height: 350px;
+  top: 10px;
+  left: 10px;
+}
+#currentDes {
+  margin-left: 380px;
+  margin-top: 10px;
+  position: absolute;
+}
+#currentISim {
+  position: absolute;
 }
 .fil-close-btn {
   position: relative;
