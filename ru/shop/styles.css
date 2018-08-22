@@ -208,12 +208,18 @@ ol {
   left: 10px;
 }
 #currentDes {
+  width: 360px;
+  height: 470px;
   margin-left: 380px;
   margin-top: 10px;
   position: absolute;
 }
 #currentISim {
   position: absolute;
+  top: 360px;
+  left: 10px;
+  width: 350px;
+  height: 130px;
 }
 .fil-close-btn {
   position: relative;
