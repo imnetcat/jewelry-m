@@ -221,19 +221,19 @@ ol {
   width: 350px;
   height: 120px;
 }
-#currentISim img:eq(0) {
+#currentISim img:nth-child(0) {
   width: 75px;
   height: 75px;
   margin-left: 40px;
   position: absolute;
 }
-#currentISim img:eq(1) {
+#currentISim img:nth-child(1) {
   width: 100px;
   height: 100px;
   margin-left: 125px;
   position: absolute;
 }
-#currentISim img:eq(2) {
+#currentISim img:nth-child(2) {
   width: 75px;
   height: 75px;
   margin-left: 235px;
