@@ -9,7 +9,7 @@ $query ="CREATE TABLE  IF NOT EXISTS shop (
   technology VARCHAR(60) NOT NULL,
   cost VARCHAR(60) NOT NULL,
   filter_5 VARCHAR(60) NOT NULL,
-  description VARCHAR(600) NULL
+  description VARCHAR(1000) NULL
 )";
 if(mysqli_query($database, $query)){
 }else{
@@ -23,7 +23,7 @@ $query ="CREATE TABLE  IF NOT EXISTS archive (
   technology VARCHAR(60) NOT NULL,
   cost VARCHAR(60) NOT NULL,
   filter_5 VARCHAR(60) NOT NULL,
-  description VARCHAR(600) NULL
+  description VARCHAR(1000) NULL
 )";
 if(mysqli_query($database, $query)){
 }else{
