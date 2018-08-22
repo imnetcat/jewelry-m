@@ -1,5 +1,5 @@
 $( () => {
-  $('.fil-close-btn').click( () => {
+  $('#filters .filters .fil-close-btn').click( () => {
     $('.filters').css({
       visibility: "hidden",
       zIndex: 99
@@ -14,6 +14,10 @@ $( () => {
     });
   });
 
+  $('#currentItem .fil-close-btn').click( () => {
+    $('#currentItem').css('visibility', 'hidden');
+  });
+  
   $('#to_types').click( () => {
     $('#types').css({
       visibility: "visible",
