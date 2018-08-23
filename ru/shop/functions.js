@@ -252,26 +252,26 @@ function set_pages(allItems){
         $('#currentImg').attr('src', currentImg);
         $('#currentDes').html(pages_set[page][n][1]);
         var similars = pages_set[page][n][2].split(',');
-        similars[similars.lenght] = currentImg;
+        similars[similars.length] = currentImg;
 	      console.log(similars);
-        $('#currentISim img:eq(1)').attr('src', similars[simNum]);
-        $('#currentISim img:eq(2)').attr('src', similars[simNum]+1);
-        $('#currentISim img:eq(3)').attr('src', similars[simNum]+2);
+        $('#currentISim img:eq(1)').attr('src', "items/"+similars[simNum]);
+        $('#currentISim img:eq(2)').attr('src', "items/"+similars[simNum]+1);
+        $('#currentISim img:eq(3)').attr('src', "items/"+similars[simNum]+2);
 	f = false;
       }
       n++; 
     }
     $('#currentISim img:eq(1)').click( () => {
       simNum--;
-      $('#currentISim img:eq(1)').attr('src', similars[simNum]);
-      $('#currentISim img:eq(2)').attr('src', similars[simNum]+1);
-      $('#currentISim img:eq(3)').attr('src', similars[simNum]+2);
+      $('#currentISim img:eq(1)').attr('src', "items/"+similars[simNum]);
+      $('#currentISim img:eq(2)').attr('src', "items/"+similars[simNum]+1);
+      $('#currentISim img:eq(3)').attr('src', "items/"+similars[simNum]+2);
     });
     $('#currentISim img:eq(3)').click( () => {
       simNum++;
-      $('#currentISim img:eq(1)').attr('src', similars[simNum]);
-      $('#currentISim img:eq(2)').attr('src', similars[simNum]+1);
-      $('#currentISim img:eq(3)').attr('src', similars[simNum]+2);
+      $('#currentISim img:eq(1)').attr('src', "items/"+similars[simNum]);
+      $('#currentISim img:eq(2)').attr('src', "items/"+similars[simNum]+1);
+      $('#currentISim img:eq(3)').attr('src', "items/"+similars[simNum]+2);
     });
     $('#currentItem').css('visibility', 'visible');
   });
