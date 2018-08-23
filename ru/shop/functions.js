@@ -255,8 +255,8 @@ function set_pages(allItems){
         similars[similars.length] = currentImg;
 	      console.log(similars);
         $('#currentISim img:eq(1)').attr('src', "items/"+similars[simNum]);
-        $('#currentISim img:eq(2)').attr('src', "items/"+similars[simNum]+1);
-        $('#currentISim img:eq(3)').attr('src', "items/"+similars[simNum]+2);
+        $('#currentISim img:eq(2)').attr('src', "items/"+similars[simNum+1]);
+        $('#currentISim img:eq(3)').attr('src', "items/"+similars[simNum+2]);
 	f = false;
       }
       n++; 
@@ -264,14 +264,14 @@ function set_pages(allItems){
     $('#currentISim img:eq(1)').click( () => {
       simNum--;
       $('#currentISim img:eq(1)').attr('src', "items/"+similars[simNum]);
-      $('#currentISim img:eq(2)').attr('src', "items/"+similars[simNum]+1);
-      $('#currentISim img:eq(3)').attr('src', "items/"+similars[simNum]+2);
+      $('#currentISim img:eq(2)').attr('src', "items/"+similars[simNum+1]);
+      $('#currentISim img:eq(3)').attr('src', "items/"+similars[simNum+2]);
     });
     $('#currentISim img:eq(3)').click( () => {
       simNum++;
       $('#currentISim img:eq(1)').attr('src', "items/"+similars[simNum]);
-      $('#currentISim img:eq(2)').attr('src', "items/"+similars[simNum]+1);
-      $('#currentISim img:eq(3)').attr('src', "items/"+similars[simNum]+2);
+      $('#currentISim img:eq(2)').attr('src', "items/"+similars[simNum+1]);
+      $('#currentISim img:eq(3)').attr('src', "items/"+similars[simNum+2]);
     });
     $('#currentItem').css('visibility', 'visible');
   });
