@@ -246,32 +246,47 @@ function set_pages(allItems){
     var currentImg = $(ev.target).attr('src');
     var n = 0;
     var f = true;
-    var simNum = 0;
     while(f){
       if(pages_set[page][n][0] == currentImg){
         $('#currentImg').attr('src', currentImg);
         $('#currentDes').html(pages_set[page][n][1]);
         var similars = pages_set[page][n][2].split(',');
+	for(n=0; n < similars.length; n++){
+	  similars[n] = "items/"+similars[n];
+	}
         similars[similars.length] = currentImg;
-	      console.log(similars);
-        $('#currentISim img:nth-child(1)').attr('src', "items/"+similars[simNum]);
-        $('#currentISim img:nth-child(2)').attr('src', "items/"+similars[simNum+1]);
-        $('#currentISim img:nth-child(3)').attr('src', "items/"+similars[simNum+2]);
+	var simNum = 0;
+        var numSim = similars.length;
+        $('#currentISim img:nth-child(1)').attr('src', similars[simNum]);
+        $('#currentISim img:nth-child(2)').attr('src', similars[simNum+1]);
+        $('#currentISim img:nth-child(3)').attr('src', similars[simNum+2]);
 	f = false;
       }
       n++; 
     }
     $('#currentISim img:nth-child(1)').click( () => {
       simNum--;
-      $('#currentISim img:nth-child(1)').attr('src', "items/"+similars[simNum]);
-      $('#currentISim img:nth-child(2)').attr('src', "items/"+similars[simNum+1]);
-      $('#currentISim img:nth-child(3)').attr('src', "items/"+similars[simNum+2]);
+      if(similars[simNum]){
+        $('#currentISim img:nth-child(1)').attr('src', similars[simNum]);
+        $('#currentISim img:nth-child(2)').attr('src', similars[simNum+1]);
+        $('#currentISim img:nth-child(3)').attr('src', similars[simNum+2]);
+      }else{
+	$('#currentISim img:nth-child(1)').attr('src', similars[similars.length + simNum]);
+        $('#currentISim img:nth-child(2)').attr('src', similars[(similars.length + simNum)+1]);
+        $('#currentISim img:nth-child(3)').attr('src', similars[(similars.length + simNum)+2]);
+      }
     });
     $('#currentISim img:nth-child(3)').click( () => {
       simNum++;
-      $('#currentISim img:nth-child(1)').attr('src', "items/"+similars[simNum]);
-      $('#currentISim img:nth-child(2)').attr('src', "items/"+similars[simNum+1]);
-      $('#currentISim img:nth-child(3)').attr('src', "items/"+similars[simNum+2]);
+      if(similars[simNum+2]){
+        $('#currentISim img:nth-child(1)').attr('src', similars[simNum]);
+        $('#currentISim img:nth-child(2)').attr('src', similars[simNum+1]);
+        $('#currentISim img:nth-child(3)').attr('src', similars[simNum+2]);
+      }else{
+	$('#currentISim img:nth-child(1)').attr('src', similars[similars.length + simNum]);
+        $('#currentISim img:nth-child(2)').attr('src', similars[(similars.length + simNum)+1]);
+        $('#currentISim img:nth-child(3)').attr('src', similars[(similars.length + simNum)+2]);
+      }
     });
     $('#currentItem').css('visibility', 'visible');
   });
