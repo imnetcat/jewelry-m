@@ -258,7 +258,7 @@ function set_pages(allItems){
 	      console.log($('#currentISim img:eq(2)'));
 	      console.log(similars[simNum]+1);
 	      console.log($('#currentISim img:eq(3)'));
-	      cosnole.log(similars[simNum]+2);
+	      console.log(similars[simNum]+2);
         $('#currentISim img:eq(1)').attr('src', similars[simNum]);
         $('#currentISim img:eq(2)').attr('src', similars[simNum]+1);
         $('#currentISim img:eq(3)').attr('src', similars[simNum]+2);
