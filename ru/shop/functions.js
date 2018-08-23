@@ -254,22 +254,22 @@ function set_pages(allItems){
         var similars = pages_set[page][n][2].split(',');
         similars[similars.length] = currentImg;
 	      console.log(similars);
-        $('#currentISim img:eq(1)').attr('src', "items/"+similars[simNum]);
+        $('#currentISim > img').attr('src', "items/"+similars[simNum]);
         $('#currentISim img:eq(2)').attr('src', "items/"+similars[simNum+1]);
         $('#currentISim img:eq(3)').attr('src', "items/"+similars[simNum+2]);
 	f = false;
       }
       n++; 
     }
-    $('#currentISim img:eq(1)').click( () => {
+    $('#currentISim > img').click( () => {
       simNum--;
-      $('#currentISim img:eq(1)').attr('src', "items/"+similars[simNum]);
+      $('#currentISim > img').attr('src', "items/"+similars[simNum]);
       $('#currentISim img:eq(2)').attr('src', "items/"+similars[simNum+1]);
       $('#currentISim img:eq(3)').attr('src', "items/"+similars[simNum+2]);
     });
     $('#currentISim img:eq(3)').click( () => {
       simNum++;
-      $('#currentISim img:eq(1)').attr('src', "items/"+similars[simNum]);
+      $('#currentISim > img').attr('src', "items/"+similars[simNum]);
       $('#currentISim img:eq(2)').attr('src', "items/"+similars[simNum+1]);
       $('#currentISim img:eq(3)').attr('src', "items/"+similars[simNum+2]);
     });
