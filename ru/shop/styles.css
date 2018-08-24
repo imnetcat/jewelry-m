@@ -321,11 +321,9 @@ ol {
 }
 #fullImg img {
   position: absolute;
-  margin: auto;
   z-index: 109;
   max-width: 70vw;
   max-height: 78vh;
-  margin: auto;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
