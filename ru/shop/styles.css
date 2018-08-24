@@ -258,14 +258,13 @@ ol {
   transition: 0.5s;
   background-size: 100% 200%;
   display: inline-block;
-  border-radius: 21px 0px 21px 0px;
-  -webkit-border-radius: 21px 0px 21px 0px;
-  -moz-border-radius: 21px 0px 21px 0px;
-  background-image: linear-gradient(to top, #FFE16B, #ECE9E6);
-  background-color: #FFBD08;
+  border-radius: 0px 0px 50px 15px;
+  -webkit-border-radius: 0px 0px 50px 15px;
+  -moz-border-radius: 0px 0px 50px 15px;
+  background-image: linear-gradient(to top, #FFF170 51%, #ECE9E6 100%);
 }
 #buyBtn:hover {
- background-image: linear-gradient(to top, #ECE9E6, #FFE16B);
+ background-position: top center;
 }
 .fil-close-btn {
   position: absolute;
