@@ -301,49 +301,57 @@ ol {
   transform: rotate(-45deg); 
 }
 
-
+#fullImg {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  z-index: 1000;
+  background-color: white;
+}
 
 #floatingCirclesG{
-	position:relative;
-	width:122px;
-	height:122px;
-	margin:auto;
-	transform:scale(0.6);
-		-o-transform:scale(0.6);
-		-ms-transform:scale(0.6);
-		-webkit-transform:scale(0.6);
-		-moz-transform:scale(0.6);
+  position: absolute;
+  width:122px;
+  height:122px;
+  margin:auto;
+  transform:scale(0.6);
+  -o-transform:scale(0.6);
+  -ms-transform:scale(0.6);
+  -webkit-transform:scale(0.6);
+  -moz-transform:scale(0.6);
 }
 .f_circleG{
-	position:absolute;
-	background-color:rgb(255,255,255);
-	height:22px;
-	width:22px;
-	border-radius:11px;
-		-o-border-radius:11px;
-		-ms-border-radius:11px;
-		-webkit-border-radius:11px;
-		-moz-border-radius:11px;
-	animation-name:f_fadeG;
-		-o-animation-name:f_fadeG;
-		-ms-animation-name:f_fadeG;
-		-webkit-animation-name:f_fadeG;
-		-moz-animation-name:f_fadeG;
-	animation-duration:1.2s;
-		-o-animation-duration:1.2s;
-		-ms-animation-duration:1.2s;
-		-webkit-animation-duration:1.2s;
-		-moz-animation-duration:1.2s;
-	animation-iteration-count:infinite;
-		-o-animation-iteration-count:infinite;
-		-ms-animation-iteration-count:infinite;
-		-webkit-animation-iteration-count:infinite;
-		-moz-animation-iteration-count:infinite;
-	animation-direction:normal;
-		-o-animation-direction:normal;
-		-ms-animation-direction:normal;
-		-webkit-animation-direction:normal;
-		-moz-animation-direction:normal;
+  position:absolute;
+  background-color:rgb(255,255,255);
+  height:22px;
+  width:22px;
+  border-radius:11px;
+  -o-border-radius:11px;
+  -ms-border-radius:11px;
+  -webkit-border-radius:11px;
+  -moz-border-radius:11px;
+  animation-name:f_fadeG;
+  -o-animation-name:f_fadeG;
+  -ms-animation-name:f_fadeG;
+  -webkit-animation-name:f_fadeG;
+  -moz-animation-name:f_fadeG;
+  animation-duration:1.2s;
+  -o-animation-duration:1.2s;
+  -ms-animation-duration:1.2s;
+  -webkit-animation-duration:1.2s;
+  -moz-animation-duration:1.2s;
+  animation-iteration-count:infinite;
+  -o-animation-iteration-count:infinite;
+  -ms-animation-iteration-count:infinite;
+  -webkit-animation-iteration-count:infinite;
+  -moz-animation-iteration-count:infinite;
+  animation-direction:normal;
+  -o-animation-direction:normal;
+  -ms-animation-direction:normal;
+  -webkit-animation-direction:normal;
+  -moz-animation-direction:normal;
 }
 #frotateG_01{
 	left:0;
