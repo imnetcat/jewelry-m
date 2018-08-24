@@ -246,6 +246,7 @@ ol {
   align-items: center;
 }
 .buyBtn {
+  position: absolute;
   width: auto;
   height: auto;
   margin-top: 10px;
