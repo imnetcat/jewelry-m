@@ -302,6 +302,7 @@ ol {
 }
 
 #fullImg {
+  visibility: hidden;
   position: absolute;
   width: 70vw;
   height: 84vh;
