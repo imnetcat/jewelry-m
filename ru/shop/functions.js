@@ -257,11 +257,9 @@ function set_pages(allItems){
 	  similars[n] = "items/"+similars[n];
 	}
         similars[similars.length] = currentImg;
-	var simNum = 0;
-        var numSim = similars.length;
-        $('#currentISim').append('<img src="'+similars[simNum]+'">');
-        $('#currentISim').append('<img src="'+similars[simNum+1]+'">');
-        $('#currentISim').append('<img src="'+similars[simNum+2]+'">');
+	for(n=0; n < similars.length; n++){
+          $('#currentISim').append('<img src="'+similars[n]+'">');
+	}
 	f = false;
       }
       n++; 
