@@ -14,7 +14,7 @@ $( () => {
     });
   });
   
-   $('#currentItem .fil-close-btn').click( () => {
+  $('#currentItem .fil-close-btn').click( () => {
     $('#currentItem').css({"visibility": "hidden"});
   });
   
