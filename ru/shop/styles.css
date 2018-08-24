@@ -246,11 +246,12 @@ ol {
 }
 #buyBtn {
   position: relative;
-  width: 80px;
+  width: auto;
+  height: auto;
   margin-top: 460px;
   margin-left: 69%;
   display: block;
-  padding: 5px 10px;
+  padding: 5px 54px;
   font-size: .9em;
   letter-spacing: 1px;
   text-decoration: none;
