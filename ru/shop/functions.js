@@ -279,6 +279,7 @@ function set_pages(allItems){
 	$('#currentISim img:nth-child(3)').css({
 	  "width": "75px",
           "height": "75px"
+          "margin-left": "235px"
 	});
         $('#currentISim img:nth-child(1)').attr('src', similars[simNum]);
         $('#currentISim img:nth-child(2)').attr('src', similars[simNum+1]);
@@ -295,7 +296,8 @@ function set_pages(allItems){
 	});
 	$('#currentISim img:nth-child(3)').css({
 	  "width": "75px",
-          "height": "75px"
+          "height": "75px",
+          "margin-left": "235px"
 	});
       }
     });
@@ -304,7 +306,8 @@ function set_pages(allItems){
       if(similars[simNum+2]){
 	$('#currentISim img:nth-child(3)').css({
 	  "width": "75px",
-          "height": "75px"
+          "height": "75px",
+          "margin-left": "235px"
 	});
 	$('#currentISim img:nth-child(2)').css({
 	  "width": "100px",
@@ -321,7 +324,8 @@ function set_pages(allItems){
       }else{
 	$('#currentISim img:nth-child(3)').css({
 	  "width": "100px",
-          "height": "100px"
+          "height": "100px",
+          "margin-left": "210px"
 	});
 	$('#currentISim img:nth-child(2)').css({
 	  "width": "75px",
