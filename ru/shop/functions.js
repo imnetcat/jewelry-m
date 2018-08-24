@@ -243,7 +243,9 @@ function set_pages(allItems){
   });
   // Конкретный предмет
   $('.item').click( (ev) => {
+    $('#currentISim').html("");
     var currentImg = $(ev.target).attr('src');
+    $('#currentISim').html('<img src="'+currentImg+'">');
     var n = 0;
     var f = true;
     while(f){
@@ -257,87 +259,13 @@ function set_pages(allItems){
         similars[similars.length] = currentImg;
 	var simNum = 0;
         var numSim = similars.length;
-        $('#currentISim img:nth-child(1)').attr('src', similars[simNum]);
-        $('#currentISim img:nth-child(2)').attr('src', similars[simNum+1]);
-        $('#currentISim img:nth-child(3)').attr('src', similars[simNum+2]);
+        $('#currentISim').append('<img src="'+similars[simNum]+'">');
+        $('#currentISim').append('<img src="'+similars[simNum+1]+'">');
+        $('#currentISim').append('<img src="'+similars[simNum+2]+'">');
 	f = false;
       }
       n++; 
     }
-    $('#currentISim img:nth-child(1)').click( () => {
-      simNum--;
-      if(similars[simNum]){
-	$('#currentISim img:nth-child(1)').css({
-	  "width": "75px",
-          "height": "75px"
-	});
-	$('#currentISim img:nth-child(2)').css({
-	  "width": "100px",
-          "height": "100px",
-          "margin-left": "125px"
-	});
-	$('#currentISim img:nth-child(3)').css({
-	  "width": "75px",
-          "height": "75px",
-          "margin-left": "235px"
-	});
-        $('#currentISim img:nth-child(1)').attr('src', similars[simNum]);
-        $('#currentISim img:nth-child(2)').attr('src', similars[simNum+1]);
-        $('#currentISim img:nth-child(3)').attr('src', similars[simNum+2]);
-      }else{
-	$('#currentISim img:nth-child(1)').css({
-	  "width": "100px",
-          "height": "100px"
-	});
-	$('#currentISim img:nth-child(2)').css({
-	  "width": "75px",
-          "height": "75px",
-          "margin-left": "150px"
-	});
-	$('#currentISim img:nth-child(3)').css({
-	  "width": "75px",
-          "height": "75px",
-          "margin-left": "235px"
-	});
-      }
-    });
-    $('#currentISim img:nth-child(3)').click( () => {
-      simNum++;
-      if(similars[simNum+2]){
-	$('#currentISim img:nth-child(3)').css({
-	  "width": "75px",
-          "height": "75px",
-          "margin-left": "235px"
-	});
-	$('#currentISim img:nth-child(2)').css({
-	  "width": "100px",
-          "height": "100px",
-          "margin-left": "125px"
-	});
-	$('#currentISim img:nth-child(1)').css({
-	  "width": "75px",
-          "height": "75px"
-	});
-        $('#currentISim img:nth-child(1)').attr('src', similars[simNum]);
-        $('#currentISim img:nth-child(2)').attr('src', similars[simNum+1]);
-        $('#currentISim img:nth-child(3)').attr('src', similars[simNum+2]);
-      }else{
-	$('#currentISim img:nth-child(3)').css({
-	  "width": "100px",
-          "height": "100px",
-          "margin-left": "210px"
-	});
-	$('#currentISim img:nth-child(2)').css({
-	  "width": "75px",
-          "height": "75px",
-          "margin-left": "125px"
-	});
-	$('#currentISim img:nth-child(1)').css({
-	  "width": "75px",
-          "height": "75px"
-	});
-      }
-    });
     $('#currentItem').css('visibility', 'visible');
   });
 }
