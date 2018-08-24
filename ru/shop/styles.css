@@ -310,6 +310,14 @@ ol {
   z-index: 1000;
   background-color: white;
   box-shadow: 0 3px 10px -2px rgba(0,0,0,.1);
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
 }
 #fullImg img {
   position: absolute;
@@ -317,6 +325,16 @@ ol {
   z-index: 109;
   max-width: 70vw;
   max-height: 78vh;
+  margin: auto;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
 }
 #floatingCirclesG{
   position: absolute;
