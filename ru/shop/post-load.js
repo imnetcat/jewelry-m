@@ -99,7 +99,8 @@ $( () => {
   });
   
   $('.buyBtn').click( () => {
-    document.location = "/ru/contacts"
+    document.location = "/ru/contacts";
+  });
   
 });
 
