@@ -264,13 +264,8 @@ ol {
   background-image: linear-gradient(to top, #FFE16B, #ECE9E6);
   background-color: #FFBD08;
 }
-.buyBtn:hover {
- background-image: linear-gradient(to top, #ECE9E6, #FFE16B);
-}
-  background-image: linear-gradient(to top, #ffd700 0%, #FFFFFF 51%);
-}
 #buyBtn:hover {
-  background-position: bottom center; 
+ background-image: linear-gradient(to top, #ECE9E6, #FFE16B);
 }
 .fil-close-btn {
   position: absolute;
