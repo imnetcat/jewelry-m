@@ -32,7 +32,11 @@ $( () => {
       zIndex: 99
     });
   });
-
+  
+  $('#fullImg .fil-close-btn').click( () => {
+    $('#fullImg').delete();
+  });
+  
   $('#to_stones').click( () => {
     $('#stones').css({
       visibility: "visible",
