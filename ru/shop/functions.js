@@ -268,7 +268,7 @@ function set_pages(allItems){
       $('#fullImg > img').attr("src", "items/full/"+$('#currentImg').attr('src').split('/')[1]);
       $('#fullImg').css({ "visibility": "visible"});
       $('#fullImg .fil-close-btn').click( () => {
-        $('#currentItem').css('visibility', 'hidden');
+        $('#fullImg').css('visibility', 'hidden');
       });
     });
     $('#currentISim img').click( (ev) => {
