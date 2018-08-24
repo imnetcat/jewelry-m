@@ -265,7 +265,7 @@ function set_pages(allItems){
       n++; 
     }
     $('#currentISim img').click( (ev) => {
-      $('#currentImg').attr('src', $(ev.Target).attr("src"));
+      $('#currentImg').attr('src', $(ev.target).attr("src"));
     });
     $('#currentItem').css('visibility', 'visible');
   });
