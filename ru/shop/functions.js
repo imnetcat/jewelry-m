@@ -267,25 +267,51 @@ function set_pages(allItems){
     $('#currentISim img:nth-child(1)').click( () => {
       simNum--;
       if(similars[simNum]){
+	$('#currentISim img:nth-child(1)').css({
+	  "width": "75px",
+          "height": "75px"
+	});
+	$('#currentISim img:nth-child(2)').css({
+	  "width": "100px",
+          "height": "100px"
+	});
         $('#currentISim img:nth-child(1)').attr('src', similars[simNum]);
         $('#currentISim img:nth-child(2)').attr('src', similars[simNum+1]);
         $('#currentISim img:nth-child(3)').attr('src', similars[simNum+2]);
       }else{
-	$('#currentISim img:nth-child(1)').attr('src', similars[similars.length + simNum]);
-        $('#currentISim img:nth-child(2)').attr('src', similars[(similars.length + simNum)+1]);
-        $('#currentISim img:nth-child(3)').attr('src', similars[(similars.length + simNum)+2]);
+	$('#currentISim img:nth-child(1)').css({
+	  "width": "100px",
+          "height": "100px"
+	});
+	$('#currentISim img:nth-child(2)').css({
+	  "width": "75px",
+          "height": "75px"
+	});
       }
     });
     $('#currentISim img:nth-child(3)').click( () => {
       simNum++;
       if(similars[simNum+2]){
+	$('#currentISim img:nth-child(3)').css({
+	  "width": "75px",
+          "height": "75px"
+	});
+	$('#currentISim img:nth-child(2)').css({
+	  "width": "100px",
+          "height": "100px"
+	});
         $('#currentISim img:nth-child(1)').attr('src', similars[simNum]);
         $('#currentISim img:nth-child(2)').attr('src', similars[simNum+1]);
         $('#currentISim img:nth-child(3)').attr('src', similars[simNum+2]);
       }else{
-	$('#currentISim img:nth-child(1)').attr('src', similars[similars.length + simNum]);
-        $('#currentISim img:nth-child(2)').attr('src', similars[(similars.length + simNum)+1]);
-        $('#currentISim img:nth-child(3)').attr('src', similars[(similars.length + simNum)+2]);
+	$('#currentISim img:nth-child(3)').css({
+	  "width": "100px",
+          "height": "100px"
+	});
+	$('#currentISim img:nth-child(2)').css({
+	  "width": "75px",
+          "height": "75px"
+	});
       }
     });
     $('#currentItem').css('visibility', 'visible');
