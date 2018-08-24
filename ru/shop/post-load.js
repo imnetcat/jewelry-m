@@ -13,10 +13,6 @@ $( () => {
       zIndex: 100
     });
   });
-
-  $('#currentItem .fil-close-btn').click( () => {
-    $('#currentItem').css('visibility', 'hidden');
-  });
   
   $('#to_types').click( () => {
     $('#types').css({
