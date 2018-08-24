@@ -278,7 +278,7 @@ function set_pages(allItems){
 	});
 	$('#currentISim img:nth-child(3)').css({
 	  "width": "75px",
-          "height": "75px"
+          "height": "75px",
           "margin-left": "235px"
 	});
         $('#currentISim img:nth-child(1)').attr('src', similars[simNum]);
