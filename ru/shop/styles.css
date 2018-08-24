@@ -244,6 +244,21 @@ ol {
   -ms-flex-align: center;
   align-items: center;
 }
+#buyBtn {
+  display: block;
+  padding: 10px 7px;
+  //color: #222;
+  font-size: .9em;
+  letter-spacing: 1px;
+  text-decoration: none;
+  text-transform: uppercase;
+  transition: 0.5s;
+  background-size: 100% 200%;
+  background-image: linear-gradient(to top, #ffd700 0%, #FFFFFF 51%);
+}
+#buyBtn:hover {
+  background-position: bottom center; 
+}
 .fil-close-btn {
   position: relative;
   cursor: pointer;
