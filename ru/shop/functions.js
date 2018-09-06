@@ -2,7 +2,7 @@ function build_item(){
   return '<div><img class="item" src="items/default.png"><div class="description"></div><span class="more"><ins>Подробнее</ins></span></div>';
 }
 function adaptation_1(){
-  var client_w = $('body').width;
+  var client_w = screen.width;
   if(client_w < 1024){
     $('#container').css({
       "marginLeft": "1vw",
