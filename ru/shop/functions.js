@@ -240,7 +240,6 @@ function set_pages(allItems){
           $('.description:eq('+n+')').html("");
 	}
       }
-      $('.item[src="items/default.png"]').attr("class", "undefinedItem");
     }
   });
   // Конкретный предмет
