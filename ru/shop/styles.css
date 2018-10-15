@@ -188,6 +188,9 @@ ol {
 .item:hover + .description + .more {
   opacity: 1;
 }
+.item[src="items/default.png"] + .more {
+  opacity: 1;
+}
 .more {
   opacity: 0;
   background: #fff;
