@@ -154,7 +154,7 @@ ol {
   height: 250px;
   position: absolute;
 }
-.undefinedItem {
+.undefined {
   z-index: 10;
   width: 250px;
   height: 250px;
@@ -182,13 +182,13 @@ ol {
   //background-color: #fff;
   background-image: linear-gradient(to right, rgba(255,255,255,0), rgba(255,255,255,1));
 }
+.undefined:hover {
+  opacity: 1;
+}
 .item:hover {
   opacity: 0.2;
 }
 .item:hover + .description + .more {
-  opacity: 1;
-}
-.item[src="items/default.png"] + .more {
   opacity: 1;
 }
 .more {
