@@ -182,13 +182,10 @@ ol {
   //background-color: #fff;
   background-image: linear-gradient(to right, rgba(255,255,255,0), rgba(255,255,255,1));
 }
-.undefined:hover {
-  opacity: 1;
-}
-.item:hover {
+.defined:hover {
   opacity: 0.2;
 }
-.item:hover + .description + .more {
+.defined:hover + .description + .more {
   opacity: 1;
 }
 .more {
