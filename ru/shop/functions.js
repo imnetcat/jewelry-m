@@ -191,6 +191,7 @@ function set_pages(allItems){
   }else{
     $('.btn.right').show();
   }
+  $('.item').attr("class", "defined item");
   $('.item[src="items/default.png"]').attr("class", "undefined item");
   //предыдущая страницы
   $('.btn.left').click( () => {
@@ -216,6 +217,8 @@ function set_pages(allItems){
 	}
       }
     }
+    $('.item').attr("class", "defined item");
+    $('.item[src="items/default.png"]').attr("class", "undefined item");
   });  
   // следующая страница
   $('.btn.right').click( () => {
@@ -241,6 +244,7 @@ function set_pages(allItems){
 	}
       }
     }
+    $('.item').attr("class", "defined item");
     $('.item[src="items/default.png"]').attr("class", "undefined item");
   });
   // Конкретный предмет
