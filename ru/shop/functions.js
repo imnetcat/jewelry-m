@@ -241,6 +241,7 @@ function set_pages(allItems){
 	}
       }
     }
+    $('.item[src="items/default.png"]').attr("class", "undefinedItem");
   });
   // Конкретный предмет
   $('.item').click( (ev) => {
