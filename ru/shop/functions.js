@@ -215,6 +215,7 @@ function set_pages(allItems){
           $('.description:eq('+n+')').html("");
 	}
       }
+      console.log($('.item[src="items/default.png"]'));
       $('.item[src="items/default.png"]').attr("class", "undefinedItem");
     }
   });  
@@ -241,6 +242,7 @@ function set_pages(allItems){
           $('.description:eq('+n+')').html("");
 	}
       }
+      console.log($('.item[src="items/default.png"]'));
       $('.item[src="items/default.png"]').attr("class", "undefinedItem");
     }
   });
