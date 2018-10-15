@@ -154,7 +154,6 @@ ol {
 }
 .undefinedItem {
   z-index: 10;
-  cursor: pointer;
   width: 250px;
   height: 250px;
   position: absolute;
