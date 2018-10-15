@@ -191,7 +191,7 @@ function set_pages(allItems){
   }else{
     $('.btn.right').show();
   }
-  $('.item[src="items/default.png"]').attr("class", "undefinedItem");
+  $('.item[src="items/default.png"]').attr("class", "undefined item");
   //предыдущая страницы
   $('.btn.left').click( () => {
     if(pages_set[page-1]){
@@ -241,7 +241,7 @@ function set_pages(allItems){
 	}
       }
     }
-    $('.item[src="items/default.png"]').attr("class", "undefinedItem");
+    $('.item[src="items/default.png"]').attr("class", "undefined item");
   });
   // Конкретный предмет
   $('.item').click( (ev) => {
