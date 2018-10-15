@@ -211,11 +211,11 @@ function set_pages(allItems){
           $('.item:eq('+n+')').attr("src", pages_set[page][n][0]);
           $('.description:eq('+n+')').html(pages_set[page][n][1]);
         }else{
+          $('.item:eq('+n+')').attr("class", "undefinedItem");
           $('.item:eq('+n+')').attr("src", "items/default.png");
           $('.description:eq('+n+')').html("");
 	}
       }
-      //$('.item[src="items/default.png"]').attr("class", "undefinedItem");
     }
   });  
   // следующая страница
@@ -237,11 +237,11 @@ function set_pages(allItems){
           $('.item:eq('+n+')').attr("src", pages_set[page][n][0]);
           $('.description:eq('+n+')').html(pages_set[page][n][1]);
         }else{
+          $('.item:eq('+n+')').attr("class", "undefinedItem");
           $('.item:eq('+n+')').attr("src", "items/default.png");
           $('.description:eq('+n+')').html("");
 	}
       }
-      //$('.item[src="items/default.png"]').attr("class", "undefinedItem");
     }
   });
   // Конкретный предмет
