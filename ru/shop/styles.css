@@ -275,7 +275,7 @@ ol {
   border-radius: 0px 50px 50px 0px;
   -webkit-border-radius: 0px 50px 50px 0px;
   -moz-border-radius: 0px 50px 50px 0px;
-  background-image: linear-gradient(to left, #000000 0%, #ECE9E6 51%, #000000 100%);
+  background-image: linear-gradient(to left, #ECE9E6 0%, #FFFFFF 51%, #ECE9E6 100%);
 }
 .buyBtn:hover {
  background-position: left center;
